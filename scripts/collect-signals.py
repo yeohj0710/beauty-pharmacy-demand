@@ -262,6 +262,12 @@ def merge_google(keywords: list[str]) -> dict:
 
 def main() -> None:
     entities = json.loads(ENTITIES_PATH.read_text(encoding="utf-8"))
+    previous = {}
+    if OUTPUT_PATH.exists():
+        previous = {
+            item["id"]: item
+            for item in json.loads(OUTPUT_PATH.read_text(encoding="utf-8")).get("products", [])
+        }
     collected_at = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).isoformat(timespec="seconds")
     results = []
     for index, entity in enumerate(entities):
@@ -286,8 +292,12 @@ def main() -> None:
         except Exception as error:
             row["tiktok"] = {"status": "manual_required", "sourceUrl": "https://www.tiktok.com/search/video?q=" + urllib.parse.quote(keyword), "reason": f"자동 수집 실패: {type(error).__name__}"}
             errors.append(f"TikTok: {type(error).__name__}: {error}")
-        row["instagram"] = instagram_task(keyword)
-        row["instagram"]["sourceUrls"] = ["https://www.instagram.com/explore/search/keyword/?q=" + urllib.parse.quote(query) for query in entity["keywords"]]
+        previous_instagram = previous.get(entity["id"], {}).get("instagram", {})
+        if previous_instagram.get("method") == "logged_in_browser":
+            row["instagram"] = previous_instagram
+        else:
+            row["instagram"] = instagram_task(keyword)
+            row["instagram"]["sourceUrls"] = ["https://www.instagram.com/explore/search/keyword/?q=" + urllib.parse.quote(query) for query in entity["keywords"]]
         if errors:
             row["status"] = "partial" if len(row) > 5 else "failed"
             row["errors"] = errors
@@ -295,7 +305,7 @@ def main() -> None:
         if index < len(entities) - 1:
             time.sleep(0.8)
     OUTPUT_PATH.write_text(
-        json.dumps({"collectedAt": collected_at, "scope": "top-10-by-30-day-revenue", "products": results}, ensure_ascii=False, indent=2),
+        json.dumps({"collectedAt": collected_at, "scope": "full-product-catalog", "products": results}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
     print(f"Collected {len(results)} demand entities → {OUTPUT_PATH}")
