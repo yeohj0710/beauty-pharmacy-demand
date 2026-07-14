@@ -7,18 +7,8 @@
     "revenue": 37680000,
     "profit": 15072000,
     "margin": 40.0,
-    "salesScore": 78,
-    "onlineScore": 55,
-    "gap": -23,
     "previousUnits": 360,
-    "previousRevenue": 28746667,
-    "platforms": {
-      "youtube": 56,
-      "instagram": 57,
-      "tiktok": 47,
-      "naver": 49,
-      "google": 53
-    }
+    "previousRevenue": 28746667
   },
   {
     "name": "노스카나겔 20g",
@@ -28,18 +18,8 @@
     "revenue": 22309000,
     "profit": 9322616,
     "margin": 41.8,
-    "salesScore": 66,
-    "onlineScore": 43,
-    "gap": -23,
     "previousUnits": 926,
-    "previousRevenue": 20915000,
-    "platforms": {
-      "youtube": 31,
-      "instagram": 43,
-      "tiktok": 32,
-      "naver": 49,
-      "google": 36
-    }
+    "previousRevenue": 20915000
   },
   {
     "name": "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 크림 30ml",
@@ -49,18 +29,8 @@
     "revenue": 20241000,
     "profit": 7983000,
     "margin": 39.4,
-    "salesScore": 48,
-    "onlineScore": 38,
-    "gap": -10,
     "previousUnits": 624,
-    "previousRevenue": 27847500,
-    "platforms": {
-      "youtube": 28,
-      "instagram": 35,
-      "tiktok": 27,
-      "naver": 35,
-      "google": 30
-    }
+    "previousRevenue": 27847500
   },
   {
     "name": "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 립 세럼 10ml",
@@ -70,18 +40,8 @@
     "revenue": 16923000,
     "profit": 8315000,
     "margin": 49.1,
-    "salesScore": 59,
-    "onlineScore": 54,
-    "gap": -5,
     "previousUnits": 1175,
-    "previousRevenue": 18567167,
-    "platforms": {
-      "youtube": 59,
-      "instagram": 50,
-      "tiktok": 55,
-      "naver": 62,
-      "google": 60
-    }
+    "previousRevenue": 18567167
   },
   {
     "name": "애크논크림",
@@ -91,18 +51,8 @@
     "revenue": 15792000,
     "profit": 7347772,
     "margin": 46.5,
-    "salesScore": 62,
-    "onlineScore": 42,
-    "gap": -20,
     "previousUnits": 1121,
-    "previousRevenue": 14201900,
-    "platforms": {
-      "youtube": 32,
-      "instagram": 39,
-      "tiktok": 34,
-      "naver": 52,
-      "google": 54
-    }
+    "previousRevenue": 14201900
   },
   {
     "name": "멜라토닝크림",
@@ -112,18 +62,8 @@
     "revenue": 11372000,
     "profit": 5447480,
     "margin": 47.9,
-    "salesScore": 33,
-    "onlineScore": 26,
-    "gap": -7,
     "previousUnits": 436,
-    "previousRevenue": 10441667,
-    "platforms": {
-      "youtube": 18,
-      "instagram": 23,
-      "tiktok": 37,
-      "naver": 32,
-      "google": 25
-    }
+    "previousRevenue": 10441667
   },
   {
     "name": "애크린겔",
@@ -133,18 +73,8 @@
     "revenue": 10508500,
     "profit": 4818364,
     "margin": 45.9,
-    "salesScore": 42,
-    "onlineScore": 37,
-    "gap": -5,
     "previousUnits": 781,
-    "previousRevenue": 9799500,
-    "platforms": {
-      "youtube": 25,
-      "instagram": 34,
-      "tiktok": 32,
-      "naver": 38,
-      "google": 36
-    }
+    "previousRevenue": 9799500
   },
   {
     "name": "올인원 우먼플러스 15포",
@@ -154,18 +84,8 @@
     "revenue": 9598500,
     "profit": 4168500,
     "margin": 43.4,
-    "salesScore": 24,
-    "onlineScore": 12,
-    "gap": -12,
     "previousUnits": 266,
-    "previousRevenue": 10299767,
-    "platforms": {
-      "youtube": 17,
-      "instagram": 20,
-      "tiktok": 24,
-      "naver": 3,
-      "google": 16
-    }
+    "previousRevenue": 10299767
   },
   {
     "name": "닥터딥 미네랄 프리 필링 글로우샷 1500",
@@ -175,18 +95,8 @@
     "revenue": 8343000,
     "profit": 3660300,
     "margin": 43.9,
-    "salesScore": 20,
-    "onlineScore": 14,
-    "gap": -6,
     "previousUnits": 204,
-    "previousRevenue": 8664333,
-    "platforms": {
-      "youtube": 23,
-      "instagram": 20,
-      "tiktok": 19,
-      "naver": 26,
-      "google": 5
-    }
+    "previousRevenue": 8664333
   },
   {
     "name": "닥터딥 클리니컬 텍스쳐 턴오버 스팟 크림 40ml(TT크림)",
@@ -196,18 +106,8 @@
     "revenue": 7584000,
     "profit": 3103832,
     "margin": 40.9,
-    "salesScore": 19,
-    "onlineScore": 12,
-    "gap": -7,
     "previousUnits": 138,
-    "previousRevenue": 5225667,
-    "platforms": {
-      "youtube": 12,
-      "instagram": 20,
-      "tiktok": 11,
-      "naver": 20,
-      "google": 8
-    }
+    "previousRevenue": 5225667
   },
   {
     "name": "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 마스크 6매",
@@ -217,18 +117,8 @@
     "revenue": 6674900,
     "profit": 3632900,
     "margin": 54.4,
-    "salesScore": 18,
-    "onlineScore": 12,
-    "gap": -6,
     "previousUnits": 210,
-    "previousRevenue": 6008347,
-    "platforms": {
-      "youtube": 6,
-      "instagram": 10,
-      "tiktok": 7,
-      "naver": 1,
-      "google": 21
-    }
+    "previousRevenue": 6008347
   },
   {
     "name": "닥터멜라신 아이멀트 아이백 크림 플러스 10g",
@@ -238,18 +128,8 @@
     "revenue": 6090000,
     "profit": 3367836,
     "margin": 55.3,
-    "salesScore": 15,
-    "onlineScore": 12,
-    "gap": -3,
     "previousUnits": 163,
-    "previousRevenue": 6246333,
-    "platforms": {
-      "youtube": 1,
-      "instagram": 18,
-      "tiktok": 17,
-      "naver": 11,
-      "google": 23
-    }
+    "previousRevenue": 6246333
   },
   {
     "name": "큐립 연고",
@@ -259,18 +139,8 @@
     "revenue": 5480000,
     "profit": 2582336,
     "margin": 47.1,
-    "salesScore": 29,
-    "onlineScore": 34,
-    "gap": 5,
     "previousUnits": 654,
-    "previousRevenue": 5205333,
-    "platforms": {
-      "youtube": 31,
-      "instagram": 23,
-      "tiktok": 34,
-      "naver": 23,
-      "google": 28
-    }
+    "previousRevenue": 5205333
   },
   {
     "name": "도미나크림 50g",
@@ -280,18 +150,8 @@
     "revenue": 4995000,
     "profit": 1665111,
     "margin": 33.3,
-    "salesScore": 12,
-    "onlineScore": 14,
-    "gap": 2,
     "previousUnits": 116,
-    "previousRevenue": 5350667,
-    "platforms": {
-      "youtube": 4,
-      "instagram": 2,
-      "tiktok": 23,
-      "naver": 20,
-      "google": 13
-    }
+    "previousRevenue": 5350667
   },
   {
     "name": "리안정안액 30튜브",
@@ -301,18 +161,8 @@
     "revenue": 4658780,
     "profit": 2475880,
     "margin": 53.1,
-    "salesScore": 15,
-    "onlineScore": 17,
-    "gap": 2,
     "previousUnits": 238,
-    "previousRevenue": 4243260,
-    "platforms": {
-      "youtube": 5,
-      "instagram": 11,
-      "tiktok": 12,
-      "naver": 18,
-      "google": 22
-    }
+    "previousRevenue": 4243260
   },
   {
     "name": "리쥬비넥스크림 10g",
@@ -322,18 +172,8 @@
     "revenue": 3898000,
     "profit": 1693000,
     "margin": 43.4,
-    "salesScore": 10,
-    "onlineScore": 12,
-    "gap": 2,
     "previousUnits": 158,
-    "previousRevenue": 6083333,
-    "platforms": {
-      "youtube": 12,
-      "instagram": 17,
-      "tiktok": 11,
-      "naver": 1,
-      "google": 1
-    }
+    "previousRevenue": 6083333
   },
   {
     "name": "닥터 리쥬올 어드밴스드 피디엘엘에이 퍼밍 크림 30ml",
@@ -343,18 +183,8 @@
     "revenue": 3600000,
     "profit": 2142000,
     "margin": 59.5,
-    "salesScore": 8,
-    "onlineScore": 20,
-    "gap": 12,
     "previousUnits": 72,
-    "previousRevenue": 3195000,
-    "platforms": {
-      "youtube": 25,
-      "instagram": 19,
-      "tiktok": 15,
-      "naver": 30,
-      "google": 13
-    }
+    "previousRevenue": 3195000
   },
   {
     "name": "리쥬부스터 피디알엔 리쥬비네이팅 크림 25ml",
@@ -364,18 +194,8 @@
     "revenue": 3420000,
     "profit": 1976000,
     "margin": 57.8,
-    "salesScore": 8,
-    "onlineScore": 12,
-    "gap": 4,
     "previousUnits": 103,
-    "previousRevenue": 4605000,
-    "platforms": {
-      "youtube": 1,
-      "instagram": 6,
-      "tiktok": 22,
-      "naver": 12,
-      "google": 23
-    }
+    "previousRevenue": 4605000
   },
   {
     "name": "닥터 리쥬올 어드밴스드 피디알엔 코퍼 펩타이드 세럼 30ml",
@@ -385,18 +205,8 @@
     "revenue": 3173500,
     "profit": 1368500,
     "margin": 43.1,
-    "salesScore": 8,
-    "onlineScore": 12,
-    "gap": 4,
     "previousUnits": null,
-    "previousRevenue": null,
-    "platforms": {
-      "youtube": 16,
-      "instagram": 17,
-      "tiktok": 14,
-      "naver": 20,
-      "google": 11
-    }
+    "previousRevenue": null
   },
   {
     "name": "신신파스 아렉스 대형 30매",
@@ -406,18 +216,8 @@
     "revenue": 3075000,
     "profit": 1088345,
     "margin": 35.4,
-    "salesScore": 11,
-    "onlineScore": 12,
-    "gap": 1,
     "previousUnits": 149,
-    "previousRevenue": 2226000,
-    "platforms": {
-      "youtube": 1,
-      "instagram": 1,
-      "tiktok": 6,
-      "naver": 22,
-      "google": 18
-    }
+    "previousRevenue": 2226000
   },
   {
     "name": "D-판테놀연고 50g",
@@ -427,18 +227,8 @@
     "revenue": 2980000,
     "profit": 1641392,
     "margin": 55.1,
-    "salesScore": 14,
-    "onlineScore": 12,
-    "gap": -2,
     "previousUnits": 362,
-    "previousRevenue": 3596000,
-    "platforms": {
-      "youtube": 13,
-      "instagram": 11,
-      "tiktok": 20,
-      "naver": 15,
-      "google": 8
-    }
+    "previousRevenue": 3596000
   },
   {
     "name": "닥터멜시아 345 릴리프 크림 50ml",
@@ -448,18 +238,8 @@
     "revenue": 2751000,
     "profit": 1311000,
     "margin": 47.7,
-    "salesScore": 7,
-    "onlineScore": 15,
-    "gap": 8,
     "previousUnits": 70,
-    "previousRevenue": 2019000,
-    "platforms": {
-      "youtube": 5,
-      "instagram": 18,
-      "tiktok": 4,
-      "naver": 21,
-      "google": 14
-    }
+    "previousRevenue": 2019000
   },
   {
     "name": "닥터 리쥬올 어드밴스드 레티노 멜라 톤 크림 30ml",
@@ -469,18 +249,8 @@
     "revenue": 2688000,
     "profit": 1351500,
     "margin": 50.3,
-    "salesScore": 7,
-    "onlineScore": 12,
-    "gap": 5,
     "previousUnits": 104,
-    "previousRevenue": 2834167,
-    "platforms": {
-      "youtube": 24,
-      "instagram": 18,
-      "tiktok": 24,
-      "naver": 3,
-      "google": 12
-    }
+    "previousRevenue": 2834167
   },
   {
     "name": "센텔리안24 마데카 크림 타임 리버스 50ml",
@@ -490,18 +260,8 @@
     "revenue": 2196000,
     "profit": 1254300,
     "margin": 57.1,
-    "salesScore": 7,
-    "onlineScore": 18,
-    "gap": 11,
     "previousUnits": 150,
-    "previousRevenue": 2641833,
-    "platforms": {
-      "youtube": 24,
-      "instagram": 30,
-      "tiktok": 15,
-      "naver": 16,
-      "google": 26
-    }
+    "previousRevenue": 2641833
   },
   {
     "name": "닥터 리쥬올 어드밴스드 피디알엔 카밍 선 세럼 50ml",
@@ -511,18 +271,8 @@
     "revenue": 2189000,
     "profit": 954000,
     "margin": 43.6,
-    "salesScore": 6,
-    "onlineScore": 14,
-    "gap": 8,
     "previousUnits": null,
-    "previousRevenue": null,
-    "platforms": {
-      "youtube": 22,
-      "instagram": 4,
-      "tiktok": 2,
-      "naver": 14,
-      "google": 19
-    }
+    "previousRevenue": null
   },
   {
     "name": "멜라노사 크림",
@@ -532,18 +282,8 @@
     "revenue": 2162000,
     "profit": 699000,
     "margin": 32.3,
-    "salesScore": 6,
-    "onlineScore": 12,
-    "gap": 6,
     "previousUnits": null,
-    "previousRevenue": null,
-    "platforms": {
-      "youtube": 2,
-      "instagram": 6,
-      "tiktok": 3,
-      "naver": 12,
-      "google": 4
-    }
+    "previousRevenue": null
   },
   {
     "name": "닥터 리쥬올 어드밴스드 피디알엔 헤어 덴시티 스칼프 세럼 15ml",
@@ -553,18 +293,8 @@
     "revenue": 1850000,
     "profit": 849000,
     "margin": 45.9,
-    "salesScore": 5,
-    "onlineScore": 12,
-    "gap": 7,
     "previousUnits": null,
-    "previousRevenue": null,
-    "platforms": {
-      "youtube": 3,
-      "instagram": 6,
-      "tiktok": 10,
-      "naver": 16,
-      "google": 14
-    }
+    "previousRevenue": null
   },
   {
     "name": "뉴베인액 7포",
@@ -574,18 +304,8 @@
     "revenue": 1836110,
     "profit": 845010,
     "margin": 46.0,
-    "salesScore": 6,
-    "onlineScore": 13,
-    "gap": 7,
     "previousUnits": 99,
-    "previousRevenue": 1752037,
-    "platforms": {
-      "youtube": 18,
-      "instagram": 15,
-      "tiktok": 2,
-      "naver": 16,
-      "google": 18
-    }
+    "previousRevenue": 1752037
   },
   {
     "name": "신신파스 아렉스 소형 42매",
@@ -595,18 +315,8 @@
     "revenue": 1836000,
     "profit": 714000,
     "margin": 38.9,
-    "salesScore": 9,
-    "onlineScore": 12,
-    "gap": 3,
     "previousUnits": 153,
-    "previousRevenue": 1380000,
-    "platforms": {
-      "youtube": 6,
-      "instagram": 22,
-      "tiktok": 15,
-      "naver": 17,
-      "google": 14
-    }
+    "previousRevenue": 1380000
   },
   {
     "name": "안티푸라민 에스 로션 100ml",
@@ -616,18 +326,8 @@
     "revenue": 1656000,
     "profit": 654120,
     "margin": 39.5,
-    "salesScore": 15,
-    "onlineScore": 12,
-    "gap": -3,
     "previousUnits": 435,
-    "previousRevenue": 1737333,
-    "platforms": {
-      "youtube": 15,
-      "instagram": 8,
-      "tiktok": 13,
-      "naver": 11,
-      "google": 13
-    }
+    "previousRevenue": 1737333
   },
   {
     "name": "신신파스 아렉스 중형 10매",
@@ -637,18 +337,8 @@
     "revenue": 1652000,
     "profit": 561680,
     "margin": 34.0,
-    "salesScore": 16,
-    "onlineScore": 24,
-    "gap": 8,
     "previousUnits": 305,
-    "previousRevenue": 1065167,
-    "platforms": {
-      "youtube": 21,
-      "instagram": 28,
-      "tiktok": 14,
-      "naver": 12,
-      "google": 18
-    }
+    "previousRevenue": 1065167
   },
   {
     "name": "큐립 마일드 연고",
@@ -658,18 +348,8 @@
     "revenue": 1648000,
     "profit": 777856,
     "margin": 47.2,
-    "salesScore": 9,
-    "onlineScore": 12,
-    "gap": 3,
     "previousUnits": 224,
-    "previousRevenue": 1786667,
-    "platforms": {
-      "youtube": 24,
-      "instagram": 9,
-      "tiktok": 23,
-      "naver": 24,
-      "google": 24
-    }
+    "previousRevenue": 1786667
   },
   {
     "name": "프로 칼 레드엑스 크림 에스 18ml",
@@ -679,18 +359,8 @@
     "revenue": 1530000,
     "profit": 722262,
     "margin": 47.2,
-    "salesScore": 6,
-    "onlineScore": 13,
-    "gap": 7,
     "previousUnits": 112,
-    "previousRevenue": 1672933,
-    "platforms": {
-      "youtube": 10,
-      "instagram": 8,
-      "tiktok": 5,
-      "naver": 7,
-      "google": 14
-    }
+    "previousRevenue": 1672933
   },
   {
     "name": "마리엔메이 스피큘 레티놀 피디알엔 크림 15g",
@@ -700,18 +370,8 @@
     "revenue": 1517000,
     "profit": 925791,
     "margin": 61.0,
-    "salesScore": 5,
-    "onlineScore": 12,
-    "gap": 7,
     "previousUnits": 76,
-    "previousRevenue": 1384500,
-    "platforms": {
-      "youtube": 13,
-      "instagram": 14,
-      "tiktok": 11,
-      "naver": 20,
-      "google": 2
-    }
+    "previousRevenue": 1384500
   },
   {
     "name": "노스카나겔 10g",
@@ -721,18 +381,8 @@
     "revenue": 1460000,
     "profit": 437000,
     "margin": 29.9,
-    "salesScore": 6,
-    "onlineScore": 12,
-    "gap": 6,
     "previousUnits": 92,
-    "previousRevenue": 1094667,
-    "platforms": {
-      "youtube": 24,
-      "instagram": 21,
-      "tiktok": 12,
-      "naver": 1,
-      "google": 6
-    }
+    "previousRevenue": 1094667
   },
   {
     "name": "프렌즈 아이드롭 점안액 순 14ml",
@@ -742,18 +392,8 @@
     "revenue": 1380000,
     "profit": 650300,
     "margin": 47.1,
-    "salesScore": 9,
-    "onlineScore": 12,
-    "gap": 3,
     "previousUnits": 159,
-    "previousRevenue": 948000,
-    "platforms": {
-      "youtube": 24,
-      "instagram": 3,
-      "tiktok": 3,
-      "naver": 1,
-      "google": 18
-    }
+    "previousRevenue": 948000
   },
   {
     "name": "이지덤밴드 뷰티 픽카밍 6매",
@@ -763,18 +403,8 @@
     "revenue": 1375000,
     "profit": 527020,
     "margin": 38.3,
-    "salesScore": 6,
-    "onlineScore": 12,
-    "gap": 6,
     "previousUnits": 110,
-    "previousRevenue": 1195333,
-    "platforms": {
-      "youtube": 10,
-      "instagram": 10,
-      "tiktok": 20,
-      "naver": 24,
-      "google": 6
-    }
+    "previousRevenue": 1195333
   },
   {
     "name": "노스엣 센스액 30ml",
@@ -784,18 +414,8 @@
     "revenue": 1350000,
     "profit": 646880,
     "margin": 47.9,
-    "salesScore": 6,
-    "onlineScore": 17,
-    "gap": 11,
     "previousUnits": 116,
-    "previousRevenue": 1141167,
-    "platforms": {
-      "youtube": 21,
-      "instagram": 25,
-      "tiktok": 7,
-      "naver": 11,
-      "google": 18
-    }
+    "previousRevenue": 1141167
   },
   {
     "name": "디판버그겔 30g",
@@ -805,18 +425,8 @@
     "revenue": 1072000,
     "profit": 632927,
     "margin": 59.0,
-    "salesScore": 6,
-    "onlineScore": 12,
-    "gap": 6,
     "previousUnits": 115,
-    "previousRevenue": 904000,
-    "platforms": {
-      "youtube": 24,
-      "instagram": 3,
-      "tiktok": 3,
-      "naver": 16,
-      "google": 2
-    }
+    "previousRevenue": 904000
   },
   {
     "name": "이지덤 뷰티",
@@ -826,18 +436,8 @@
     "revenue": 1072000,
     "profit": 1072000,
     "margin": 100.0,
-    "salesScore": 6,
-    "onlineScore": 12,
-    "gap": 6,
     "previousUnits": 112,
-    "previousRevenue": 893333,
-    "platforms": {
-      "youtube": 9,
-      "instagram": 13,
-      "tiktok": 14,
-      "naver": 20,
-      "google": 2
-    }
+    "previousRevenue": 893333
   },
   {
     "name": "프렌즈 아이드롭 점안액 쿨 14ml",
@@ -847,18 +447,8 @@
     "revenue": 930000,
     "profit": 434000,
     "margin": 46.7,
-    "salesScore": 6,
-    "onlineScore": 17,
-    "gap": 11,
     "previousUnits": 136,
-    "previousRevenue": 807167,
-    "platforms": {
-      "youtube": 20,
-      "instagram": 10,
-      "tiktok": 18,
-      "naver": 16,
-      "google": 12
-    }
+    "previousRevenue": 807167
   },
   {
     "name": "애크린 외용액",
@@ -868,18 +458,8 @@
     "revenue": 816000,
     "profit": 277440,
     "margin": 34.0,
-    "salesScore": 3,
-    "onlineScore": 12,
-    "gap": 9,
     "previousUnits": null,
-    "previousRevenue": null,
-    "platforms": {
-      "youtube": 20,
-      "instagram": 5,
-      "tiktok": 1,
-      "naver": 3,
-      "google": 6
-    }
+    "previousRevenue": null
   },
   {
     "name": "디판큐어크림 30g",
@@ -889,18 +469,8 @@
     "revenue": 740000,
     "profit": 375925,
     "margin": 50.8,
-    "salesScore": 3,
-    "onlineScore": 12,
-    "gap": 9,
     "previousUnits": 84,
-    "previousRevenue": 843333,
-    "platforms": {
-      "youtube": 12,
-      "instagram": 14,
-      "tiktok": 17,
-      "naver": 24,
-      "google": 12
-    }
+    "previousRevenue": 843333
   },
   {
     "name": "이지덤밴드 뷰티 릴리프 57매",
@@ -910,18 +480,8 @@
     "revenue": 728000,
     "profit": 367640,
     "margin": 50.5,
-    "salesScore": 4,
-    "onlineScore": 12,
-    "gap": 8,
     "previousUnits": 85,
-    "previousRevenue": 672000,
-    "platforms": {
-      "youtube": 13,
-      "instagram": 1,
-      "tiktok": 15,
-      "naver": 17,
-      "google": 8
-    }
+    "previousRevenue": 672000
   },
   {
     "name": "프렌즈 아이드롭 점안액 쿨하이 14ml",
@@ -931,18 +491,8 @@
     "revenue": 696000,
     "profit": 325960,
     "margin": 46.8,
-    "salesScore": 4,
-    "onlineScore": 12,
-    "gap": 8,
     "previousUnits": 99,
-    "previousRevenue": 590560,
-    "platforms": {
-      "youtube": 1,
-      "instagram": 9,
-      "tiktok": 1,
-      "naver": 6,
-      "google": 1
-    }
+    "previousRevenue": 590560
   },
   {
     "name": "딥콜라겐 파워부스팅 마스크",
@@ -952,18 +502,8 @@
     "revenue": 660600,
     "profit": 660600,
     "margin": 100.0,
-    "salesScore": 11,
-    "onlineScore": 12,
-    "gap": 1,
     "previousUnits": 352,
-    "previousRevenue": 634667,
-    "platforms": {
-      "youtube": 6,
-      "instagram": 13,
-      "tiktok": 7,
-      "naver": 22,
-      "google": 5
-    }
+    "previousRevenue": 634667
   },
   {
     "name": "이지엔6 이브 연질캡슐 30캡슐",
@@ -973,18 +513,8 @@
     "revenue": 616000,
     "profit": 231000,
     "margin": 37.5,
-    "salesScore": 3,
-    "onlineScore": 12,
-    "gap": 9,
     "previousUnits": 59,
-    "previousRevenue": 469333,
-    "platforms": {
-      "youtube": 23,
-      "instagram": 15,
-      "tiktok": 11,
-      "naver": 10,
-      "google": 20
-    }
+    "previousRevenue": 469333
   },
   {
     "name": "신신파스 아렉스 대형 6매",
@@ -994,18 +524,8 @@
     "revenue": 612500,
     "profit": 227500,
     "margin": 37.1,
-    "salesScore": 6,
-    "onlineScore": 12,
-    "gap": 6,
     "previousUnits": 121,
-    "previousRevenue": 415333,
-    "platforms": {
-      "youtube": 16,
-      "instagram": 20,
-      "tiktok": 5,
-      "naver": 22,
-      "google": 9
-    }
+    "previousRevenue": 415333
   },
   {
     "name": "이지엔6 이브 연질캡슐 10캡슐",
@@ -1015,18 +535,8 @@
     "revenue": 555000,
     "profit": 242350,
     "margin": 43.7,
-    "salesScore": 6,
-    "onlineScore": 17,
-    "gap": 11,
     "previousUnits": 143,
-    "previousRevenue": 426000,
-    "platforms": {
-      "youtube": 9,
-      "instagram": 27,
-      "tiktok": 17,
-      "naver": 22,
-      "google": 29
-    }
+    "previousRevenue": 426000
   },
   {
     "name": "신신파스 아렉스 소형 14매",
@@ -1036,17 +546,7 @@
     "revenue": 486500,
     "profit": 244918,
     "margin": 50.3,
-    "salesScore": 5,
-    "onlineScore": 16,
-    "gap": 11,
     "previousUnits": 136,
-    "previousRevenue": 475500,
-    "platforms": {
-      "youtube": 24,
-      "instagram": 19,
-      "tiktok": 12,
-      "naver": 23,
-      "google": 9
-    }
+    "previousRevenue": 475500
   }
 ]
