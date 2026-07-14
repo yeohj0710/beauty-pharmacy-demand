@@ -1801,3 +1801,193 @@ td > small {
     font-size: 11px;
   }
 }
+
+/* Desktop readability scale */
+@media (min-width: 1000px) {
+  :root {
+    --sidebar: 250px;
+  }
+  body {
+    font-size: 16px;
+  }
+  main {
+    max-width: 1760px;
+    padding-right: 56px;
+    padding-left: 56px;
+  }
+  .brand div {
+    font-size: 18px;
+  }
+  .brand small,
+  .sidebar-foot small {
+    font-size: 13px;
+  }
+  .sidebar nav button {
+    min-height: 48px;
+    font-size: 15px;
+  }
+  .sidebar-foot {
+    font-size: 15px;
+  }
+  .eyebrow,
+  .section-kicker {
+    font-size: 14px;
+  }
+  .hero-copy {
+    font-size: 19px;
+  }
+  .hero-status,
+  .metrics article > span,
+  .sample-badge {
+    font-size: 14px;
+  }
+  .hero-status strong,
+  .metrics p {
+    font-size: 15px;
+  }
+  .metrics strong {
+    font-size: 28px;
+  }
+  th {
+    font-size: 13px;
+    padding: 15px 12px;
+  }
+  td {
+    font-size: 15px;
+    padding: 18px 12px;
+  }
+  td > strong {
+    max-width: 410px;
+    font-size: 15px;
+  }
+  td > small,
+  .score-label span {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .score-label b {
+    font-size: 14px;
+  }
+
+  .drawer {
+    width: min(1060px, calc(100vw - 96px));
+    max-height: calc(100vh - 48px);
+    padding: 48px 56px 54px;
+  }
+  .drawer-rank {
+    font-size: 15px;
+  }
+  .drawer h2 {
+    font-size: 34px;
+    margin-top: 16px;
+  }
+  .drawer > p {
+    font-size: 16px;
+  }
+  .entity-rule {
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 12px 22px;
+    padding: 24px;
+  }
+  .entity-rule b,
+  .entity-rule p {
+    font-size: 15px;
+  }
+  .drawer-heading,
+  .drawer-section h3,
+  .manual-form h3 {
+    font-size: 20px;
+  }
+  .evidence-list button {
+    grid-template-columns: 16px minmax(210px, 1fr) 150px 18px;
+    min-height: 82px;
+    padding: 18px 20px;
+  }
+  .evidence-list b {
+    font-size: 16px;
+  }
+  .evidence-list small,
+  .evidence-list button > strong {
+    font-size: 14px;
+  }
+  .collection-rule b,
+  .auto-result > span,
+  .manual-reason b {
+    font-size: 15px;
+  }
+  .collection-rule p,
+  .auto-result p,
+  .manual-reason p,
+  .score-lock p {
+    font-size: 15px;
+  }
+  .auto-result strong {
+    font-size: 22px;
+  }
+  .auto-result a,
+  .manual-reason a,
+  .manual-form label span {
+    font-size: 14px;
+  }
+  .evidence-list > a {
+    min-height: 52px;
+    padding: 13px 15px;
+    font-size: 15px;
+  }
+  .evidence-list > a small {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 999px) {
+  .drawer {
+    width: calc(100vw - 40px);
+    padding: 40px;
+  }
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 15px;
+  }
+  .drawer {
+    padding: 34px 22px 72px;
+  }
+  .drawer-rank {
+    font-size: 14px;
+  }
+  .drawer > p {
+    font-size: 14px;
+  }
+  .entity-rule {
+    grid-template-columns: 104px minmax(0, 1fr);
+    gap: 12px 18px;
+    padding: 20px;
+  }
+  .entity-rule b,
+  .entity-rule p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .drawer-heading,
+  .drawer-section h3,
+  .manual-form h3 {
+    font-size: 18px;
+  }
+  .evidence-list button {
+    grid-template-columns: 14px minmax(0, 1fr) auto 14px;
+    min-height: 112px;
+    padding: 17px 12px;
+  }
+  .evidence-list b {
+    font-size: 14px;
+  }
+  .evidence-list small,
+  .evidence-list button > strong {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+  .sidebar nav button {
+    font-size: 12px;
+  }
+}
