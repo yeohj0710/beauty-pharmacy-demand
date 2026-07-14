@@ -60,7 +60,7 @@ const catalogSignals: Signal[] = catalog.products
       skuNames: [name],
       exclude: [],
       reason:
-        "내부 자료에서는 제품명만 참조했으며 대표 검색어는 조사자가 검토합니다.",
+        "제품명에서 용량 표기를 덜어낸 검색어입니다. 필요하면 직접 다듬어 주세요.",
       youtube: manualSource("YouTube"),
       instagram: manualSource("Instagram"),
       tiktok: manualSource("TikTok"),
@@ -69,19 +69,8 @@ const catalogSignals: Signal[] = catalog.products
     };
   });
 const allProducts: Signal[] = [...signalFile.products, ...catalogSignals];
-const money = (v: number) =>
-  `${Math.round(v / 10000).toLocaleString("ko-KR")}만원`;
 const fmt = (v?: number | null) =>
   v == null ? "—" : v.toLocaleString("ko-KR");
-
-function saleFor(signal: Signal) {
-  return {
-    revenue: 0,
-    profit: 0,
-    units: 0,
-    margin: 0,
-  };
-}
 
 function getAuto(signal: Signal, platform: Platform) {
   return signal[platform as keyof Signal] as Record<string, any> | undefined;
@@ -243,7 +232,6 @@ function ProductDrawer({
   onClose: () => void;
   onOpen: (platform: Platform) => void;
 }) {
-  const sale = saleFor(signal);
   return (
     <div className="drawer-backdrop" onClick={onClose}>
       <aside
@@ -267,24 +255,6 @@ function ProductDrawer({
           <p>{signal.reason}</p>
           <b>제외어</b>
           <p>{signal.exclude.join(" · ")}</p>
-        </div>
-        <div className="sale-facts drawer-facts">
-          <div>
-            <span>매출 데이터</span>
-            <strong>비공개</strong>
-          </div>
-          <div>
-            <span>판매량 데이터</span>
-            <strong>비공개</strong>
-          </div>
-          <div>
-            <span>순이익 데이터</span>
-            <strong>비공개</strong>
-          </div>
-          <div>
-            <span>이익률 데이터</span>
-            <strong>비공개</strong>
-          </div>
         </div>
         <h3 className="drawer-heading">채널별 수집 현황</h3>
         <div className="evidence-list">
@@ -311,7 +281,10 @@ function ProductDrawer({
         </div>
         <div className="score-lock">
           <b>수요 점수 계산 전</b>
-          <p>5개 채널 근거가 모두 확보되면 실판매와 비교할 수 있습니다.</p>
+          <p>
+            채널별 근거가 모이면 제품의 온라인 관심 흐름을 한눈에 비교할 수
+            있습니다.
+          </p>
         </div>
       </aside>
     </div>
@@ -336,15 +309,16 @@ function Overview({
     <>
       <section className="hero">
         <div>
-          <p className="eyebrow">PRODUCT DEMAND COLLECTION</p>
+          <p className="eyebrow">PRODUCT DEMAND RESEARCH</p>
           <h1>
-            판매 결과가 아니라,
+            제품의 온라인 관심을
             <br />
-            수요 근거를 모읍니다
+            한곳에서 확인하세요
           </h1>
           <p className="hero-copy">
-            상위 10개 제품을 5개 채널에서 같은 기준으로 조사하고
-            <br className="desktop" /> 실제 약국 판매와 일치하는지 검증합니다.
+            등록된 제품을 YouTube, Instagram, TikTok, 네이버, Google에서
+            <br className="desktop" /> 같은 기준으로 조사하고 근거와 함께
+            정리합니다.
           </p>
         </div>
         <div className="hero-status">
@@ -357,12 +331,12 @@ function Overview({
       </section>
       <section className="metrics">
         <article>
-          <p>MVP 대상</p>
+          <p>등록 제품</p>
           <strong>
             {allProducts.length}
             <small>개 수요 개체</small>
           </strong>
-          <span>제품명만 내부 자료에서 참조</span>
+          <span>조사할 전체 제품 목록</span>
         </article>
         <article>
           <p>수집 작업</p>
@@ -401,18 +375,16 @@ function Overview({
           <table>
             <thead>
               <tr>
-                <th>순위</th>
+                <th>번호</th>
                 <th>제품</th>
-                <th>제품 정보</th>
-                <th>판매 데이터</th>
-                <th>재무 데이터</th>
+                <th>통합 제품</th>
+                <th>대표 검색어</th>
                 <th>수집 현황</th>
               </tr>
             </thead>
             <tbody>
               {top.map((p, i) => {
                 const s = p;
-                const sale = saleFor(s);
                 const done = platforms.filter((x) =>
                   ["auto", "manual"].includes(statusOf(s, x.id, manual)),
                 ).length;
@@ -436,8 +408,7 @@ function Overview({
                     <td>
                       <strong>{s.skuNames.length}개 SKU</strong>
                     </td>
-                    <td>비공개</td>
-                    <td>비공개</td>
+                    <td>{s.keywords[0]}</td>
                     <td>
                       <div className="progress-label">
                         <b>{done}/5 확보</b>
@@ -555,7 +526,6 @@ function Products({
   onOpen: (s: Signal, p: Platform) => void;
 }) {
   const [selected, setSelected] = useState(allProducts[0]);
-  const sale = saleFor(selected);
   return (
     <section className="page-section">
       <div className="page-title">
@@ -582,23 +552,11 @@ function Products({
         <div className="panel validation-detail">
           <span className="drawer-rank">제품 수요 조사</span>
           <h2>{selected.name}</h2>
-          <div className="sale-facts">
-            <div>
-              <span>매출 데이터</span>
-              <strong>비공개</strong>
-            </div>
-            <div>
-              <span>판매량 데이터</span>
-              <strong>비공개</strong>
-            </div>
-            <div>
-              <span>순이익 데이터</span>
-              <strong>비공개</strong>
-            </div>
-            <div>
-              <span>이익률 데이터</span>
-              <strong>비공개</strong>
-            </div>
+          <div className="entity-rule validation-keywords">
+            <b>대표 검색어</b>
+            <p>{selected.keywords.join(" · ")}</p>
+            <b>통합 제품</b>
+            <p>{selected.skuNames.join(" · ")}</p>
           </div>
           <h3>채널별 수집 근거</h3>
           <div className="evidence-list">
@@ -952,7 +910,8 @@ export default function Home() {
         </nav>
         <div className="sidebar-foot">
           <span className="live-dot" />
-          수집 파이프라인<small>상위 10개 · 5개 채널</small>
+          수집 파이프라인
+          <small>{allProducts.length}개 수요 개체 · 5개 채널</small>
         </div>
       </aside>
       <main>
