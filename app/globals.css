@@ -1678,3 +1678,105 @@ td > small {
     gap: 10px;
   }
 }
+
+/* Readable modal typography */
+@media (min-width: 761px) {
+  .drawer {
+    width: min(840px, calc(100vw - 64px));
+    padding: 44px 48px;
+  }
+}
+.drawer-rank {
+  font-size: 14px;
+}
+.drawer h2 {
+  font-size: 30px;
+  line-height: 1.35;
+  margin: 14px 0 10px;
+}
+.drawer > p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.entity-rule {
+  padding: 20px;
+}
+.entity-rule b {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.entity-rule p {
+  font-size: 13px;
+  line-height: 1.65;
+  margin: 6px 0 14px;
+}
+.entity-rule p:last-child {
+  margin-bottom: 0;
+}
+.drawer-facts span,
+.drawer-facts small {
+  font-size: 12px;
+}
+.drawer-facts strong {
+  font-size: 18px;
+}
+.drawer-heading,
+.drawer-section h3,
+.manual-form h3 {
+  font-size: 18px;
+}
+.evidence-list button {
+  grid-template-columns: 12px 1fr 110px 14px;
+  padding: 18px 16px;
+}
+.evidence-list b {
+  font-size: 14px;
+}
+.evidence-list small {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+.evidence-list button > strong {
+  font-size: 12px;
+}
+.score-lock b {
+  font-size: 14px;
+}
+.score-lock p {
+  font-size: 12px;
+  line-height: 1.55;
+}
+.collection-rule b,
+.auto-result > span,
+.manual-reason b {
+  font-size: 13px;
+}
+.collection-rule p,
+.auto-result p,
+.manual-reason p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+.auto-result strong {
+  font-size: 20px;
+}
+.auto-result a,
+.manual-reason a {
+  font-size: 13px;
+}
+.manual-form label span {
+  font-size: 12px;
+}
+.manual-form input {
+  height: 46px;
+  font-size: 14px;
+}
+@media (max-width: 760px) {
+  .drawer h2 {
+    font-size: 25px;
+  }
+  .evidence-list small {
+    font-size: 11px;
+  }
+}
