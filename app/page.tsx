@@ -280,7 +280,7 @@ function ProductDrawer({
   return (
     <div className="drawer-backdrop" onClick={onClose}>
       <aside
-        className="drawer"
+        className="drawer product-drawer"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
@@ -288,48 +288,50 @@ function ProductDrawer({
         <button className="close" onClick={onClose}>
           ×
         </button>
-        <span className="drawer-rank">제품 수요 상세</span>
-        <h2>{signal.name}</h2>
-        <p>
-          검색 키워드: <b>{signal.keywords.join(" · ")}</b>
-        </p>
-        <div className="entity-rule">
-          <b>통합 SKU</b>
-          <p>{signal.skuNames.join(" · ")}</p>
-          <b>키워드 선정 근거</b>
-          <p>{signal.reason}</p>
-          <b>제외어</b>
-          <p>{signal.exclude.join(" · ")}</p>
+        <div className="drawer-intro">
+          <span className="drawer-rank">제품 수요 상세</span>
+          <h2>{signal.name}</h2>
+          <p>
+            검색 키워드: <b>{signal.keywords.join(" · ")}</b>
+          </p>
+          <div className="entity-rule">
+            <b>통합 SKU</b>
+            <p>{signal.skuNames.join(" · ")}</p>
+            <b>키워드 선정 근거</b>
+            <p>{signal.reason}</p>
+            <b>제외어</b>
+            <p>{signal.exclude.join(" · ")}</p>
+          </div>
         </div>
-        <h3 className="drawer-heading">채널별 수집 현황</h3>
-        <div className="evidence-list">
-          {platforms.map((p) => {
-            const st = statusOf(signal, p.id, manual);
-            return (
-              <button key={p.id} onClick={() => onOpen(p.id)}>
-                <span className={`status-dot ${st}`} />
-                <div>
+        <div className="drawer-scroll">
+          <h3 className="drawer-heading">채널별 수집 현황</h3>
+          <div className="evidence-list">
+            {platforms.map((p) => {
+              const st = statusOf(signal, p.id, manual);
+              return (
+                <button key={p.id} onClick={() => onOpen(p.id)}>
+                  <span className={`status-dot ${st}`} />
                   <b>{p.name}</b>
                   <small>{p.rule}</small>
-                </div>
-                <strong>
-                  {st === "auto"
-                    ? "자동 확보"
-                    : st === "manual"
-                      ? "확인 완료"
-                      : "확인 필요"}
-                </strong>
-                <i>›</i>
-              </button>
-            );
-          })}
-        </div>
-        <div className="score-lock">
-          <b>수요 점수 계산 전</b>
-          <p>
-            채널별 근거가 모이면 제품의 온라인 관심 흐름을 한눈에 비교할 수
-            있습니다.
-          </p>
+                  <strong>
+                    {st === "auto"
+                      ? "자동 확보"
+                      : st === "manual"
+                        ? "확인 완료"
+                        : "확인 필요"}
+                  </strong>
+                  <i>›</i>
+                </button>
+              );
+            })}
+          </div>
+          <div className="score-lock">
+            <b>수요 점수 계산 전</b>
+            <p>
+              채널별 근거가 모이면 제품의 온라인 관심 흐름을 한눈에 비교할 수
+              있습니다.
+            </p>
+          </div>
         </div>
       </aside>
     </div>
@@ -851,6 +853,15 @@ export default function Home() {
     platform: Platform;
   } | null>(null);
   const [selectedProduct, setSelectedProduct] = useState<Signal | null>(null);
+  useEffect(() => {
+    const modalOpen = Boolean(selectedProduct || open);
+    if (!modalOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [selectedProduct, open]);
   useEffect(() => {
     try {
       setManual(
