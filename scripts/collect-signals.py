@@ -1,4 +1,4 @@
-"""Collect public demand signals for the top pharmacy products.
+"""Collect public demand signals for pharmacy products.
 
 No API keys are used. YouTube and Naver values are samples from their public
 search result pages, not exhaustive platform totals. Raw URLs and timestamps
@@ -17,7 +17,6 @@ import urllib.parse
 import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-SALES_PATH = ROOT / "app" / "sales-data.json"
 ENTITIES_PATH = ROOT / "app" / "demand-entities.json"
 OUTPUT_PATH = ROOT / "app" / "signals.json"
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/138 Safari/537.36"

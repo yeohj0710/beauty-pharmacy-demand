@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import sales from "./sales-data.json";
+import catalog from "./product-catalog.json";
 import signalFile from "./signals.json";
 
-type Sales = (typeof sales)[number];
-type Signal = (typeof signalFile.products)[number];
+type Signal = any;
 type Platform = "youtube" | "instagram" | "tiktok" | "naver" | "google";
 type ManualRecord = {
   contentCount: string;
@@ -37,20 +36,50 @@ const platforms: { id: Platform; name: string; rule: string }[] = [
   { id: "naver", name: "네이버", rule: "검색 노출 · 블로그 · 카페 결과" },
   { id: "google", name: "Google", rule: "검색 결과 · Trends 관심도" },
 ];
+const knownSkuNames = new Set(
+  signalFile.products.flatMap((product) => product.skuNames),
+);
+const catalogSignals: Signal[] = catalog.products
+  .filter((name) => !knownSkuNames.has(name))
+  .map((name) => {
+    const keyword = name
+      .replace(/\([^)]*\)/g, " ")
+      .replace(/\b\d+(?:\.\d+)?\s*(?:ml|g|mg|매|포|정|캡슐|튜브)\b/gi, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    const manualSource = (platform: string) => ({
+      status: "manual_required",
+      reason: `${platform}에서 사람이 검색 결과를 확인해야 합니다.`,
+      sourceUrl: "",
+    });
+    return {
+      id: `catalog-${name}`,
+      name: keyword || name,
+      keyword: keyword || name,
+      keywords: [keyword || name],
+      skuNames: [name],
+      exclude: [],
+      reason:
+        "내부 자료에서는 제품명만 참조했으며 대표 검색어는 조사자가 검토합니다.",
+      youtube: manualSource("YouTube"),
+      instagram: manualSource("Instagram"),
+      tiktok: manualSource("TikTok"),
+      naver: manualSource("네이버"),
+      google: manualSource("Google"),
+    };
+  });
+const allProducts: Signal[] = [...signalFile.products, ...catalogSignals];
 const money = (v: number) =>
   `${Math.round(v / 10000).toLocaleString("ko-KR")}만원`;
 const fmt = (v?: number | null) =>
   v == null ? "—" : v.toLocaleString("ko-KR");
 
 function saleFor(signal: Signal) {
-  const rows = sales.filter((row) => signal.skuNames.includes(row.name));
-  const revenue = rows.reduce((sum, row) => sum + row.revenue, 0);
-  const profit = rows.reduce((sum, row) => sum + row.profit, 0);
   return {
-    revenue,
-    profit,
-    units: rows.reduce((sum, row) => sum + row.units, 0),
-    margin: revenue ? Math.round((profit / revenue) * 1000) / 10 : 0,
+    revenue: 0,
+    profit: 0,
+    units: 0,
+    margin: 0,
   };
 }
 
@@ -241,20 +270,20 @@ function ProductDrawer({
         </div>
         <div className="sale-facts drawer-facts">
           <div>
-            <span>30일 매출</span>
-            <strong>{money(sale.revenue)}</strong>
+            <span>매출 데이터</span>
+            <strong>비공개</strong>
           </div>
           <div>
-            <span>판매량</span>
-            <strong>{fmt(sale.units)}개</strong>
+            <span>판매량 데이터</span>
+            <strong>비공개</strong>
           </div>
           <div>
-            <span>순이익</span>
-            <strong>{money(sale.profit)}</strong>
+            <span>순이익 데이터</span>
+            <strong>비공개</strong>
           </div>
           <div>
-            <span>이익률</span>
-            <strong>{sale.margin}%</strong>
+            <span>이익률 데이터</span>
+            <strong>비공개</strong>
           </div>
         </div>
         <h3 className="drawer-heading">채널별 수집 현황</h3>
@@ -296,10 +325,8 @@ function Overview({
   manual: Record<string, ManualRecord>;
   onSelect: (signal: Signal) => void;
 }) {
-  const top = [...signalFile.products].sort(
-    (a, b) => saleFor(b).revenue - saleFor(a).revenue,
-  );
-  const autoCount = signalFile.products.reduce(
+  const top = allProducts;
+  const autoCount = allProducts.reduce(
     (n, s) =>
       n + platforms.filter((p) => statusOf(s, p.id, manual) === "auto").length,
     0,
@@ -332,18 +359,18 @@ function Overview({
         <article>
           <p>MVP 대상</p>
           <strong>
-            {signalFile.products.length}
+            {allProducts.length}
             <small>개 수요 개체</small>
           </strong>
-          <span>30일 매출 상위 제품</span>
+          <span>제품명만 내부 자료에서 참조</span>
         </article>
         <article>
           <p>수집 작업</p>
           <strong>
-            {signalFile.products.length * 5}
+            {allProducts.length * 5}
             <small>건</small>
           </strong>
-          <span>수요 개체 {signalFile.products.length} × 채널 5</span>
+          <span>수요 개체 {allProducts.length} × 채널 5</span>
         </article>
         <article>
           <p>자동 확보</p>
@@ -365,8 +392,8 @@ function Overview({
       <section className="panel ranking-panel">
         <div className="section-head">
           <div>
-            <p className="section-kicker">실판매 기준선</p>
-            <h2>검증할 상위 10개 제품</h2>
+            <p className="section-kicker">제품명 기준</p>
+            <h2>수요를 조사할 제품</h2>
           </div>
           <span className="real-badge">제품을 눌러 상세 보기</span>
         </div>
@@ -376,9 +403,9 @@ function Overview({
               <tr>
                 <th>순위</th>
                 <th>제품</th>
-                <th>30일 매출</th>
-                <th>판매</th>
-                <th>순이익</th>
+                <th>제품 정보</th>
+                <th>판매 데이터</th>
+                <th>재무 데이터</th>
                 <th>수집 현황</th>
               </tr>
             </thead>
@@ -407,10 +434,10 @@ function Overview({
                       </small>
                     </td>
                     <td>
-                      <strong>{money(sale.revenue)}</strong>
+                      <strong>{s.skuNames.length}개 SKU</strong>
                     </td>
-                    <td>{fmt(sale.units)}개</td>
-                    <td>{money(sale.profit)}</td>
+                    <td>비공개</td>
+                    <td>비공개</td>
                     <td>
                       <div className="progress-label">
                         <b>{done}/5 확보</b>
@@ -472,7 +499,7 @@ function Collection({
             <span key={p.id}>{p.name}</span>
           ))}
         </div>
-        {signalFile.products.map((s, i) => (
+        {allProducts.map((s, i) => (
           <div className="board-row" key={s.name}>
             <div>
               <b>
@@ -527,7 +554,7 @@ function Products({
   manual: Record<string, ManualRecord>;
   onOpen: (s: Signal, p: Platform) => void;
 }) {
-  const [selected, setSelected] = useState(signalFile.products[0]);
+  const [selected, setSelected] = useState(allProducts[0]);
   const sale = saleFor(selected);
   return (
     <section className="page-section">
@@ -538,7 +565,7 @@ function Products({
       </div>
       <div className="validation-layout">
         <div className="product-list">
-          {signalFile.products.map((s, i) => (
+          {allProducts.map((s, i) => (
             <button
               className={selected.name === s.name ? "active" : ""}
               onClick={() => setSelected(s)}
@@ -553,24 +580,24 @@ function Products({
           ))}
         </div>
         <div className="panel validation-detail">
-          <span className="drawer-rank">실판매 기준</span>
+          <span className="drawer-rank">제품 수요 조사</span>
           <h2>{selected.name}</h2>
           <div className="sale-facts">
             <div>
-              <span>30일 매출</span>
-              <strong>{money(sale.revenue)}</strong>
+              <span>매출 데이터</span>
+              <strong>비공개</strong>
             </div>
             <div>
-              <span>판매량</span>
-              <strong>{fmt(sale.units)}개</strong>
+              <span>판매량 데이터</span>
+              <strong>비공개</strong>
             </div>
             <div>
-              <span>순이익</span>
-              <strong>{money(sale.profit)}</strong>
+              <span>순이익 데이터</span>
+              <strong>비공개</strong>
             </div>
             <div>
-              <span>이익률</span>
-              <strong>{sale.margin}%</strong>
+              <span>이익률 데이터</span>
+              <strong>비공개</strong>
             </div>
           </div>
           <h3>채널별 수집 근거</h3>
@@ -697,12 +724,12 @@ function ResearchWorkspace({
       <div className="workspace-summary">
         <div>
           <span>조사 대상</span>
-          <strong>{signalFile.products.length}개 수요 개체</strong>
+          <strong>{allProducts.length}개 수요 개체</strong>
         </div>
         <div>
           <span>직접 입력 완료</span>
           <strong>
-            {Object.keys(manual).length} / {signalFile.products.length * 5}건
+            {Object.keys(manual).length} / {allProducts.length * 5}건
           </strong>
         </div>
         <div>
@@ -728,7 +755,7 @@ function ResearchWorkspace({
         다른 PC로 옮길 때는 JSON을 내보내고 가져오세요.
       </div>
       <div className="research-list">
-        {signalFile.products.map((signal, index) => (
+        {allProducts.map((signal, index) => (
           <article className="research-card" key={signal.name}>
             <div className="research-card-head">
               <div>
