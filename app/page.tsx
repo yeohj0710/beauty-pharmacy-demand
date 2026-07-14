@@ -140,7 +140,7 @@ function platformSummary(signal: Signal, platform: Platform) {
     return `${fmt(value.acceptedCount)}건 채택 · 조회 ${fmt(value.totals?.views)} · 좋아요 ${fmt(value.totals?.likes)}`;
   }
   if (["no_results", "no_relevant_results"].includes(value?.status)) {
-    return value.status === "no_results" ? "검색 결과 없음" : "제품 관련 콘텐츠 없음";
+    return value?.status === "no_results" ? "검색 결과 없음" : "제품 관련 콘텐츠 없음";
   }
   if (platform === "google" && value?.status === "collected") {
     return `최근 4주 평균 ${fmt(value.recent4WeekAverage)} · 증감 ${value.changePct == null ? "비교 불가" : `${value.changePct > 0 ? "+" : ""}${value.changePct}%`}`;
