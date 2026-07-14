@@ -127,6 +127,24 @@ function statusOf(
       : "blocked";
 }
 
+function platformSummary(signal: Signal, platform: Platform) {
+  const value = getAuto(signal, platform);
+  if (platform === "naver" && value?.trend) {
+    const trend = value.trend;
+    return `기준어 대비 ${fmt(trend.anchorNormalizedLatest30)} · 30일 증감 ${trend.changePct > 0 ? "+" : ""}${trend.changePct ?? "—"}%`;
+  }
+  if (platform === "youtube" && value?.status === "collected") {
+    return `${fmt(value.resultSampleCount)}개 영상 · 조회 ${fmt(value.totalViews)}`;
+  }
+  if (platform === "instagram" && value?.status === "collected") {
+    return `${fmt(value.acceptedCount)}건 채택 · 독립 콘텐츠 ${fmt(value.classificationCounts?.independent)}건`;
+  }
+  if (platform === "google" && value?.status === "rate_limited") {
+    return "Google Trends 429 · 재수집 대기";
+  }
+  return platforms.find((item) => item.id === platform)?.rule || "";
+}
+
 function CollectionDrawer({
   signal,
   platform,
@@ -259,10 +277,15 @@ function CollectionDrawer({
               <>
                 {auto.trend ? (
                   <>
-                    <strong>최근 30일 평균 {fmt(auto.trend.latest30Mean)}</strong>
+                    <strong>
+                      기준어 대비 {fmt(auto.trend.anchorNormalizedLatest30)}
+                    </strong>
                     <p>
-                      직전 30일 대비 {auto.trend.changePct > 0 ? "+" : ""}
-                      {auto.trend.changePct}% · 최근 1년 최고값을 100으로 둔 상대지수
+                      최근 30일 평균 {fmt(auto.trend.latest30Mean)} · 직전 30일 대비{" "}
+                      {auto.trend.changePct > 0 ? "+" : ""}{auto.trend.changePct}%
+                    </p>
+                    <p>
+                      공통 기준어: {auto.trend.anchor} · DataLab 공개 상대지수
                     </p>
                   </>
                 ) : (
@@ -446,7 +469,7 @@ function ProductDrawer({
                 <button key={p.id} onClick={() => onOpen(p.id)}>
                   <span className={`status-dot ${st}`} />
                   <b>{p.name}</b>
-                  <small>{p.rule}</small>
+                  <small>{platformSummary(signal, p.id)}</small>
                   <strong>
                     {st === "auto"
                       ? "자동 확보"
@@ -460,10 +483,10 @@ function ProductDrawer({
             })}
           </div>
           <div className="score-lock">
-            <b>수요 점수 계산 전</b>
+            <b>검색 관심도 수집 반영</b>
             <p>
-              채널별 근거가 모이면 제품의 온라인 관심 흐름을 한눈에 비교할 수
-              있습니다.
+              네이버는 공통 기준어 대비 상대 검색 관심도입니다. Google은 실제
+              Trends 수집이 성공한 뒤에만 값이 표시됩니다.
             </p>
           </div>
         </div>
@@ -671,7 +694,7 @@ function Collection({
                   <i />
                   {status === "auto"
                     ? p.id === "naver" && auto?.trend
-                      ? `30일 ${auto.trend.latest30Mean}`
+                      ? `기준어 대비 ${auto.trend.anchorNormalizedLatest30}`
                       : p.id === "youtube"
                       ? `${auto?.resultSampleCount || 0}개 영상`
                       : p.id === "naver"
