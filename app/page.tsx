@@ -765,7 +765,23 @@ function ResearchWorkspace({
                     }
                     key={platform.id}
                   >
-                    <button onClick={() => onOpen(signal, platform.id)}>
+                    <button
+                      onClick={() =>
+                        onOpen(
+                          {
+                            ...signal,
+                            keywords: (
+                              keywordDrafts[signal.name] ??
+                              signal.keywords.join(",")
+                            )
+                              .split(",")
+                              .map((keyword) => keyword.trim())
+                              .filter(Boolean),
+                          },
+                          platform.id,
+                        )
+                      }
+                    >
                       <span>{platform.name}</span>
                       <b>{record ? "수정" : "입력"}</b>
                       <small>
