@@ -48,9 +48,19 @@ const numericValue = (value: string) => {
 
 const platforms: { id: Platform; name: string; rule: string }[] = [
   {
+    id: "naver",
+    name: "네이버",
+    rule: "DataLab 검색어 트렌드 · 최근 1년 · 별칭을 한 키워드군으로 묶어 최근 30일 평균과 증감 비교",
+  },
+  {
+    id: "google",
+    name: "Google",
+    rule: "Google Trends · 대한민국 · 최근 1년 · 검색 관심도와 증감 비교 · 429 발생 시 재수집 대기",
+  },
+  {
     id: "youtube",
     name: "YouTube",
-    rule: "최근 365일 · 상위 20개 검토 · 관련 영상 최대 10개 · Shorts 분리",
+    rule: "최근 365일 · 상위 20개 검토 · 관련 영상 최대 10개 · 조회수 중앙값과 합계 · Shorts 분리",
   },
   {
     id: "instagram",
@@ -61,16 +71,6 @@ const platforms: { id: Platform; name: string; rule: string }[] = [
     id: "tiktok",
     name: "TikTok",
     rule: "최근 180일 · 상위 20개 검토 · 관련 영상 최대 10개 · 공유 포함",
-  },
-  {
-    id: "naver",
-    name: "네이버",
-    rule: "통합검색·VIEW 상위 20개 검토 · 관련 결과 최대 10개 · 체험단 분리",
-  },
-  {
-    id: "google",
-    name: "Google",
-    rule: "자연검색 상위 20개 검토 · 관련 결과 최대 10개 · 광고·쇼핑 제외",
   },
 ];
 const knownSkuNames = new Set(
@@ -257,11 +257,23 @@ function CollectionDrawer({
             )}
             {platform === "naver" && (
               <>
-                <strong>
-                  블로그 {fmt(auto.blogResultSampleCount)}개 · 카페{" "}
-                  {fmt(auto.cafeResultSampleCount)}개
-                </strong>
-                <p>공개 검색 첫 화면에서 확인된 링크 표본입니다.</p>
+                {auto.trend ? (
+                  <>
+                    <strong>최근 30일 평균 {fmt(auto.trend.latest30Mean)}</strong>
+                    <p>
+                      직전 30일 대비 {auto.trend.changePct > 0 ? "+" : ""}
+                      {auto.trend.changePct}% · 최근 1년 최고값을 100으로 둔 상대지수
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <strong>
+                      블로그 {fmt(auto.blogResultSampleCount)}개 · 카페{" "}
+                      {fmt(auto.cafeResultSampleCount)}개
+                    </strong>
+                    <p>DataLab 시계열 수집 전 참고용 공개 검색 링크입니다.</p>
+                  </>
+                )}
               </>
             )}
             {platform === "google" && (
@@ -485,8 +497,8 @@ function Overview({
             한곳에서 확인하세요
           </h1>
           <p className="hero-copy">
-            등록된 제품을 YouTube, Instagram, TikTok, 네이버, Google에서
-            <br className="desktop" /> 같은 기준으로 조사하고 근거와 함께
+            등록된 제품을 네이버, Google, YouTube, Instagram, TikTok에서
+            <br className="desktop" /> 플랫폼별 기준으로 조사하고 근거와 함께
             정리합니다.
           </p>
         </div>
@@ -521,7 +533,7 @@ function Overview({
             {autoCount}
             <small>건</small>
           </strong>
-          <span>YouTube · 네이버 공개 표본</span>
+          <span>DataLab · YouTube · 공개 근거</span>
         </article>
         <article>
           <p>사람 확인 완료</p>
@@ -658,7 +670,9 @@ function Collection({
                 >
                   <i />
                   {status === "auto"
-                    ? p.id === "youtube"
+                    ? p.id === "naver" && auto?.trend
+                      ? `30일 ${auto.trend.latest30Mean}`
+                      : p.id === "youtube"
                       ? `${auto?.resultSampleCount || 0}개 영상`
                       : p.id === "naver"
                         ? `${(auto?.blogResultSampleCount || 0) + (auto?.cafeResultSampleCount || 0)}개 링크`
@@ -675,12 +689,12 @@ function Collection({
         ))}
       </div>
       <div className="panel collection-note">
-        <h3>왜 자동·수동을 섞나요?</h3>
+        <h3>플랫폼마다 수요 신호가 다릅니다</h3>
         <p>
-          Instagram과 TikTok은 로그인·모바일 조회 또는 승인된 API가 필요합니다.
-          억지로 가짜 점수를 만들지 않고, 담당자가 같은 기준으로 확인해 증빙
-          URL과 함께 기록하도록 했습니다. YouTube·네이버·Google도 공개 검색
-          표본과 공식 API 전체값을 구분합니다.
+          네이버는 DataLab 상대 검색지수, Google은 Trends 관심도, YouTube는
+          조회수, Instagram과 TikTok은 게시물별 반응을 봅니다. 서로 다른 숫자를
+          억지로 합치지 않고 원본 URL과 수집 시각을 남긴 뒤, 채널별 정규화 점수만
+          비교합니다.
         </p>
       </div>
     </section>
@@ -786,10 +800,10 @@ function Method() {
         </article>
         <article>
           <span>02</span>
-          <h3>상위 10개 MVP</h3>
+          <h3>전체 제품 순차 조사</h3>
           <p>
-            전체 제품을 한 번에 긁지 않고 판매 상위 제품부터 5개 채널의 수집
-            가능성을 검증합니다.
+            등록된 전체 제품을 조사합니다. 채널 우선순위는 네이버 DataLab,
+            Google Trends, YouTube, Instagram, TikTok 순입니다.
           </p>
         </article>
         <article>
@@ -802,10 +816,10 @@ function Method() {
         </article>
         <article>
           <span>04</span>
-          <h3>실판매 상관 검증</h3>
+          <h3>채널별 점수 정규화</h3>
           <p>
-            30일 환산 판매 순위와 온라인 순위의 일치도를 확인한 후 플랫폼
-            가중치를 결정합니다.
+            검색 관심도, 조회수, 반응 수처럼 단위가 다른 신호를 채널 안에서 먼저
+            비교하고, 데이터 품질에 따라 가중치를 결정합니다.
           </p>
         </article>
       </div>
@@ -814,7 +828,7 @@ function Method() {
         <i>→</i>
         <span>이상치·광고 보정</span>
         <i>→</i>
-        <span>실판매 순위 비교</span>
+        <span>채널별 정규화</span>
         <i>→</i>
         <strong>가중치 확정</strong>
       </div>
