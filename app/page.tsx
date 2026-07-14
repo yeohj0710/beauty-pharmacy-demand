@@ -21,20 +21,28 @@ const platforms: { id: Platform; name: string; rule: string }[] = [
   {
     id: "youtube",
     name: "YouTube",
-    rule: "콘텐츠 수 · 조회수 · 좋아요 · 댓글",
+    rule: "최근 365일 · 상위 20개 검토 · 관련 영상 최대 10개 · Shorts 분리",
   },
   {
     id: "instagram",
     name: "Instagram",
-    rule: "최근 7일 릴스 · 조회수 · 반응 · 광고 구분",
+    rule: "최근 180일 · 상위 20개 검토 · 관련 게시물 최대 10개 · 협찬 분리",
   },
   {
     id: "tiktok",
     name: "TikTok",
-    rule: "영상 수 · 조회수 · 좋아요 · 댓글 · 공유",
+    rule: "최근 180일 · 상위 20개 검토 · 관련 영상 최대 10개 · 공유 포함",
   },
-  { id: "naver", name: "네이버", rule: "검색 노출 · 블로그 · 카페 결과" },
-  { id: "google", name: "Google", rule: "검색 결과 · Trends 관심도" },
+  {
+    id: "naver",
+    name: "네이버",
+    rule: "통합검색·VIEW 상위 20개 검토 · 관련 결과 최대 10개 · 체험단 분리",
+  },
+  {
+    id: "google",
+    name: "Google",
+    rule: "자연검색 상위 20개 검토 · 관련 결과 최대 10개 · 광고·쇼핑 제외",
+  },
 ];
 const knownSkuNames = new Set(
   signalFile.products.flatMap((product) => product.skuNames),

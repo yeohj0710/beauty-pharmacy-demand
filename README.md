@@ -1,12 +1,13 @@
-# Product Demand Dashboard
+# 제품 수요 대시보드
 
-제품별 온라인 관심 신호를 수집하고 근거와 함께 검토하는 대시보드입니다.
+제품별 온라인 관심 신호를 수집하고 원본 근거와 함께 검토하는 대시보드입니다.
 
-## 현재 데이터
+## 데이터 범위
 
-- 등록 제품의 제품명 목록
-- 판매수량, 매출, 순이익, 이익률, 90일 월평균 비교
-- 온라인 신호는 수집 파이프라인 연결 전 검증용 샘플이며 실제 지표가 아닙니다.
+- 등록 제품명과 수요 개체
+- YouTube, Instagram, TikTok, 네이버, Google의 공개 검색 결과
+- 조사자가 직접 확인한 콘텐츠 지표와 원본 URL
+- 내부 매출·판매량·순이익·이익률은 사용하지 않습니다.
 
 ## 실행
 
@@ -15,9 +16,7 @@ npm install
 npm run dev
 ```
 
-## 다음 연결 순서
+## 조사 기준
 
-1. 네이버 데이터랩과 Google Trends
-2. YouTube 콘텐츠·조회·반응 데이터
-3. Instagram과 TikTok 수집 가능성 검증
-4. 채널별 관심 신호 비교 및 검토
+- 에이전트 실행 절차: [AGENTS.md](./AGENTS.md)
+- 플랫폼별 표본·판정·점수 기준: [docs/collection-protocol.md](./docs/collection-protocol.md)
