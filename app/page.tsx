@@ -6,6 +6,17 @@ import signalFile from "./signals.json";
 
 type Signal = any;
 type Platform = "youtube" | "instagram" | "tiktok" | "naver" | "google";
+type ManualItem = {
+  id: string;
+  label: string;
+  url: string;
+  views: string;
+  likes: string;
+  comments: string;
+  shares: string;
+  classification: "independent" | "sponsored" | "official";
+  note: string;
+};
 type ManualRecord = {
   contentCount: string;
   views: string;
@@ -15,6 +26,24 @@ type ManualRecord = {
   evidenceUrl: string;
   note: string;
   collectedAt: string;
+  items?: ManualItem[];
+};
+
+const newManualItem = (): ManualItem => ({
+  id: crypto.randomUUID(),
+  label: "",
+  url: "",
+  views: "",
+  likes: "",
+  comments: "",
+  shares: "",
+  classification: "independent",
+  note: "",
+});
+
+const numericValue = (value: string) => {
+  const parsed = Number(value.replace(/[^0-9.-]/g, ""));
+  return Number.isFinite(parsed) ? parsed : 0;
 };
 
 const platforms: { id: Platform; name: string; rule: string }[] = [
@@ -115,8 +144,8 @@ function CollectionDrawer({
 }) {
   const meta = platforms.find((p) => p.id === platform)!;
   const auto = getAuto(signal, platform);
-  const [form, setForm] = useState<ManualRecord>(
-    existing || {
+  const [form, setForm] = useState<ManualRecord>(() => {
+    const base = existing || {
       contentCount: "",
       views: "",
       likes: "",
@@ -125,22 +154,60 @@ function CollectionDrawer({
       evidenceUrl: auto?.sourceUrl || "",
       note: "",
       collectedAt: new Date().toISOString(),
-    },
+    };
+    const legacyItem =
+      existing && !existing.items?.length
+        ? {
+            ...newManualItem(),
+            label: "기존 입력값",
+            url: existing.evidenceUrl,
+            views: existing.views,
+            likes: existing.likes,
+            comments: existing.comments,
+            shares: existing.shares,
+            note: existing.note,
+          }
+        : null;
+    return {
+      ...base,
+      items: existing?.items?.length
+        ? existing.items
+        : legacyItem
+          ? [legacyItem]
+          : [newManualItem()],
+    };
+  });
+  const items = form.items || [];
+  const totals = useMemo(
+    () => ({
+      count: items.filter((item) =>
+        [item.label, item.url, item.views, item.likes, item.comments, item.shares].some(
+          Boolean,
+        ),
+      ).length,
+      views: items.reduce((sum, item) => sum + numericValue(item.views), 0),
+      likes: items.reduce((sum, item) => sum + numericValue(item.likes), 0),
+      comments: items.reduce((sum, item) => sum + numericValue(item.comments), 0),
+      shares: items.reduce((sum, item) => sum + numericValue(item.shares), 0),
+    }),
+    [items],
   );
-  const field = (
-    key: keyof ManualRecord,
-    label: string,
-    placeholder = "숫자 입력",
-  ) => (
-    <label>
-      <span>{label}</span>
-      <input
-        value={form[key]}
-        placeholder={placeholder}
-        onChange={(e) => setForm({ ...form, [key]: e.target.value })}
-      />
-    </label>
-  );
+  const updateItem = (id: string, key: keyof ManualItem, value: string) =>
+    setForm({
+      ...form,
+      items: items.map((item) =>
+        item.id === id ? { ...item, [key]: value } : item,
+      ),
+    });
+  const addItem = () => setForm({ ...form, items: [...items, newManualItem()] });
+  const removeItem = (id: string) =>
+    setForm({
+      ...form,
+      items:
+        items.length === 1
+          ? [newManualItem()]
+          : items.filter((item) => item.id !== id),
+    });
   return (
     <div className="drawer-backdrop" onClick={onClose}>
       <aside
@@ -242,20 +309,75 @@ function CollectionDrawer({
           </div>
         )}
         <div className="manual-form">
-          <h3>수동 확인값 기록</h3>
-          <div className="form-grid">
-            {field("contentCount", "콘텐츠 수")}
-            {field("views", "조회수 합계")}
-            {field("likes", "좋아요 합계")}
-            {field("comments", "댓글 합계")}
-            {field("shares", "공유 합계")}
+          <div className="manual-form-head">
+            <div>
+              <h3>게시물별 기록</h3>
+              <p>게시물마다 보이는 숫자만 입력하면 합계는 자동 계산됩니다.</p>
+            </div>
+            <button type="button" onClick={addItem}>+ 게시물 추가</button>
           </div>
-          {field("evidenceUrl", "증빙 URL", "https://...")}
-          {field("note", "메모", "검색 조건, 광고 제외 기준 등")}
+          <div className="manual-total-grid">
+            <div><span>콘텐츠</span><strong>{fmt(totals.count)}개</strong></div>
+            <div><span>조회수</span><strong>{fmt(totals.views)}</strong></div>
+            <div><span>좋아요</span><strong>{fmt(totals.likes)}</strong></div>
+            <div><span>댓글</span><strong>{fmt(totals.comments)}</strong></div>
+            <div><span>공유</span><strong>{fmt(totals.shares)}</strong></div>
+          </div>
+          <div className="manual-items">
+            {items.map((item, index) => (
+              <section className="manual-item" key={item.id}>
+                <div className="manual-item-head">
+                  <strong>게시물 {index + 1}</strong>
+                  <select
+                    aria-label={`게시물 ${index + 1} 유형`}
+                    value={item.classification}
+                    onChange={(e) => updateItem(item.id, "classification", e.target.value)}
+                  >
+                    <option value="independent">독립 콘텐츠</option>
+                    <option value="sponsored">협찬·광고</option>
+                    <option value="official">공식 계정</option>
+                  </select>
+                  <button type="button" onClick={() => removeItem(item.id)}>삭제</button>
+                </div>
+                <div className="manual-item-main">
+                  <label>
+                    <span>계정·제목</span>
+                    <input value={item.label} placeholder="@계정 또는 게시물 제목" onChange={(e) => updateItem(item.id, "label", e.target.value)} />
+                  </label>
+                  <label>
+                    <span>원문 URL</span>
+                    <input value={item.url} placeholder="https://..." onChange={(e) => updateItem(item.id, "url", e.target.value)} />
+                  </label>
+                </div>
+                <div className="manual-item-metrics">
+                  {(["views", "likes", "comments", "shares"] as const).map((key) => (
+                    <label key={key}>
+                      <span>{{ views: "조회수", likes: "좋아요", comments: "댓글", shares: "공유" }[key]}</span>
+                      <input inputMode="numeric" value={item[key]} placeholder="0" onChange={(e) => updateItem(item.id, key, e.target.value)} />
+                    </label>
+                  ))}
+                </div>
+                <label className="manual-item-note">
+                  <span>메모</span>
+                  <input value={item.note} placeholder="관련성·광고 여부 등" onChange={(e) => updateItem(item.id, "note", e.target.value)} />
+                </label>
+              </section>
+            ))}
+          </div>
           <button
             className="primary"
             onClick={() =>
-              onSave({ ...form, collectedAt: new Date().toISOString() })
+              onSave({
+                ...form,
+                contentCount: String(totals.count),
+                views: String(totals.views),
+                likes: String(totals.likes),
+                comments: String(totals.comments),
+                shares: String(totals.shares),
+                evidenceUrl: items.find((item) => item.url)?.url || auto?.sourceUrl || "",
+                note: `${items.filter((item) => item.classification === "sponsored").length}개 협찬·광고 분리`,
+                collectedAt: new Date().toISOString(),
+              })
             }
           >
             수집값 저장
