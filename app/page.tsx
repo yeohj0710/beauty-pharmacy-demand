@@ -884,7 +884,7 @@ export default function Home() {
     ["overview", "수요 개요", "⌁"],
     ["collection", "데이터 수집", "◎"],
     ["products", "제품 검증", "▦"],
-    ["method", "수집 기준", "◇"],
+    ["method", "조사 관리", "◇"],
   ] as const;
   return (
     <div className="app-shell">
