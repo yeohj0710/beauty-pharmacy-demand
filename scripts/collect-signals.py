@@ -111,7 +111,7 @@ def collect_youtube(keyword: str) -> dict:
             break
     numeric_views = [video["views"] for video in videos if video["views"] is not None]
     return {
-        "status": "collected",
+        "status": "collected" if videos else "manual_required",
         "sourceUrl": url,
         "resultSampleCount": len(videos),
         "viewSampleCount": len(numeric_views),
@@ -127,7 +127,7 @@ def collect_naver(keyword: str) -> dict:
     blog_urls = sorted(set(re.findall(r"https?://blog\.naver\.com/[A-Za-z0-9_.%-]+/[0-9]+", html)))
     cafe_urls = sorted(set(re.findall(r"https?://cafe\.naver\.com/[A-Za-z0-9_.%-]+/[0-9]+", html)))
     return {
-        "status": "collected",
+        "status": "collected" if (blog_urls or cafe_urls) else "manual_required",
         "sourceUrl": url,
         "blogResultSampleCount": len(blog_urls),
         "cafeResultSampleCount": len(cafe_urls),
@@ -145,11 +145,12 @@ def collect_google(keyword: str) -> dict:
             outbound.append(candidate)
     outbound = list(dict.fromkeys(outbound))
     return {
-        "status": "collected",
+        "status": "collected" if outbound else "manual_required",
         "sourceUrl": url,
         "organicResultSampleCount": len(outbound),
         "sampleUrls": outbound[:5],
         "note": "공개 Google 검색 첫 화면의 유기적 결과 표본",
+        "reason": None if outbound else "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음",
     }
 
 
