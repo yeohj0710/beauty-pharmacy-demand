@@ -77,6 +77,7 @@ def item(meta, url):
         "account": meta.get("uploader_id") or meta.get("channel") or meta.get("uploader"),
         "publishedAt": datetime.fromtimestamp(ts, timezone.utc).isoformat().replace("+00:00", "Z") if ts else None,
         "title": meta.get("title") or meta.get("description"),
+        "description": meta.get("description"),
         "views": meta.get("view_count"),
         "likes": meta.get("like_count"),
         "comments": meta.get("comment_count"),
@@ -91,6 +92,14 @@ def totals(items):
 
 def merge_channel(discovery, entity, platform, cache, candidate_limit=20, accepted_limit=10):
     row = discovery.get(entity["id"], {})
+    attempted_queries = list(dict.fromkeys(
+        [row.get("keyword") or entity["keywords"][0], *(row.get("alternateSearched") or [])]
+    ))
+    url_prefix = (
+        "https://www.instagram.com/explore/search/keyword/?q="
+        if platform == "instagram"
+        else "https://www.tiktok.com/search/video?q="
+    )
     raw_items = row.get("items", [])
     raw_candidates = row.get("urls") or [x.get("url") for x in raw_items]
     raw_candidates = [x for x in dict.fromkeys(raw_candidates) if x][:candidate_limit]
@@ -117,7 +126,9 @@ def merge_channel(discovery, entity, platform, cache, candidate_limit=20, accept
         "collectedAt": datetime.now(timezone(timedelta(hours=9))).isoformat(timespec="seconds"),
         "method": "logged_in_browser_ytdlp",
         "query": row.get("keyword") or entity["keywords"][0],
-        "sourceUrl": ("https://www.instagram.com/explore/search/keyword/?q=" if platform == "instagram" else "https://www.tiktok.com/search/video?q=") + quote(row.get("keyword") or entity["keywords"][0]),
+        "attemptedQueries": attempted_queries,
+        "sourceUrl": url_prefix + quote(row.get("keyword") or entity["keywords"][0]),
+        "sourceUrls": [url_prefix + quote(query) for query in attempted_queries],
         "inspectedCount": len(raw_candidates),
         "acceptedCount": len(accepted),
         "rejectedCount": max(0, len(raw_candidates) - len(accepted) - errors),
@@ -137,12 +148,19 @@ def merge_google(row, entity):
     previous_avg = round(sum(previous) / len(previous), 1) if previous else None
     change = round((recent_avg - previous_avg) / previous_avg * 100, 1) if previous_avg not in (None, 0) else None
     keyword = row.get("keyword") or entity["keywords"][0]
+    attempted_queries = list(dict.fromkeys([
+        entity["keywords"][0],
+        *([row.get("alternateKeywordChecked")] if row.get("alternateKeywordChecked") else []),
+        *([keyword] if row.get("alternateKeyword") else []),
+    ]))
     return {
         "status": "collected" if values else "no_data",
         "collectedAt": datetime.now(timezone(timedelta(hours=9))).isoformat(timespec="seconds"),
         "method": "google_trends_logged_in_browser",
         "query": keyword,
+        "attemptedQueries": attempted_queries,
         "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=" + quote(keyword),
+        "sourceUrls": ["https://trends.google.com/trends/explore?geo=KR&q=" + quote(query) for query in attempted_queries],
         "period": "대한민국 · 최근 12개월 · 웹 검색",
         "pointCount": len(values),
         "recent4WeekAverage": recent_avg,
