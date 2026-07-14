@@ -120,7 +120,7 @@ function statusOf(
 ) {
   if (manual[`${signal.name}::${platform}`]) return "manual";
   const auto = getAuto(signal, platform);
-  return auto?.status === "collected"
+  return ["collected", "no_results", "no_relevant_results", "no_data"].includes(auto?.status)
     ? "auto"
     : auto?.status === "manual_required"
       ? "needed"
@@ -136,11 +136,17 @@ function platformSummary(signal: Signal, platform: Platform) {
   if (platform === "youtube" && value?.status === "collected") {
     return `${fmt(value.resultSampleCount)}개 영상 · 조회 ${fmt(value.totalViews)}`;
   }
-  if (platform === "instagram" && value?.status === "collected") {
-    return `${fmt(value.acceptedCount)}건 채택 · 독립 콘텐츠 ${fmt(value.classificationCounts?.independent)}건`;
+  if (["instagram", "tiktok"].includes(platform) && value?.status === "collected") {
+    return `${fmt(value.acceptedCount)}건 채택 · 조회 ${fmt(value.totals?.views)} · 좋아요 ${fmt(value.totals?.likes)}`;
   }
-  if (platform === "google" && value?.status === "rate_limited") {
-    return "Google Trends 429 · 재수집 대기";
+  if (["no_results", "no_relevant_results"].includes(value?.status)) {
+    return value.status === "no_results" ? "검색 결과 없음" : "제품 관련 콘텐츠 없음";
+  }
+  if (platform === "google" && value?.status === "collected") {
+    return `최근 4주 평균 ${fmt(value.recent4WeekAverage)} · 증감 ${value.changePct == null ? "비교 불가" : `${value.changePct > 0 ? "+" : ""}${value.changePct}%`}`;
+  }
+  if (platform === "google" && value?.status === "no_data") {
+    return "Google Trends 검색량 부족";
   }
   return platforms.find((item) => item.id === platform)?.rule || "";
 }
