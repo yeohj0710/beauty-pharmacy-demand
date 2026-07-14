@@ -33,6 +33,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+.playwright-cli/
 
 # typescript
 next-env.d.ts

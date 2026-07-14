@@ -171,6 +171,23 @@ function CollectionDrawer({
                 </p>
               </>
             )}
+            {platform === "instagram" && (
+              <>
+                <strong>
+                  {fmt(auto.inspectedCount)}건 확인 · {fmt(auto.acceptedCount)}건 채택
+                </strong>
+                <p>
+                  독립 콘텐츠 {fmt(auto.classificationCounts?.independent)}건 · 협찬{" "}
+                  {fmt(auto.classificationCounts?.sponsored)}건 · 공식{" "}
+                  {fmt(auto.classificationCounts?.official)}건
+                </p>
+                <p>
+                  독립 콘텐츠 좋아요 {fmt(auto.independentTotals?.likes)} · 댓글{" "}
+                  {fmt(auto.independentTotals?.comments)} · 리포스트{" "}
+                  {fmt(auto.independentTotals?.reposts)}
+                </p>
+              </>
+            )}
             {platform === "naver" && (
               <>
                 <strong>
@@ -191,6 +208,26 @@ function CollectionDrawer({
             <a href={auto.sourceUrl} target="_blank">
               원본 검색 열기 ↗
             </a>
+            {platform === "instagram" && auto.items?.length > 0 && (
+              <div className="evidence-list">
+                {auto.items.map((item: any) => (
+                  <a key={item.id} href={item.url} target="_blank">
+                    <span>@{item.account}</span>
+                    <small>
+                      {item.classification === "sponsored"
+                        ? "협찬"
+                        : item.classification === "official"
+                          ? "공식"
+                          : "독립"}
+                      {" · 좋아요 "}
+                      {item.likes == null ? "비공개" : fmt(item.likes)}
+                      {" · 댓글 "}
+                      {fmt(item.comments)}
+                    </small>
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         )}
         {auto?.status !== "collected" && (

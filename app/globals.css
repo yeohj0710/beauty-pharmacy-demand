@@ -1155,6 +1155,27 @@ td > small {
   font-size: 11px;
   text-decoration: none;
 }
+.evidence-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+.evidence-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 12px;
+  border: 1px solid #d8e2dc;
+  border-radius: 10px;
+  background: #fff;
+  color: #191f28;
+  font-size: 13px;
+}
+.evidence-list small {
+  color: #6b7684;
+  text-align: right;
+}
 .manual-reason {
   background: #fff4e6;
 }
