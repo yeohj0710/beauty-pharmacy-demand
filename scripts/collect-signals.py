@@ -18,6 +18,7 @@ import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SALES_PATH = ROOT / "app" / "sales-data.json"
+ENTITIES_PATH = ROOT / "app" / "demand-entities.json"
 OUTPUT_PATH = ROOT / "app" / "signals.json"
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/138 Safari/537.36"
 
@@ -118,6 +119,7 @@ def collect_youtube(keyword: str) -> dict:
         "totalViews": sum(numeric_views),
         "medianViews": round(statistics.median(numeric_views)) if numeric_views else None,
         "topVideos": sorted(videos, key=lambda item: item["views"] or 0, reverse=True)[:3],
+        "videos": videos,
     }
 
 
@@ -132,6 +134,7 @@ def collect_naver(keyword: str) -> dict:
         "blogResultSampleCount": len(blog_urls),
         "cafeResultSampleCount": len(cafe_urls),
         "sampleUrls": (blog_urls + cafe_urls)[:5],
+        "urls": blog_urls + cafe_urls,
     }
 
 
@@ -149,6 +152,7 @@ def collect_google(keyword: str) -> dict:
         "sourceUrl": url,
         "organicResultSampleCount": len(outbound),
         "sampleUrls": outbound[:5],
+        "urls": outbound,
         "note": "공개 Google 검색 첫 화면의 유기적 결과 표본",
         "reason": None if outbound else "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음",
     }
@@ -195,43 +199,107 @@ def instagram_task(keyword: str) -> dict:
     }
 
 
+def merge_youtube(keywords: list[str], exclude: list[str]) -> dict:
+    by_id = {}
+    breakdown = []
+    source_urls = []
+    for keyword in keywords:
+        result = collect_youtube(keyword)
+        source_urls.append(result["sourceUrl"])
+        accepted = []
+        for video in result.pop("videos", []):
+            searchable = f"{video.get('title', '')} {video.get('channel', '')}".lower()
+            if any(word.lower() in searchable for word in exclude):
+                continue
+            by_id[video["id"]] = video
+            accepted.append(video["id"])
+        breakdown.append({"keyword": keyword, "rawCount": result["resultSampleCount"], "acceptedCount": len(accepted)})
+        time.sleep(0.35)
+    videos = list(by_id.values())
+    views = [video["views"] for video in videos if video.get("views") is not None]
+    return {
+        "status": "collected" if videos else "manual_required",
+        "sourceUrl": source_urls[0],
+        "sourceUrls": source_urls,
+        "queryBreakdown": breakdown,
+        "resultSampleCount": len(videos),
+        "viewSampleCount": len(views),
+        "totalViews": sum(views),
+        "medianViews": round(statistics.median(views)) if views else None,
+        "topVideos": sorted(videos, key=lambda item: item.get("views") or 0, reverse=True)[:3],
+        "deduplication": "videoId 기준 중복 제거 후 제외어 필터 적용",
+    }
+
+
+def merge_naver(keywords: list[str]) -> dict:
+    urls = set()
+    breakdown = []
+    source_urls = []
+    for keyword in keywords:
+        result = collect_naver(keyword)
+        source_urls.append(result["sourceUrl"])
+        found = result.pop("urls", [])
+        urls.update(found)
+        breakdown.append({"keyword": keyword, "resultSampleCount": len(found)})
+        time.sleep(0.35)
+    blog = sorted(url for url in urls if "blog.naver.com" in url)
+    cafe = sorted(url for url in urls if "cafe.naver.com" in url)
+    return {"status": "collected" if urls else "manual_required", "sourceUrl": source_urls[0], "sourceUrls": source_urls, "queryBreakdown": breakdown, "blogResultSampleCount": len(blog), "cafeResultSampleCount": len(cafe), "sampleUrls": (blog + cafe)[:5], "deduplication": "게시물 URL 기준 중복 제거"}
+
+
+def merge_google(keywords: list[str]) -> dict:
+    urls = set()
+    breakdown = []
+    source_urls = []
+    for keyword in keywords:
+        result = collect_google(keyword)
+        source_urls.append(result["sourceUrl"])
+        found = result.pop("urls", [])
+        urls.update(found)
+        breakdown.append({"keyword": keyword, "resultSampleCount": len(found)})
+        time.sleep(0.35)
+    return {"status": "collected" if urls else "manual_required", "sourceUrl": source_urls[0], "sourceUrls": source_urls, "queryBreakdown": breakdown, "organicResultSampleCount": len(urls), "sampleUrls": sorted(urls)[:5], "reason": None if urls else "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음", "deduplication": "결과 URL 기준 중복 제거"}
+
+
 def main() -> None:
-    products = json.loads(SALES_PATH.read_text(encoding="utf-8"))[:10]
+    entities = json.loads(ENTITIES_PATH.read_text(encoding="utf-8"))
     collected_at = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).isoformat(timespec="seconds")
     results = []
-    for index, product in enumerate(products):
-        keyword = re.sub(r"\s+(10|15|20|25|30|40|50|60|90|100|1500)\s*(ml|g|포|매|튜브)?$", "", product["name"], flags=re.I)
-        row = {"name": product["name"], "keyword": keyword, "collectedAt": collected_at, "status": "collected"}
+    for index, entity in enumerate(entities):
+        keyword = entity["keywords"][0]
+        row = {**entity, "keyword": keyword, "collectedAt": collected_at, "status": "collected"}
         errors = []
         try:
-            row["youtube"] = collect_youtube(keyword)
+            row["youtube"] = merge_youtube(entity["keywords"], entity["exclude"])
         except Exception as error:  # Preserve partial collection and make failure visible.
             errors.append(f"YouTube: {type(error).__name__}: {error}")
         try:
-            row["naver"] = collect_naver(keyword)
+            row["naver"] = merge_naver(entity["keywords"])
         except Exception as error:
             errors.append(f"Naver: {type(error).__name__}: {error}")
         try:
-            row["google"] = collect_google(keyword)
+            row["google"] = merge_google(entity["keywords"])
         except Exception as error:
             errors.append(f"Google: {type(error).__name__}: {error}")
         try:
             row["tiktok"] = collect_tiktok(keyword)
+            row["tiktok"]["sourceUrls"] = ["https://www.tiktok.com/search/video?q=" + urllib.parse.quote(query) for query in entity["keywords"]]
         except Exception as error:
             row["tiktok"] = {"status": "manual_required", "sourceUrl": "https://www.tiktok.com/search/video?q=" + urllib.parse.quote(keyword), "reason": f"자동 수집 실패: {type(error).__name__}"}
             errors.append(f"TikTok: {type(error).__name__}: {error}")
         row["instagram"] = instagram_task(keyword)
+        row["instagram"]["sourceUrls"] = ["https://www.instagram.com/explore/search/keyword/?q=" + urllib.parse.quote(query) for query in entity["keywords"]]
         if errors:
             row["status"] = "partial" if len(row) > 5 else "failed"
             row["errors"] = errors
         results.append(row)
-        if index < len(products) - 1:
+        if index < len(entities) - 1:
             time.sleep(0.8)
     OUTPUT_PATH.write_text(
         json.dumps({"collectedAt": collected_at, "scope": "top-10-by-30-day-revenue", "products": results}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    print(f"Collected {len(results)} products → {OUTPUT_PATH}")
+    print(f"Collected {len(results)} demand entities → {OUTPUT_PATH}")
 
 
 if __name__ == "__main__":

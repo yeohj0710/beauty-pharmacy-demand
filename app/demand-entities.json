@@ -1,0 +1,95 @@
+[
+  {
+    "id": "dr-rejuall-pdrn-cream",
+    "name": "닥터 리쥬올 PDRN 크림",
+    "brand": "닥터 리쥬올",
+    "category": "PDRN 재생 크림",
+    "skuNames": [
+      "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 크림 맥스 60ml",
+      "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 크림 30ml"
+    ],
+    "keywords": ["닥터 리쥬올 크림", "리쥬올 PDRN 크림", "닥터리쥬올 피디알엔 크림"],
+    "exclude": ["립 세럼", "마스크", "선 세럼"],
+    "reason": "용량·맥스 SKU를 하나의 크림 수요로 통합"
+  },
+  {
+    "id": "noscarna-gel",
+    "name": "노스카나겔",
+    "brand": "동아제약",
+    "category": "흉터 치료제",
+    "skuNames": ["노스카나겔 20g", "노스카나겔 10g"],
+    "keywords": ["노스카나겔", "노스카나", "동아제약 노스카나"],
+    "exclude": ["중고", "해외직구"],
+    "reason": "용량과 구어체 표기를 통합"
+  },
+  {
+    "id": "dr-rejuall-pdrn-lip-serum",
+    "name": "닥터 리쥬올 PDRN 립 세럼",
+    "brand": "닥터 리쥬올",
+    "category": "립 케어",
+    "skuNames": ["닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 립 세럼 10ml"],
+    "keywords": ["닥터 리쥬올 립세럼", "리쥬올 PDRN 립 세럼", "피디알엔 립세럼"],
+    "exclude": ["크림", "마스크"],
+    "reason": "브랜드·성분·제품형 통칭을 함께 수집"
+  },
+  {
+    "id": "acnon-cream",
+    "name": "애크논크림",
+    "brand": "동아제약",
+    "category": "여드름 치료제",
+    "skuNames": ["애크논크림"],
+    "keywords": ["애크논", "애크논크림", "동아제약 애크논"],
+    "exclude": ["애크린", "애크린겔"],
+    "reason": "제품 통칭과 붙여쓰기 검색을 통합"
+  },
+  {
+    "id": "melatoning-cream",
+    "name": "멜라토닝크림",
+    "brand": "동아제약",
+    "category": "색소침착 치료제",
+    "skuNames": ["멜라토닝크림"],
+    "keywords": ["멜라토닝", "멜라토닝크림", "동아제약 멜라토닝"],
+    "exclude": ["도미나", "멜라노사"],
+    "reason": "제품 통칭과 브랜드 결합 검색을 통합"
+  },
+  {
+    "id": "aclean-gel",
+    "name": "애크린겔",
+    "brand": "동아제약",
+    "category": "여드름 치료제",
+    "skuNames": ["애크린겔"],
+    "keywords": ["애크린", "애크린겔", "동아제약 애크린"],
+    "exclude": ["애크논"],
+    "reason": "제품 통칭과 붙여쓰기 검색을 통합"
+  },
+  {
+    "id": "re4day-woman-plus",
+    "name": "올인원 우먼플러스",
+    "brand": "RE4DAY",
+    "category": "여성 건강기능식품",
+    "skuNames": ["올인원 우먼플러스 15포"],
+    "keywords": ["올인원 우먼플러스", "RE4DAY 우먼플러스", "우먼플러스 15포"],
+    "exclude": ["우먼 멀티비타민"],
+    "reason": "브랜드 영문명과 용량 표기를 보조 키워드로 사용"
+  },
+  {
+    "id": "drdeep-glow-shot",
+    "name": "닥터딥 필링 글로우샷",
+    "brand": "닥터딥",
+    "category": "필링 앰플",
+    "skuNames": ["닥터딥 미네랄 프리 필링 글로우샷 1500"],
+    "keywords": ["닥터딥 글로우샷", "닥터딥 필링 글로우샷", "미네랄 프리 글로우샷"],
+    "exclude": ["턴오버 스팟 크림"],
+    "reason": "긴 정식명 대신 브랜드·제품 통칭 중심"
+  },
+  {
+    "id": "drdeep-tt-cream",
+    "name": "닥터딥 TT크림",
+    "brand": "닥터딥",
+    "category": "스팟 크림",
+    "skuNames": ["닥터딥 클리니컬 텍스쳐 턴오버 스팟 크림 40ml(TT크림)"],
+    "keywords": ["닥터딥 TT크림", "닥터딥 턴오버 스팟 크림", "닥터딥 텍스쳐 크림"],
+    "exclude": ["글로우샷"],
+    "reason": "소비자 통칭 TT크림을 대표 키워드로 사용"
+  }
+]

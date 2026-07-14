@@ -1,38 +1,60 @@
 {
-  "collectedAt": "2026-07-14T15:58:36+09:00",
+  "collectedAt": "2026-07-14T16:12:29+09:00",
   "scope": "top-10-by-30-day-revenue",
   "products": [
     {
-      "name": "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 크림 맥스 60ml",
-      "keyword": "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 크림 맥스",
-      "collectedAt": "2026-07-14T15:58:36+09:00",
+      "id": "dr-rejuall-pdrn-cream",
+      "name": "닥터 리쥬올 PDRN 크림",
+      "brand": "닥터 리쥬올",
+      "category": "PDRN 재생 크림",
+      "skuNames": [
+        "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 크림 맥스 60ml",
+        "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 크림 30ml"
+      ],
+      "keywords": [
+        "닥터 리쥬올 크림",
+        "리쥬올 PDRN 크림",
+        "닥터리쥬올 피디알엔 크림"
+      ],
+      "exclude": [
+        "립 세럼",
+        "마스크",
+        "선 세럼"
+      ],
+      "reason": "용량·맥스 SKU를 하나의 크림 수요로 통합",
+      "keyword": "닥터 리쥬올 크림",
+      "collectedAt": "2026-07-14T16:12:29+09:00",
       "status": "collected",
       "youtube": {
         "status": "collected",
-        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%ED%81%AC%EB%A6%BC%20%EB%A7%A5%EC%8A%A4",
-        "resultSampleCount": 17,
-        "viewSampleCount": 17,
-        "totalViews": 5688731,
-        "medianViews": 110316,
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%81%AC%EB%A6%BC",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%81%AC%EB%A6%BC",
+          "https://www.youtube.com/results?search_query=%EB%A6%AC%EC%A5%AC%EC%98%AC%20PDRN%20%ED%81%AC%EB%A6%BC",
+          "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%ED%81%AC%EB%A6%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "닥터 리쥬올 크림",
+            "rawCount": 11,
+            "acceptedCount": 11
+          },
+          {
+            "keyword": "리쥬올 PDRN 크림",
+            "rawCount": 12,
+            "acceptedCount": 12
+          },
+          {
+            "keyword": "닥터리쥬올 피디알엔 크림",
+            "rawCount": 4,
+            "acceptedCount": 4
+          }
+        ],
+        "resultSampleCount": 13,
+        "viewSampleCount": 13,
+        "totalViews": 1735166,
+        "medianViews": 65258,
         "topVideos": [
-          {
-            "id": "zQ-O4R3Wmq8",
-            "title": "\"10배 저렴한데, 효과는 더 좋습니다!\" 피부과 의사가 매일 쓰고 효과 본 재생크림 6가지 추천",
-            "channel": "박경열의 피부상담소",
-            "published": "3개월 전",
-            "views": 1536730,
-            "viewsText": "조회수 1,536,730회",
-            "url": "https://www.youtube.com/watch?v=zQ-O4R3Wmq8"
-          },
-          {
-            "id": "34jcAuEGzYc",
-            "title": "잠들기 직전까지 관리하는 탑모델 한혜진의 나이트루틴 최초공개｜마스크팩, 스킨케어, 마사지기 정보 (주름, 탄력, 보습 다 잡는 동안 피부 비결)",
-            "channel": "한혜진 Han Hye Jin",
-            "published": "2년 전",
-            "views": 1141272,
-            "viewsText": "조회수 1,141,272회",
-            "url": "https://www.youtube.com/watch?v=34jcAuEGzYc"
-          },
           {
             "id": "yAL3S2n8Pck",
             "title": "“리쥬란보다 10배 저렴….” ㅣ의사가 직접 써보고 추천하는 재생크림 4가지",
@@ -41,40 +63,103 @@
             "views": 910733,
             "viewsText": "조회수 910,733회",
             "url": "https://www.youtube.com/watch?v=yAL3S2n8Pck"
+          },
+          {
+            "id": "y1zCRGPO3NY",
+            "title": "요즘 채정안 피부장벽 과몰입템! ✨ PDRN의 모든 것 | 직접 써 본 피부 회복템 총출동",
+            "channel": "채정안TV",
+            "published": "9개월 전",
+            "views": 218895,
+            "viewsText": "조회수 218,895회",
+            "url": "https://www.youtube.com/watch?v=y1zCRGPO3NY"
+          },
+          {
+            "id": "mVxo28XlmaU",
+            "title": "(광고❌) 리쥬란보다 10배 저렴한데 효과좋은 크림 추천 5가지! 다른 화장품 다 필요없고 이걸 쓰세요│크림추천, 피부관리법, 피부홈케어, 스킨케어",
+            "channel": "숏닥터 Short Doctor",
+            "published": "8개월 전",
+            "views": 218326,
+            "viewsText": "조회수 218,326회",
+            "url": "https://www.youtube.com/watch?v=mVxo28XlmaU"
           }
-        ]
+        ],
+        "deduplication": "videoId 기준 중복 제거 후 제외어 필터 적용"
       },
       "naver": {
         "status": "collected",
-        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%ED%81%AC%EB%A6%BC%20%EB%A7%A5%EC%8A%A4",
-        "blogResultSampleCount": 17,
-        "cafeResultSampleCount": 0,
+        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%81%AC%EB%A6%BC",
+        "sourceUrls": [
+          "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%81%AC%EB%A6%BC",
+          "https://search.naver.com/search.naver?where=view&query=%EB%A6%AC%EC%A5%AC%EC%98%AC%20PDRN%20%ED%81%AC%EB%A6%BC",
+          "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%ED%81%AC%EB%A6%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "닥터 리쥬올 크림",
+            "resultSampleCount": 34
+          },
+          {
+            "keyword": "리쥬올 PDRN 크림",
+            "resultSampleCount": 10
+          },
+          {
+            "keyword": "닥터리쥬올 피디알엔 크림",
+            "resultSampleCount": 15
+          }
+        ],
+        "blogResultSampleCount": 46,
+        "cafeResultSampleCount": 5,
         "sampleUrls": [
-          "https://blog.naver.com/bevenus1004/224176402804",
-          "https://blog.naver.com/bo1606/224142865323",
-          "https://blog.naver.com/breath_mi/224141757874",
-          "https://blog.naver.com/dldzpwl/224034940768",
-          "https://blog.naver.com/dolphinpharm/224093259205"
-        ]
+          "https://blog.naver.com/552566/224330446793",
+          "https://blog.naver.com/arkijin/224053101265",
+          "https://blog.naver.com/azure531/224330324455",
+          "https://blog.naver.com/bella_ever319/224042465051",
+          "https://blog.naver.com/byulonnuri/224017369522"
+        ],
+        "deduplication": "게시물 URL 기준 중복 제거"
       },
       "google": {
         "status": "manual_required",
-        "sourceUrl": "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%ED%81%AC%EB%A6%BC%20%EB%A7%A5%EC%8A%A4",
+        "sourceUrl": "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%81%AC%EB%A6%BC",
+        "sourceUrls": [
+          "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%81%AC%EB%A6%BC",
+          "https://www.google.com/search?q=%EB%A6%AC%EC%A5%AC%EC%98%AC%20PDRN%20%ED%81%AC%EB%A6%BC",
+          "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%ED%81%AC%EB%A6%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "닥터 리쥬올 크림",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "리쥬올 PDRN 크림",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "닥터리쥬올 피디알엔 크림",
+            "resultSampleCount": 0
+          }
+        ],
         "organicResultSampleCount": 0,
         "sampleUrls": [],
-        "note": "공개 Google 검색 첫 화면의 유기적 결과 표본",
-        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음"
+        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음",
+        "deduplication": "결과 URL 기준 중복 제거"
       },
       "tiktok": {
         "status": "manual_required",
-        "sourceUrl": "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%ED%81%AC%EB%A6%BC%20%EB%A7%A5%EC%8A%A4",
+        "sourceUrl": "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%81%AC%EB%A6%BC",
         "resultSampleCount": 0,
         "topVideos": [],
-        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음"
+        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%81%AC%EB%A6%BC",
+          "https://www.tiktok.com/search/video?q=%EB%A6%AC%EC%A5%AC%EC%98%AC%20PDRN%20%ED%81%AC%EB%A6%BC",
+          "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%ED%81%AC%EB%A6%BC"
+        ]
       },
       "instagram": {
         "status": "manual_required",
-        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%ED%81%AC%EB%A6%BC%20%EB%A7%A5%EC%8A%A4",
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%81%AC%EB%A6%BC",
         "reason": "로그인 세션·모바일 화면에서 릴스 조회수 확인 필요",
         "fields": [
           "최근 7일 릴스 수",
@@ -83,78 +168,167 @@
           "댓글",
           "광고 여부",
           "증빙 URL"
+        ],
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%81%AC%EB%A6%BC",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%A6%AC%EC%A5%AC%EC%98%AC%20PDRN%20%ED%81%AC%EB%A6%BC",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%EB%A6%AC%EC%A5%AC%EC%98%AC%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%ED%81%AC%EB%A6%BC"
         ]
       }
     },
     {
-      "name": "노스카나겔 20g",
+      "id": "noscarna-gel",
+      "name": "노스카나겔",
+      "brand": "동아제약",
+      "category": "흉터 치료제",
+      "skuNames": [
+        "노스카나겔 20g",
+        "노스카나겔 10g"
+      ],
+      "keywords": [
+        "노스카나겔",
+        "노스카나",
+        "동아제약 노스카나"
+      ],
+      "exclude": [
+        "중고",
+        "해외직구"
+      ],
+      "reason": "용량과 구어체 표기를 통합",
       "keyword": "노스카나겔",
-      "collectedAt": "2026-07-14T15:58:36+09:00",
+      "collectedAt": "2026-07-14T16:12:29+09:00",
       "status": "collected",
       "youtube": {
         "status": "collected",
         "sourceUrl": "https://www.youtube.com/results?search_query=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98%EA%B2%94",
-        "resultSampleCount": 10,
-        "viewSampleCount": 10,
-        "totalViews": 4651900,
-        "medianViews": 125802,
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98%EA%B2%94",
+          "https://www.youtube.com/results?search_query=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98",
+          "https://www.youtube.com/results?search_query=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "노스카나겔",
+            "rawCount": 12,
+            "acceptedCount": 12
+          },
+          {
+            "keyword": "노스카나",
+            "rawCount": 20,
+            "acceptedCount": 20
+          },
+          {
+            "keyword": "동아제약 노스카나",
+            "rawCount": 20,
+            "acceptedCount": 20
+          }
+        ],
+        "resultSampleCount": 34,
+        "viewSampleCount": 34,
+        "totalViews": 132909989,
+        "medianViews": 413782,
         "topVideos": [
           {
-            "id": "jdb2lJ00ymY",
-            "title": "흉터치료제 '노스카나겔' 제품정보 (수술흉터,켈로이드성흉터, 여드름흉터)",
+            "id": "2opV6ua38TA",
+            "title": "혜리가 친구를 걱정하는 이유는? ㅣ2020 노스카나겔 광고",
             "channel": "동아제약 OFFICIAL",
-            "published": "8년 전",
-            "views": 2288276,
-            "viewsText": "조회수 2,288,276회",
-            "url": "https://www.youtube.com/watch?v=jdb2lJ00ymY"
-          },
-          {
-            "id": "I3xxlnw3Brc",
-            "title": "추천? 비추천? 약국 가면 그냥 이거 사세요...🔥 심한 여드름 피부가 효과 본!! 약국 여드름 인생템 소개해요🤓",
-            "channel": "뷰드름 유튜버 인씨",
-            "published": "3년 전",
-            "views": 1264865,
-            "viewsText": "조회수 1,264,865회",
-            "url": "https://www.youtube.com/watch?v=I3xxlnw3Brc"
-          },
-          {
-            "id": "WafDZQ3Gffk",
-            "title": "돈 안 들이고 여드름흉터를 치료할 수 있다고?! 노스카나겔의 효과를 논문을 근거로 팩트체크합니다 | 노스카나겔 구매 전 필수 시청!",
-            "channel": "피부왕정윤",
             "published": "6년 전",
-            "views": 507864,
-            "viewsText": "조회수 507,864회",
-            "url": "https://www.youtube.com/watch?v=WafDZQ3Gffk"
+            "views": 28268978,
+            "viewsText": "조회수 28,268,978회",
+            "url": "https://www.youtube.com/watch?v=2opV6ua38TA"
+          },
+          {
+            "id": "74JDZDvX1mc",
+            "title": "지금도 누군가는 좋아지고 있다, 노스카나 (15초 편)",
+            "channel": "동아제약 OFFICIAL",
+            "published": "3주 전",
+            "views": 18305802,
+            "viewsText": "조회수 18,305,802회",
+            "url": "https://www.youtube.com/watch?v=74JDZDvX1mc"
+          },
+          {
+            "id": "OSAPIbt0jYo",
+            "title": "여드름, 짜자마자 노스카딘",
+            "channel": "동아제약 OFFICIAL",
+            "published": "5개월 전",
+            "views": 14176703,
+            "viewsText": "조회수 14,176,703회",
+            "url": "https://www.youtube.com/watch?v=OSAPIbt0jYo"
           }
-        ]
+        ],
+        "deduplication": "videoId 기준 중복 제거 후 제외어 필터 적용"
       },
       "naver": {
         "status": "collected",
         "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98%EA%B2%94",
-        "blogResultSampleCount": 26,
-        "cafeResultSampleCount": 4,
+        "sourceUrls": [
+          "https://search.naver.com/search.naver?where=view&query=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98%EA%B2%94",
+          "https://search.naver.com/search.naver?where=view&query=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98",
+          "https://search.naver.com/search.naver?where=view&query=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "노스카나겔",
+            "resultSampleCount": 30
+          },
+          {
+            "keyword": "노스카나",
+            "resultSampleCount": 31
+          },
+          {
+            "keyword": "동아제약 노스카나",
+            "resultSampleCount": 22
+          }
+        ],
+        "blogResultSampleCount": 63,
+        "cafeResultSampleCount": 10,
         "sampleUrls": [
+          "https://blog.naver.com/89107989/221899955592",
           "https://blog.naver.com/aablanc/224285685600",
+          "https://blog.naver.com/bbaapc_11291/224332926472",
           "https://blog.naver.com/beerrryong/223986597700",
-          "https://blog.naver.com/boram1646/223994350254",
-          "https://blog.naver.com/chocopetpharm/224131421461",
-          "https://blog.naver.com/dlwhddla1/223949943932"
-        ]
+          "https://blog.naver.com/boram1646/223994350254"
+        ],
+        "deduplication": "게시물 URL 기준 중복 제거"
       },
       "google": {
         "status": "manual_required",
         "sourceUrl": "https://www.google.com/search?q=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98%EA%B2%94",
+        "sourceUrls": [
+          "https://www.google.com/search?q=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98%EA%B2%94",
+          "https://www.google.com/search?q=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98",
+          "https://www.google.com/search?q=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "노스카나겔",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "노스카나",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "동아제약 노스카나",
+            "resultSampleCount": 0
+          }
+        ],
         "organicResultSampleCount": 0,
         "sampleUrls": [],
-        "note": "공개 Google 검색 첫 화면의 유기적 결과 표본",
-        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음"
+        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음",
+        "deduplication": "결과 URL 기준 중복 제거"
       },
       "tiktok": {
         "status": "manual_required",
         "sourceUrl": "https://www.tiktok.com/search/video?q=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98%EA%B2%94",
         "resultSampleCount": 0,
         "topVideos": [],
-        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음"
+        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98%EA%B2%94",
+          "https://www.tiktok.com/search/video?q=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98",
+          "https://www.tiktok.com/search/video?q=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98"
+        ]
       },
       "instagram": {
         "status": "manual_required",
@@ -167,166 +341,170 @@
           "댓글",
           "광고 여부",
           "증빙 URL"
+        ],
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98%EA%B2%94",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EB%85%B8%EC%8A%A4%EC%B9%B4%EB%82%98"
         ]
       }
     },
     {
-      "name": "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 크림 30ml",
-      "keyword": "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 크림",
-      "collectedAt": "2026-07-14T15:58:36+09:00",
+      "id": "dr-rejuall-pdrn-lip-serum",
+      "name": "닥터 리쥬올 PDRN 립 세럼",
+      "brand": "닥터 리쥬올",
+      "category": "립 케어",
+      "skuNames": [
+        "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 립 세럼 10ml"
+      ],
+      "keywords": [
+        "닥터 리쥬올 립세럼",
+        "리쥬올 PDRN 립 세럼",
+        "피디알엔 립세럼"
+      ],
+      "exclude": [
+        "크림",
+        "마스크"
+      ],
+      "reason": "브랜드·성분·제품형 통칭을 함께 수집",
+      "keyword": "닥터 리쥬올 립세럼",
+      "collectedAt": "2026-07-14T16:12:29+09:00",
       "status": "collected",
       "youtube": {
         "status": "collected",
-        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%ED%81%AC%EB%A6%BC",
-        "resultSampleCount": 8,
-        "viewSampleCount": 8,
-        "totalViews": 1135967,
-        "medianViews": 35742,
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EB%A6%BD%EC%84%B8%EB%9F%BC",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EB%A6%BD%EC%84%B8%EB%9F%BC",
+          "https://www.youtube.com/results?search_query=%EB%A6%AC%EC%A5%AC%EC%98%AC%20PDRN%20%EB%A6%BD%20%EC%84%B8%EB%9F%BC",
+          "https://www.youtube.com/results?search_query=%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%BD%EC%84%B8%EB%9F%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "닥터 리쥬올 립세럼",
+            "rawCount": 6,
+            "acceptedCount": 5
+          },
+          {
+            "keyword": "리쥬올 PDRN 립 세럼",
+            "rawCount": 14,
+            "acceptedCount": 12
+          },
+          {
+            "keyword": "피디알엔 립세럼",
+            "rawCount": 20,
+            "acceptedCount": 18
+          }
+        ],
+        "resultSampleCount": 29,
+        "viewSampleCount": 29,
+        "totalViews": 9762565,
+        "medianViews": 83078,
         "topVideos": [
           {
-            "id": "yAL3S2n8Pck",
-            "title": "“리쥬란보다 10배 저렴….” ㅣ의사가 직접 써보고 추천하는 재생크림 4가지",
-            "channel": "태오네모세모",
-            "published": "10개월 전",
-            "views": 910733,
-            "viewsText": "조회수 910,733회",
-            "url": "https://www.youtube.com/watch?v=yAL3S2n8Pck"
-          },
-          {
-            "id": "vk6W236Ca_A",
-            "title": "PDRN 정말 효과 있을까?  같이 쓰면 안좋은 성분은?  함량별 제품 10종 비교(부작용, 사용법, 피부타입별 추천)",
-            "channel": "디렉터 파이",
-            "published": "8개월 전",
-            "views": 77626,
-            "viewsText": "조회수 77,626회",
-            "url": "https://www.youtube.com/watch?v=vk6W236Ca_A"
-          },
-          {
-            "id": "E439tYOIpfk",
-            "title": "cc) 올해 PDRN 무조건 뜬다💖피부재생에 좋은 피디알엔 제품 싹다 비교‼️(피부과추천템,올리브영1위템)ㅣ아랑",
-            "channel": "Arang 아랑",
+            "id": "CSAsSoCKij8",
+            "title": "(SUB) 광고❌ 이나연의 꿀피부 만드는 법🍯 l 수분진정 기초템 추천💧 l 나이트 루틴 대공개 l 효소 클렌저 l 워터 에센스",
+            "channel": "일단이나연 NAYEON",
             "published": "2년 전",
-            "views": 67553,
-            "viewsText": "조회수 67,553회",
-            "url": "https://www.youtube.com/watch?v=E439tYOIpfk"
+            "views": 2336968,
+            "viewsText": "조회수 2,336,968회",
+            "url": "https://www.youtube.com/watch?v=CSAsSoCKij8"
+          },
+          {
+            "id": "EZaUIDa2g7c",
+            "title": "주름 쫙 펴지는 올리브영 추천템 5가지를 20년차 피부과 전문의가 알려드립니다",
+            "channel": "피부는 성현철",
+            "published": "4개월 전",
+            "views": 1603097,
+            "viewsText": "조회수 1,603,097회",
+            "url": "https://www.youtube.com/watch?v=EZaUIDa2g7c"
+          },
+          {
+            "id": "56-s3SCtoQc",
+            "title": "대부분 모르는 세럼 바를 때 실수 5가지 | 세럼 효과 제대로 보는 방법",
+            "channel": "닥터블랑_예뻐지는비결",
+            "published": "10개월 전",
+            "views": 1021358,
+            "viewsText": "조회수 1,021,358회",
+            "url": "https://www.youtube.com/watch?v=56-s3SCtoQc"
           }
-        ]
+        ],
+        "deduplication": "videoId 기준 중복 제거 후 제외어 필터 적용"
       },
       "naver": {
         "status": "collected",
-        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%ED%81%AC%EB%A6%BC",
-        "blogResultSampleCount": 10,
-        "cafeResultSampleCount": 0,
-        "sampleUrls": [
-          "https://blog.naver.com/bevenus1004/224176402804",
-          "https://blog.naver.com/greendog75/224235539459",
-          "https://blog.naver.com/jyemini/224123831669",
-          "https://blog.naver.com/le_blooming/224140944275",
-          "https://blog.naver.com/lovebok12/224144117715"
-        ]
-      },
-      "google": {
-        "status": "manual_required",
-        "sourceUrl": "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%ED%81%AC%EB%A6%BC",
-        "organicResultSampleCount": 0,
-        "sampleUrls": [],
-        "note": "공개 Google 검색 첫 화면의 유기적 결과 표본",
-        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음"
-      },
-      "tiktok": {
-        "status": "manual_required",
-        "sourceUrl": "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%ED%81%AC%EB%A6%BC",
-        "resultSampleCount": 0,
-        "topVideos": [],
-        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음"
-      },
-      "instagram": {
-        "status": "manual_required",
-        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%ED%81%AC%EB%A6%BC",
-        "reason": "로그인 세션·모바일 화면에서 릴스 조회수 확인 필요",
-        "fields": [
-          "최근 7일 릴스 수",
-          "상위 10개 조회수",
-          "좋아요",
-          "댓글",
-          "광고 여부",
-          "증빙 URL"
-        ]
-      }
-    },
-    {
-      "name": "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 립 세럼 10ml",
-      "keyword": "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 립 세럼",
-      "collectedAt": "2026-07-14T15:58:36+09:00",
-      "status": "collected",
-      "youtube": {
-        "status": "collected",
-        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%EB%A6%BD%20%EC%84%B8%EB%9F%BC",
-        "resultSampleCount": 7,
-        "viewSampleCount": 7,
-        "totalViews": 1134013,
-        "medianViews": 65257,
-        "topVideos": [
+        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EB%A6%BD%EC%84%B8%EB%9F%BC",
+        "sourceUrls": [
+          "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EB%A6%BD%EC%84%B8%EB%9F%BC",
+          "https://search.naver.com/search.naver?where=view&query=%EB%A6%AC%EC%A5%AC%EC%98%AC%20PDRN%20%EB%A6%BD%20%EC%84%B8%EB%9F%BC",
+          "https://search.naver.com/search.naver?where=view&query=%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%BD%EC%84%B8%EB%9F%BC"
+        ],
+        "queryBreakdown": [
           {
-            "id": "yAL3S2n8Pck",
-            "title": "“리쥬란보다 10배 저렴….” ㅣ의사가 직접 써보고 추천하는 재생크림 4가지",
-            "channel": "태오네모세모",
-            "published": "10개월 전",
-            "views": 910733,
-            "viewsText": "조회수 910,733회",
-            "url": "https://www.youtube.com/watch?v=yAL3S2n8Pck"
+            "keyword": "닥터 리쥬올 립세럼",
+            "resultSampleCount": 25
           },
           {
-            "id": "vk6W236Ca_A",
-            "title": "PDRN 정말 효과 있을까?  같이 쓰면 안좋은 성분은?  함량별 제품 10종 비교(부작용, 사용법, 피부타입별 추천)",
-            "channel": "디렉터 파이",
-            "published": "8개월 전",
-            "views": 77626,
-            "viewsText": "조회수 77,626회",
-            "url": "https://www.youtube.com/watch?v=vk6W236Ca_A"
+            "keyword": "리쥬올 PDRN 립 세럼",
+            "resultSampleCount": 12
           },
           {
-            "id": "E439tYOIpfk",
-            "title": "cc) 올해 PDRN 무조건 뜬다💖피부재생에 좋은 피디알엔 제품 싹다 비교‼️(피부과추천템,올리브영1위템)ㅣ아랑",
-            "channel": "Arang 아랑",
-            "published": "2년 전",
-            "views": 67553,
-            "viewsText": "조회수 67,553회",
-            "url": "https://www.youtube.com/watch?v=E439tYOIpfk"
+            "keyword": "피디알엔 립세럼",
+            "resultSampleCount": 8
           }
-        ]
-      },
-      "naver": {
-        "status": "collected",
-        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%EB%A6%BD%20%EC%84%B8%EB%9F%BC",
-        "blogResultSampleCount": 13,
-        "cafeResultSampleCount": 0,
+        ],
+        "blogResultSampleCount": 35,
+        "cafeResultSampleCount": 1,
         "sampleUrls": [
-          "https://blog.naver.com/balancepharm22/224238505290",
+          "https://blog.naver.com/allypsh/224211649604",
+          "https://blog.naver.com/anteyna/224337501797",
+          "https://blog.naver.com/beautyna_/224315589793",
           "https://blog.naver.com/bevenus1004/224176251846",
-          "https://blog.naver.com/blanc202331/224171086176",
-          "https://blog.naver.com/kss0063/224169193346",
-          "https://blog.naver.com/ksyun0908/224174583659"
-        ]
+          "https://blog.naver.com/chyy021705/224176609218"
+        ],
+        "deduplication": "게시물 URL 기준 중복 제거"
       },
       "google": {
         "status": "manual_required",
-        "sourceUrl": "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%EB%A6%BD%20%EC%84%B8%EB%9F%BC",
+        "sourceUrl": "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EB%A6%BD%EC%84%B8%EB%9F%BC",
+        "sourceUrls": [
+          "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EB%A6%BD%EC%84%B8%EB%9F%BC",
+          "https://www.google.com/search?q=%EB%A6%AC%EC%A5%AC%EC%98%AC%20PDRN%20%EB%A6%BD%20%EC%84%B8%EB%9F%BC",
+          "https://www.google.com/search?q=%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%BD%EC%84%B8%EB%9F%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "닥터 리쥬올 립세럼",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "리쥬올 PDRN 립 세럼",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "피디알엔 립세럼",
+            "resultSampleCount": 0
+          }
+        ],
         "organicResultSampleCount": 0,
         "sampleUrls": [],
-        "note": "공개 Google 검색 첫 화면의 유기적 결과 표본",
-        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음"
+        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음",
+        "deduplication": "결과 URL 기준 중복 제거"
       },
       "tiktok": {
         "status": "manual_required",
-        "sourceUrl": "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%EB%A6%BD%20%EC%84%B8%EB%9F%BC",
+        "sourceUrl": "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EB%A6%BD%EC%84%B8%EB%9F%BC",
         "resultSampleCount": 0,
         "topVideos": [],
-        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음"
+        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EB%A6%BD%EC%84%B8%EB%9F%BC",
+          "https://www.tiktok.com/search/video?q=%EB%A6%AC%EC%A5%AC%EC%98%AC%20PDRN%20%EB%A6%BD%20%EC%84%B8%EB%9F%BC",
+          "https://www.tiktok.com/search/video?q=%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%BD%EC%84%B8%EB%9F%BC"
+        ]
       },
       "instagram": {
         "status": "manual_required",
-        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85%20%EB%A6%BD%20%EC%84%B8%EB%9F%BC",
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EB%A6%BD%EC%84%B8%EB%9F%BC",
         "reason": "로그인 세션·모바일 화면에서 릴스 조회수 확인 필요",
         "fields": [
           "최근 7일 릴스 수",
@@ -335,30 +513,82 @@
           "댓글",
           "광고 여부",
           "증빙 URL"
+        ],
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%20%EB%A6%AC%EC%A5%AC%EC%98%AC%20%EB%A6%BD%EC%84%B8%EB%9F%BC",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%A6%AC%EC%A5%AC%EC%98%AC%20PDRN%20%EB%A6%BD%20%EC%84%B8%EB%9F%BC",
+          "https://www.instagram.com/explore/search/keyword/?q=%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%A6%BD%EC%84%B8%EB%9F%BC"
         ]
       }
     },
     {
+      "id": "acnon-cream",
       "name": "애크논크림",
-      "keyword": "애크논크림",
-      "collectedAt": "2026-07-14T15:58:36+09:00",
+      "brand": "동아제약",
+      "category": "여드름 치료제",
+      "skuNames": [
+        "애크논크림"
+      ],
+      "keywords": [
+        "애크논",
+        "애크논크림",
+        "동아제약 애크논"
+      ],
+      "exclude": [
+        "애크린",
+        "애크린겔"
+      ],
+      "reason": "제품 통칭과 붙여쓰기 검색을 통합",
+      "keyword": "애크논",
+      "collectedAt": "2026-07-14T16:12:29+09:00",
       "status": "collected",
       "youtube": {
         "status": "collected",
-        "sourceUrl": "https://www.youtube.com/results?search_query=%EC%95%A0%ED%81%AC%EB%85%BC%ED%81%AC%EB%A6%BC",
-        "resultSampleCount": 8,
-        "viewSampleCount": 8,
-        "totalViews": 29726479,
-        "medianViews": 129366,
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EC%95%A0%ED%81%AC%EB%85%BC",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EC%95%A0%ED%81%AC%EB%85%BC",
+          "https://www.youtube.com/results?search_query=%EC%95%A0%ED%81%AC%EB%85%BC%ED%81%AC%EB%A6%BC",
+          "https://www.youtube.com/results?search_query=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EC%95%A0%ED%81%AC%EB%85%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "애크논",
+            "rawCount": 7,
+            "acceptedCount": 5
+          },
+          {
+            "keyword": "애크논크림",
+            "rawCount": 10,
+            "acceptedCount": 7
+          },
+          {
+            "keyword": "동아제약 애크논",
+            "rawCount": 15,
+            "acceptedCount": 9
+          }
+        ],
+        "resultSampleCount": 16,
+        "viewSampleCount": 16,
+        "totalViews": 23237148,
+        "medianViews": 12167,
         "topVideos": [
           {
-            "id": "W9s23wCrvD8",
-            "title": "[애크린겔&애크논크림&애크린외용액]여드름, 이제 증상별로 제대로 치료하세요!",
+            "id": "fPAaAslNvbQ",
+            "title": "[애크논크림]붉은 여드름엔 애크논 콕 편",
             "channel": "동아제약 OFFICIAL",
-            "published": "2개월 전",
-            "views": 28755853,
-            "viewsText": "조회수 28,755,853회",
-            "url": "https://www.youtube.com/watch?v=W9s23wCrvD8"
+            "published": "2년 전",
+            "views": 20643806,
+            "viewsText": "조회수 20,643,806회",
+            "url": "https://www.youtube.com/watch?v=fPAaAslNvbQ"
+          },
+          {
+            "id": "I3xxlnw3Brc",
+            "title": "추천? 비추천? 약국 가면 그냥 이거 사세요...🔥 심한 여드름 피부가 효과 본!! 약국 여드름 인생템 소개해요🤓",
+            "channel": "뷰드름 유튜버 인씨",
+            "published": "3년 전",
+            "views": 1264865,
+            "viewsText": "조회수 1,264,865회",
+            "url": "https://www.youtube.com/watch?v=I3xxlnw3Brc"
           },
           {
             "id": "dk01wGnSi4U",
@@ -368,49 +598,85 @@
             "views": 458671,
             "viewsText": "조회수 458,671회",
             "url": "https://www.youtube.com/watch?v=dk01wGnSi4U"
-          },
-          {
-            "id": "yROPk3IcwlY",
-            "title": "약국템, 생각보다 다 필요 없습니다",
-            "channel": "스완SWAN_현실남자관리 및 잠티",
-            "published": "5개월 전",
-            "views": 247333,
-            "viewsText": "조회수 247,333회",
-            "url": "https://www.youtube.com/watch?v=yROPk3IcwlY"
           }
-        ]
+        ],
+        "deduplication": "videoId 기준 중복 제거 후 제외어 필터 적용"
       },
       "naver": {
         "status": "collected",
-        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EC%95%A0%ED%81%AC%EB%85%BC%ED%81%AC%EB%A6%BC",
-        "blogResultSampleCount": 5,
-        "cafeResultSampleCount": 2,
+        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EC%95%A0%ED%81%AC%EB%85%BC",
+        "sourceUrls": [
+          "https://search.naver.com/search.naver?where=view&query=%EC%95%A0%ED%81%AC%EB%85%BC",
+          "https://search.naver.com/search.naver?where=view&query=%EC%95%A0%ED%81%AC%EB%85%BC%ED%81%AC%EB%A6%BC",
+          "https://search.naver.com/search.naver?where=view&query=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EC%95%A0%ED%81%AC%EB%85%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "애크논",
+            "resultSampleCount": 34
+          },
+          {
+            "keyword": "애크논크림",
+            "resultSampleCount": 7
+          },
+          {
+            "keyword": "동아제약 애크논",
+            "resultSampleCount": 28
+          }
+        ],
+        "blogResultSampleCount": 53,
+        "cafeResultSampleCount": 10,
         "sampleUrls": [
+          "https://blog.naver.com/7_hz_rk_7/224263784939",
+          "https://blog.naver.com/a_anna/223654981192",
+          "https://blog.naver.com/aja4567/224331170031",
           "https://blog.naver.com/anarche69/224297435806",
-          "https://blog.naver.com/herbsmen/224334243527",
-          "https://blog.naver.com/hitakuchi/224336207678",
-          "https://blog.naver.com/sbk11ove/224341325575",
-          "https://blog.naver.com/wss9457/224316871729"
-        ]
+          "https://blog.naver.com/beautykangdan/223816641001"
+        ],
+        "deduplication": "게시물 URL 기준 중복 제거"
       },
       "google": {
         "status": "manual_required",
-        "sourceUrl": "https://www.google.com/search?q=%EC%95%A0%ED%81%AC%EB%85%BC%ED%81%AC%EB%A6%BC",
+        "sourceUrl": "https://www.google.com/search?q=%EC%95%A0%ED%81%AC%EB%85%BC",
+        "sourceUrls": [
+          "https://www.google.com/search?q=%EC%95%A0%ED%81%AC%EB%85%BC",
+          "https://www.google.com/search?q=%EC%95%A0%ED%81%AC%EB%85%BC%ED%81%AC%EB%A6%BC",
+          "https://www.google.com/search?q=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EC%95%A0%ED%81%AC%EB%85%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "애크논",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "애크논크림",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "동아제약 애크논",
+            "resultSampleCount": 0
+          }
+        ],
         "organicResultSampleCount": 0,
         "sampleUrls": [],
-        "note": "공개 Google 검색 첫 화면의 유기적 결과 표본",
-        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음"
+        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음",
+        "deduplication": "결과 URL 기준 중복 제거"
       },
       "tiktok": {
         "status": "manual_required",
-        "sourceUrl": "https://www.tiktok.com/search/video?q=%EC%95%A0%ED%81%AC%EB%85%BC%ED%81%AC%EB%A6%BC",
+        "sourceUrl": "https://www.tiktok.com/search/video?q=%EC%95%A0%ED%81%AC%EB%85%BC",
         "resultSampleCount": 0,
         "topVideos": [],
-        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음"
+        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=%EC%95%A0%ED%81%AC%EB%85%BC",
+          "https://www.tiktok.com/search/video?q=%EC%95%A0%ED%81%AC%EB%85%BC%ED%81%AC%EB%A6%BC",
+          "https://www.tiktok.com/search/video?q=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EC%95%A0%ED%81%AC%EB%85%BC"
+        ]
       },
       "instagram": {
         "status": "manual_required",
-        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EC%95%A0%ED%81%AC%EB%85%BC%ED%81%AC%EB%A6%BC",
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EC%95%A0%ED%81%AC%EB%85%BC",
         "reason": "로그인 세션·모바일 화면에서 릴스 조회수 확인 필요",
         "fields": [
           "최근 7일 릴스 수",
@@ -419,22 +685,74 @@
           "댓글",
           "광고 여부",
           "증빙 URL"
+        ],
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=%EC%95%A0%ED%81%AC%EB%85%BC",
+          "https://www.instagram.com/explore/search/keyword/?q=%EC%95%A0%ED%81%AC%EB%85%BC%ED%81%AC%EB%A6%BC",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EC%95%A0%ED%81%AC%EB%85%BC"
         ]
       }
     },
     {
+      "id": "melatoning-cream",
       "name": "멜라토닝크림",
-      "keyword": "멜라토닝크림",
-      "collectedAt": "2026-07-14T15:58:36+09:00",
+      "brand": "동아제약",
+      "category": "색소침착 치료제",
+      "skuNames": [
+        "멜라토닝크림"
+      ],
+      "keywords": [
+        "멜라토닝",
+        "멜라토닝크림",
+        "동아제약 멜라토닝"
+      ],
+      "exclude": [
+        "도미나",
+        "멜라노사"
+      ],
+      "reason": "제품 통칭과 브랜드 결합 검색을 통합",
+      "keyword": "멜라토닝",
+      "collectedAt": "2026-07-14T16:12:29+09:00",
       "status": "collected",
       "youtube": {
         "status": "collected",
-        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D%ED%81%AC%EB%A6%BC",
-        "resultSampleCount": 8,
-        "viewSampleCount": 8,
-        "totalViews": 27893245,
-        "medianViews": 225396,
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D",
+          "https://www.youtube.com/results?search_query=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D%ED%81%AC%EB%A6%BC",
+          "https://www.youtube.com/results?search_query=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "멜라토닝",
+            "rawCount": 14,
+            "acceptedCount": 10
+          },
+          {
+            "keyword": "멜라토닝크림",
+            "rawCount": 14,
+            "acceptedCount": 11
+          },
+          {
+            "keyword": "동아제약 멜라토닝",
+            "rawCount": 18,
+            "acceptedCount": 14
+          }
+        ],
+        "resultSampleCount": 19,
+        "viewSampleCount": 19,
+        "totalViews": 87452569,
+        "medianViews": 726689,
         "topVideos": [
+          {
+            "id": "rAXnsHnUfXw",
+            "title": "[멜라토닝] 캠핑, 등산, 골프 자외선이 나에게 남긴 건? 멜라토닝으로 치료!",
+            "channel": "동아제약 OFFICIAL",
+            "published": "1년 전",
+            "views": 22190977,
+            "viewsText": "조회수 22,190,977회",
+            "url": "https://www.youtube.com/watch?v=rAXnsHnUfXw"
+          },
           {
             "id": "yhn5D0eRrcg",
             "title": "[멜라토닝] 전지현이 콕 찍은 색소침착치료제 이름은? 멜.라.토.닝",
@@ -452,49 +770,85 @@
             "views": 12726068,
             "viewsText": "조회수 12,726,068회",
             "url": "https://www.youtube.com/watch?v=pMDNkQOmIhw"
-          },
-          {
-            "id": "ImYVld6fY1Y",
-            "title": "[멜라토닝 X 박지현] 배우 박지현의 색소침착 관리 방법",
-            "channel": "동아제약 OFFICIAL",
-            "published": "2년 전",
-            "views": 1648975,
-            "viewsText": "조회수 1,648,975회",
-            "url": "https://www.youtube.com/watch?v=ImYVld6fY1Y"
           }
-        ]
+        ],
+        "deduplication": "videoId 기준 중복 제거 후 제외어 필터 적용"
       },
       "naver": {
         "status": "collected",
-        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D%ED%81%AC%EB%A6%BC",
-        "blogResultSampleCount": 4,
-        "cafeResultSampleCount": 1,
+        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D",
+        "sourceUrls": [
+          "https://search.naver.com/search.naver?where=view&query=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D",
+          "https://search.naver.com/search.naver?where=view&query=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D%ED%81%AC%EB%A6%BC",
+          "https://search.naver.com/search.naver?where=view&query=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "멜라토닝",
+            "resultSampleCount": 6
+          },
+          {
+            "keyword": "멜라토닝크림",
+            "resultSampleCount": 5
+          },
+          {
+            "keyword": "동아제약 멜라토닝",
+            "resultSampleCount": 29
+          }
+        ],
+        "blogResultSampleCount": 28,
+        "cafeResultSampleCount": 8,
         "sampleUrls": [
+          "https://blog.naver.com/32pharm/224321124079",
+          "https://blog.naver.com/89107989/223125101012",
+          "https://blog.naver.com/adg153/224338190203",
           "https://blog.naver.com/anarche69/224316451419",
-          "https://blog.naver.com/dntdj10/224330003858",
-          "https://blog.naver.com/otc1000info/224332313421",
-          "https://blog.naver.com/yahoo122/224296622073",
-          "https://cafe.naver.com/gloseems1/1281833"
-        ]
+          "https://blog.naver.com/anko-/224058939414"
+        ],
+        "deduplication": "게시물 URL 기준 중복 제거"
       },
       "google": {
         "status": "manual_required",
-        "sourceUrl": "https://www.google.com/search?q=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D%ED%81%AC%EB%A6%BC",
+        "sourceUrl": "https://www.google.com/search?q=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D",
+        "sourceUrls": [
+          "https://www.google.com/search?q=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D",
+          "https://www.google.com/search?q=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D%ED%81%AC%EB%A6%BC",
+          "https://www.google.com/search?q=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "멜라토닝",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "멜라토닝크림",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "동아제약 멜라토닝",
+            "resultSampleCount": 0
+          }
+        ],
         "organicResultSampleCount": 0,
         "sampleUrls": [],
-        "note": "공개 Google 검색 첫 화면의 유기적 결과 표본",
-        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음"
+        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음",
+        "deduplication": "결과 URL 기준 중복 제거"
       },
       "tiktok": {
         "status": "manual_required",
-        "sourceUrl": "https://www.tiktok.com/search/video?q=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D%ED%81%AC%EB%A6%BC",
+        "sourceUrl": "https://www.tiktok.com/search/video?q=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D",
         "resultSampleCount": 0,
         "topVideos": [],
-        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음"
+        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D",
+          "https://www.tiktok.com/search/video?q=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D%ED%81%AC%EB%A6%BC",
+          "https://www.tiktok.com/search/video?q=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D"
+        ]
       },
       "instagram": {
         "status": "manual_required",
-        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D%ED%81%AC%EB%A6%BC",
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D",
         "reason": "로그인 세션·모바일 화면에서 릴스 조회수 확인 필요",
         "fields": [
           "최근 7일 릴스 수",
@@ -503,31 +857,64 @@
           "댓글",
           "광고 여부",
           "증빙 URL"
+        ],
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D%ED%81%AC%EB%A6%BC",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%9D"
         ]
       }
     },
     {
+      "id": "aclean-gel",
       "name": "애크린겔",
-      "keyword": "애크린겔",
-      "collectedAt": "2026-07-14T15:58:36+09:00",
+      "brand": "동아제약",
+      "category": "여드름 치료제",
+      "skuNames": [
+        "애크린겔"
+      ],
+      "keywords": [
+        "애크린",
+        "애크린겔",
+        "동아제약 애크린"
+      ],
+      "exclude": [
+        "애크논"
+      ],
+      "reason": "제품 통칭과 붙여쓰기 검색을 통합",
+      "keyword": "애크린",
+      "collectedAt": "2026-07-14T16:12:29+09:00",
       "status": "collected",
       "youtube": {
         "status": "collected",
-        "sourceUrl": "https://www.youtube.com/results?search_query=%EC%95%A0%ED%81%AC%EB%A6%B0%EA%B2%94",
-        "resultSampleCount": 7,
-        "viewSampleCount": 7,
-        "totalViews": 45877616,
-        "medianViews": 247333,
-        "topVideos": [
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EC%95%A0%ED%81%AC%EB%A6%B0",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EC%95%A0%ED%81%AC%EB%A6%B0",
+          "https://www.youtube.com/results?search_query=%EC%95%A0%ED%81%AC%EB%A6%B0%EA%B2%94",
+          "https://www.youtube.com/results?search_query=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EC%95%A0%ED%81%AC%EB%A6%B0"
+        ],
+        "queryBreakdown": [
           {
-            "id": "W9s23wCrvD8",
-            "title": "[애크린겔&애크논크림&애크린외용액]여드름, 이제 증상별로 제대로 치료하세요!",
-            "channel": "동아제약 OFFICIAL",
-            "published": "2개월 전",
-            "views": 28755853,
-            "viewsText": "조회수 28,755,853회",
-            "url": "https://www.youtube.com/watch?v=W9s23wCrvD8"
+            "keyword": "애크린",
+            "rawCount": 8,
+            "acceptedCount": 5
           },
+          {
+            "keyword": "애크린겔",
+            "rawCount": 6,
+            "acceptedCount": 4
+          },
+          {
+            "keyword": "동아제약 애크린",
+            "rawCount": 11,
+            "acceptedCount": 6
+          }
+        ],
+        "resultSampleCount": 10,
+        "viewSampleCount": 10,
+        "totalViews": 22073969,
+        "medianViews": 221564,
+        "topVideos": [
           {
             "id": "yRCrCHBZgFE",
             "title": "[애크린겔] 좁쌀 여드름 원인부터 약으로 제대로 편 15초",
@@ -538,6 +925,15 @@
             "url": "https://www.youtube.com/watch?v=yRCrCHBZgFE"
           },
           {
+            "id": "_nI06T5fP5I",
+            "title": "[애크린외용액] 노출이 신경 쓰이는 계절엔",
+            "channel": "동아제약 OFFICIAL",
+            "published": "11개월 전",
+            "views": 3496688,
+            "viewsText": "조회수 3,496,688회",
+            "url": "https://www.youtube.com/watch?v=_nI06T5fP5I"
+          },
+          {
             "id": "RlKCtc5WTGA",
             "title": "[애크린겔] 좁쌀 여드름 원인부터 약으로 제대로 편 30초",
             "channel": "동아제약 OFFICIAL",
@@ -546,39 +942,84 @@
             "viewsText": "조회수 2,103,628회",
             "url": "https://www.youtube.com/watch?v=RlKCtc5WTGA"
           }
-        ]
+        ],
+        "deduplication": "videoId 기준 중복 제거 후 제외어 필터 적용"
       },
       "naver": {
         "status": "collected",
-        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EC%95%A0%ED%81%AC%EB%A6%B0%EA%B2%94",
-        "blogResultSampleCount": 6,
-        "cafeResultSampleCount": 1,
+        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EC%95%A0%ED%81%AC%EB%A6%B0",
+        "sourceUrls": [
+          "https://search.naver.com/search.naver?where=view&query=%EC%95%A0%ED%81%AC%EB%A6%B0",
+          "https://search.naver.com/search.naver?where=view&query=%EC%95%A0%ED%81%AC%EB%A6%B0%EA%B2%94",
+          "https://search.naver.com/search.naver?where=view&query=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EC%95%A0%ED%81%AC%EB%A6%B0"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "애크린",
+            "resultSampleCount": 34
+          },
+          {
+            "keyword": "애크린겔",
+            "resultSampleCount": 7
+          },
+          {
+            "keyword": "동아제약 애크린",
+            "resultSampleCount": 34
+          }
+        ],
+        "blogResultSampleCount": 58,
+        "cafeResultSampleCount": 10,
         "sampleUrls": [
+          "https://blog.naver.com/15dmsdud/223334377231",
+          "https://blog.naver.com/5005won/224328139480",
           "https://blog.naver.com/anarche69/224306591251",
-          "https://blog.naver.com/jeongjuneun/224304540971",
-          "https://blog.naver.com/kimjk9748/224256698539",
-          "https://blog.naver.com/lyjlove7/224333326047",
-          "https://blog.naver.com/sbk11ove/224341325575"
-        ]
+          "https://blog.naver.com/bbaapc_11291/224323529616",
+          "https://blog.naver.com/beomgyepharm/224332899619"
+        ],
+        "deduplication": "게시물 URL 기준 중복 제거"
       },
       "google": {
         "status": "manual_required",
-        "sourceUrl": "https://www.google.com/search?q=%EC%95%A0%ED%81%AC%EB%A6%B0%EA%B2%94",
+        "sourceUrl": "https://www.google.com/search?q=%EC%95%A0%ED%81%AC%EB%A6%B0",
+        "sourceUrls": [
+          "https://www.google.com/search?q=%EC%95%A0%ED%81%AC%EB%A6%B0",
+          "https://www.google.com/search?q=%EC%95%A0%ED%81%AC%EB%A6%B0%EA%B2%94",
+          "https://www.google.com/search?q=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EC%95%A0%ED%81%AC%EB%A6%B0"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "애크린",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "애크린겔",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "동아제약 애크린",
+            "resultSampleCount": 0
+          }
+        ],
         "organicResultSampleCount": 0,
         "sampleUrls": [],
-        "note": "공개 Google 검색 첫 화면의 유기적 결과 표본",
-        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음"
+        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음",
+        "deduplication": "결과 URL 기준 중복 제거"
       },
       "tiktok": {
         "status": "manual_required",
-        "sourceUrl": "https://www.tiktok.com/search/video?q=%EC%95%A0%ED%81%AC%EB%A6%B0%EA%B2%94",
+        "sourceUrl": "https://www.tiktok.com/search/video?q=%EC%95%A0%ED%81%AC%EB%A6%B0",
         "resultSampleCount": 0,
         "topVideos": [],
-        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음"
+        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=%EC%95%A0%ED%81%AC%EB%A6%B0",
+          "https://www.tiktok.com/search/video?q=%EC%95%A0%ED%81%AC%EB%A6%B0%EA%B2%94",
+          "https://www.tiktok.com/search/video?q=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EC%95%A0%ED%81%AC%EB%A6%B0"
+        ]
       },
       "instagram": {
         "status": "manual_required",
-        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EC%95%A0%ED%81%AC%EB%A6%B0%EA%B2%94",
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EC%95%A0%ED%81%AC%EB%A6%B0",
         "reason": "로그인 세션·모바일 화면에서 릴스 조회수 확인 필요",
         "fields": [
           "최근 7일 릴스 수",
@@ -587,78 +1028,165 @@
           "댓글",
           "광고 여부",
           "증빙 URL"
+        ],
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=%EC%95%A0%ED%81%AC%EB%A6%B0",
+          "https://www.instagram.com/explore/search/keyword/?q=%EC%95%A0%ED%81%AC%EB%A6%B0%EA%B2%94",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD%20%EC%95%A0%ED%81%AC%EB%A6%B0"
         ]
       }
     },
     {
-      "name": "올인원 우먼플러스 15포",
+      "id": "re4day-woman-plus",
+      "name": "올인원 우먼플러스",
+      "brand": "RE4DAY",
+      "category": "여성 건강기능식품",
+      "skuNames": [
+        "올인원 우먼플러스 15포"
+      ],
+      "keywords": [
+        "올인원 우먼플러스",
+        "RE4DAY 우먼플러스",
+        "우먼플러스 15포"
+      ],
+      "exclude": [
+        "우먼 멀티비타민"
+      ],
+      "reason": "브랜드 영문명과 용량 표기를 보조 키워드로 사용",
       "keyword": "올인원 우먼플러스",
-      "collectedAt": "2026-07-14T15:58:36+09:00",
+      "collectedAt": "2026-07-14T16:12:29+09:00",
       "status": "collected",
       "youtube": {
         "status": "collected",
         "sourceUrl": "https://www.youtube.com/results?search_query=%EC%98%AC%EC%9D%B8%EC%9B%90%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
-        "resultSampleCount": 14,
-        "viewSampleCount": 14,
-        "totalViews": 5824903,
-        "medianViews": 158586,
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EC%98%AC%EC%9D%B8%EC%9B%90%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
+          "https://www.youtube.com/results?search_query=RE4DAY%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
+          "https://www.youtube.com/results?search_query=%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4%2015%ED%8F%AC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "올인원 우먼플러스",
+            "rawCount": 8,
+            "acceptedCount": 8
+          },
+          {
+            "keyword": "RE4DAY 우먼플러스",
+            "rawCount": 19,
+            "acceptedCount": 19
+          },
+          {
+            "keyword": "우먼플러스 15포",
+            "rawCount": 4,
+            "acceptedCount": 4
+          }
+        ],
+        "resultSampleCount": 28,
+        "viewSampleCount": 28,
+        "totalViews": 7504571,
+        "medianViews": 47923,
         "topVideos": [
           {
-            "id": "SiCPnfp_mOA",
-            "title": "영양제를 여러개 먹는게 부담되시면 '이 4개'만 드시면 안전하게 효과좋은 대부분의 영양 성분을 채울수 있습니다 (어떤 영양제를 먹어야 할지 고민이시면 꼭 보세요!)",
+            "id": "9JBaSCxRgAg",
+            "title": "영양제 여러개 먹기 부담스러우시면 종합비타민 '이걸' 드시면 됩니다.",
             "channel": "약사가 들려주는 약 이야기",
             "published": "4년 전",
-            "views": 1979692,
-            "viewsText": "조회수 1,979,692회",
-            "url": "https://www.youtube.com/watch?v=SiCPnfp_mOA"
+            "views": 1434294,
+            "viewsText": "조회수 1,434,294회",
+            "url": "https://www.youtube.com/watch?v=9JBaSCxRgAg"
           },
           {
             "id": "qcTBRmhDbwM",
             "title": "최초공개! 한가인이 25년동안 꾸준히 챙겨먹은 영양제 (PPL 아님)",
             "channel": "자유부인 한가인",
             "published": "1년 전",
-            "views": 1383792,
-            "viewsText": "조회수 1,383,792회",
+            "views": 1383789,
+            "viewsText": "조회수 1,383,789회",
             "url": "https://www.youtube.com/watch?v=qcTBRmhDbwM"
           },
           {
-            "id": "uJ57Cknqfws",
-            "title": "사는 순간 돈 증발시키는 최신 유행 영양제 Top 5 (2025 영양제 베스트&워스트)",
-            "channel": "약사가 들려주는 약 이야기 외 2명",
-            "published": "5개월 전",
-            "views": 801657,
-            "viewsText": "조회수 801,657회",
-            "url": "https://www.youtube.com/watch?v=uJ57Cknqfws"
+            "id": "VveKTYirxjs",
+            "title": "비싼 영양제 다 부질 없고 저는 이것만 먹습니다. 피로, 염증, 혈관, 피부 다 해결되는 영양제 세팅법",
+            "channel": "약사 메디슨맨 TV",
+            "published": "2년 전",
+            "views": 1109950,
+            "viewsText": "조회수 1,109,950회",
+            "url": "https://www.youtube.com/watch?v=VveKTYirxjs"
           }
-        ]
+        ],
+        "deduplication": "videoId 기준 중복 제거 후 제외어 필터 적용"
       },
       "naver": {
         "status": "collected",
         "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EC%98%AC%EC%9D%B8%EC%9B%90%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
-        "blogResultSampleCount": 15,
-        "cafeResultSampleCount": 3,
+        "sourceUrls": [
+          "https://search.naver.com/search.naver?where=view&query=%EC%98%AC%EC%9D%B8%EC%9B%90%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
+          "https://search.naver.com/search.naver?where=view&query=RE4DAY%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
+          "https://search.naver.com/search.naver?where=view&query=%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4%2015%ED%8F%AC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "올인원 우먼플러스",
+            "resultSampleCount": 18
+          },
+          {
+            "keyword": "RE4DAY 우먼플러스",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "우먼플러스 15포",
+            "resultSampleCount": 8
+          }
+        ],
+        "blogResultSampleCount": 21,
+        "cafeResultSampleCount": 5,
         "sampleUrls": [
           "https://blog.naver.com/2oclock_/223307654618",
+          "https://blog.naver.com/bensoo/224191868102",
           "https://blog.naver.com/cherry-coco/224337119580",
           "https://blog.naver.com/chuc_ne/224292185603",
-          "https://blog.naver.com/fitaminpharmacy/224158205017",
-          "https://blog.naver.com/hello_yaksa/224316343657"
-        ]
+          "https://blog.naver.com/fitaminpharmacy/224158205017"
+        ],
+        "deduplication": "게시물 URL 기준 중복 제거"
       },
       "google": {
         "status": "manual_required",
         "sourceUrl": "https://www.google.com/search?q=%EC%98%AC%EC%9D%B8%EC%9B%90%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
+        "sourceUrls": [
+          "https://www.google.com/search?q=%EC%98%AC%EC%9D%B8%EC%9B%90%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
+          "https://www.google.com/search?q=RE4DAY%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
+          "https://www.google.com/search?q=%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4%2015%ED%8F%AC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "올인원 우먼플러스",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "RE4DAY 우먼플러스",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "우먼플러스 15포",
+            "resultSampleCount": 0
+          }
+        ],
         "organicResultSampleCount": 0,
         "sampleUrls": [],
-        "note": "공개 Google 검색 첫 화면의 유기적 결과 표본",
-        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음"
+        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음",
+        "deduplication": "결과 URL 기준 중복 제거"
       },
       "tiktok": {
         "status": "manual_required",
         "sourceUrl": "https://www.tiktok.com/search/video?q=%EC%98%AC%EC%9D%B8%EC%9B%90%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
         "resultSampleCount": 0,
         "topVideos": [],
-        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음"
+        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=%EC%98%AC%EC%9D%B8%EC%9B%90%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
+          "https://www.tiktok.com/search/video?q=RE4DAY%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
+          "https://www.tiktok.com/search/video?q=%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4%2015%ED%8F%AC"
+        ]
       },
       "instagram": {
         "status": "manual_required",
@@ -671,82 +1199,169 @@
           "댓글",
           "광고 여부",
           "증빙 URL"
+        ],
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=%EC%98%AC%EC%9D%B8%EC%9B%90%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
+          "https://www.instagram.com/explore/search/keyword/?q=RE4DAY%20%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4",
+          "https://www.instagram.com/explore/search/keyword/?q=%EC%9A%B0%EB%A8%BC%ED%94%8C%EB%9F%AC%EC%8A%A4%2015%ED%8F%AC"
         ]
       }
     },
     {
-      "name": "닥터딥 미네랄 프리 필링 글로우샷 1500",
-      "keyword": "닥터딥 미네랄 프리 필링 글로우샷",
-      "collectedAt": "2026-07-14T15:58:36+09:00",
+      "id": "drdeep-glow-shot",
+      "name": "닥터딥 필링 글로우샷",
+      "brand": "닥터딥",
+      "category": "필링 앰플",
+      "skuNames": [
+        "닥터딥 미네랄 프리 필링 글로우샷 1500"
+      ],
+      "keywords": [
+        "닥터딥 글로우샷",
+        "닥터딥 필링 글로우샷",
+        "미네랄 프리 글로우샷"
+      ],
+      "exclude": [
+        "턴오버 스팟 크림"
+      ],
+      "reason": "긴 정식명 대신 브랜드·제품 통칭 중심",
+      "keyword": "닥터딥 글로우샷",
+      "collectedAt": "2026-07-14T16:12:29+09:00",
       "status": "collected",
       "youtube": {
         "status": "collected",
-        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EB%AF%B8%EB%84%A4%EB%9E%84%20%ED%94%84%EB%A6%AC%20%ED%95%84%EB%A7%81%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
-        "resultSampleCount": 14,
-        "viewSampleCount": 14,
-        "totalViews": 3746597,
-        "medianViews": 214166,
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+          "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%95%84%EB%A7%81%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+          "https://www.youtube.com/results?search_query=%EB%AF%B8%EB%84%A4%EB%9E%84%20%ED%94%84%EB%A6%AC%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "닥터딥 글로우샷",
+            "rawCount": 1,
+            "acceptedCount": 1
+          },
+          {
+            "keyword": "닥터딥 필링 글로우샷",
+            "rawCount": 0,
+            "acceptedCount": 0
+          },
+          {
+            "keyword": "미네랄 프리 글로우샷",
+            "rawCount": 5,
+            "acceptedCount": 5
+          }
+        ],
+        "resultSampleCount": 6,
+        "viewSampleCount": 6,
+        "totalViews": 1203717,
+        "medianViews": 111028,
         "topVideos": [
           {
-            "id": "SFlFQByIQ1g",
-            "title": "의사들만 몰래받는 S급 가성비! 수백만원 아끼는 만족도 가장 높은 시술을 20년차 피부과 전문의가 알려드립니다.",
-            "channel": "피부는 성현철",
-            "published": "11개월 전",
-            "views": 938492,
-            "viewsText": "조회수 938,492회",
-            "url": "https://www.youtube.com/watch?v=SFlFQByIQ1g"
+            "id": "bsSz4FcqGFQ",
+            "title": "승무원 파우치 탈탈 털었습니다",
+            "channel": "해피해은 HAEPPY",
+            "published": "1년 전",
+            "views": 718162,
+            "viewsText": "조회수 718,162회",
+            "url": "https://www.youtube.com/watch?v=bsSz4FcqGFQ"
           },
           {
-            "id": "9ia_DPz4too",
-            "title": "“시술 없이 됩니다” 수백만원 아끼는 집에서 모공 줄이는 방법을 20년차 피부과 원장이 직접 하는 동안시술 3가지를 알려드립니다",
-            "channel": "피부는 성현철",
+            "id": "SibRuUblbjM",
+            "title": "민서마켓)울쎄X, 써마X, 갈바닉 기능 모두 탑재한 리프팅 디바이스⁉️글로우엠 하이퍼 글로우 샷 최대 할인 마켓 OPEN🔥",
+            "channel": "로맨틱민서 MINSEO",
+            "published": "3개월 전",
+            "views": 226056,
+            "viewsText": "조회수 226,056회",
+            "url": "https://www.youtube.com/watch?v=SibRuUblbjM"
+          },
+          {
+            "id": "H76_qc4z11I",
+            "title": "광고에 속지 마세요❌ 홈케어 디바이스·기능성 화장품 효과 검증｜피부과 전문의의 솔직한 답변",
+            "channel": "당신의 피부과 전문의, 허준원",
             "published": "10개월 전",
-            "views": 826537,
-            "viewsText": "조회수 826,537회",
-            "url": "https://www.youtube.com/watch?v=9ia_DPz4too"
-          },
-          {
-            "id": "0k8fwoaSEEA",
-            "title": "(절대 광고❌) 피부과 전문의가 '직접' 써보고 추천하는 홈디바이스의 모든 것",
-            "channel": "피친남 이승주",
-            "published": "6개월 전",
-            "views": 346050,
-            "viewsText": "조회수 346,050회",
-            "url": "https://www.youtube.com/watch?v=0k8fwoaSEEA"
+            "views": 118650,
+            "viewsText": "조회수 118,650회",
+            "url": "https://www.youtube.com/watch?v=H76_qc4z11I"
           }
-        ]
+        ],
+        "deduplication": "videoId 기준 중복 제거 후 제외어 필터 적용"
       },
       "naver": {
         "status": "collected",
-        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EB%AF%B8%EB%84%A4%EB%9E%84%20%ED%94%84%EB%A6%AC%20%ED%95%84%EB%A7%81%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
-        "blogResultSampleCount": 14,
-        "cafeResultSampleCount": 0,
+        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+        "sourceUrls": [
+          "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+          "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%95%84%EB%A7%81%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+          "https://search.naver.com/search.naver?where=view&query=%EB%AF%B8%EB%84%A4%EB%9E%84%20%ED%94%84%EB%A6%AC%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "닥터딥 글로우샷",
+            "resultSampleCount": 13
+          },
+          {
+            "keyword": "닥터딥 필링 글로우샷",
+            "resultSampleCount": 12
+          },
+          {
+            "keyword": "미네랄 프리 글로우샷",
+            "resultSampleCount": 12
+          }
+        ],
+        "blogResultSampleCount": 16,
+        "cafeResultSampleCount": 1,
         "sampleUrls": [
           "https://blog.naver.com/1qw2e3/224304265040",
           "https://blog.naver.com/a9971004/224299691196",
           "https://blog.naver.com/akaxist/224305861352",
           "https://blog.naver.com/be_forever19/224303191540",
           "https://blog.naver.com/byul9653/224312412152"
-        ]
+        ],
+        "deduplication": "게시물 URL 기준 중복 제거"
       },
       "google": {
         "status": "manual_required",
-        "sourceUrl": "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EB%AF%B8%EB%84%A4%EB%9E%84%20%ED%94%84%EB%A6%AC%20%ED%95%84%EB%A7%81%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+        "sourceUrl": "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+        "sourceUrls": [
+          "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+          "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%95%84%EB%A7%81%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+          "https://www.google.com/search?q=%EB%AF%B8%EB%84%A4%EB%9E%84%20%ED%94%84%EB%A6%AC%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "닥터딥 글로우샷",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "닥터딥 필링 글로우샷",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "미네랄 프리 글로우샷",
+            "resultSampleCount": 0
+          }
+        ],
         "organicResultSampleCount": 0,
         "sampleUrls": [],
-        "note": "공개 Google 검색 첫 화면의 유기적 결과 표본",
-        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음"
+        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음",
+        "deduplication": "결과 URL 기준 중복 제거"
       },
       "tiktok": {
         "status": "manual_required",
-        "sourceUrl": "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EB%AF%B8%EB%84%A4%EB%9E%84%20%ED%94%84%EB%A6%AC%20%ED%95%84%EB%A7%81%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+        "sourceUrl": "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
         "resultSampleCount": 0,
         "topVideos": [],
-        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음"
+        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+          "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%95%84%EB%A7%81%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+          "https://www.tiktok.com/search/video?q=%EB%AF%B8%EB%84%A4%EB%9E%84%20%ED%94%84%EB%A6%AC%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7"
+        ]
       },
       "instagram": {
         "status": "manual_required",
-        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EB%AF%B8%EB%84%A4%EB%9E%84%20%ED%94%84%EB%A6%AC%20%ED%95%84%EB%A7%81%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
         "reason": "로그인 세션·모바일 화면에서 릴스 조회수 확인 필요",
         "fields": [
           "최근 7일 릴스 수",
@@ -755,82 +1370,169 @@
           "댓글",
           "광고 여부",
           "증빙 URL"
+        ],
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%95%84%EB%A7%81%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%AF%B8%EB%84%A4%EB%9E%84%20%ED%94%84%EB%A6%AC%20%EA%B8%80%EB%A1%9C%EC%9A%B0%EC%83%B7"
         ]
       }
     },
     {
-      "name": "닥터딥 클리니컬 텍스쳐 턴오버 스팟 크림 40ml(TT크림)",
-      "keyword": "닥터딥 클리니컬 텍스쳐 턴오버 스팟 크림 40ml(TT크림)",
-      "collectedAt": "2026-07-14T15:58:36+09:00",
+      "id": "drdeep-tt-cream",
+      "name": "닥터딥 TT크림",
+      "brand": "닥터딥",
+      "category": "스팟 크림",
+      "skuNames": [
+        "닥터딥 클리니컬 텍스쳐 턴오버 스팟 크림 40ml(TT크림)"
+      ],
+      "keywords": [
+        "닥터딥 TT크림",
+        "닥터딥 턴오버 스팟 크림",
+        "닥터딥 텍스쳐 크림"
+      ],
+      "exclude": [
+        "글로우샷"
+      ],
+      "reason": "소비자 통칭 TT크림을 대표 키워드로 사용",
+      "keyword": "닥터딥 TT크림",
+      "collectedAt": "2026-07-14T16:12:29+09:00",
       "status": "collected",
       "youtube": {
         "status": "collected",
-        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%81%B4%EB%A6%AC%EB%8B%88%EC%BB%AC%20%ED%85%8D%EC%8A%A4%EC%B3%90%20%ED%84%B4%EC%98%A4%EB%B2%84%20%EC%8A%A4%ED%8C%9F%20%ED%81%AC%EB%A6%BC%2040ml%28TT%ED%81%AC%EB%A6%BC%29",
-        "resultSampleCount": 20,
-        "viewSampleCount": 20,
-        "totalViews": 6892347,
-        "medianViews": 152051,
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%EB%94%A5%20TT%ED%81%AC%EB%A6%BC",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%EB%94%A5%20TT%ED%81%AC%EB%A6%BC",
+          "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%84%B4%EC%98%A4%EB%B2%84%20%EC%8A%A4%ED%8C%9F%20%ED%81%AC%EB%A6%BC",
+          "https://www.youtube.com/results?search_query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%85%8D%EC%8A%A4%EC%B3%90%20%ED%81%AC%EB%A6%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "닥터딥 TT크림",
+            "rawCount": 3,
+            "acceptedCount": 3
+          },
+          {
+            "keyword": "닥터딥 턴오버 스팟 크림",
+            "rawCount": 8,
+            "acceptedCount": 8
+          },
+          {
+            "keyword": "닥터딥 텍스쳐 크림",
+            "rawCount": 13,
+            "acceptedCount": 13
+          }
+        ],
+        "resultSampleCount": 24,
+        "viewSampleCount": 24,
+        "totalViews": 7779588,
+        "medianViews": 104604,
         "topVideos": [
           {
-            "id": "q12lCuRff34",
-            "title": "(**Eng.)여드름, 좁쌀, 각질 부자 모여! 피부타입별 성분 궁합& 착한 크림들끼리 대격돌, 과연 승자는? by 디렉터파이",
-            "channel": "디렉터 파이",
-            "published": "8년 전",
-            "views": 2277754,
-            "viewsText": "조회수 2,277,754회",
-            "url": "https://www.youtube.com/watch?v=q12lCuRff34"
+            "id": "suS-wV5d8YI",
+            "title": "Sub)NO광고 NO구라..🔥직접 효과본 민감성/수부지/트러블 타파 찐찐템 zip.(2021~2022결산)",
+            "channel": "제이미포유 Jaymeeforyou",
+            "published": "3년 전",
+            "views": 1166815,
+            "viewsText": "조회수 1,166,815회",
+            "url": "https://www.youtube.com/watch?v=suS-wV5d8YI"
           },
           {
-            "id": "yAL3S2n8Pck",
-            "title": "“리쥬란보다 10배 저렴….” ㅣ의사가 직접 써보고 추천하는 재생크림 4가지",
-            "channel": "태오네모세모",
+            "id": "I_cZ96xpQEE",
+            "title": "(*Eng) 2022 수분크림 1위는?🏆 30여 종 비교 분석, 진정, 속건조, 장벽, 가성비갑 TOP을 찾아라! Best Moisturizers",
+            "channel": "디렉터 파이",
+            "published": "3년 전",
+            "views": 1076714,
+            "viewsText": "조회수 1,076,714회",
+            "url": "https://www.youtube.com/watch?v=I_cZ96xpQEE"
+          },
+          {
+            "id": "56-s3SCtoQc",
+            "title": "대부분 모르는 세럼 바를 때 실수 5가지 | 세럼 효과 제대로 보는 방법",
+            "channel": "닥터블랑_예뻐지는비결",
             "published": "10개월 전",
-            "views": 910733,
-            "viewsText": "조회수 910,733회",
-            "url": "https://www.youtube.com/watch?v=yAL3S2n8Pck"
-          },
-          {
-            "id": "-c_52oTVhJ8",
-            "title": "(*Eng) 2024 수분크림 1위는?🥇30여 종 구매 추천?! 여드름, 붉은기, 건조한 피부 다 모여!! Best Moisturizers by 디렉터파이",
-            "channel": "디렉터 파이",
-            "published": "1년 전",
-            "views": 651668,
-            "viewsText": "조회수 651,668회",
-            "url": "https://www.youtube.com/watch?v=-c_52oTVhJ8"
+            "views": 1021358,
+            "viewsText": "조회수 1,021,358회",
+            "url": "https://www.youtube.com/watch?v=56-s3SCtoQc"
           }
-        ]
+        ],
+        "deduplication": "videoId 기준 중복 제거 후 제외어 필터 적용"
       },
       "naver": {
         "status": "collected",
-        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%81%B4%EB%A6%AC%EB%8B%88%EC%BB%AC%20%ED%85%8D%EC%8A%A4%EC%B3%90%20%ED%84%B4%EC%98%A4%EB%B2%84%20%EC%8A%A4%ED%8C%9F%20%ED%81%AC%EB%A6%BC%2040ml%28TT%ED%81%AC%EB%A6%BC%29",
-        "blogResultSampleCount": 6,
-        "cafeResultSampleCount": 1,
+        "sourceUrl": "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%EB%94%A5%20TT%ED%81%AC%EB%A6%BC",
+        "sourceUrls": [
+          "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%EB%94%A5%20TT%ED%81%AC%EB%A6%BC",
+          "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%84%B4%EC%98%A4%EB%B2%84%20%EC%8A%A4%ED%8C%9F%20%ED%81%AC%EB%A6%BC",
+          "https://search.naver.com/search.naver?where=view&query=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%85%8D%EC%8A%A4%EC%B3%90%20%ED%81%AC%EB%A6%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "닥터딥 TT크림",
+            "resultSampleCount": 8
+          },
+          {
+            "keyword": "닥터딥 턴오버 스팟 크림",
+            "resultSampleCount": 10
+          },
+          {
+            "keyword": "닥터딥 텍스쳐 크림",
+            "resultSampleCount": 9
+          }
+        ],
+        "blogResultSampleCount": 17,
+        "cafeResultSampleCount": 2,
         "sampleUrls": [
+          "https://blog.naver.com/80quddkfl/224320576773",
           "https://blog.naver.com/annkim219/224310952114",
-          "https://blog.naver.com/daily_with_woo/224310340449",
-          "https://blog.naver.com/fond_of_u/224254263692",
-          "https://blog.naver.com/heejee7774/224310492462",
-          "https://blog.naver.com/qo5161/224310561873"
-        ]
+          "https://blog.naver.com/bnpou/224247832836",
+          "https://blog.naver.com/cyw2583/224332525819",
+          "https://blog.naver.com/daily_with_woo/224310340449"
+        ],
+        "deduplication": "게시물 URL 기준 중복 제거"
       },
       "google": {
         "status": "manual_required",
-        "sourceUrl": "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%81%B4%EB%A6%AC%EB%8B%88%EC%BB%AC%20%ED%85%8D%EC%8A%A4%EC%B3%90%20%ED%84%B4%EC%98%A4%EB%B2%84%20%EC%8A%A4%ED%8C%9F%20%ED%81%AC%EB%A6%BC%2040ml%28TT%ED%81%AC%EB%A6%BC%29",
+        "sourceUrl": "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20TT%ED%81%AC%EB%A6%BC",
+        "sourceUrls": [
+          "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20TT%ED%81%AC%EB%A6%BC",
+          "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%84%B4%EC%98%A4%EB%B2%84%20%EC%8A%A4%ED%8C%9F%20%ED%81%AC%EB%A6%BC",
+          "https://www.google.com/search?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%85%8D%EC%8A%A4%EC%B3%90%20%ED%81%AC%EB%A6%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "닥터딥 TT크림",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "닥터딥 턴오버 스팟 크림",
+            "resultSampleCount": 0
+          },
+          {
+            "keyword": "닥터딥 텍스쳐 크림",
+            "resultSampleCount": 0
+          }
+        ],
         "organicResultSampleCount": 0,
         "sampleUrls": [],
-        "note": "공개 Google 검색 첫 화면의 유기적 결과 표본",
-        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음"
+        "reason": "자동 요청에서 검증 가능한 검색 결과가 노출되지 않음",
+        "deduplication": "결과 URL 기준 중복 제거"
       },
       "tiktok": {
         "status": "manual_required",
-        "sourceUrl": "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%81%B4%EB%A6%AC%EB%8B%88%EC%BB%AC%20%ED%85%8D%EC%8A%A4%EC%B3%90%20%ED%84%B4%EC%98%A4%EB%B2%84%20%EC%8A%A4%ED%8C%9F%20%ED%81%AC%EB%A6%BC%2040ml%28TT%ED%81%AC%EB%A6%BC%29",
+        "sourceUrl": "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20TT%ED%81%AC%EB%A6%BC",
         "resultSampleCount": 0,
         "topVideos": [],
-        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음"
+        "reason": "TikTok이 브라우저 실행 전 HTML에 검색 결과를 제공하지 않음",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20TT%ED%81%AC%EB%A6%BC",
+          "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%84%B4%EC%98%A4%EB%B2%84%20%EC%8A%A4%ED%8C%9F%20%ED%81%AC%EB%A6%BC",
+          "https://www.tiktok.com/search/video?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%85%8D%EC%8A%A4%EC%B3%90%20%ED%81%AC%EB%A6%BC"
+        ]
       },
       "instagram": {
         "status": "manual_required",
-        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%81%B4%EB%A6%AC%EB%8B%88%EC%BB%AC%20%ED%85%8D%EC%8A%A4%EC%B3%90%20%ED%84%B4%EC%98%A4%EB%B2%84%20%EC%8A%A4%ED%8C%9F%20%ED%81%AC%EB%A6%BC%2040ml%28TT%ED%81%AC%EB%A6%BC%29",
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20TT%ED%81%AC%EB%A6%BC",
         "reason": "로그인 세션·모바일 화면에서 릴스 조회수 확인 필요",
         "fields": [
           "최근 7일 릴스 수",
@@ -839,6 +1541,11 @@
           "댓글",
           "광고 여부",
           "증빙 URL"
+        ],
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20TT%ED%81%AC%EB%A6%BC",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%84%B4%EC%98%A4%EB%B2%84%20%EC%8A%A4%ED%8C%9F%20%ED%81%AC%EB%A6%BC",
+          "https://www.instagram.com/explore/search/keyword/?q=%EB%8B%A5%ED%84%B0%EB%94%A5%20%ED%85%8D%EC%8A%A4%EC%B3%90%20%ED%81%AC%EB%A6%BC"
         ]
       }
     }
