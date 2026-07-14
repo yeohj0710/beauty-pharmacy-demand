@@ -16,3 +16,7 @@ test("zero-result sources are not reported as collected", () => {
 test("snapshot progress is not labeled as actively collecting", () => {
   assert.equal(pageSource.includes('"수집 중"'), false);
 });
+
+test("overview product rows open a product detail", () => {
+  assert.match(pageSource, /onClick=\{\(\) => onSelect\(s\)\}/);
+});
