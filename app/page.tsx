@@ -506,7 +506,9 @@ function Overview({
           <span className="live-dot" />
           최근 수집 실행
           <strong>
-            {new Date(signalFile.collectedAt).toLocaleString("ko-KR")}
+            {new Date(signalFile.collectedAt).toLocaleString("ko-KR", {
+              timeZone: "Asia/Seoul",
+            })}
           </strong>
         </div>
       </section>
