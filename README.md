@@ -1,4 +1,4 @@
-# Demand Radar
+# Product Demand Dashboard
 
 약국 실판매 데이터와 온라인 관심 신호를 비교해 제품 수요를 검증하는 대시보드입니다.
 

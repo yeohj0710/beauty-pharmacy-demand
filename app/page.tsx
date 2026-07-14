@@ -34,7 +34,7 @@ function Overview({ onSelect }: { onSelect: (p: Product) => void }) {
     <>
       <section className="hero">
         <div>
-          <p className="eyebrow">PURE PHARMACY · DEMAND INTELLIGENCE</p>
+          <p className="eyebrow">PRODUCT DEMAND DASHBOARD</p>
           <h1>팔린 만큼,<br />왜 팔렸는지 봅니다</h1>
           <p className="hero-copy">실제 약국 판매를 기준으로 온라인 관심 신호를 비교해<br className="desktop" /> 다음에 키울 제품을 빠르게 찾으세요.</p>
         </div>
@@ -115,5 +115,5 @@ function Detail({ product, onClose }: { product: Product; onClose: () => void })
 export default function Home() {
   const [view, setView] = useState<View>("overview");
   const [selected, setSelected] = useState<Product | null>(null);
-  return <div className="app-shell"><aside className="sidebar"><div className="brand" onClick={()=>setView("overview")}><span>W</span><div>웰니스박스<small>Demand Radar</small></div></div><nav>{nav.map(n=><button key={n.id} className={view===n.id?"active":""} onClick={()=>setView(n.id)}><i>{n.id==="overview"?"⌁":n.id==="products"?"▦":n.id==="sources"?"◉":"◇"}</i>{n.label}</button>)}</nav><div className="sidebar-foot"><span className="live-dot"/>성수 퓨어약국<small>마지막 동기화 7월 9일</small></div></aside><main>{view==="overview"&&<Overview onSelect={setSelected}/>} {view==="products"&&<Products onSelect={setSelected}/>} {view==="sources"&&<Sources/>} {view==="method"&&<Method/>}</main>{selected&&<Detail product={selected} onClose={()=>setSelected(null)}/>}</div>;
+  return <div className="app-shell"><aside className="sidebar"><div className="brand" onClick={()=>setView("overview")}><span>W</span><div>웰니스박스<small>제품 수요 대시보드</small></div></div><nav>{nav.map(n=><button key={n.id} className={view===n.id?"active":""} onClick={()=>setView(n.id)}><i>{n.id==="overview"?"⌁":n.id==="products"?"▦":n.id==="sources"?"◉":"◇"}</i>{n.label}</button>)}</nav><div className="sidebar-foot"><span className="live-dot"/>성수 퓨어약국<small>마지막 동기화 7월 9일</small></div></aside><main>{view==="overview"&&<Overview onSelect={setSelected}/>} {view==="products"&&<Products onSelect={setSelected}/>} {view==="sources"&&<Sources/>} {view==="method"&&<Method/>}</main>{selected&&<Detail product={selected} onClose={()=>setSelected(null)}/>}</div>;
 }

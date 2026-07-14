@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Demand Radar | 웰니스박스",
+  title: "제품 수요 대시보드 | 웰니스박스",
   description: "약국 실판매와 온라인 관심 신호를 비교하는 제품 수요 인텔리전스",
 };
 
