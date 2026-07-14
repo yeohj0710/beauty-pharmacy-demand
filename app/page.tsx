@@ -75,26 +75,32 @@ function statusOf(
 function CollectionDrawer({
   signal,
   platform,
+  existing,
   onClose,
   onSave,
+  onDelete,
 }: {
   signal: Signal;
   platform: Platform;
+  existing?: ManualRecord;
   onClose: () => void;
   onSave: (record: ManualRecord) => void;
+  onDelete: () => void;
 }) {
   const meta = platforms.find((p) => p.id === platform)!;
   const auto = getAuto(signal, platform);
-  const [form, setForm] = useState<ManualRecord>({
-    contentCount: "",
-    views: "",
-    likes: "",
-    comments: "",
-    shares: "",
-    evidenceUrl: auto?.sourceUrl || "",
-    note: "",
-    collectedAt: new Date().toISOString(),
-  });
+  const [form, setForm] = useState<ManualRecord>(
+    existing || {
+      contentCount: "",
+      views: "",
+      likes: "",
+      comments: "",
+      shares: "",
+      evidenceUrl: auto?.sourceUrl || "",
+      note: "",
+      collectedAt: new Date().toISOString(),
+    },
+  );
   const field = (
     key: keyof ManualRecord,
     label: string,
@@ -326,14 +332,16 @@ function Overview({
         <article>
           <p>MVP 대상</p>
           <strong>
-            {signalFile.products.length}<small>개 수요 개체</small>
+            {signalFile.products.length}
+            <small>개 수요 개체</small>
           </strong>
           <span>30일 매출 상위 제품</span>
         </article>
         <article>
           <p>수집 작업</p>
           <strong>
-            {signalFile.products.length * 5}<small>건</small>
+            {signalFile.products.length * 5}
+            <small>건</small>
           </strong>
           <span>수요 개체 {signalFile.products.length} × 채널 5</span>
         </article>
@@ -393,7 +401,10 @@ function Overview({
                     </td>
                     <td>
                       <strong>{s.name}</strong>
-                      <small>{s.skuNames.length}개 SKU 통합 · {s.keywords.join(" · ")}</small>
+                      <small>
+                        {s.skuNames.length}개 SKU 통합 ·{" "}
+                        {s.keywords.join(" · ")}
+                      </small>
                     </td>
                     <td>
                       <strong>{money(sale.revenue)}</strong>
@@ -657,11 +668,138 @@ function Method() {
   );
 }
 
+function ResearchWorkspace({
+  manual,
+  keywordDrafts,
+  onKeywordChange,
+  onOpen,
+  onDelete,
+  onExport,
+  onImport,
+}: {
+  manual: Record<string, ManualRecord>;
+  keywordDrafts: Record<string, string>;
+  onKeywordChange: (name: string, value: string) => void;
+  onOpen: (signal: Signal, platform: Platform) => void;
+  onDelete: (signal: Signal, platform: Platform) => void;
+  onExport: () => void;
+  onImport: (file: File) => void;
+}) {
+  return (
+    <section className="page-section">
+      <div className="page-title">
+        <p className="section-kicker">사람이 조사하고 근거를 남기는 곳</p>
+        <h1>조사 관리</h1>
+        <p>
+          대표 검색어를 다듬고 채널별 수치, 근거 URL, 메모를 직접 기록하세요.
+        </p>
+      </div>
+      <div className="workspace-summary">
+        <div>
+          <span>조사 대상</span>
+          <strong>{signalFile.products.length}개 수요 개체</strong>
+        </div>
+        <div>
+          <span>직접 입력 완료</span>
+          <strong>
+            {Object.keys(manual).length} / {signalFile.products.length * 5}건
+          </strong>
+        </div>
+        <div>
+          <span>저장 위치</span>
+          <strong>현재 브라우저</strong>
+        </div>
+        <div className="workspace-actions">
+          <button onClick={onExport}>JSON 내보내기</button>
+          <label>
+            JSON 가져오기
+            <input
+              type="file"
+              accept="application/json"
+              onChange={(event) =>
+                event.target.files?.[0] && onImport(event.target.files[0])
+              }
+            />
+          </label>
+        </div>
+      </div>
+      <div className="storage-notice">
+        공개 방문자가 서로의 데이터를 덮어쓰지 않도록 브라우저별로 저장합니다.
+        다른 PC로 옮길 때는 JSON을 내보내고 가져오세요.
+      </div>
+      <div className="research-list">
+        {signalFile.products.map((signal, index) => (
+          <article className="research-card" key={signal.name}>
+            <div className="research-card-head">
+              <div>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h2>{signal.name}</h2>
+                <p>{signal.skuNames.length}개 SKU 통합</p>
+              </div>
+              <small>
+                {
+                  platforms.filter(
+                    (platform) => manual[`${signal.name}::${platform.id}`],
+                  ).length
+                }
+                /5 직접 입력
+              </small>
+            </div>
+            <label className="keyword-editor">
+              <span>대표 검색어 · 쉼표로 구분</span>
+              <input
+                value={keywordDrafts[signal.name] ?? signal.keywords.join(", ")}
+                onChange={(event) =>
+                  onKeywordChange(signal.name, event.target.value)
+                }
+              />
+              <small>{signal.reason}</small>
+            </label>
+            <div className="channel-editor">
+              {platforms.map((platform) => {
+                const record = manual[`${signal.name}::${platform.id}`];
+                return (
+                  <div
+                    className={
+                      record ? "channel-item complete" : "channel-item"
+                    }
+                    key={platform.id}
+                  >
+                    <button onClick={() => onOpen(signal, platform.id)}>
+                      <span>{platform.name}</span>
+                      <b>{record ? "수정" : "입력"}</b>
+                      <small>
+                        {record?.evidenceUrl ? "근거 URL 있음" : "근거 필요"}
+                      </small>
+                    </button>
+                    {record && (
+                      <button
+                        className="record-delete"
+                        aria-label={`${platform.name} 조사값 삭제`}
+                        onClick={() => onDelete(signal, platform.id)}
+                      >
+                        삭제
+                      </button>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const [view, setView] = useState<
     "overview" | "collection" | "products" | "method"
   >("overview");
   const [manual, setManual] = useState<Record<string, ManualRecord>>({});
+  const [keywordDrafts, setKeywordDrafts] = useState<Record<string, string>>(
+    {},
+  );
   const [open, setOpen] = useState<{
     signal: Signal;
     platform: Platform;
@@ -671,6 +809,9 @@ export default function Home() {
     try {
       setManual(
         JSON.parse(localStorage.getItem("demand-manual-records") || "{}"),
+      );
+      setKeywordDrafts(
+        JSON.parse(localStorage.getItem("demand-keyword-drafts") || "{}"),
       );
     } catch {}
   }, []);
@@ -683,6 +824,61 @@ export default function Home() {
     setManual(next);
     localStorage.setItem("demand-manual-records", JSON.stringify(next));
     setOpen(null);
+  };
+  const removeRecord = (signal: Signal, platform: Platform) => {
+    const next = { ...manual };
+    delete next[`${signal.name}::${platform}`];
+    setManual(next);
+    localStorage.setItem("demand-manual-records", JSON.stringify(next));
+  };
+  const updateKeyword = (name: string, value: string) => {
+    const next = { ...keywordDrafts, [name]: value };
+    setKeywordDrafts(next);
+    localStorage.setItem("demand-keyword-drafts", JSON.stringify(next));
+  };
+  const exportWorkspace = () => {
+    const payload = JSON.stringify(
+      {
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        manual,
+        keywordDrafts,
+      },
+      null,
+      2,
+    );
+    const url = URL.createObjectURL(
+      new Blob([payload], { type: "application/json" }),
+    );
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "wellnessbox-demand-research.json";
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+  const importWorkspace = async (file: File) => {
+    try {
+      const parsed = JSON.parse(await file.text());
+      if (
+        !parsed ||
+        typeof parsed.manual !== "object" ||
+        typeof parsed.keywordDrafts !== "object"
+      )
+        throw new Error("invalid workspace file");
+      setManual(parsed.manual);
+      setKeywordDrafts(parsed.keywordDrafts);
+      localStorage.setItem(
+        "demand-manual-records",
+        JSON.stringify(parsed.manual),
+      );
+      localStorage.setItem(
+        "demand-keyword-drafts",
+        JSON.stringify(parsed.keywordDrafts),
+      );
+      window.alert("조사 데이터를 가져왔습니다.");
+    } catch {
+      window.alert("올바른 조사 데이터 JSON 파일이 아닙니다.");
+    }
   };
   const nav = [
     ["overview", "수요 개요", "⌁"],
@@ -732,7 +928,17 @@ export default function Home() {
             onOpen={(signal, platform) => setOpen({ signal, platform })}
           />
         )}{" "}
-        {view === "method" && <Method />}
+        {view === "method" && (
+          <ResearchWorkspace
+            manual={manual}
+            keywordDrafts={keywordDrafts}
+            onKeywordChange={updateKeyword}
+            onOpen={(signal, platform) => setOpen({ signal, platform })}
+            onDelete={removeRecord}
+            onExport={exportWorkspace}
+            onImport={importWorkspace}
+          />
+        )}
       </main>
       {selectedProduct && (
         <ProductDrawer
@@ -749,8 +955,10 @@ export default function Home() {
         <CollectionDrawer
           signal={open.signal}
           platform={open.platform}
+          existing={manual[`${open.signal.name}::${open.platform}`]}
           onClose={() => setOpen(null)}
           onSave={save}
+          onDelete={() => removeRecord(open.signal, open.platform)}
         />
       )}
     </div>
