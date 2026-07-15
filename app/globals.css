@@ -133,7 +133,14 @@ select {
 main {
   margin-left: var(--sidebar);
   padding: 0 48px 80px;
-  max-width: 1600px;
+  width: calc(100% - var(--sidebar));
+  max-width: none;
+}
+main > section {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero {
   min-height: 345px;
@@ -2090,7 +2097,7 @@ td > small {
     font-size: 16px;
   }
   main {
-    max-width: 1760px;
+    max-width: none;
     padding-right: 56px;
     padding-left: 56px;
   }
