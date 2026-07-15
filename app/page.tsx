@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { type CSSProperties, useEffect, useMemo, useState } from "react";
 import catalog from "./product-catalog.json";
 import signalFile from "./signals.json";
 
 type Signal = any;
 type Platform = "youtube" | "instagram" | "tiktok" | "naver" | "google";
+type ChannelWeights = Record<Platform, number>;
+type ChannelScores = Record<Platform, number | null>;
 type ManualItem = {
   id: string;
   label: string;
@@ -108,6 +110,185 @@ const catalogSignals: Signal[] = catalog.products
 const allProducts: Signal[] = [...signalFile.products, ...catalogSignals];
 const fmt = (v?: number | null) =>
   v == null ? "—" : v.toLocaleString("ko-KR");
+
+const recommendedWeights: ChannelWeights = {
+  naver: 35,
+  google: 10,
+  youtube: 25,
+  instagram: 15,
+  tiktok: 15,
+};
+
+const weightPresets: {
+  id: string;
+  name: string;
+  description: string;
+  weights: ChannelWeights;
+}[] = [
+  {
+    id: "recommended",
+    name: "현재 데이터 권장",
+    description: "수집 커버리지와 채널 신뢰도를 함께 반영",
+    weights: recommendedWeights,
+  },
+  {
+    id: "search",
+    name: "검색 수요 중심",
+    description: "구매 의도가 비교적 선명한 검색 관심도 중심",
+    weights: { naver: 55, google: 20, youtube: 10, instagram: 10, tiktok: 5 },
+  },
+  {
+    id: "viral",
+    name: "바이럴 반응 중심",
+    description: "Instagram과 TikTok의 확산·반응 중심",
+    weights: { naver: 10, google: 5, youtube: 15, instagram: 40, tiktok: 30 },
+  },
+  {
+    id: "video",
+    name: "영상 확산 중심",
+    description: "누적 조회와 영상 표본이 많은 제품 중심",
+    weights: { naver: 10, google: 5, youtube: 45, instagram: 15, tiktok: 25 },
+  },
+];
+
+function manualMetrics(record?: ManualRecord) {
+  if (!record) return null;
+  const items = record.items?.length ? record.items : [];
+  const views = items.length
+    ? items.reduce((sum, item) => sum + numericValue(item.views), 0)
+    : numericValue(record.views);
+  const likes = items.length
+    ? items.reduce((sum, item) => sum + numericValue(item.likes), 0)
+    : numericValue(record.likes);
+  const comments = items.length
+    ? items.reduce((sum, item) => sum + numericValue(item.comments), 0)
+    : numericValue(record.comments);
+  const shares = items.length
+    ? items.reduce((sum, item) => sum + numericValue(item.shares), 0)
+    : numericValue(record.shares);
+  return { primary: views, secondary: likes + comments * 4 + shares * 6 };
+}
+
+function rawChannelMetrics(
+  signal: Signal,
+  platform: Platform,
+  manual: Record<string, ManualRecord>,
+) {
+  const manualValue = manualMetrics(manual[`${signal.name}::${platform}`]);
+  if (manualValue) return manualValue;
+  const value = getAuto(signal, platform);
+  if (["no_results", "no_relevant_results"].includes(value?.status)) {
+    return { primary: 0, secondary: 0 };
+  }
+  if (value?.status !== "collected" && !(platform === "naver" && value?.trend)) {
+    return null;
+  }
+  if (platform === "naver") {
+    return {
+      primary: Number(value?.trend?.anchorNormalizedLatest30 ?? 0),
+      secondary: Number(value?.trend?.latest90Mean ?? 0),
+    };
+  }
+  if (platform === "google") {
+    return {
+      primary: Number(value?.recent4WeekAverage ?? 0),
+      secondary: Number(value?.latest ?? 0),
+    };
+  }
+  if (platform === "youtube") {
+    return {
+      primary: Number(value?.totalViews ?? 0),
+      secondary: Number(value?.medianViews ?? 0),
+    };
+  }
+  const totals = value?.totals || {};
+  return {
+    primary: Number(totals.views ?? 0),
+    secondary:
+      Number(totals.likes ?? 0) +
+      Number(totals.comments ?? 0) * 4 +
+      Number(totals.reposts ?? 0) * 6 +
+      Number(totals.saves ?? 0) * 2,
+  };
+}
+
+function percentile(value: number, values: number[]) {
+  if (value <= 0) return 0;
+  const positives = values.filter((item) => item > 0).sort((a, b) => a - b);
+  if (!positives.length) return 0;
+  return (positives.filter((item) => item <= value).length / positives.length) * 100;
+}
+
+function buildChannelScores(
+  products: Signal[],
+  manual: Record<string, ManualRecord>,
+) {
+  const metrics = new Map<string, ReturnType<typeof rawChannelMetrics>>();
+  const result = new Map<string, ChannelScores>();
+  for (const signal of products) {
+    for (const platform of platforms) {
+      metrics.set(
+        `${signal.name}::${platform.id}`,
+        rawChannelMetrics(signal, platform.id, manual),
+      );
+    }
+  }
+  for (const platform of platforms) {
+    const available = products
+      .map((signal) => metrics.get(`${signal.name}::${platform.id}`))
+      .filter(Boolean) as { primary: number; secondary: number }[];
+    const primaryValues = available.map((item) => item.primary);
+    const secondaryValues = available.map((item) => item.secondary);
+    const usePrimary = primaryValues.some((value) => value > 0);
+    const useSecondary = secondaryValues.some((value) => value > 0);
+    for (const signal of products) {
+      const metric = metrics.get(`${signal.name}::${platform.id}`);
+      const current = result.get(signal.name) || ({} as ChannelScores);
+      if (!metric) {
+        current[platform.id] = null;
+      } else {
+        const parts = [
+          usePrimary ? { score: percentile(metric.primary, primaryValues), weight: 70 } : null,
+          useSecondary
+            ? { score: percentile(metric.secondary, secondaryValues), weight: 30 }
+            : null,
+        ].filter(Boolean) as { score: number; weight: number }[];
+        const denominator = parts.reduce((sum, part) => sum + part.weight, 0);
+        current[platform.id] = denominator
+          ? parts.reduce((sum, part) => sum + part.score * part.weight, 0) /
+            denominator
+          : 0;
+      }
+      result.set(signal.name, current);
+    }
+  }
+  return result;
+}
+
+function weightedScore(scores: ChannelScores, weights: ChannelWeights) {
+  const denominator = platforms.reduce(
+    (sum, platform) => sum + weights[platform.id],
+    0,
+  );
+  if (!denominator) return 0;
+  return platforms.reduce(
+    (sum, platform) =>
+      sum + (scores[platform.id] || 0) * weights[platform.id],
+    0,
+  ) / denominator;
+}
+
+function scoreCoverage(scores: ChannelScores, weights: ChannelWeights) {
+  const total = platforms.reduce((sum, platform) => sum + weights[platform.id], 0);
+  if (!total) return 0;
+  return (
+    platforms.reduce(
+      (sum, platform) =>
+        sum + (scores[platform.id] == null ? 0 : weights[platform.id]),
+      0,
+    ) / total
+  ) * 100;
+}
 
 function getAuto(signal: Signal, platform: Platform) {
   return signal[platform as keyof Signal] as Record<string, any> | undefined;
@@ -501,14 +682,121 @@ function ProductDrawer({
   );
 }
 
+function WeightControls({
+  weights,
+  onChange,
+  scores,
+}: {
+  weights: ChannelWeights;
+  onChange: (weights: ChannelWeights) => void;
+  scores: Map<string, ChannelScores>;
+}) {
+  const total = platforms.reduce((sum, platform) => sum + weights[platform.id], 0);
+  const activePreset = weightPresets.find((preset) =>
+    platforms.every(
+      (platform) => preset.weights[platform.id] === weights[platform.id],
+    ),
+  );
+  return (
+    <section className="weight-panel" aria-label="채널 가중치 설정">
+      <div className="weight-panel-head">
+        <div>
+          <h3>채널별 비중</h3>
+          <p>
+            슬라이더를 움직이면 채널 안에서 정규화한 점수를 즉시 다시 합산해
+            순위를 바꿉니다.
+          </p>
+        </div>
+        <div className="weight-total">
+          <span>현재 합계</span>
+          <strong>{total}</strong>
+          <small>합계와 관계없이 100%로 환산</small>
+        </div>
+      </div>
+      <div className="preset-list">
+        {weightPresets.map((preset) => (
+          <button
+            key={preset.id}
+            className={activePreset?.id === preset.id ? "active" : ""}
+            onClick={() => onChange({ ...preset.weights })}
+            title={preset.description}
+          >
+            {preset.name}
+          </button>
+        ))}
+      </div>
+      <div className="weight-grid">
+        {platforms.map((platform) => {
+          const coverage = allProducts.filter(
+            (signal) => scores.get(signal.name)?.[platform.id] != null,
+          ).length;
+          const effective = total ? Math.round((weights[platform.id] / total) * 100) : 0;
+          return (
+            <label className="weight-control" key={platform.id}>
+              <span className="weight-label">
+                <b>{platform.name}</b>
+                <small>{coverage}/{allProducts.length}개 제품</small>
+                <strong>{effective}%</strong>
+              </span>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="5"
+                value={weights[platform.id]}
+                aria-label={`${platform.name} 가중치`}
+                onChange={(event) =>
+                  onChange({
+                    ...weights,
+                    [platform.id]: Number(event.target.value),
+                  })
+                }
+                style={{ "--range-value": `${weights[platform.id]}%` } as CSSProperties}
+              />
+              <output>{weights[platform.id]}</output>
+            </label>
+          );
+        })}
+      </div>
+      <p className="weight-guidance">
+        <b>{activePreset?.name || "사용자 설정"}</b>
+        {activePreset?.description || "조사 목적에 맞게 채널 비중을 직접 조정한 설정입니다."}
+        <span>값이 없는 채널은 다른 채널로 임의 재배분하지 않고 근거 커버리지에 반영합니다.</span>
+      </p>
+    </section>
+  );
+}
+
 function Overview({
   manual,
+  weights,
+  onWeightsChange,
   onSelect,
 }: {
   manual: Record<string, ManualRecord>;
+  weights: ChannelWeights;
+  onWeightsChange: (weights: ChannelWeights) => void;
   onSelect: (signal: Signal) => void;
 }) {
-  const top = allProducts;
+  const channelScores = useMemo(
+    () => buildChannelScores(allProducts, manual),
+    [manual],
+  );
+  const top = useMemo(
+    () =>
+      allProducts
+        .map((signal, originalIndex) => ({
+          signal,
+          originalIndex,
+          scores: channelScores.get(signal.name) || ({} as ChannelScores),
+        }))
+        .map((item) => ({
+          ...item,
+          score: weightedScore(item.scores, weights),
+        }))
+        .sort((a, b) => b.score - a.score || a.originalIndex - b.originalIndex),
+    [channelScores, weights],
+  );
   const autoCount = allProducts.reduce(
     (n, s) =>
       n + platforms.filter((p) => statusOf(s, p.id, manual) === "auto").length,
@@ -576,31 +864,33 @@ function Overview({
       <section className="panel ranking-panel">
         <div className="section-head">
           <div>
-            <p className="section-kicker">제품명 기준</p>
-            <h2>수요를 조사할 제품</h2>
+            <p className="section-kicker">가중치 기반 순위</p>
+            <h2>온라인 수요 순위</h2>
           </div>
           <span className="real-badge">제품을 눌러 상세 보기</span>
         </div>
+        <WeightControls weights={weights} onChange={onWeightsChange} scores={channelScores} />
         <div className="table-wrap">
           <table>
             <thead>
               <tr>
                 <th>번호</th>
                 <th>제품</th>
+                <th>종합 점수</th>
                 <th>통합 제품</th>
                 <th>대표 검색어</th>
                 <th>수집 현황</th>
               </tr>
             </thead>
             <tbody>
-              {top.map((p, i) => {
-                const s = p;
+              {top.map((item, i) => {
+                const s = item.signal;
                 const done = platforms.filter((x) =>
                   ["auto", "manual"].includes(statusOf(s, x.id, manual)),
                 ).length;
                 return (
                   <tr
-                    key={p.name}
+                    key={s.name}
                     onClick={() => onSelect(s)}
                     tabIndex={0}
                     onKeyDown={(e) => e.key === "Enter" && onSelect(s)}
@@ -614,6 +904,15 @@ function Overview({
                         {s.skuNames.length}개 SKU 통합 ·{" "}
                         {s.keywords.join(" · ")}
                       </small>
+                    </td>
+                    <td>
+                      <div className="demand-score">
+                        <strong>{item.score.toFixed(1)}</strong>
+                        <div className="signal">
+                          <span style={{ width: `${item.score}%` }} />
+                        </div>
+                        <small>근거 {Math.round(scoreCoverage(item.scores, weights))}%</small>
+                      </div>
                     </td>
                     <td>
                       <strong>{s.skuNames.length}개 SKU</strong>
@@ -732,22 +1031,48 @@ function Collection({
 
 function Products({
   manual,
+  weights,
+  onWeightsChange,
   onOpen,
 }: {
   manual: Record<string, ManualRecord>;
+  weights: ChannelWeights;
+  onWeightsChange: (weights: ChannelWeights) => void;
   onOpen: (s: Signal, p: Platform) => void;
 }) {
   const [selected, setSelected] = useState(allProducts[0]);
+  const channelScores = useMemo(
+    () => buildChannelScores(allProducts, manual),
+    [manual],
+  );
+  const sortedProducts = useMemo(
+    () =>
+      allProducts
+        .map((signal, originalIndex) => ({
+          signal,
+          originalIndex,
+          score: weightedScore(
+            channelScores.get(signal.name) || ({} as ChannelScores),
+            weights,
+          ),
+        }))
+        .sort((a, b) => b.score - a.score || a.originalIndex - b.originalIndex),
+    [channelScores, weights],
+  );
+  const selectedChannelScores =
+    channelScores.get(selected.name) || ({} as ChannelScores);
+  const selectedScore = weightedScore(selectedChannelScores, weights);
   return (
     <section className="page-section">
       <div className="page-title">
-        <p className="section-kicker">판매 × 온라인 근거</p>
+        <p className="section-kicker">채널별 온라인 근거</p>
         <h1>제품 검증</h1>
-        <p>온라인 점수는 5개 채널 수집이 끝난 뒤에만 계산합니다.</p>
+        <p>채널별 상대 점수와 적용 비중을 제품 단위로 확인합니다.</p>
       </div>
+      <WeightControls weights={weights} onChange={onWeightsChange} scores={channelScores} />
       <div className="validation-layout">
         <div className="product-list">
-          {allProducts.map((s, i) => (
+          {sortedProducts.map(({ signal: s, score }, i) => (
             <button
               className={selected.name === s.name ? "active" : ""}
               onClick={() => setSelected(s)}
@@ -758,12 +1083,33 @@ function Products({
                 <b>{s.name}</b>
                 <small>{s.keyword}</small>
               </div>
+              <em>{score.toFixed(1)}</em>
             </button>
           ))}
         </div>
         <div className="panel validation-detail">
           <span className="drawer-rank">제품 수요 조사</span>
           <h2>{selected.name}</h2>
+          <div className="selected-score">
+            <div>
+              <span>가중 종합 점수</span>
+              <strong>{selectedScore.toFixed(1)}</strong>
+              <small>
+                근거 {Math.round(scoreCoverage(selectedChannelScores, weights))}%
+              </small>
+            </div>
+            {platforms.map((platform) => (
+              <div key={platform.id}>
+                <span>{platform.name}</span>
+                <strong>
+                  {selectedChannelScores[platform.id] == null
+                    ? "—"
+                    : selectedChannelScores[platform.id]!.toFixed(1)}
+                </strong>
+                <small>비중 {weights[platform.id]}</small>
+              </div>
+            ))}
+          </div>
           <div className="entity-rule validation-keywords">
             <b>대표 검색어</b>
             <p>{selected.keywords.join(" · ")}</p>
@@ -797,9 +1143,11 @@ function Products({
             })}
           </div>
           <div className="score-lock">
-            <b>종합 수요 점수 잠김</b>
+            <b>가중 점수 계산됨</b>
             <p>
-              5개 채널의 수집 기준이 충족되기 전에는 점수를 노출하지 않습니다.
+              채널별 원시 수치를 상대 점수로 바꾼 뒤 현재 비중을 적용했습니다.
+              값이 없는 채널은 다른 채널로 재배분하지 않고 근거 커버리지에
+              반영합니다.
             </p>
           </div>
         </div>
@@ -815,8 +1163,8 @@ function Method() {
         <p className="section-kicker">회의 결정 반영</p>
         <h1>수집·검증 기준</h1>
         <p>
-          먼저 원천 데이터를 모으고, 실제 판매와 맞는지 확인한 뒤 가중치를
-          정합니다.
+          먼저 공개 원천 데이터를 모으고, 관련성과 재현성을 확인한 뒤 가중치를
+          조정합니다.
         </p>
       </div>
       <div className="method-grid">
@@ -845,10 +1193,10 @@ function Method() {
         </article>
         <article>
           <span>04</span>
-          <h3>채널별 점수 정규화</h3>
+          <h3>정규화 후 비중 조정</h3>
           <p>
             검색 관심도, 조회수, 반응 수처럼 단위가 다른 신호를 채널 안에서 먼저
-            비교하고, 데이터 품질에 따라 가중치를 결정합니다.
+            비교하고, 조사 목적에 맞는 비중을 슬라이더로 적용합니다.
           </p>
         </article>
       </div>
@@ -859,7 +1207,7 @@ function Method() {
         <i>→</i>
         <span>채널별 정규화</span>
         <i>→</i>
-        <strong>가중치 확정</strong>
+        <strong>가중치별 순위 비교</strong>
       </div>
     </section>
   );
@@ -1010,6 +1358,7 @@ export default function Home() {
     "overview" | "collection" | "products" | "method"
   >("overview");
   const [manual, setManual] = useState<Record<string, ManualRecord>>({});
+  const [weights, setWeights] = useState<ChannelWeights>(recommendedWeights);
   const [keywordDrafts, setKeywordDrafts] = useState<Record<string, string>>(
     {},
   );
@@ -1035,8 +1384,30 @@ export default function Home() {
       setKeywordDrafts(
         JSON.parse(localStorage.getItem("demand-keyword-drafts") || "{}"),
       );
+      const storedWeights = JSON.parse(
+        localStorage.getItem("demand-channel-weights") || "null",
+      );
+      if (
+        storedWeights &&
+        platforms.every((platform) =>
+          Number.isFinite(Number(storedWeights[platform.id])),
+        )
+      ) {
+        setWeights(
+          Object.fromEntries(
+            platforms.map((platform) => [
+              platform.id,
+              Math.max(0, Math.min(100, Number(storedWeights[platform.id]))),
+            ]),
+          ) as ChannelWeights,
+        );
+      }
     } catch {}
   }, []);
+  const updateWeights = (next: ChannelWeights) => {
+    setWeights(next);
+    localStorage.setItem("demand-channel-weights", JSON.stringify(next));
+  };
   const save = (record: ManualRecord) => {
     if (!open) return;
     const next = {
@@ -1065,6 +1436,7 @@ export default function Home() {
         exportedAt: new Date().toISOString(),
         manual,
         keywordDrafts,
+        weights,
       },
       null,
       2,
@@ -1089,6 +1461,7 @@ export default function Home() {
         throw new Error("invalid workspace file");
       setManual(parsed.manual);
       setKeywordDrafts(parsed.keywordDrafts);
+      if (parsed.weights) updateWeights(parsed.weights);
       localStorage.setItem(
         "demand-manual-records",
         JSON.stringify(parsed.manual),
@@ -1137,7 +1510,12 @@ export default function Home() {
       </aside>
       <main>
         {view === "overview" && (
-          <Overview manual={manual} onSelect={setSelectedProduct} />
+          <Overview
+            manual={manual}
+            weights={weights}
+            onWeightsChange={updateWeights}
+            onSelect={setSelectedProduct}
+          />
         )}{" "}
         {view === "collection" && (
           <Collection
@@ -1148,6 +1526,8 @@ export default function Home() {
         {view === "products" && (
           <Products
             manual={manual}
+            weights={weights}
+            onWeightsChange={updateWeights}
             onOpen={(signal, platform) => setOpen({ signal, platform })}
           />
         )}{" "}
