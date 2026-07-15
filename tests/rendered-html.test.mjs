@@ -21,8 +21,8 @@ test("server-renders the product demand dashboard", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>제품 수요 대시보드 \| 웰니스박스<\/title>/i);
-  assert.match(html, /83(?:<!-- -->)?개 수요 개체/);
-  assert.match(html, /415<small>건<\/small>/);
+  assert.match(html, /96(?:<!-- -->)?개 수요 개체/);
+  assert.match(html, /480<small>건<\/small>/);
   assert.match(html, /VT PDRN Cream RX/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|Codex is working/i);
 });
@@ -34,8 +34,8 @@ test("uses canonical product and signal data without starter preview files", asy
     readFile(new URL("../app/demand-entities.json", import.meta.url), "utf8").then(JSON.parse),
   ]);
 
-  assert.equal(signals.products.length, 83);
-  assert.equal(entities.length, 83);
+  assert.equal(signals.products.length, 96);
+  assert.equal(entities.length, 96);
   assert.match(page, /import signalFile from "\.\/signals\.json"/);
   assert.match(page, /import catalog from "\.\/product-catalog\.json"/);
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));

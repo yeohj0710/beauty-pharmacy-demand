@@ -254,5 +254,109 @@
     "sourceType": "약국 유통 협업 공개 기사",
     "confidence": "A~B",
     "entityId": "public-vt-pdrn-reedle-shot-100"
+  },
+  {
+    "productName": "제나벨 PDRN 비타 토닝 앰플 30ml",
+    "brand": "GENABELLE",
+    "sourceUrl": "https://genabelle.co.kr/product/detail.html?product_no=109",
+    "sourceType": "브랜드 공식 제품 페이지·약국 공개 게시물 교차확인",
+    "confidence": "A",
+    "entityId": "public-genabelle-pdrn-vita-toning-ampoule"
+  },
+  {
+    "productName": "RXme 리쥬영 PDRN 10000 딥 리페어 크림",
+    "brand": "RX:ME",
+    "sourceUrl": "https://www.instagram.com/peachyou_pharmacy/",
+    "sourceType": "약국 공식 계정 공개 게시물",
+    "confidence": "B",
+    "entityId": "public-rxme-rejuyoung-pdrn-10000-cream"
+  },
+  {
+    "productName": "RXme 쥬베클 PDLLA 10000 플러스 퍼밍 크림",
+    "brand": "RX:ME",
+    "sourceUrl": "https://rxmecosmetics.com/product/rxme-%EC%A5%AC%EB%B2%A0%ED%81%B4-pdlla-10000-%ED%94%8C%EB%9F%AC%EC%8A%A4-%ED%8D%BC%EB%B0%8D-%ED%81%AC%EB%A6%BC/31/",
+    "sourceType": "브랜드 공식 제품 페이지·약국 공개 게시물 교차확인",
+    "confidence": "A",
+    "entityId": "public-rxme-juvekle-pdlla-10000-cream"
+  },
+  {
+    "productName": "Déesse PDRN 2000+ Cream",
+    "brand": "DÉESSE",
+    "sourceUrl": "https://www.instagram.com/karyna.di/reel/DavnVMIyI_0/",
+    "sourceType": "약국 방문 공개 게시물",
+    "confidence": "B",
+    "entityId": "public-deesse-pdrn-2000-cream"
+  },
+  {
+    "productName": "메디필 멜라논 엑스 앰플 18.9 30ml",
+    "brand": "MEDIPEEL",
+    "sourceUrl": "https://medipeel.co.kr/category/%EB%A9%9C%EB%9D%BC%EB%85%BC%EC%97%91%EC%8A%A4/774/",
+    "sourceType": "브랜드 공식 제품 카테고리·약국 유통 기사 교차확인",
+    "confidence": "A~B",
+    "entityId": "public-medipeel-melanon-x-ampoule"
+  },
+  {
+    "productName": "메디필 멜라논 엑스 크림 30ml",
+    "brand": "MEDIPEEL",
+    "sourceUrl": "https://m.medipeel.co.kr/product/1020-%EC%98%88%EC%95%BD-%EB%B0%9C%EC%86%A1-%EB%A9%9C%EB%9D%BC%EB%85%BC%EC%97%91%EC%8A%A4-%ED%81%AC%EB%A6%BC-30ml/2658/",
+    "sourceType": "브랜드 공식 제품 페이지·약국 유통 기사 교차확인",
+    "confidence": "A~B",
+    "entityId": "public-medipeel-melanon-x-cream"
+  },
+  {
+    "productName": "메디필 레티날 NMN 바운스 샷 부스터 30ml",
+    "brand": "MEDIPEEL",
+    "sourceUrl": "https://www.medipeel.co.kr/product/detail.html?cate_no=1&display_group=35&product_no=4218",
+    "sourceType": "브랜드 공식 제품 페이지·약국 유통 기사 교차확인",
+    "confidence": "A~B",
+    "entityId": "public-medipeel-retinal-nmn-booster"
+  },
+  {
+    "productName": "메디필 레티날 NMN 바운스 샷 아이 크림 15ml",
+    "brand": "MEDIPEEL",
+    "sourceUrl": "https://www.medipeel.co.kr/product/detail.html?cate_no=1&display_group=35&product_no=4216",
+    "sourceType": "브랜드 공식 제품 페이지·약국 유통 기사 교차확인",
+    "confidence": "A~B",
+    "entityId": "public-medipeel-retinal-nmn-eye-cream"
+  },
+  {
+    "productName": "엘라비에 리투오 이씨엠 액티브 앰플 15ml 3개",
+    "brand": "ELRAVIE",
+    "sourceUrl": "https://m.elraviecos.com/goods/goods_view.php?goodsNo=1000000819",
+    "sourceType": "브랜드 공식 약국 판매 라인 제품 페이지",
+    "confidence": "A",
+    "entityId": "public-elravie-re2o-ecm-active-ampoule"
+  },
+  {
+    "productName": "엘라비에 리투오 이씨엠 부스터 크림 50ml",
+    "brand": "ELRAVIE",
+    "sourceUrl": "https://m.elraviecos.com/goods/goods_view.php?goodsNo=1000000820",
+    "sourceType": "브랜드 공식 약국 판매 라인 제품 페이지",
+    "confidence": "A",
+    "entityId": "public-elravie-re2o-ecm-booster-cream"
+  },
+  {
+    "productName": "엘라비에 리투오 이씨엠 스킨핏 비비",
+    "brand": "ELRAVIE",
+    "sourceUrl": "https://m.elraviecos.com/goods/goods_view.php?goodsNo=1000000821",
+    "sourceType": "브랜드 공식 약국 판매 라인 제품 페이지",
+    "confidence": "A",
+    "entityId": "public-elravie-re2o-ecm-skinfit-bb"
+  },
+  {
+    "productName": "fmk 리쥬네이팅 피디알엔 키트",
+    "brand": "fmk",
+    "sourceUrl": "https://fmkcos.com/product/detail.html?item_code=P000000O000C&product_no=14",
+    "sourceType": "브랜드 공식 제품 페이지·약국 입점 기사 교차확인",
+    "confidence": "A~B",
+    "entityId": "public-fmk-rejuvenating-pdrn-kit"
+  },
+  {
+    "productName": "fmk 브라이트닝 비타+ 키트",
+    "brand": "fmk",
+    "sourceUrl": "https://fmkcos.com/",
+    "sourceType": "브랜드 공식 제품 라인·약국 입점 기사 교차확인",
+    "confidence": "A~B",
+    "entityId": "public-fmk-brightening-vita-kit"
   }
 ]

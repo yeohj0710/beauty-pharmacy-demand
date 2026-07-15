@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-07-15T12:21:23+09:00",
+  "collectedAt": "2026-07-15T12:53:50+09:00",
   "scope": "full-product-catalog",
   "products": [
     {
@@ -26891,6 +26891,3577 @@
             "saves": null
           }
         ],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-genabelle-pdrn-vita-toning-ampoule",
+      "name": "제나벨 PDRN 비타 토닝 앰플",
+      "brand": "GENABELLE",
+      "category": "PDRN 브라이트닝 앰플",
+      "skuNames": [
+        "제나벨 PDRN 비타 토닝 앰플 30ml"
+      ],
+      "sourceAliases": [
+        "Genabelle PDRN Vita Toning Ampoule 30ml"
+      ],
+      "keywords": [
+        "제나벨 PDRN 비타 토닝 앰플",
+        "Genabelle PDRN Vita Toning Ampoule",
+        "제나벨 피디알엔 비타 앰플"
+      ],
+      "exclude": [
+        "마스크",
+        "크림"
+      ],
+      "reason": "제나벨 공식 제품명과 영문 표기를 하나의 앰플 수요로 통합",
+      "keyword": "제나벨 PDRN 비타 토닝 앰플",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "제나벨 PDRN 비타 토닝 앰플 30ml",
+          "brand": "GENABELLE",
+          "sourceUrl": "https://genabelle.co.kr/product/detail.html?product_no=109",
+          "sourceType": "브랜드 공식 제품 페이지·약국 공개 게시물 교차확인",
+          "confidence": "A",
+          "entityId": "public-genabelle-pdrn-vita-toning-ampoule"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "제나벨 PDRN 비타 토닝 앰플",
+        "attemptedQueries": [
+          "제나벨 PDRN 비타 토닝 앰플",
+          "Genabelle PDRN Vita Toning Ampoule",
+          "제나벨 피디알엔 비타 앰플"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EC%A0%9C%EB%82%98%EB%B2%A8%20PDRN%20%EB%B9%84%ED%83%80%20%ED%86%A0%EB%8B%9D%20%EC%95%B0%ED%94%8C",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EC%A0%9C%EB%82%98%EB%B2%A8%20PDRN%20%EB%B9%84%ED%83%80%20%ED%86%A0%EB%8B%9D%20%EC%95%B0%ED%94%8C",
+          "https://www.youtube.com/results?search_query=Genabelle%20PDRN%20Vita%20Toning%20Ampoule",
+          "https://www.youtube.com/results?search_query=%EC%A0%9C%EB%82%98%EB%B2%A8%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%EB%B9%84%ED%83%80%20%EC%95%B0%ED%94%8C"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "제나벨 PDRN 비타 토닝 앰플",
+            "rawCount": 9,
+            "acceptedCount": 7
+          },
+          {
+            "keyword": "Genabelle PDRN Vita Toning Ampoule",
+            "rawCount": 20,
+            "acceptedCount": 20
+          },
+          {
+            "keyword": "제나벨 피디알엔 비타 앰플",
+            "rawCount": 12,
+            "acceptedCount": 8
+          }
+        ],
+        "inspectedCount": 41,
+        "resultSampleCount": 29,
+        "viewSampleCount": 29,
+        "totalViews": 1204662,
+        "medianViews": 8772,
+        "topVideos": [
+          {
+            "id": "PjX3qIllSmg",
+            "title": "PDRN 그만 좀 쓰세요(+노스카나, 비판텐, 등)",
+            "channel": "잠티",
+            "published": "8개월 전",
+            "views": 320479,
+            "viewsText": "조회수 320,479회",
+            "url": "https://www.youtube.com/watch?v=PjX3qIllSmg"
+          },
+          {
+            "id": "y1zCRGPO3NY",
+            "title": "요즘 채정안 피부장벽 과몰입템! ✨ PDRN의 모든 것 | 직접 써 본 피부 회복템 총출동",
+            "channel": "채정안TV",
+            "published": "9개월 전",
+            "views": 218896,
+            "viewsText": "조회수 218,896회",
+            "url": "https://www.youtube.com/watch?v=y1zCRGPO3NY"
+          },
+          {
+            "id": "dNMwdzGJ4A4",
+            "title": "PDRN 성분의 장단점과 화장품으로 사용했을때의 한계점과 좋은 제품 6종 소개",
+            "channel": "제이나 [Jaina]",
+            "published": "1년 전",
+            "views": 144089,
+            "viewsText": "조회수 144,089회",
+            "url": "https://www.youtube.com/watch?v=dNMwdzGJ4A4"
+          },
+          {
+            "id": "wfZpcHv8Mo0",
+            "title": "I Tried PDRN Products for 4 Months All to Tell You THIS?!",
+            "channel": "AliceintheRabbitHole",
+            "published": "1년 전",
+            "views": 84616,
+            "viewsText": "조회수 84,616회",
+            "url": "https://www.youtube.com/watch?v=wfZpcHv8Mo0"
+          },
+          {
+            "id": "vk6W236Ca_A",
+            "title": "PDRN 정말 효과 있을까?  같이 쓰면 안좋은 성분은?  함량별 제품 10종 비교(부작용, 사용법, 피부타입별 추천)",
+            "channel": "디렉터 파이",
+            "published": "8개월 전",
+            "views": 77660,
+            "viewsText": "조회수 77,660회",
+            "url": "https://www.youtube.com/watch?v=vk6W236Ca_A"
+          },
+          {
+            "id": "ta8YCA1Voc8",
+            "title": "Which PDRN is WORTH checking out?! Review on Top 10 PDRN products | HONEST REVIEW, ❌ADS",
+            "channel": "Soo Beauty 수뷰티 ",
+            "published": "1년 전",
+            "views": 74610,
+            "viewsText": "조회수 74,610회",
+            "url": "https://www.youtube.com/watch?v=ta8YCA1Voc8"
+          },
+          {
+            "id": "E439tYOIpfk",
+            "title": "cc) 올해 PDRN 무조건 뜬다💖피부재생에 좋은 피디알엔 제품 싹다 비교‼️(피부과추천템,올리브영1위템)ㅣ아랑",
+            "channel": "Arang 아랑",
+            "published": "2년 전",
+            "views": 67554,
+            "viewsText": "조회수 67,554회",
+            "url": "https://www.youtube.com/watch?v=E439tYOIpfk"
+          },
+          {
+            "id": "L9w5hEOvQfs",
+            "title": "사지 마세요 ⚠️ 함량 0.01%?  의사가 직접 비교한 PDRN 앰플 TOP5 ㅣ 항노화, 수분, 탄력, 주름 만병통치약이라고..?!",
+            "channel": "청담 닥터원",
+            "published": "1년 전",
+            "views": 65288,
+            "viewsText": "조회수 65,288회",
+            "url": "https://www.youtube.com/watch?v=L9w5hEOvQfs"
+          },
+          {
+            "id": "PEpiVhBo_g8",
+            "title": "Best & Worst PDRN Skincare 2025 - What Actually Works for Mature Skin?",
+            "channel": "One Eye Beauty",
+            "published": "7개월 전",
+            "views": 35032,
+            "viewsText": "조회수 35,032회",
+            "url": "https://www.youtube.com/watch?v=PEpiVhBo_g8"
+          },
+          {
+            "id": "F0cU7DemvKQ",
+            "title": "You Put WHAT on Your Face?! | PDRN the Hottest Trend in K-Beauty",
+            "channel": "Kelly Driscoll",
+            "published": "1년 전",
+            "views": 32529,
+            "viewsText": "조회수 32,529회",
+            "url": "https://www.youtube.com/watch?v=F0cU7DemvKQ"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_da07cd9cf88d9302e27ac9cabbb6976c",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 0.01,
+          "previous30Mean": 0.01,
+          "changePct": 20.0,
+          "latest90Mean": 0.01,
+          "latest": 0.0,
+          "peak": 0.49,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "제나벨 PDRN 비타 토닝 앰플",
+            "Genabelle PDRN Vita Toning Ampoule",
+            "제나벨 피디알엔 비타 앰플"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 0.02,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_da07cd9cf88d9302e27ac9cabbb6976c"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EB%82%98%EB%B2%A8%20PDRN%20%EB%B9%84%ED%83%80%20%ED%86%A0%EB%8B%9D%20%EC%95%B0%ED%94%8C",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:52:11+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Genabelle PDRN Vita Toning Ampoule",
+        "attemptedQueries": [
+          "Genabelle PDRN Vita Toning Ampoule"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=Genabelle%20PDRN%20Vita%20Toning%20Ampoule",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=Genabelle%20PDRN%20Vita%20Toning%20Ampoule"
+        ],
+        "inspectedCount": 6,
+        "acceptedCount": 6,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 215240,
+          "likes": 4940,
+          "comments": 166,
+          "reposts": 403,
+          "saves": 2611
+        },
+        "items": [
+          {
+            "id": "7526990152799997206",
+            "url": "https://www.tiktok.com/@skincupid/video/7526990152799997206",
+            "account": "6882005256811004929",
+            "publishedAt": "2025-07-14T17:26:07Z",
+            "title": "No gate keeping here, had to share it with you guys💕 🪽 GENABELLE PDRN...",
+            "description": "No gate keeping here, had to share it with you guys💕 🪽 GENABELLE PDRN Vita Toning Ampoule #skincare #ampoule #darkspot #koreanskincare #kbeauty #hydration #skincaretips ",
+            "views": 209300,
+            "likes": 4799,
+            "comments": 134,
+            "reposts": 394,
+            "saves": 2578
+          },
+          {
+            "id": "7658783862255914272",
+            "url": "https://www.tiktok.com/@tiktokajussi/video/7658783862255914272",
+            "account": "7222067107775939590",
+            "publishedAt": "2026-07-04T21:13:00Z",
+            "title": "I genuinely got the last jumbo bottle 😭💛 Don't wait for the regular s...",
+            "description": "I genuinely got the last jumbo bottle 😭💛 Don't wait for the regular size to disappear too. @Genabelle #genabelle #genabellepdrnvitatoningampoule #vitatoningampoule #koreanskincare #pdrnserum ",
+            "views": 458,
+            "likes": 8,
+            "comments": 0,
+            "reposts": 2,
+            "saves": 1
+          },
+          {
+            "id": "7647441195605511446",
+            "url": "https://www.tiktok.com/@lucychesterbeauty/video/7647441195605511446",
+            "account": "6776512951860921350",
+            "publishedAt": "2026-06-04T07:37:54Z",
+            "title": "⭐️On offer right now⭐️ The Genabelle PDRN Vita Toning Ampoule is a hi...",
+            "description": "⭐️On offer right now⭐️ The Genabelle PDRN Vita Toning Ampoule is a highly popular Korean multi-tasking serum. Designed for dull, uneven, and sensitive skin, it blends brightening vitamins with cell-regenerating salmon extract to fade dark spots, smooth fine lines, and deeply hydrate. #RegenerativeSkinCare #Over40SkincareCare. #GenabellePDRNAmpoule ",
+            "views": 1630,
+            "likes": 50,
+            "comments": 14,
+            "reposts": 3,
+            "saves": 13
+          },
+          {
+            "id": "7643048951679028494",
+            "url": "https://www.tiktok.com/@lustrous.aura/video/7643048951679028494",
+            "account": "6914367790796276741",
+            "publishedAt": "2026-05-23T11:33:41Z",
+            "title": "New skincare obsession unlocked ✨ Been using the Genabelle PDRN Vita ...",
+            "description": "New skincare obsession unlocked ✨ Been using the Genabelle PDRN Vita Toning Ampoule and my skin has been looking extra glowy, hydrated, and smooth lately 👀 I love that it combines PDRN, vitamin capsules, niacinamide, and hydrating ingredients all in one formula without feeling heavy on my sensitive skin 💛 🛍️ LINKED HERE #genabelle #genabellepdrn #newdropsforyou #summerwins #koreanskincareroutine ",
+            "views": 537,
+            "likes": 18,
+            "comments": 11,
+            "reposts": 2,
+            "saves": 6
+          },
+          {
+            "id": "7653474015541021974",
+            "url": "https://www.tiktok.com/@beauty_with_binny/video/7653474015541021974",
+            "account": "7486183570148803606",
+            "publishedAt": "2026-06-21T23:33:00Z",
+            "title": "The @Genabelle PDRN Vita Toning Ampoule 🤍 a brightening, skin-renewin...",
+            "description": "The @Genabelle PDRN Vita Toning Ampoule 🤍 a brightening, skin-renewing ampoule designed to help even tone and boost radiance for a healthier-looking glow. #radiantskin #glowyskin #glassskin #koreanskincare #pdrnserum ",
+            "views": 614,
+            "likes": 20,
+            "comments": 0,
+            "reposts": 0,
+            "saves": 3
+          },
+          {
+            "id": "7616803484301577486",
+            "url": "https://www.tiktok.com/@amandaswenson/video/7616803484301577486",
+            "account": "7313390672596583470",
+            "publishedAt": "2026-03-13T18:08:17Z",
+            "title": "The way this Vita Toning PDRN Ampoule from @Genabelle USA makes my mo...",
+            "description": "The way this Vita Toning PDRN Ampoule from @Genabelle USA makes my mornings SO MUCH EASIER! It’s loaded with amazing ingredients that allow for the serum to truly do it all: brighten, smooth, soothe and hydrate! #skincare #amskincare #vitaminc #serum #glowyskin ",
+            "views": 2701,
+            "likes": 45,
+            "comments": 7,
+            "reposts": 2,
+            "saves": 10
+          }
+        ],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "no_relevant_results",
+        "collectedAt": "2026-07-15T12:51:06+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Genabelle PDRN Vita Toning Ampoule",
+        "attemptedQueries": [
+          "Genabelle PDRN Vita Toning Ampoule"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=Genabelle%20PDRN%20Vita%20Toning%20Ampoule",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=Genabelle%20PDRN%20Vita%20Toning%20Ampoule"
+        ],
+        "inspectedCount": 1,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 1,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-rxme-rejuyoung-pdrn-10000-cream",
+      "name": "RXme 리쥬영 PDRN 10000 크림",
+      "brand": "RX:ME",
+      "category": "약국 PDRN 크림",
+      "skuNames": [
+        "RXme 리쥬영 PDRN 10000 딥 리페어 크림"
+      ],
+      "sourceAliases": [
+        "Rejuyoung PDRN 10000 Deep Repair Cream"
+      ],
+      "keywords": [
+        "리쥬영 PDRN 10000 크림",
+        "Rejuyoung PDRN 10000",
+        "RXme 리쥬영 크림"
+      ],
+      "exclude": [
+        "쥬베클",
+        "리쥬올"
+      ],
+      "reason": "약국 공개 게시물의 한글·영문 제품명을 하나의 리쥬영 크림 수요로 통합",
+      "keyword": "리쥬영 PDRN 10000 크림",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "RXme 리쥬영 PDRN 10000 딥 리페어 크림",
+          "brand": "RX:ME",
+          "sourceUrl": "https://www.instagram.com/peachyou_pharmacy/",
+          "sourceType": "약국 공식 계정 공개 게시물",
+          "confidence": "B",
+          "entityId": "public-rxme-rejuyoung-pdrn-10000-cream"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "리쥬영 PDRN 10000 크림",
+        "attemptedQueries": [
+          "리쥬영 PDRN 10000 크림",
+          "Rejuyoung PDRN 10000",
+          "RXme 리쥬영 크림"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%A6%AC%EC%A5%AC%EC%98%81%20PDRN%2010000%20%ED%81%AC%EB%A6%BC",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EB%A6%AC%EC%A5%AC%EC%98%81%20PDRN%2010000%20%ED%81%AC%EB%A6%BC",
+          "https://www.youtube.com/results?search_query=Rejuyoung%20PDRN%2010000",
+          "https://www.youtube.com/results?search_query=RXme%20%EB%A6%AC%EC%A5%AC%EC%98%81%20%ED%81%AC%EB%A6%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "리쥬영 PDRN 10000 크림",
+            "rawCount": 11,
+            "acceptedCount": 4
+          },
+          {
+            "keyword": "Rejuyoung PDRN 10000",
+            "rawCount": 11,
+            "acceptedCount": 10
+          },
+          {
+            "keyword": "RXme 리쥬영 크림",
+            "rawCount": 1,
+            "acceptedCount": 0
+          }
+        ],
+        "inspectedCount": 23,
+        "resultSampleCount": 13,
+        "viewSampleCount": 13,
+        "totalViews": 857822,
+        "medianViews": 37134,
+        "topVideos": [
+          {
+            "id": "PjX3qIllSmg",
+            "title": "PDRN 그만 좀 쓰세요(+노스카나, 비판텐, 등)",
+            "channel": "잠티",
+            "published": "8개월 전",
+            "views": 320479,
+            "viewsText": "조회수 320,479회",
+            "url": "https://www.youtube.com/watch?v=PjX3qIllSmg"
+          },
+          {
+            "id": "Ck7jTChVZWs",
+            "title": "被推坑PDRN？先別下單！帶你看清：市場有多亂丨PDRN能幹什麼丨PDRN產品實測哪些靠譜！丨配方师刘星 #pdrn #水光針 #skinbooster #抗老 #抗皱",
+            "channel": "配方师刘星",
+            "published": "5개월 전",
+            "views": 116343,
+            "viewsText": "조회수 116,343회",
+            "url": "https://www.youtube.com/watch?v=Ck7jTChVZWs"
+          },
+          {
+            "id": "vk6W236Ca_A",
+            "title": "PDRN 정말 효과 있을까?  같이 쓰면 안좋은 성분은?  함량별 제품 10종 비교(부작용, 사용법, 피부타입별 추천)",
+            "channel": "디렉터 파이",
+            "published": "8개월 전",
+            "views": 77660,
+            "viewsText": "조회수 77,660회",
+            "url": "https://www.youtube.com/watch?v=vk6W236Ca_A"
+          },
+          {
+            "id": "ta8YCA1Voc8",
+            "title": "Which PDRN is WORTH checking out?! Review on Top 10 PDRN products | HONEST REVIEW, ❌ADS",
+            "channel": "Soo Beauty 수뷰티 ",
+            "published": "1년 전",
+            "views": 74610,
+            "viewsText": "조회수 74,610회",
+            "url": "https://www.youtube.com/watch?v=ta8YCA1Voc8"
+          },
+          {
+            "id": "MUBkaoqDj1o",
+            "title": "충격..PDRN함량 0.01%..?😧 가장 좋은 PDRN앰플 가려내기👩🏻‍🔬",
+            "channel": "한별두별[Hanna]",
+            "published": "1년 전",
+            "views": 68877,
+            "viewsText": "조회수 68,877회",
+            "url": "https://www.youtube.com/watch?v=MUBkaoqDj1o"
+          },
+          {
+            "id": "L9w5hEOvQfs",
+            "title": "사지 마세요 ⚠️ 함량 0.01%?  의사가 직접 비교한 PDRN 앰플 TOP5 ㅣ 항노화, 수분, 탄력, 주름 만병통치약이라고..?!",
+            "channel": "청담 닥터원",
+            "published": "1년 전",
+            "views": 65288,
+            "viewsText": "조회수 65,288회",
+            "url": "https://www.youtube.com/watch?v=L9w5hEOvQfs"
+          },
+          {
+            "id": "GI91cCv5c1U",
+            "title": "[SUB] PDRN 세럼 10개 써보고 장단점 비교 검증해봅니다 (살거 딱정해줌) 광고X | I Tested 10 PDRN Serums",
+            "channel": "소살 Sora Salon",
+            "published": "2개월 전",
+            "views": 37134,
+            "viewsText": "조회수 37,134회",
+            "url": "https://www.youtube.com/watch?v=GI91cCv5c1U"
+          },
+          {
+            "id": "PEpiVhBo_g8",
+            "title": "Best & Worst PDRN Skincare 2025 - What Actually Works for Mature Skin?",
+            "channel": "One Eye Beauty",
+            "published": "7개월 전",
+            "views": 35032,
+            "viewsText": "조회수 35,032회",
+            "url": "https://www.youtube.com/watch?v=PEpiVhBo_g8"
+          },
+          {
+            "id": "5-74Oaefc8Q",
+            "title": "The PDRN Mistake 90% of People Make (Including Me!) | AD ft Dr. Reju-All",
+            "channel": "Kelly Driscoll",
+            "published": "7개월 전",
+            "views": 18914,
+            "viewsText": "조회수 18,914회",
+            "url": "https://www.youtube.com/watch?v=5-74Oaefc8Q"
+          },
+          {
+            "id": "FE6CV3WL-jk",
+            "title": "요즘 화장품 업계에서 가장 ‘핫한 성분’ PDRN,  진짜 효과 있을까? 추천템·비추천템까지 싹 정리🔥 (광고X)",
+            "channel": "피부는 희쌤",
+            "published": "7개월 전",
+            "views": 18761,
+            "viewsText": "조회수 18,761회",
+            "url": "https://www.youtube.com/watch?v=FE6CV3WL-jk"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_da07cd9cf88d9302e27ac9cabbb6976c",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 0.0,
+          "previous30Mean": 0.0,
+          "changePct": null,
+          "latest90Mean": 0.0,
+          "latest": 0.0,
+          "peak": 0.0,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "리쥬영 PDRN 10000 크림",
+            "Rejuyoung PDRN 10000",
+            "RXme 리쥬영 크림"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 0.0,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_da07cd9cf88d9302e27ac9cabbb6976c"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%EC%A5%AC%EC%98%81%20PDRN%2010000%20%ED%81%AC%EB%A6%BC",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:52:29+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Rejuyoung PDRN 10000 Deep Repair Cream",
+        "attemptedQueries": [
+          "Rejuyoung PDRN 10000 Deep Repair Cream"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=Rejuyoung%20PDRN%2010000%20Deep%20Repair%20Cream",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=Rejuyoung%20PDRN%2010000%20Deep%20Repair%20Cream"
+        ],
+        "inspectedCount": 5,
+        "acceptedCount": 5,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 23228,
+          "likes": 124,
+          "comments": 10,
+          "reposts": 52,
+          "saves": 37
+        },
+        "items": [
+          {
+            "id": "7603215564147936532",
+            "url": "https://www.tiktok.com/@young2ee/video/7603215564147936532",
+            "account": "7063455654137267202",
+            "publishedAt": "2026-02-05T03:19:42Z",
+            "title": "(제품제공) 리쥬영 PDRN 10000 #리쥬영 #pdrn #추천떠라 #fypシ ",
+            "description": "(제품제공) 리쥬영 PDRN 10000 #리쥬영 #pdrn #추천떠라 #fypシ ",
+            "views": 2331,
+            "likes": 14,
+            "comments": 0,
+            "reposts": 5,
+            "saves": 12
+          },
+          {
+            "id": "7600777797723901191",
+            "url": "https://www.tiktok.com/@s_.eeung/video/7600777797723901191",
+            "account": "7430443949088031751",
+            "publishedAt": "2026-01-29T13:39:55Z",
+            "title": "강남 에이원 약국에서만 살 수 있는 피디알엔 크림이 있다고~!???  #리쥬영 #rejuyoung #pdrn #pdrn100...",
+            "description": "강남 에이원 약국에서만 살 수 있는 피디알엔 크림이 있다고~!???  #리쥬영 #rejuyoung #pdrn #pdrn10000 #rxme @RXme cosmetics ",
+            "views": 1572,
+            "likes": 35,
+            "comments": 4,
+            "reposts": 1,
+            "saves": 8
+          },
+          {
+            "id": "7600817931987062034",
+            "url": "https://www.tiktok.com/@surfinginlovelyhawaii/video/7600817931987062034",
+            "account": "7206005267145638914",
+            "publishedAt": "2026-01-29T16:15:35Z",
+            "title": "이거 사려고 강남 약국 찾아간다는데..🏃🏻‍♀️💨  #리쥬영 #rejuyoung #pdrn #pdrn10000 #rxme @...",
+            "description": "이거 사려고 강남 약국 찾아간다는데..🏃🏻‍♀️💨  #리쥬영 #rejuyoung #pdrn #pdrn10000 #rxme @RXme cosmetics ",
+            "views": 4182,
+            "likes": 34,
+            "comments": 1,
+            "reposts": 4,
+            "saves": 14
+          },
+          {
+            "id": "7599655428947070225",
+            "url": "https://www.tiktok.com/@seok0_deepmute/video/7599655428947070225",
+            "account": "6810002788765516802",
+            "publishedAt": "2026-01-26T13:05:06Z",
+            "title": "#광고 역대급 약국템 PDRN 등장! @RXme cosmetics  #광고 #rejuyoung #pdrn #pdrn1000...",
+            "description": "#광고 역대급 약국템 PDRN 등장! @RXme cosmetics  #광고 #rejuyoung #pdrn #pdrn10000 #rxme",
+            "views": 4143,
+            "likes": 7,
+            "comments": 0,
+            "reposts": 1,
+            "saves": 0
+          },
+          {
+            "id": "7600316277432945928",
+            "url": "https://www.tiktok.com/@yn_04/video/7600316277432945928",
+            "account": "6635491334403833858",
+            "publishedAt": "2026-01-28T07:48:55Z",
+            "title": "PDRN제품 찾으시는 분들! 요거 완전 진국임… ❤️ #리쥬영 #rejuyoung #pdrn #pdrn10000 #rxme ...",
+            "description": "PDRN제품 찾으시는 분들! 요거 완전 진국임… ❤️ #리쥬영 #rejuyoung #pdrn #pdrn10000 #rxme  @RXme cosmetics ",
+            "views": 11000,
+            "likes": 34,
+            "comments": 5,
+            "reposts": 41,
+            "saves": 3
+          }
+        ],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:51:16+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Rejuyoung PDRN 10000 Deep Repair Cream",
+        "attemptedQueries": [
+          "Rejuyoung PDRN 10000 Deep Repair Cream"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=Rejuyoung%20PDRN%2010000%20Deep%20Repair%20Cream",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=Rejuyoung%20PDRN%2010000%20Deep%20Repair%20Cream"
+        ],
+        "inspectedCount": 1,
+        "acceptedCount": 1,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 22,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [
+          {
+            "id": "DaRq3o4SBW-",
+            "url": "https://www.instagram.com/b_riahc.real/reel/DaRq3o4SBW-/",
+            "account": "330378978",
+            "publishedAt": "2026-07-02T03:53:08Z",
+            "title": "Video by b_riahc.real",
+            "description": "#ad\n來明洞必逛的韓國美妝藥局💗 @peachyou_pharmacy \n\nPeach You 藥局外觀是粉紅色系超甜美適合拍照\n店內也有會講中英日文的服務員可以提供說明，對外國旅客來說蠻安心的！\n這次試了他們家主打的 RX 的 Rejuyoung 麗珠洋修護霜和 Juvekle 喬雅可豐顏霜。\n\n一款適合全臉保養，一款適合局部加強，質地都比我想像中好推開，也很輕不黏膩！\n我自己覺得使用後保濕感跟彈潤感都有提升，需要加強保養的時候晚上都會擦✨\n大家如果有去明洞的話可以考慮到Peach You藥局逛逛喔！\n\n📍Peach You 藥局\n首爾市中區明洞7街21號\n\n#Rejuyoung #Juvekle #韓國保養 #PeachYouPharmacy",
+            "views": null,
+            "likes": 22,
+            "comments": 0,
+            "reposts": null,
+            "saves": null
+          }
+        ],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-rxme-juvekle-pdlla-10000-cream",
+      "name": "RXme 쥬베클 PDLLA 10000 크림",
+      "brand": "RX:ME",
+      "category": "약국 PDLLA 퍼밍 크림",
+      "skuNames": [
+        "RXme 쥬베클 PDLLA 10000 플러스 퍼밍 크림"
+      ],
+      "sourceAliases": [
+        "Juvekle PDLLA 10000 Plus Firming Cream"
+      ],
+      "keywords": [
+        "쥬베클 PDLLA 10000 크림",
+        "Juvekle PDLLA 10000",
+        "RXme 쥬베클 크림"
+      ],
+      "exclude": [
+        "리쥬영",
+        "리쥬올"
+      ],
+      "reason": "브랜드·쥬베클·PDLLA 함량을 함께 사용해 동시 판매 제품과 분리",
+      "keyword": "쥬베클 PDLLA 10000 크림",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "RXme 쥬베클 PDLLA 10000 플러스 퍼밍 크림",
+          "brand": "RX:ME",
+          "sourceUrl": "https://rxmecosmetics.com/product/rxme-%EC%A5%AC%EB%B2%A0%ED%81%B4-pdlla-10000-%ED%94%8C%EB%9F%AC%EC%8A%A4-%ED%8D%BC%EB%B0%8D-%ED%81%AC%EB%A6%BC/31/",
+          "sourceType": "브랜드 공식 제품 페이지·약국 공개 게시물 교차확인",
+          "confidence": "A",
+          "entityId": "public-rxme-juvekle-pdlla-10000-cream"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "쥬베클 PDLLA 10000 크림",
+        "attemptedQueries": [
+          "쥬베클 PDLLA 10000 크림",
+          "Juvekle PDLLA 10000",
+          "RXme 쥬베클 크림"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EC%A5%AC%EB%B2%A0%ED%81%B4%20PDLLA%2010000%20%ED%81%AC%EB%A6%BC",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EC%A5%AC%EB%B2%A0%ED%81%B4%20PDLLA%2010000%20%ED%81%AC%EB%A6%BC",
+          "https://www.youtube.com/results?search_query=Juvekle%20PDLLA%2010000",
+          "https://www.youtube.com/results?search_query=RXme%20%EC%A5%AC%EB%B2%A0%ED%81%B4%20%ED%81%AC%EB%A6%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "쥬베클 PDLLA 10000 크림",
+            "rawCount": 5,
+            "acceptedCount": 0
+          },
+          {
+            "keyword": "Juvekle PDLLA 10000",
+            "rawCount": 18,
+            "acceptedCount": 1
+          },
+          {
+            "keyword": "RXme 쥬베클 크림",
+            "rawCount": 20,
+            "acceptedCount": 1
+          }
+        ],
+        "inspectedCount": 43,
+        "resultSampleCount": 2,
+        "viewSampleCount": 2,
+        "totalViews": 2778,
+        "medianViews": 1389,
+        "topVideos": [
+          {
+            "id": "4C5g1mYcDIo",
+            "title": "약국에선 이거사야해! 품절 나기 전에 서둘러😳#쥬베클 #Juvekle #rxme #Kbeauty #koreanskincare",
+            "channel": "리라리라",
+            "published": "5개월 전",
+            "views": 1585,
+            "viewsText": "조회수 1,585회",
+            "url": "https://www.youtube.com/watch?v=4C5g1mYcDIo"
+          },
+          {
+            "id": "b9Rd9JmuTmc",
+            "title": "How Juvelook™ Works | The Science of PDLLA Collagen Stimulation",
+            "channel": "Dr. A Clinic - Top Skin & Aesthetic Clinic in KL",
+            "published": "8개월 전",
+            "views": 1193,
+            "viewsText": "조회수 1,193회",
+            "url": "https://www.youtube.com/watch?v=b9Rd9JmuTmc"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_da07cd9cf88d9302e27ac9cabbb6976c",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 0.0,
+          "previous30Mean": 0.0,
+          "changePct": null,
+          "latest90Mean": 0.0,
+          "latest": 0.0,
+          "peak": 0.0,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "쥬베클 PDLLA 10000 크림",
+            "Juvekle PDLLA 10000",
+            "RXme 쥬베클 크림"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 0.0,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_da07cd9cf88d9302e27ac9cabbb6976c"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A5%AC%EB%B2%A0%ED%81%B4%20PDLLA%2010000%20%ED%81%AC%EB%A6%BC",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:52:45+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Juvekle PDLLA 10000 Plus Firming Cream",
+        "attemptedQueries": [
+          "Juvekle PDLLA 10000 Plus Firming Cream"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=Juvekle%20PDLLA%2010000%20Plus%20Firming%20Cream",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=Juvekle%20PDLLA%2010000%20Plus%20Firming%20Cream"
+        ],
+        "inspectedCount": 4,
+        "acceptedCount": 4,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 56361,
+          "likes": 409,
+          "comments": 9,
+          "reposts": 176,
+          "saves": 235
+        },
+        "items": [
+          {
+            "id": "7585775914298920193",
+            "url": "https://www.tiktok.com/@gnapgnap17_/video/7585775914298920193",
+            "account": "7342130287914025986",
+            "publishedAt": "2025-12-20T03:26:11Z",
+            "title": "외국인들 사이에서 입소문나서 구하기 힘든 약국품절템? 💙쥬베클 울트라 PDLLA 10000+ 필업크림  촉촉하고 가벼운 제형...",
+            "description": "외국인들 사이에서 입소문나서 구하기 힘든 약국품절템? 💙쥬베클 울트라 PDLLA 10000+ 필업크림  촉촉하고 가벼운 제형의 크림인데, 실제 피부과 수준의 PDLLA 함량으로 푸석하고 주름 생기는 곳에 발라주면 피부 탄력 개선에 도움을 줘요!  #쥬베클 #Juvekle #rxme #Kbeauty #koreanskincare @rxme_official ",
+            "views": 3389,
+            "likes": 14,
+            "comments": 0,
+            "reposts": 8,
+            "saves": 4
+          },
+          {
+            "id": "7580569502186753300",
+            "url": "https://www.tiktok.com/@kitzi_cosmos/video/7580569502186753300",
+            "account": "6988807703145628673",
+            "publishedAt": "2025-12-06T02:41:36Z",
+            "title": "외국인 관광객들이 싹쓸이하는 약국 대란템!? #쥬베클 #juvekle #rxme #Kbeauty #koreanskincare...",
+            "description": "외국인 관광객들이 싹쓸이하는 약국 대란템!? #쥬베클 #juvekle #rxme #Kbeauty #koreanskincare @RXme cosmetics ",
+            "views": 27600,
+            "likes": 119,
+            "comments": 1,
+            "reposts": 23,
+            "saves": 20
+          },
+          {
+            "id": "7592926954089614600",
+            "url": "https://www.tiktok.com/@misongss_s2/video/7592926954089614600",
+            "account": "6743497496020042753",
+            "publishedAt": "2026-01-08T09:54:33Z",
+            "title": "명동 베리뉴 약국에서 쥬베클 플러스 필업 크림 쟁여두자!!🛍️@RXme cosmetics  . . . #쥬베클#Juvekle...",
+            "description": "명동 베리뉴 약국에서 쥬베클 플러스 필업 크림 쟁여두자!!🛍️@RXme cosmetics  . . . #쥬베클#Juvekle#rxme#Kbeauty#koreanskincare  ",
+            "views": 1272,
+            "likes": 10,
+            "comments": 0,
+            "reposts": 0,
+            "saves": 1
+          },
+          {
+            "id": "7594159585678593297",
+            "url": "https://www.tiktok.com/@aguzzim1_/video/7594159585678593297",
+            "account": "7291600242444649490",
+            "publishedAt": "2026-01-11T17:38:36Z",
+            "title": "요즘 약국은 차원이 달라 🫢✨ 피부관리에 신경 좀 쓴다 하는 사람들은 미리 알고있었다는 그 ‘크림‘! 직접 발라봤어요 🧴💗 ...",
+            "description": "요즘 약국은 차원이 달라 🫢✨ 피부관리에 신경 좀 쓴다 하는 사람들은 미리 알고있었다는 그 ‘크림‘! 직접 발라봤어요 🧴💗 @RXme cosmetics  #쥬베클 #Juvekle #rxme #kbeauty #koreanskincare ",
+            "views": 24100,
+            "likes": 266,
+            "comments": 8,
+            "reposts": 145,
+            "saves": 210
+          }
+        ],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:51:30+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Juvekle PDLLA 10000 Plus Firming Cream",
+        "attemptedQueries": [
+          "Juvekle PDLLA 10000 Plus Firming Cream"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=Juvekle%20PDLLA%2010000%20Plus%20Firming%20Cream",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=Juvekle%20PDLLA%2010000%20Plus%20Firming%20Cream"
+        ],
+        "inspectedCount": 2,
+        "acceptedCount": 1,
+        "rejectedCount": 0,
+        "errorCount": 1,
+        "totals": {
+          "views": 0,
+          "likes": 3,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [
+          {
+            "id": "DaSo2XPk-Jv",
+            "url": "https://www.instagram.com/eight_pharmacy/p/DaSo2XPk-Jv/",
+            "account": "46841883322",
+            "publishedAt": "2026-07-02T12:54:13Z",
+            "title": "Post by eight_pharmacy",
+            "description": "✨ Discover JUVEKLE & REJUYOUNG at Eight Pharmacy.\n\nAdvanced Korean skin booster formulations designed to support hydration, elasticity, and healthier-looking skin.\n\n📍Available at Eight Pharmacy\n💬 Our pharmacists are happy to help you find the right skincare solution.\n\n#EightPharmacy #Juvekle #Rejuyoung #KBeauty #koreanpharmacy",
+            "views": null,
+            "likes": 3,
+            "comments": 0,
+            "reposts": null,
+            "saves": null
+          }
+        ],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-deesse-pdrn-2000-cream",
+      "name": "디에스 PDRN 2000+ 크림",
+      "brand": "DÉESSE",
+      "category": "약국 PDRN 크림",
+      "skuNames": [
+        "Déesse PDRN 2000+ Cream"
+      ],
+      "sourceAliases": [
+        "디에스 PDRN 2000 플러스 크림"
+      ],
+      "keywords": [
+        "디에스 PDRN 2000 크림",
+        "Déesse PDRN 2000 Cream",
+        "디에스 피디알엔 2000"
+      ],
+      "exclude": [
+        "PDRN 1000",
+        "시카 멜라"
+      ],
+      "reason": "공개 약국 게시물에 노출된 2000+ 함량 제품을 기존 PDRN 1000+와 분리",
+      "keyword": "디에스 PDRN 2000 크림",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "Déesse PDRN 2000+ Cream",
+          "brand": "DÉESSE",
+          "sourceUrl": "https://www.instagram.com/karyna.di/reel/DavnVMIyI_0/",
+          "sourceType": "약국 방문 공개 게시물",
+          "confidence": "B",
+          "entityId": "public-deesse-pdrn-2000-cream"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "디에스 PDRN 2000 크림",
+        "attemptedQueries": [
+          "디에스 PDRN 2000 크림",
+          "Déesse PDRN 2000 Cream",
+          "디에스 피디알엔 2000"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%94%94%EC%97%90%EC%8A%A4%20PDRN%202000%20%ED%81%AC%EB%A6%BC",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EB%94%94%EC%97%90%EC%8A%A4%20PDRN%202000%20%ED%81%AC%EB%A6%BC",
+          "https://www.youtube.com/results?search_query=D%C3%A9esse%20PDRN%202000%20Cream",
+          "https://www.youtube.com/results?search_query=%EB%94%94%EC%97%90%EC%8A%A4%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%202000"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "디에스 PDRN 2000 크림",
+            "rawCount": 5,
+            "acceptedCount": 4
+          },
+          {
+            "keyword": "Déesse PDRN 2000 Cream",
+            "rawCount": 0,
+            "acceptedCount": 0
+          },
+          {
+            "keyword": "디에스 피디알엔 2000",
+            "rawCount": 5,
+            "acceptedCount": 1
+          }
+        ],
+        "inspectedCount": 10,
+        "resultSampleCount": 5,
+        "viewSampleCount": 5,
+        "totalViews": 399162,
+        "medianViews": 68877,
+        "topVideos": [
+          {
+            "id": "y1zCRGPO3NY",
+            "title": "요즘 채정안 피부장벽 과몰입템! ✨ PDRN의 모든 것 | 직접 써 본 피부 회복템 총출동",
+            "channel": "채정안TV",
+            "published": "9개월 전",
+            "views": 218896,
+            "viewsText": "조회수 218,896회",
+            "url": "https://www.youtube.com/watch?v=y1zCRGPO3NY"
+          },
+          {
+            "id": "vk6W236Ca_A",
+            "title": "PDRN 정말 효과 있을까?  같이 쓰면 안좋은 성분은?  함량별 제품 10종 비교(부작용, 사용법, 피부타입별 추천)",
+            "channel": "디렉터 파이",
+            "published": "8개월 전",
+            "views": 77660,
+            "viewsText": "조회수 77,660회",
+            "url": "https://www.youtube.com/watch?v=vk6W236Ca_A"
+          },
+          {
+            "id": "MUBkaoqDj1o",
+            "title": "충격..PDRN함량 0.01%..?😧 가장 좋은 PDRN앰플 가려내기👩🏻‍🔬",
+            "channel": "한별두별[Hanna]",
+            "published": "1년 전",
+            "views": 68877,
+            "viewsText": "조회수 68,877회",
+            "url": "https://www.youtube.com/watch?v=MUBkaoqDj1o"
+          },
+          {
+            "id": "gc178PtW1HU",
+            "title": "다이소 PDRN 화장품… 이 가격에 진짜 효과 있을까?😳 환절기 스킨케어 루틴 공개!",
+            "channel": "민가든",
+            "published": "7개월 전",
+            "views": 22099,
+            "viewsText": "조회수 22,099회",
+            "url": "https://www.youtube.com/watch?v=gc178PtW1HU"
+          },
+          {
+            "id": "Aym4i6x57mU",
+            "title": "피부과 전문의가 추천하는 PDRN 제품 TOP5 (광고 X)",
+            "channel": "피부트래블러",
+            "published": "8개월 전",
+            "views": 11630,
+            "viewsText": "조회수 11,630회",
+            "url": "https://www.youtube.com/watch?v=Aym4i6x57mU"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_da07cd9cf88d9302e27ac9cabbb6976c",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 0.0,
+          "previous30Mean": 0.0,
+          "changePct": null,
+          "latest90Mean": 0.0,
+          "latest": 0.0,
+          "peak": 0.0,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "디에스 PDRN 2000 크림",
+            "Déesse PDRN 2000 Cream",
+            "디에스 피디알엔 2000"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 0.0,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_da07cd9cf88d9302e27ac9cabbb6976c"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=%EB%94%94%EC%97%90%EC%8A%A4%20PDRN%202000%20%ED%81%AC%EB%A6%BC",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:52:45+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Déesse PDRN 2000 Cream",
+        "attemptedQueries": [
+          "Déesse PDRN 2000 Cream"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=D%C3%A9esse%20PDRN%202000%20Cream",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=D%C3%A9esse%20PDRN%202000%20Cream"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:51:40+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Déesse PDRN 2000 Cream",
+        "attemptedQueries": [
+          "Déesse PDRN 2000 Cream"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=D%C3%A9esse%20PDRN%202000%20Cream",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=D%C3%A9esse%20PDRN%202000%20Cream"
+        ],
+        "inspectedCount": 1,
+        "acceptedCount": 1,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 98,
+          "comments": 10,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [
+          {
+            "id": "DavnVMIyI_0",
+            "url": "https://www.instagram.com/karyna.di/reel/DavnVMIyI_0/",
+            "account": "3495666197",
+            "publishedAt": "2026-07-13T19:01:24Z",
+            "title": "Video by karyna.di",
+            "description": "Где искать идеальный уход в Сеуле? 💊✨\nДевочки, делюсь личным секретом! Забежала в аптеку Eight Pharmacy на Мёндоне (она прямо напротив магазина NYUNYU, мимо не пройдете) — и это просто рай для кожи. Во-первых, там стильно, во-вторых, персонал говорит на разных языках и помогает подобрать уход, ну и сразу на месте делают Tax Refund — кошелек говорит спасибо! 💸\nВ общем, без покупок я не ушла. Что забрала с собой:\n1️⃣ Крем Déesse с цикой (Cica Mela) — моя новая любовь. Спасает, если кожа раздражена, шелушится или остались пятна от прыщиков. Буквально заживляет всё на ура.\n2️⃣ Крем Déesse с PDRN 2000+ — это вообще тяжелая артиллерия для упругости и против морщинок. Кожа после него плотная, напитанная, как после салона.\n3️⃣ Сет из 10 масок — чисто местный эксклюзив, собрали в один набор 10 крутых масок от разных брендов (Anua, Exosome и др.). В других местах такой микс не найти, взяла не думая!\nЕсли будете в Сеуле, очень советую заглянуть, локация 👇\n📍 Где: Myeongdong (напротив NYUNYU)\n📲 Инста: @eight_pharmacy \nКто пробовал кремы с PDRN, как вам эффект? Пишите 👇\n#EightPharmacy #에이트약국 #сеул #корейскаякосметика #уходзакожей корея мёндон",
+            "views": null,
+            "likes": 98,
+            "comments": 10,
+            "reposts": null,
+            "saves": null
+          }
+        ],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-medipeel-melanon-x-ampoule",
+      "name": "메디필 멜라논 엑스 앰플 18.9",
+      "brand": "MEDIPEEL",
+      "category": "브라이트닝 앰플",
+      "skuNames": [
+        "메디필 멜라논 엑스 앰플 18.9 30ml"
+      ],
+      "keywords": [
+        "메디필 멜라논 엑스 앰플 18.9",
+        "MEDIPEEL Melanon X Ampoule 18.9",
+        "멜라논엑스 앰플"
+      ],
+      "exclude": [
+        "크림",
+        "세트"
+      ],
+      "reason": "멜라논 엑스 라인에서 앰플 단품 수요만 분리 수집",
+      "keyword": "메디필 멜라논 엑스 앰플 18.9",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "메디필 멜라논 엑스 앰플 18.9 30ml",
+          "brand": "MEDIPEEL",
+          "sourceUrl": "https://medipeel.co.kr/category/%EB%A9%9C%EB%9D%BC%EB%85%BC%EC%97%91%EC%8A%A4/774/",
+          "sourceType": "브랜드 공식 제품 카테고리·약국 유통 기사 교차확인",
+          "confidence": "A~B",
+          "entityId": "public-medipeel-melanon-x-ampoule"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "메디필 멜라논 엑스 앰플 18.9",
+        "attemptedQueries": [
+          "메디필 멜라논 엑스 앰플 18.9",
+          "MEDIPEEL Melanon X Ampoule 18.9",
+          "멜라논엑스 앰플"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%A9%94%EB%94%94%ED%95%84%20%EB%A9%9C%EB%9D%BC%EB%85%BC%20%EC%97%91%EC%8A%A4%20%EC%95%B0%ED%94%8C%2018.9",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EB%A9%94%EB%94%94%ED%95%84%20%EB%A9%9C%EB%9D%BC%EB%85%BC%20%EC%97%91%EC%8A%A4%20%EC%95%B0%ED%94%8C%2018.9",
+          "https://www.youtube.com/results?search_query=MEDIPEEL%20Melanon%20X%20Ampoule%2018.9",
+          "https://www.youtube.com/results?search_query=%EB%A9%9C%EB%9D%BC%EB%85%BC%EC%97%91%EC%8A%A4%20%EC%95%B0%ED%94%8C"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "메디필 멜라논 엑스 앰플 18.9",
+            "rawCount": 12,
+            "acceptedCount": 3
+          },
+          {
+            "keyword": "MEDIPEEL Melanon X Ampoule 18.9",
+            "rawCount": 11,
+            "acceptedCount": 10
+          },
+          {
+            "keyword": "멜라논엑스 앰플",
+            "rawCount": 12,
+            "acceptedCount": 1
+          }
+        ],
+        "inspectedCount": 35,
+        "resultSampleCount": 12,
+        "viewSampleCount": 12,
+        "totalViews": 69573,
+        "medianViews": 2288,
+        "topVideos": [
+          {
+            "id": "186VtHURYk8",
+            "title": "Medi-Peel Melanon X cream",
+            "channel": "wl channel",
+            "published": "6년 전",
+            "views": 28526,
+            "viewsText": "조회수 28,526회",
+            "url": "https://www.youtube.com/watch?v=186VtHURYk8"
+          },
+          {
+            "id": "Y7b6mokhyWQ",
+            "title": "MEDIPEEL MOST EFFECTIVE DARK SPOTS & PIGMENTATION MELANON X CREAM #trending #viral",
+            "channel": "iFunTube",
+            "published": "3년 전",
+            "views": 16033,
+            "viewsText": "조회수 16,033회",
+            "url": "https://www.youtube.com/watch?v=Y7b6mokhyWQ"
+          },
+          {
+            "id": "HdBJImbnol8",
+            "title": "메디필 멜라논 엑스 앰플 MediPeel Melanon X Review",
+            "channel": "RachelEnergy 레이첼에너지",
+            "published": "3년 전",
+            "views": 7305,
+            "viewsText": "조회수 7,305회",
+            "url": "https://www.youtube.com/watch?v=HdBJImbnol8"
+          },
+          {
+            "id": "u9Kx_VldAOE",
+            "title": "MEDIPEEL * KOREAN DERMOCOSMETIC LINE #medipeel",
+            "channel": "LATIN SKIN KOREAN",
+            "published": "2년 전",
+            "views": 5586,
+            "viewsText": "조회수 5,586회",
+            "url": "https://www.youtube.com/watch?v=u9Kx_VldAOE"
+          },
+          {
+            "id": "T8ydvwGa8UE",
+            "title": "15's / 메디필 X 손담비 │7초만에 지워버리다 메디필 멜라논 엑스 앰플",
+            "channel": "MEDIPEEL",
+            "published": "3년 전",
+            "views": 3847,
+            "viewsText": "조회수 3,847회",
+            "url": "https://www.youtube.com/watch?v=T8ydvwGa8UE"
+          },
+          {
+            "id": "i2FHXMqgFd8",
+            "title": "[MELANON X] 피부는 기다려주지 않아요😢 거울로 마주하는 피부가 맘에 안 든다면? 멜라논 X 엑스 라인으로 관리할 때!",
+            "channel": "MEDIPEEL",
+            "published": "3년 전",
+            "views": 2376,
+            "viewsText": "조회수 2,376회",
+            "url": "https://www.youtube.com/watch?v=i2FHXMqgFd8"
+          },
+          {
+            "id": "maZqtYWcXA4",
+            "title": "Medi-Peel Melanon X Ampoule",
+            "channel": "VERONA Beauty Shop",
+            "published": "3년 전",
+            "views": 2199,
+            "viewsText": "조회수 2,199회",
+            "url": "https://www.youtube.com/watch?v=maZqtYWcXA4"
+          },
+          {
+            "id": "OlrYj2aei-k",
+            "title": "Anti Dark Spot with Melanon X Cream",
+            "channel": "MediPeel Malaysia",
+            "published": "2년 전",
+            "views": 1500,
+            "viewsText": "조회수 1,500회",
+            "url": "https://www.youtube.com/watch?v=OlrYj2aei-k"
+          },
+          {
+            "id": "anOnqkHIWoo",
+            "title": "Medi peel Melanon X Cream 30 ml",
+            "channel": "Lavishta",
+            "published": "1년 전",
+            "views": 1267,
+            "viewsText": "조회수 1,267회",
+            "url": "https://www.youtube.com/watch?v=anOnqkHIWoo"
+          },
+          {
+            "id": "ovyFdZ0aC8w",
+            "title": "MEDI PEEL Melanon X Cream 73% 30ml Dark Spot Blemishes Brightening K Beauty",
+            "channel": "Product Review",
+            "published": "6개월 전",
+            "views": 555,
+            "viewsText": "조회수 555회",
+            "url": "https://www.youtube.com/watch?v=ovyFdZ0aC8w"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_a49a285474f62193058cb31376b4f283",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 0.02,
+          "previous30Mean": 0.04,
+          "changePct": -45.0,
+          "latest90Mean": 0.03,
+          "latest": 0.0,
+          "peak": 0.81,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "메디필 멜라논 엑스 앰플 18.9",
+            "MEDIPEEL Melanon X Ampoule 18.9",
+            "멜라논엑스 앰플"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 0.04,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_a49a285474f62193058cb31376b4f283"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%94%EB%94%94%ED%95%84%20%EB%A9%9C%EB%9D%BC%EB%85%BC%20%EC%97%91%EC%8A%A4%20%EC%95%B0%ED%94%8C%2018.9",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:52:57+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "MEDIPEEL Melanon X Ampoule",
+        "attemptedQueries": [
+          "MEDIPEEL Melanon X Ampoule"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=MEDIPEEL%20Melanon%20X%20Ampoule",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=MEDIPEEL%20Melanon%20X%20Ampoule"
+        ],
+        "inspectedCount": 2,
+        "acceptedCount": 2,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 3640,
+          "likes": 26,
+          "comments": 3,
+          "reposts": 6,
+          "saves": 9
+        },
+        "items": [
+          {
+            "id": "7615932385242205458",
+            "url": "https://www.tiktok.com/@hanquocmuasam/video/7615932385242205458",
+            "account": "7358410565373068306",
+            "publishedAt": "2026-03-11T09:47:25Z",
+            "title": "Tinh chất mờ nám MEDI-PEEL MelanonX Dark Spot Ampoule 1.5.0 ✨ Ampoule...",
+            "description": "Tinh chất mờ nám MEDI-PEEL MelanonX Dark Spot Ampoule 1.5.0 ✨ Ampoule chuyên sâu giúp làm mờ nám, tàn nhang và thâm mụn ✨ Chứa Niacinamide + Tranexamic Acid + Vitamin C giúp làm sáng da, đều màu và cải thiện đốm nâu ✨ Kết cấu tinh chất thấm nhanh, không bết dính, phù hợp nhiều loại da ✨ Hỗ trợ giảm sạm nám, phục hồi làn da sáng khỏe 📌 Dùng sau toner, ngày 2 lần sáng – tối để đạt hiệu quả tốt hơn.",
+            "views": 1178,
+            "likes": 6,
+            "comments": 0,
+            "reposts": 4,
+            "saves": 2
+          },
+          {
+            "id": "7617048479696801031",
+            "url": "https://www.tiktok.com/@panglum2840/video/7617048479696801031",
+            "account": "6718326796603851777",
+            "publishedAt": "2026-03-14T09:58:29Z",
+            "title": "เซ็ตกู้หน้าพัง! MEDIPEEL+ Melanon X 🇰🇷 จัดการ ฝ้า กระ จุดด่างดำ จบในเ...",
+            "description": "เซ็ตกู้หน้าพัง! MEDIPEEL+ Melanon X 🇰🇷 จัดการ ฝ้า กระ จุดด่างดำ จบในเซ็ตเดียว! ไอเทมดังจาก Daiso เกาหลี ที่สายบิวตี้ต้องมี! • Ampoule: สลายเม็ดสีเข้มข้น รอยดำจางไว • Cream: หน้าขาวกระจ่างใส ผิวแข็งแรง ✅ 3 ขั้นตอน หน้าใส ไร้รอยดำ ✅ ของแท้ 100% พร้อมส่ง! 💰 ราคา: [ใส่ราคาของคุณ] 🛒 สนใจทัก #กดลิงค์ หน้าช่องจร่า",
+            "views": 2462,
+            "likes": 20,
+            "comments": 3,
+            "reposts": 2,
+            "saves": 7
+          }
+        ],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:51:40+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "MEDIPEEL Melanon X Ampoule",
+        "attemptedQueries": [
+          "MEDIPEEL Melanon X Ampoule"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=MEDIPEEL%20Melanon%20X%20Ampoule",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=MEDIPEEL%20Melanon%20X%20Ampoule"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-medipeel-melanon-x-cream",
+      "name": "메디필 멜라논 엑스 크림",
+      "brand": "MEDIPEEL",
+      "category": "브라이트닝 크림",
+      "skuNames": [
+        "메디필 멜라논 엑스 크림 30ml"
+      ],
+      "keywords": [
+        "메디필 멜라논 엑스 크림",
+        "MEDIPEEL Melanon X Cream",
+        "멜라논엑스 크림"
+      ],
+      "exclude": [
+        "앰플",
+        "세트"
+      ],
+      "reason": "멜라논 엑스 라인에서 크림 단품 수요만 분리 수집",
+      "keyword": "메디필 멜라논 엑스 크림",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "메디필 멜라논 엑스 크림 30ml",
+          "brand": "MEDIPEEL",
+          "sourceUrl": "https://m.medipeel.co.kr/product/1020-%EC%98%88%EC%95%BD-%EB%B0%9C%EC%86%A1-%EB%A9%9C%EB%9D%BC%EB%85%BC%EC%97%91%EC%8A%A4-%ED%81%AC%EB%A6%BC-30ml/2658/",
+          "sourceType": "브랜드 공식 제품 페이지·약국 유통 기사 교차확인",
+          "confidence": "A~B",
+          "entityId": "public-medipeel-melanon-x-cream"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "메디필 멜라논 엑스 크림",
+        "attemptedQueries": [
+          "메디필 멜라논 엑스 크림",
+          "MEDIPEEL Melanon X Cream",
+          "멜라논엑스 크림"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%A9%94%EB%94%94%ED%95%84%20%EB%A9%9C%EB%9D%BC%EB%85%BC%20%EC%97%91%EC%8A%A4%20%ED%81%AC%EB%A6%BC",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EB%A9%94%EB%94%94%ED%95%84%20%EB%A9%9C%EB%9D%BC%EB%85%BC%20%EC%97%91%EC%8A%A4%20%ED%81%AC%EB%A6%BC",
+          "https://www.youtube.com/results?search_query=MEDIPEEL%20Melanon%20X%20Cream",
+          "https://www.youtube.com/results?search_query=%EB%A9%9C%EB%9D%BC%EB%85%BC%EC%97%91%EC%8A%A4%20%ED%81%AC%EB%A6%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "메디필 멜라논 엑스 크림",
+            "rawCount": 11,
+            "acceptedCount": 6
+          },
+          {
+            "keyword": "MEDIPEEL Melanon X Cream",
+            "rawCount": 13,
+            "acceptedCount": 10
+          },
+          {
+            "keyword": "멜라논엑스 크림",
+            "rawCount": 11,
+            "acceptedCount": 6
+          }
+        ],
+        "inspectedCount": 35,
+        "resultSampleCount": 16,
+        "viewSampleCount": 16,
+        "totalViews": 222270,
+        "medianViews": 4824,
+        "topVideos": [
+          {
+            "id": "52xm4sYpQEM",
+            "title": "MEDI-PEEL Melanon X Cream, a Korean anti-pigmentation lightening cream, is a three-week treatment.",
+            "channel": "Асель Асан Корейская Косметика",
+            "published": "6년 전",
+            "views": 99524,
+            "viewsText": "조회수 99,524회",
+            "url": "https://www.youtube.com/watch?v=52xm4sYpQEM"
+          },
+          {
+            "id": "d0JYrxwNYb8",
+            "title": "[트렌드쇼퍼 시즌4] 기미, 잡티, 색소 침착까지 한번에! ♥메디필 멜라논엑스 크림♥",
+            "channel": "선데이미디어",
+            "published": "5개월 전",
+            "views": 31568,
+            "viewsText": "조회수 31,568회",
+            "url": "https://www.youtube.com/watch?v=d0JYrxwNYb8"
+          },
+          {
+            "id": "186VtHURYk8",
+            "title": "Medi-Peel Melanon X cream",
+            "channel": "wl channel",
+            "published": "6년 전",
+            "views": 28526,
+            "viewsText": "조회수 28,526회",
+            "url": "https://www.youtube.com/watch?v=186VtHURYk8"
+          },
+          {
+            "id": "Y7b6mokhyWQ",
+            "title": "MEDIPEEL MOST EFFECTIVE DARK SPOTS & PIGMENTATION MELANON X CREAM #trending #viral",
+            "channel": "iFunTube",
+            "published": "3년 전",
+            "views": 16033,
+            "viewsText": "조회수 16,033회",
+            "url": "https://www.youtube.com/watch?v=Y7b6mokhyWQ"
+          },
+          {
+            "id": "EhMdETxFNhw",
+            "title": "Эффективная борьба с пигментацией с серией Melanon X от MEDI-PEEL. Лучшие средства для результата❗️",
+            "channel": "ECOPLACE | MEDIPEEL⁺",
+            "published": "2년 전",
+            "views": 10991,
+            "viewsText": "조회수 10,991회",
+            "url": "https://www.youtube.com/watch?v=EhMdETxFNhw"
+          },
+          {
+            "id": "enzYxHSeaKg",
+            "title": "올리브영.다이소에서 핫한 기미크림 3종, 전격비교! #멜라논엑스 #도미나스 #이지듀｜シミクリーム3種の効果比較",
+            "channel": "바디피부해결사 세희쌤",
+            "published": "7개월 전",
+            "views": 9079,
+            "viewsText": "조회수 9,079회",
+            "url": "https://www.youtube.com/watch?v=enzYxHSeaKg"
+          },
+          {
+            "id": "dnV6AfJhiwk",
+            "title": "MEDIPEEL MELANON X CREAM for Pigmentation✨ #trending #trending #viral",
+            "channel": "iFunTube",
+            "published": "2년 전",
+            "views": 7434,
+            "viewsText": "조회수 7,434회",
+            "url": "https://www.youtube.com/watch?v=dnV6AfJhiwk"
+          },
+          {
+            "id": "rwQPj3bdNlE",
+            "title": "Melanon X Cream | Medipeel | Pigmentation Cream",
+            "channel": "iFunTube",
+            "published": "1년 전",
+            "views": 6283,
+            "viewsText": "조회수 6,283회",
+            "url": "https://www.youtube.com/watch?v=rwQPj3bdNlE"
+          },
+          {
+            "id": "We5LXv6Ymdo",
+            "title": "기미 걱정 NO! 메디필 멜라논엑스 기미크림 사용후기와 효과 공개",
+            "channel": "모아플러스",
+            "published": "9개월 전",
+            "views": 3364,
+            "viewsText": "조회수 3,364회",
+            "url": "https://www.youtube.com/watch?v=We5LXv6Ymdo"
+          },
+          {
+            "id": "i2FHXMqgFd8",
+            "title": "[MELANON X] 피부는 기다려주지 않아요😢 거울로 마주하는 피부가 맘에 안 든다면? 멜라논 X 엑스 라인으로 관리할 때!",
+            "channel": "MEDIPEEL",
+            "published": "3년 전",
+            "views": 2376,
+            "viewsText": "조회수 2,376회",
+            "url": "https://www.youtube.com/watch?v=i2FHXMqgFd8"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_a49a285474f62193058cb31376b4f283",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 3.27,
+          "previous30Mean": 3.82,
+          "changePct": -14.28,
+          "latest90Mean": 3.86,
+          "latest": 2.65,
+          "peak": 62.24,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "메디필 멜라논 엑스 크림",
+            "MEDIPEEL Melanon X Cream",
+            "멜라논엑스 크림"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 6.9,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_a49a285474f62193058cb31376b4f283"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%94%EB%94%94%ED%95%84%20%EB%A9%9C%EB%9D%BC%EB%85%BC%20%EC%97%91%EC%8A%A4%20%ED%81%AC%EB%A6%BC",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:53:15+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "MEDIPEEL Melanon X Cream",
+        "attemptedQueries": [
+          "MEDIPEEL Melanon X Cream"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=MEDIPEEL%20Melanon%20X%20Cream",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=MEDIPEEL%20Melanon%20X%20Cream"
+        ],
+        "inspectedCount": 5,
+        "acceptedCount": 5,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 39542,
+          "likes": 134,
+          "comments": 7,
+          "reposts": 43,
+          "saves": 40
+        },
+        "items": [
+          {
+            "id": "7465670092584406290",
+            "url": "https://www.tiktok.com/@treeskinbeauty/video/7465670092584406290",
+            "account": "7071246679580214299",
+            "publishedAt": "2025-01-30T11:32:58Z",
+            "title": "Watch this video to learn how to use Medipeel Melanon X Cream for all...",
+            "description": "Watch this video to learn how to use Medipeel Melanon X Cream for all skin types! 🌟 Whether you have oily, dry, or combination skin, this cream is your go-to for tackling hyperpigmentation and achieving a brighter, even skin tone. ✨ Let’s get glowing! 💖 #treeskinbeauty #koreanskincare #kbeautyskincare #kbeauty #trending #trendingmalaysia #fyp #fypmalaysia #medipeel #MedipeelMelanonX #MelanonXCream #BrightSkinJourney #HyperpigmentationCare #tiktokviral ",
+            "views": 21500,
+            "likes": 81,
+            "comments": 3,
+            "reposts": 19,
+            "saves": 21
+          },
+          {
+            "id": "7579965665163906322",
+            "url": "https://www.tiktok.com/@aishahexe/video/7579965665163906322",
+            "account": "7058209523069240347",
+            "publishedAt": "2025-12-04T11:38:08Z",
+            "title": "I didn’t realise how much those tiny dark spots were dulling my whole...",
+            "description": "I didn’t realise how much those tiny dark spots were dulling my whole face, until they started fading. Thanks to MelanonXCream ✨ @guardian Malaysia @Marshear Beauty   #guardianmy #marshearmy #marshearbeauty #medipeel #melanonxcream ",
+            "views": 3195,
+            "likes": 16,
+            "comments": 2,
+            "reposts": 4,
+            "saves": 6
+          },
+          {
+            "id": "7591785133762448648",
+            "url": "https://www.tiktok.com/@medipeel.official_my/video/7591785133762448648",
+            "account": "7228782474788471810",
+            "publishedAt": "2026-01-05T08:40:00Z",
+            "title": "Targeted brightening care designed to help improve the look of dark s...",
+            "description": "Targeted brightening care designed to help improve the look of dark spots, uneven tone, and dull skin ✨ Melanon X Cream supports a clearer, more radiant complexion with consistent use. #MediPeel #melanonxcream #skincare #kbeauty #darkspots ",
+            "views": 872,
+            "likes": 4,
+            "comments": 1,
+            "reposts": 2,
+            "saves": 2
+          },
+          {
+            "id": "7600419000836754709",
+            "url": "https://www.tiktok.com/@medipeel.official_my/video/7600419000836754709",
+            "account": "7228782474788471810",
+            "publishedAt": "2026-01-30T01:00:00Z",
+            "title": "Dark spots? Acne marks? BYE ✨ Just be consistent & watch your even sk...",
+            "description": "Dark spots? Acne marks? BYE ✨ Just be consistent & watch your even skin even out 👌 #fyppppppppppppppppppppppp #medipeel #melanonxcream #koreanskincare ",
+            "views": 1475,
+            "likes": 6,
+            "comments": 0,
+            "reposts": 10,
+            "saves": 2
+          },
+          {
+            "id": "7449374861408980232",
+            "url": "https://www.tiktok.com/@treeskinbeauty/video/7449374861408980232",
+            "account": "7071246679580214299",
+            "publishedAt": "2024-12-17T13:39:10Z",
+            "title": "Hyperpigmentation, who? ✨ Unlock brighter, even-toned skin with Medip...",
+            "description": "Hyperpigmentation, who? ✨ Unlock brighter, even-toned skin with Medipeel Melanon X Cream – the game changer your routine needs! #treeskinbeauty #medipeel #melanonxcream #koreanskincare #kbeautyskincare #hyperpigmentation #SpotlessSkin #MedipeelGlow #ConfidenceInACream #fyp #fypmalaysia #trendingmalaysia #trending ",
+            "views": 12500,
+            "likes": 27,
+            "comments": 1,
+            "reposts": 8,
+            "saves": 9
+          }
+        ],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:51:40+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "MEDIPEEL Melanon X Cream",
+        "attemptedQueries": [
+          "MEDIPEEL Melanon X Cream"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=MEDIPEEL%20Melanon%20X%20Cream",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=MEDIPEEL%20Melanon%20X%20Cream"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-medipeel-retinal-nmn-booster",
+      "name": "메디필 레티날 NMN 바운스 샷 부스터",
+      "brand": "MEDIPEEL",
+      "category": "레티날 부스터",
+      "skuNames": [
+        "메디필 레티날 NMN 바운스 샷 부스터 30ml"
+      ],
+      "keywords": [
+        "메디필 레티날 NMN 바운스 샷 부스터",
+        "MEDIPEEL Retinal NMN Bounce Shot Booster",
+        "레티날 NMN 부스터"
+      ],
+      "exclude": [
+        "아이 크림",
+        "리필"
+      ],
+      "reason": "동일 라인의 아이크림·리필과 부스터 본품 수요를 분리",
+      "keyword": "메디필 레티날 NMN 바운스 샷 부스터",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "메디필 레티날 NMN 바운스 샷 부스터 30ml",
+          "brand": "MEDIPEEL",
+          "sourceUrl": "https://www.medipeel.co.kr/product/detail.html?cate_no=1&display_group=35&product_no=4218",
+          "sourceType": "브랜드 공식 제품 페이지·약국 유통 기사 교차확인",
+          "confidence": "A~B",
+          "entityId": "public-medipeel-retinal-nmn-booster"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "메디필 레티날 NMN 바운스 샷 부스터",
+        "attemptedQueries": [
+          "메디필 레티날 NMN 바운스 샷 부스터",
+          "MEDIPEEL Retinal NMN Bounce Shot Booster",
+          "레티날 NMN 부스터"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%A9%94%EB%94%94%ED%95%84%20%EB%A0%88%ED%8B%B0%EB%82%A0%20NMN%20%EB%B0%94%EC%9A%B4%EC%8A%A4%20%EC%83%B7%20%EB%B6%80%EC%8A%A4%ED%84%B0",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EB%A9%94%EB%94%94%ED%95%84%20%EB%A0%88%ED%8B%B0%EB%82%A0%20NMN%20%EB%B0%94%EC%9A%B4%EC%8A%A4%20%EC%83%B7%20%EB%B6%80%EC%8A%A4%ED%84%B0",
+          "https://www.youtube.com/results?search_query=MEDIPEEL%20Retinal%20NMN%20Bounce%20Shot%20Booster",
+          "https://www.youtube.com/results?search_query=%EB%A0%88%ED%8B%B0%EB%82%A0%20NMN%20%EB%B6%80%EC%8A%A4%ED%84%B0"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "메디필 레티날 NMN 바운스 샷 부스터",
+            "rawCount": 2,
+            "acceptedCount": 0
+          },
+          {
+            "keyword": "MEDIPEEL Retinal NMN Bounce Shot Booster",
+            "rawCount": 20,
+            "acceptedCount": 13
+          },
+          {
+            "keyword": "레티날 NMN 부스터",
+            "rawCount": 5,
+            "acceptedCount": 0
+          }
+        ],
+        "inspectedCount": 27,
+        "resultSampleCount": 13,
+        "viewSampleCount": 13,
+        "totalViews": 16626830,
+        "medianViews": 15501,
+        "topVideos": [
+          {
+            "id": "vKQQu_zGi3c",
+            "title": "✨ Best Anti-Aging Serum in the USA | Retinal + Peptides for Wrinkles & Firm, Glowing Skin #shorts",
+            "channel": "Beauty Care ",
+            "published": "9개월 전",
+            "views": 15629730,
+            "viewsText": "조회수 15,629,730회",
+            "url": "https://www.youtube.com/watch?v=vKQQu_zGi3c"
+          },
+          {
+            "id": "6r7zXWk-mrY",
+            "title": "The power of retinal + retinol💛✨duo for pore & wrinkle care ✨",
+            "channel": "milky🥛",
+            "published": "1년 전",
+            "views": 860727,
+            "viewsText": "조회수 860,727회",
+            "url": "https://www.youtube.com/watch?v=6r7zXWk-mrY"
+          },
+          {
+            "id": "uMkbahXFclY",
+            "title": "Korean brands love gentle products & the #meditherapy Retinal Skin Booster is a game-changer! A D",
+            "channel": "Lisa Beautify",
+            "published": "1년 전",
+            "views": 43032,
+            "viewsText": "조회수 43,032회",
+            "url": "https://www.youtube.com/watch?v=uMkbahXFclY"
+          },
+          {
+            "id": "SEMmIpFGf5w",
+            "title": "Boost your skin with Meditherapy’s Retinal Skin Booster Serum #skincare #koreanskincare",
+            "channel": "emilysjoyy",
+            "published": "1년 전",
+            "views": 27500,
+            "viewsText": "조회수 27,500회",
+            "url": "https://www.youtube.com/watch?v=SEMmIpFGf5w"
+          },
+          {
+            "id": "zZFvM7DTft8",
+            "title": "Trying to choose between these retinal serums? 👀",
+            "channel": "Kiyoko Beauty",
+            "published": "3주 전",
+            "views": 25075,
+            "viewsText": "조회수 25,075회",
+            "url": "https://www.youtube.com/watch?v=zZFvM7DTft8"
+          },
+          {
+            "id": "dsEg2Xo5lDo",
+            "title": "✅ How to Use Retinal Skin Booster for Skin Benefits? 📆 #skincare #retinol #kbeauty #koreanskincare",
+            "channel": "MerkBu ",
+            "published": "1년 전",
+            "views": 21661,
+            "viewsText": "조회수 21,661회",
+            "url": "https://www.youtube.com/watch?v=dsEg2Xo5lDo"
+          },
+          {
+            "id": "FPCp7xfoeyQ",
+            "title": "lowkey obsessed with this meditherapy retinal serum.. #메디테라피  #retinal #sensitiveskin #fyp",
+            "channel": "carol yang",
+            "published": "1년 전",
+            "views": 15501,
+            "viewsText": "조회수 15,501회",
+            "url": "https://www.youtube.com/watch?v=FPCp7xfoeyQ"
+          },
+          {
+            "id": "pOIu4EoU_Ok",
+            "title": "1회 롤링 볼륨충전 MEDITHERAPY Filligio Pink Retinol Shot Serum",
+            "channel": "MEDITHERAPY",
+            "published": "1년 전",
+            "views": 1842,
+            "viewsText": "조회수 1,842회",
+            "url": "https://www.youtube.com/watch?v=pOIu4EoU_Ok"
+          },
+          {
+            "id": "yTe8XKzTiG0",
+            "title": "The long-awaited Korean anti-aging innovation — Retinal and NMN Booster MEDIPEEL⁺ Retinal NMN Bounce",
+            "channel": "ECOPLACE | MEDIPEEL⁺",
+            "published": "2주 전",
+            "views": 793,
+            "viewsText": "조회수 793회",
+            "url": "https://www.youtube.com/watch?v=yTe8XKzTiG0"
+          },
+          {
+            "id": "f8Nqc2QZFnA",
+            "title": "Почему кореянки не стареют? Секрет в правильном лифтинг-бустере",
+            "channel": "ECOPLACE | MEDIPEEL⁺",
+            "published": "5일 전",
+            "views": 640,
+            "viewsText": "조회수 640회",
+            "url": "https://www.youtube.com/watch?v=f8Nqc2QZFnA"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_a49a285474f62193058cb31376b4f283",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 0.0,
+          "previous30Mean": 0.0,
+          "changePct": null,
+          "latest90Mean": 0.0,
+          "latest": 0.0,
+          "peak": 0.0,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "메디필 레티날 NMN 바운스 샷 부스터",
+            "MEDIPEEL Retinal NMN Bounce Shot Booster",
+            "레티날 NMN 부스터"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 0.0,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_a49a285474f62193058cb31376b4f283"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%94%EB%94%94%ED%95%84%20%EB%A0%88%ED%8B%B0%EB%82%A0%20NMN%20%EB%B0%94%EC%9A%B4%EC%8A%A4%20%EC%83%B7%20%EB%B6%80%EC%8A%A4%ED%84%B0",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:53:27+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "MEDIPEEL Retinal NMN Bounce Shot Booster",
+        "attemptedQueries": [
+          "MEDIPEEL Retinal NMN Bounce Shot Booster"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=MEDIPEEL%20Retinal%20NMN%20Bounce%20Shot%20Booster",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=MEDIPEEL%20Retinal%20NMN%20Bounce%20Shot%20Booster"
+        ],
+        "inspectedCount": 2,
+        "acceptedCount": 2,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 2662,
+          "likes": 33,
+          "comments": 1,
+          "reposts": 0,
+          "saves": 10
+        },
+        "items": [
+          {
+            "id": "7657222998163737876",
+            "url": "https://www.tiktok.com/@ecoplace/video/7657222998163737876",
+            "account": "6629921060802854917",
+            "publishedAt": "2026-06-30T16:16:04Z",
+            "title": "Долгожданная новинка на ECOPLACE — Бустер с ретиналем и NMN MEDIPEEL⁺...",
+            "description": "Долгожданная новинка на ECOPLACE — Бустер с ретиналем и NMN MEDIPEEL⁺ Retinal NMN Bounce Хотели бы попробовать? #омоложениелица #омоложение #корейскийуход #ретинол ",
+            "views": 860,
+            "likes": 8,
+            "comments": 1,
+            "reposts": 0,
+            "saves": 0
+          },
+          {
+            "id": "7627469564732787976",
+            "url": "https://www.tiktok.com/@d0daeng/video/7627469564732787976",
+            "account": "7609899742706222101",
+            "publishedAt": "2026-04-11T11:57:33Z",
+            "title": "💛메디필 레티날 NMN 바운스 샷 아이크림 & 부스터💛#제품제공@medipeel.official #제ᄎ직도 레티놀만 사용하세...",
+            "description": "💛메디필 레티날 NMN 바운스 샷 아이크림 & 부스터💛#제품제공@medipeel.official #제ᄎ직도 레티놀만 사용하세요 ? 레티놀보다 한 단계 빠르게 작용하는  고효능 비타민A 성분인 레티날을 지금 런칭 특가로 저렴하게 구매할 수 있으니 놓치지 마세요 :) 📍레티날 사용방법 ✅ 서늘한 곳에 보관하기 (3~10도) ✅사용 초기에는 격일로 밤에 쌀알 크기 만큼 사용,  피부가 적응하면 콩알 크기 만큼 사용하기 ✅낮에 사용 시에는 자외선 차단제 필수! ✅비타민C, 스크럽, 필링 제품과 병행사용❌ 🌟노란 빛은 레티날 고유 원료 색상이고 책색되지 않으므로 안심하고 사용하세요   #메디필 #레티날 #아이크림 #부스터 ",
+            "views": 1802,
+            "likes": 25,
+            "comments": 0,
+            "reposts": 0,
+            "saves": 10
+          }
+        ],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:51:40+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "MEDIPEEL Retinal NMN Bounce Shot Booster",
+        "attemptedQueries": [
+          "MEDIPEEL Retinal NMN Bounce Shot Booster"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=MEDIPEEL%20Retinal%20NMN%20Bounce%20Shot%20Booster",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=MEDIPEEL%20Retinal%20NMN%20Bounce%20Shot%20Booster"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-medipeel-retinal-nmn-eye-cream",
+      "name": "메디필 레티날 NMN 바운스 샷 아이 크림",
+      "brand": "MEDIPEEL",
+      "category": "레티날 아이 크림",
+      "skuNames": [
+        "메디필 레티날 NMN 바운스 샷 아이 크림 15ml"
+      ],
+      "keywords": [
+        "메디필 레티날 NMN 바운스 샷 아이 크림",
+        "MEDIPEEL Retinal NMN Bounce Shot Eye Cream",
+        "레티날 NMN 아이크림"
+      ],
+      "exclude": [
+        "부스터",
+        "리필"
+      ],
+      "reason": "동일 라인의 부스터와 눈가 전용 아이크림 수요를 분리",
+      "keyword": "메디필 레티날 NMN 바운스 샷 아이 크림",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "메디필 레티날 NMN 바운스 샷 아이 크림 15ml",
+          "brand": "MEDIPEEL",
+          "sourceUrl": "https://www.medipeel.co.kr/product/detail.html?cate_no=1&display_group=35&product_no=4216",
+          "sourceType": "브랜드 공식 제품 페이지·약국 유통 기사 교차확인",
+          "confidence": "A~B",
+          "entityId": "public-medipeel-retinal-nmn-eye-cream"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "메디필 레티날 NMN 바운스 샷 아이 크림",
+        "attemptedQueries": [
+          "메디필 레티날 NMN 바운스 샷 아이 크림",
+          "MEDIPEEL Retinal NMN Bounce Shot Eye Cream",
+          "레티날 NMN 아이크림"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EB%A9%94%EB%94%94%ED%95%84%20%EB%A0%88%ED%8B%B0%EB%82%A0%20NMN%20%EB%B0%94%EC%9A%B4%EC%8A%A4%20%EC%83%B7%20%EC%95%84%EC%9D%B4%20%ED%81%AC%EB%A6%BC",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EB%A9%94%EB%94%94%ED%95%84%20%EB%A0%88%ED%8B%B0%EB%82%A0%20NMN%20%EB%B0%94%EC%9A%B4%EC%8A%A4%20%EC%83%B7%20%EC%95%84%EC%9D%B4%20%ED%81%AC%EB%A6%BC",
+          "https://www.youtube.com/results?search_query=MEDIPEEL%20Retinal%20NMN%20Bounce%20Shot%20Eye%20Cream",
+          "https://www.youtube.com/results?search_query=%EB%A0%88%ED%8B%B0%EB%82%A0%20NMN%20%EC%95%84%EC%9D%B4%ED%81%AC%EB%A6%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "메디필 레티날 NMN 바운스 샷 아이 크림",
+            "rawCount": 19,
+            "acceptedCount": 3
+          },
+          {
+            "keyword": "MEDIPEEL Retinal NMN Bounce Shot Eye Cream",
+            "rawCount": 18,
+            "acceptedCount": 6
+          },
+          {
+            "keyword": "레티날 NMN 아이크림",
+            "rawCount": 11,
+            "acceptedCount": 4
+          }
+        ],
+        "inspectedCount": 48,
+        "resultSampleCount": 11,
+        "viewSampleCount": 10,
+        "totalViews": 1554668,
+        "medianViews": 94716,
+        "topVideos": [
+          {
+            "id": "MrvJDn2FTxY",
+            "title": "[Eng] (Not Sponsored) The Cream Dermatologists Always Use – 2025 Edition",
+            "channel": "피부텐텐 · 피부가 예뻐지는 10분 ",
+            "published": "1년 전",
+            "views": 606017,
+            "viewsText": "조회수 606,017회",
+            "url": "https://www.youtube.com/watch?v=MrvJDn2FTxY"
+          },
+          {
+            "id": "vc8AJMHO0sM",
+            "title": "Beauty of Joseon REVIVE EYE SERUM: RETINAL + GINSENG 👁  @Dr Dray ​",
+            "channel": "Dr Dray",
+            "published": "3년 전",
+            "views": 382669,
+            "viewsText": "조회수 382,669회",
+            "url": "https://www.youtube.com/watch?v=vc8AJMHO0sM"
+          },
+          {
+            "id": "wgWdHoI9leI",
+            "title": "Best & Worst Korean Eye Creams 2026 (Tier List: Dark Circles, Wrinkles & Milia)",
+            "channel": "CYoung",
+            "published": "5개월 전",
+            "views": 193796,
+            "viewsText": "조회수 193,796회",
+            "url": "https://www.youtube.com/watch?v=wgWdHoI9leI"
+          },
+          {
+            "id": "Uz8oZqyjrWo",
+            "title": "\"아이크림 말고 이것 써라\" 보톡스 맞은 것처럼 눈가 주름 쫙 펴져요. 피부과 원장이 화장품 딱 3가지만 쓰는 이유 | 문정윤 원장 풀버전 #보톡스 #아이크림",
+            "channel": "싴 - 내가 찾는 지식의 모든 것",
+            "published": "9개월 전",
+            "views": 178607,
+            "viewsText": "조회수 178,607회",
+            "url": "https://www.youtube.com/watch?v=Uz8oZqyjrWo"
+          },
+          {
+            "id": "2TIbbssBAmI",
+            "title": "BEST 5 Korean Anti-aging Eye Creams - Gold, Silver, Bronze and Trashes... Korean skincare I Over 40",
+            "channel": "One Eye Beauty",
+            "published": "2년 전",
+            "views": 138372,
+            "viewsText": "조회수 138,372회",
+            "url": "https://www.youtube.com/watch?v=2TIbbssBAmI"
+          },
+          {
+            "id": "bh_ArPTl0MU",
+            "title": "비싼 아이크림 대신 ‘이것’만 바르면 눈가 주름 완벽하게 예방됩니다 | 의사가 아이크림을 추천하지 않는 이유",
+            "channel": "3분동안 최원준",
+            "published": "1년 전",
+            "views": 51059,
+            "viewsText": "조회수 51,059회",
+            "url": "https://www.youtube.com/watch?v=bh_ArPTl0MU"
+          },
+          {
+            "id": "J9S6TxgEMV4",
+            "title": "[장신영편] 눈의 피로를 풀어주는 리프팅 아이크림",
+            "channel": "셀렉라이프",
+            "published": "8개월 전",
+            "views": 3002,
+            "viewsText": "조회수 3,002회",
+            "url": "https://www.youtube.com/watch?v=J9S6TxgEMV4"
+          },
+          {
+            "id": "TVPLOeNpTv4",
+            "title": "이 아이크림 하나로 10년은 젊어진 느낌! 샤르드 NMN 플러스 대공개",
+            "channel": "황금이",
+            "published": "8개월 전",
+            "views": 970,
+            "viewsText": "조회수 970회",
+            "url": "https://www.youtube.com/watch?v=TVPLOeNpTv4"
+          },
+          {
+            "id": "WHDfmKgG-0Y",
+            "title": "MEDIPEEL Retinal NMN Bounce Shot Eye Cream Expert Review ",
+            "channel": "Manan Tutorial",
+            "published": "3개월 전",
+            "views": 115,
+            "viewsText": "조회수 115회",
+            "url": "https://www.youtube.com/watch?v=WHDfmKgG-0Y"
+          },
+          {
+            "id": "gcYZoUdHQA0",
+            "title": "MEDIPEEL Retinal NMN Bounce Shot Booster honest review /is it Worth buying??",
+            "channel": "beautifii Review",
+            "published": "3개월 전",
+            "views": 61,
+            "viewsText": "조회수 61회",
+            "url": "https://www.youtube.com/watch?v=gcYZoUdHQA0"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_a49a285474f62193058cb31376b4f283",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 0.0,
+          "previous30Mean": 0.0,
+          "changePct": null,
+          "latest90Mean": 0.0,
+          "latest": 0.0,
+          "peak": 0.0,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "메디필 레티날 NMN 바운스 샷 아이 크림",
+            "MEDIPEEL Retinal NMN Bounce Shot Eye Cream",
+            "레티날 NMN 아이크림"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 0.0,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_a49a285474f62193058cb31376b4f283"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%94%EB%94%94%ED%95%84%20%EB%A0%88%ED%8B%B0%EB%82%A0%20NMN%20%EB%B0%94%EC%9A%B4%EC%8A%A4%20%EC%83%B7%20%EC%95%84%EC%9D%B4%20%ED%81%AC%EB%A6%BC",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:53:41+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "MEDIPEEL Retinal NMN Bounce Shot Eye Cream",
+        "attemptedQueries": [
+          "MEDIPEEL Retinal NMN Bounce Shot Eye Cream"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=MEDIPEEL%20Retinal%20NMN%20Bounce%20Shot%20Eye%20Cream",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=MEDIPEEL%20Retinal%20NMN%20Bounce%20Shot%20Eye%20Cream"
+        ],
+        "inspectedCount": 4,
+        "acceptedCount": 4,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 9156,
+          "likes": 102,
+          "comments": 9,
+          "reposts": 14,
+          "saves": 31
+        },
+        "items": [
+          {
+            "id": "7629408133584129300",
+            "url": "https://www.tiktok.com/@katrinkaveterok/video/7629408133584129300",
+            "account": "6692991541009613830",
+            "publishedAt": "2026-04-16T17:20:15Z",
+            "title": "то то є новий крем під очі Medipeel Retinal NMN Bounce Shot Eye Cream...",
+            "description": "то то є новий крем під очі Medipeel Retinal NMN Bounce Shot Eye Cream 15ml з вібро накінечником тгк Що можна купити в Кореї #medipeel  @medipeel.official_my ",
+            "views": 2387,
+            "likes": 38,
+            "comments": 7,
+            "reposts": 1,
+            "saves": 12
+          },
+          {
+            "id": "7620515706337070358",
+            "url": "https://www.tiktok.com/@glamtouchuk/video/7620515706337070358",
+            "account": "6614467466415800322",
+            "publishedAt": "2026-03-23T18:13:04Z",
+            "title": "This vibrating eye cream from Medipeel is not just a cream, it’s a te...",
+            "description": "This vibrating eye cream from Medipeel is not just a cream, it’s a tech-upgrade for your eye care routine. With a built-in applicator delivering 12,000 vibrations per minute, it ensures that the high-potency Retinal and NMN penetrate faster and deeper than manual application, and the micro-vibrations gently massaging away the puffiness. #koreaneyecream #puffyeyes #koreanskincare #darkcircles #vibratingeyecream ",
+            "views": 3229,
+            "likes": 29,
+            "comments": 1,
+            "reposts": 11,
+            "saves": 6
+          },
+          {
+            "id": "7645877405860515090",
+            "url": "https://www.tiktok.com/@olya_to/video/7645877405860515090",
+            "account": "6785272757334115334",
+            "publishedAt": "2026-05-31T02:29:22Z",
+            "title": "Мой фаворит для свежего взгляда (спойлер: он еще и вибрирует!) Омолаж...",
+            "description": "Мой фаворит для свежего взгляда (спойлер: он еще и вибрирует!) Омолаживающий крем для век со встроенным вибромассажером Medi-Peel Retinal NMN Bounce Shot Eye Cream #medipeel #medieelretinalbounceshoteyecream@EcoPlace @Medipeel.ru ",
+            "views": 1738,
+            "likes": 10,
+            "comments": 1,
+            "reposts": 2,
+            "saves": 3
+          },
+          {
+            "id": "7627469564732787976",
+            "url": "https://www.tiktok.com/@d0daeng/video/7627469564732787976",
+            "account": "7609899742706222101",
+            "publishedAt": "2026-04-11T11:57:33Z",
+            "title": "💛메디필 레티날 NMN 바운스 샷 아이크림 & 부스터💛#제품제공@medipeel.official #제ᄎ직도 레티놀만 사용하세...",
+            "description": "💛메디필 레티날 NMN 바운스 샷 아이크림 & 부스터💛#제품제공@medipeel.official #제ᄎ직도 레티놀만 사용하세요 ? 레티놀보다 한 단계 빠르게 작용하는  고효능 비타민A 성분인 레티날을 지금 런칭 특가로 저렴하게 구매할 수 있으니 놓치지 마세요 :) 📍레티날 사용방법 ✅ 서늘한 곳에 보관하기 (3~10도) ✅사용 초기에는 격일로 밤에 쌀알 크기 만큼 사용,  피부가 적응하면 콩알 크기 만큼 사용하기 ✅낮에 사용 시에는 자외선 차단제 필수! ✅비타민C, 스크럽, 필링 제품과 병행사용❌ 🌟노란 빛은 레티날 고유 원료 색상이고 책색되지 않으므로 안심하고 사용하세요   #메디필 #레티날 #아이크림 #부스터 ",
+            "views": 1802,
+            "likes": 25,
+            "comments": 0,
+            "reposts": 0,
+            "saves": 10
+          }
+        ],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:51:40+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "MEDIPEEL Retinal NMN Bounce Shot Eye Cream",
+        "attemptedQueries": [
+          "MEDIPEEL Retinal NMN Bounce Shot Eye Cream"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=MEDIPEEL%20Retinal%20NMN%20Bounce%20Shot%20Eye%20Cream",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=MEDIPEEL%20Retinal%20NMN%20Bounce%20Shot%20Eye%20Cream"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-elravie-re2o-ecm-active-ampoule",
+      "name": "엘라비에 리투오 ECM 액티브 앰플",
+      "brand": "ELRAVIE",
+      "category": "약국 ECM 앰플",
+      "skuNames": [
+        "엘라비에 리투오 이씨엠 액티브 앰플 15ml 3개"
+      ],
+      "keywords": [
+        "엘라비에 리투오 ECM 액티브 앰플",
+        "Elravie Re2O ECM Active Ampoule",
+        "리투오 이씨엠 앰플"
+      ],
+      "exclude": [
+        "부스터 크림",
+        "스킨핏 비비"
+      ],
+      "reason": "엘라비에 공식 약국 판매 라인에서 액티브 앰플만 분리 수집",
+      "keyword": "엘라비에 리투오 ECM 액티브 앰플",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "엘라비에 리투오 이씨엠 액티브 앰플 15ml 3개",
+          "brand": "ELRAVIE",
+          "sourceUrl": "https://m.elraviecos.com/goods/goods_view.php?goodsNo=1000000819",
+          "sourceType": "브랜드 공식 약국 판매 라인 제품 페이지",
+          "confidence": "A",
+          "entityId": "public-elravie-re2o-ecm-active-ampoule"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "엘라비에 리투오 ECM 액티브 앰플",
+        "attemptedQueries": [
+          "엘라비에 리투오 ECM 액티브 앰플",
+          "Elravie Re2O ECM Active Ampoule",
+          "리투오 이씨엠 앰플"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EC%97%98%EB%9D%BC%EB%B9%84%EC%97%90%20%EB%A6%AC%ED%88%AC%EC%98%A4%20ECM%20%EC%95%A1%ED%8B%B0%EB%B8%8C%20%EC%95%B0%ED%94%8C",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EC%97%98%EB%9D%BC%EB%B9%84%EC%97%90%20%EB%A6%AC%ED%88%AC%EC%98%A4%20ECM%20%EC%95%A1%ED%8B%B0%EB%B8%8C%20%EC%95%B0%ED%94%8C",
+          "https://www.youtube.com/results?search_query=Elravie%20Re2O%20ECM%20Active%20Ampoule",
+          "https://www.youtube.com/results?search_query=%EB%A6%AC%ED%88%AC%EC%98%A4%20%EC%9D%B4%EC%94%A8%EC%97%A0%20%EC%95%B0%ED%94%8C"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "엘라비에 리투오 ECM 액티브 앰플",
+            "rawCount": 12,
+            "acceptedCount": 8
+          },
+          {
+            "keyword": "Elravie Re2O ECM Active Ampoule",
+            "rawCount": 11,
+            "acceptedCount": 10
+          },
+          {
+            "keyword": "리투오 이씨엠 앰플",
+            "rawCount": 20,
+            "acceptedCount": 1
+          }
+        ],
+        "inspectedCount": 43,
+        "resultSampleCount": 15,
+        "viewSampleCount": 15,
+        "totalViews": 332927,
+        "medianViews": 2386,
+        "topVideos": [
+          {
+            "id": "9dsTVNfYEvo",
+            "title": "엘라비에 리투오 QnA",
+            "channel": "피부과전문의_샘닥",
+            "published": "10개월 전",
+            "views": 136872,
+            "viewsText": "조회수 136,872회",
+            "url": "https://www.youtube.com/watch?v=9dsTVNfYEvo"
+          },
+          {
+            "id": "7ubaHQ_PtoI",
+            "title": "ECM부스터, 피부를 주사한다. 엘라비에 리투오(Re2O)의 모든 것👍",
+            "channel": "피부과전문의_샘닥",
+            "published": "10개월 전",
+            "views": 93412,
+            "viewsText": "조회수 93,412회",
+            "url": "https://www.youtube.com/watch?v=7ubaHQ_PtoI"
+          },
+          {
+            "id": "IHD-vuSyRP8",
+            "title": "\"엘라비에 리투오 스킨부스터\" 효과 제대로 내는 방법? | 모공 흉터 걱정 싹 | 피부과 전문의가 다 알려드립니다",
+            "channel": "닥터원픽의 피부 솔루션",
+            "published": "10개월 전",
+            "views": 39637,
+            "viewsText": "조회수 39,637회",
+            "url": "https://www.youtube.com/watch?v=IHD-vuSyRP8"
+          },
+          {
+            "id": "LYOs5Lzo3pY",
+            "title": "'피부과 전문의'가 알려주는 엘라비에 리투오 효과 200% 보는 법ㅣ효과 확실한 부위와 뜯어 말릴 부위 총정리",
+            "channel": "부산피부왕 닥터케이",
+            "published": "7개월 전",
+            "views": 27689,
+            "viewsText": "조회수 27,689회",
+            "url": "https://www.youtube.com/watch?v=LYOs5Lzo3pY"
+          },
+          {
+            "id": "fpy9sVsbfdM",
+            "title": "\"엘라비에 리투오 스킨부스터\" 효과 제대로 내는 방법? | 모공 흉터 걱정 싹 | 리투오 시술 10문 10답 [통합본]",
+            "channel": "닥터원픽의 피부 솔루션",
+            "published": "5개월 전",
+            "views": 22440,
+            "viewsText": "조회수 22,440회",
+            "url": "https://www.youtube.com/watch?v=fpy9sVsbfdM"
+          },
+          {
+            "id": "yt3U5sy1gao",
+            "title": "리쥬란보다 좋다는 스킨부스터 끝판왕🔥엘라비에  리투오(Re2O)의 모든것! 다른 스킨부스터와 차이, 통증, 효과, 민감피부가 직접 맞아본 시술 리얼 후기까지! 몽땅 다 알랴줌",
+            "channel": "로지의 성분로드 및 TATOA 타토아",
+            "published": "8개월 전",
+            "views": 4958,
+            "viewsText": "조회수 4,958회",
+            "url": "https://www.youtube.com/watch?v=yt3U5sy1gao"
+          },
+          {
+            "id": "3aB4OS_YdeA",
+            "title": "\"엘라비에 리투오 시술 10문 10답\" | 시술 받기 전에 꼭 보고 가세요",
+            "channel": "닥터원픽의 피부 솔루션",
+            "published": "6개월 전",
+            "views": 2760,
+            "viewsText": "조회수 2,760회",
+            "url": "https://www.youtube.com/watch?v=3aB4OS_YdeA"
+          },
+          {
+            "id": "-bOZYcARrhk",
+            "title": "(*Eng) everything from Elravie Re2O, A new concept of skin booster!",
+            "channel": "피부과전문의 Dr.노남경 피부클래스",
+            "published": "5개월 전",
+            "views": 2386,
+            "viewsText": "조회수 2,386회",
+            "url": "https://www.youtube.com/watch?v=-bOZYcARrhk"
+          },
+          {
+            "id": "gAOCaGL79mY",
+            "title": "스킨부스터 다음 세대?! ECM부스터, 엘라비에 리투오(Re2O)✨",
+            "channel": "피부원정대",
+            "published": "9개월 전",
+            "views": 870,
+            "viewsText": "조회수 870회",
+            "url": "https://www.youtube.com/watch?v=gAOCaGL79mY"
+          },
+          {
+            "id": "sxELVLgtIQs",
+            "title": "(*Eng) 새로운 개념의 스킨부스터, 엘라비에 리투오의 모든 것! everything from Elravie Re2Oㅣ노남경의 피부클래스",
+            "channel": "피부과전문의 Dr.노남경 피부클래스",
+            "published": "6개월 전",
+            "views": 691,
+            "viewsText": "조회수 691회",
+            "url": "https://www.youtube.com/watch?v=sxELVLgtIQs"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_d551711520e1188ffec3172db9fefdab",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 0.0,
+          "previous30Mean": 0.0,
+          "changePct": null,
+          "latest90Mean": 0.0,
+          "latest": 0.0,
+          "peak": 0.0,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "엘라비에 리투오 ECM 액티브 앰플",
+            "Elravie Re2O ECM Active Ampoule",
+            "리투오 이씨엠 앰플"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 0.0,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_d551711520e1188ffec3172db9fefdab"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%98%EB%9D%BC%EB%B9%84%EC%97%90%20%EB%A6%AC%ED%88%AC%EC%98%A4%20ECM%20%EC%95%A1%ED%8B%B0%EB%B8%8C%20%EC%95%B0%ED%94%8C",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:53:41+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Elravie Re2O ECM Active Ampoule",
+        "attemptedQueries": [
+          "Elravie Re2O ECM Active Ampoule"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=Elravie%20Re2O%20ECM%20Active%20Ampoule",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=Elravie%20Re2O%20ECM%20Active%20Ampoule"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:51:40+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Elravie Re2O ECM Active Ampoule",
+        "attemptedQueries": [
+          "Elravie Re2O ECM Active Ampoule"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=Elravie%20Re2O%20ECM%20Active%20Ampoule",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=Elravie%20Re2O%20ECM%20Active%20Ampoule"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-elravie-re2o-ecm-booster-cream",
+      "name": "엘라비에 리투오 ECM 부스터 크림",
+      "brand": "ELRAVIE",
+      "category": "약국 ECM 크림",
+      "skuNames": [
+        "엘라비에 리투오 이씨엠 부스터 크림 50ml"
+      ],
+      "keywords": [
+        "엘라비에 리투오 ECM 부스터 크림",
+        "Elravie Re2O ECM Booster Cream",
+        "리투오 이씨엠 크림"
+      ],
+      "exclude": [
+        "액티브 앰플",
+        "스킨핏 비비"
+      ],
+      "reason": "엘라비에 공식 약국 판매 라인에서 부스터 크림만 분리 수집",
+      "keyword": "엘라비에 리투오 ECM 부스터 크림",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "엘라비에 리투오 이씨엠 부스터 크림 50ml",
+          "brand": "ELRAVIE",
+          "sourceUrl": "https://m.elraviecos.com/goods/goods_view.php?goodsNo=1000000820",
+          "sourceType": "브랜드 공식 약국 판매 라인 제품 페이지",
+          "confidence": "A",
+          "entityId": "public-elravie-re2o-ecm-booster-cream"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "엘라비에 리투오 ECM 부스터 크림",
+        "attemptedQueries": [
+          "엘라비에 리투오 ECM 부스터 크림",
+          "Elravie Re2O ECM Booster Cream",
+          "리투오 이씨엠 크림"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EC%97%98%EB%9D%BC%EB%B9%84%EC%97%90%20%EB%A6%AC%ED%88%AC%EC%98%A4%20ECM%20%EB%B6%80%EC%8A%A4%ED%84%B0%20%ED%81%AC%EB%A6%BC",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EC%97%98%EB%9D%BC%EB%B9%84%EC%97%90%20%EB%A6%AC%ED%88%AC%EC%98%A4%20ECM%20%EB%B6%80%EC%8A%A4%ED%84%B0%20%ED%81%AC%EB%A6%BC",
+          "https://www.youtube.com/results?search_query=Elravie%20Re2O%20ECM%20Booster%20Cream",
+          "https://www.youtube.com/results?search_query=%EB%A6%AC%ED%88%AC%EC%98%A4%20%EC%9D%B4%EC%94%A8%EC%97%A0%20%ED%81%AC%EB%A6%BC"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "엘라비에 리투오 ECM 부스터 크림",
+            "rawCount": 20,
+            "acceptedCount": 12
+          },
+          {
+            "keyword": "Elravie Re2O ECM Booster Cream",
+            "rawCount": 14,
+            "acceptedCount": 14
+          },
+          {
+            "keyword": "리투오 이씨엠 크림",
+            "rawCount": 20,
+            "acceptedCount": 1
+          }
+        ],
+        "inspectedCount": 54,
+        "resultSampleCount": 23,
+        "viewSampleCount": 23,
+        "totalViews": 365494,
+        "medianViews": 2386,
+        "topVideos": [
+          {
+            "id": "9dsTVNfYEvo",
+            "title": "엘라비에 리투오 QnA",
+            "channel": "피부과전문의_샘닥",
+            "published": "10개월 전",
+            "views": 136872,
+            "viewsText": "조회수 136,872회",
+            "url": "https://www.youtube.com/watch?v=9dsTVNfYEvo"
+          },
+          {
+            "id": "7ubaHQ_PtoI",
+            "title": "ECM부스터, 피부를 주사한다. 엘라비에 리투오(Re2O)의 모든 것👍",
+            "channel": "피부과전문의_샘닥",
+            "published": "10개월 전",
+            "views": 93412,
+            "viewsText": "조회수 93,412회",
+            "url": "https://www.youtube.com/watch?v=7ubaHQ_PtoI"
+          },
+          {
+            "id": "IHD-vuSyRP8",
+            "title": "\"엘라비에 리투오 스킨부스터\" 효과 제대로 내는 방법? | 모공 흉터 걱정 싹 | 피부과 전문의가 다 알려드립니다",
+            "channel": "닥터원픽의 피부 솔루션",
+            "published": "10개월 전",
+            "views": 39637,
+            "viewsText": "조회수 39,637회",
+            "url": "https://www.youtube.com/watch?v=IHD-vuSyRP8"
+          },
+          {
+            "id": "fpy9sVsbfdM",
+            "title": "\"엘라비에 리투오 스킨부스터\" 효과 제대로 내는 방법? | 모공 흉터 걱정 싹 | 리투오 시술 10문 10답 [통합본]",
+            "channel": "닥터원픽의 피부 솔루션",
+            "published": "5개월 전",
+            "views": 22440,
+            "viewsText": "조회수 22,440회",
+            "url": "https://www.youtube.com/watch?v=fpy9sVsbfdM"
+          },
+          {
+            "id": "OKMyHD7FD7U",
+            "title": "[미도의원] 요즘 HOT한 새로운 스킨부스터‼️리투오 직접 받아봄🤔 | 엘라비에 리투오 | 스킨부스터 | 대구 피부과 | 동성로 피부과",
+            "channel": "중력의사 미도남쟈",
+            "published": "11개월 전",
+            "views": 17984,
+            "viewsText": "조회수 17,984회",
+            "url": "https://www.youtube.com/watch?v=OKMyHD7FD7U"
+          },
+          {
+            "id": "MklNO-TrJaE",
+            "title": "Skin Boosters Korea Has That the U.S. Doesn't — What You're Missing Out On! | Dr. Roy Kim",
+            "channel": "Dr Roy Kim",
+            "published": "1년 전",
+            "views": 15166,
+            "viewsText": "조회수 15,166회",
+            "url": "https://www.youtube.com/watch?v=MklNO-TrJaE"
+          },
+          {
+            "id": "F_FycTeCHkg",
+            "title": "엘라비에 리투오 효과, 이런분들이 받으면 좋습니다/ 의사가 직접 받아본 리투오 후기",
+            "channel": "끌레어X서울",
+            "published": "8개월 전",
+            "views": 13217,
+            "viewsText": "조회수 13,217회",
+            "url": "https://www.youtube.com/watch?v=F_FycTeCHkg"
+          },
+          {
+            "id": "yt3U5sy1gao",
+            "title": "리쥬란보다 좋다는 스킨부스터 끝판왕🔥엘라비에  리투오(Re2O)의 모든것! 다른 스킨부스터와 차이, 통증, 효과, 민감피부가 직접 맞아본 시술 리얼 후기까지! 몽땅 다 알랴줌",
+            "channel": "로지의 성분로드 및 TATOA 타토아",
+            "published": "8개월 전",
+            "views": 4958,
+            "viewsText": "조회수 4,958회",
+            "url": "https://www.youtube.com/watch?v=yt3U5sy1gao"
+          },
+          {
+            "id": "-8kDuDx8CIc",
+            "title": "한국 스킨 부스터 혁신: 자연스러운 노화 방지를 위한 ECM 리투오 #re2o #리투오",
+            "channel": "맑은피부, 맑은윤TV",
+            "published": "7개월 전",
+            "views": 4731,
+            "viewsText": "조회수 4,731회",
+            "url": "https://www.youtube.com/watch?v=-8kDuDx8CIc"
+          },
+          {
+            "id": "uZ3p-fWEX78",
+            "title": "Skin boosters made from human skin, Elravie Re20, effects and precautions?",
+            "channel": "금손쌤 김세형",
+            "published": "8개월 전",
+            "views": 4011,
+            "viewsText": "조회수 4,011회",
+            "url": "https://www.youtube.com/watch?v=uZ3p-fWEX78"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_d551711520e1188ffec3172db9fefdab",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 0.0,
+          "previous30Mean": 0.01,
+          "changePct": -100.0,
+          "latest90Mean": 0.0,
+          "latest": 0.0,
+          "peak": 0.27,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "엘라비에 리투오 ECM 부스터 크림",
+            "Elravie Re2O ECM Booster Cream",
+            "리투오 이씨엠 크림"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 0.0,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_d551711520e1188ffec3172db9fefdab"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%98%EB%9D%BC%EB%B9%84%EC%97%90%20%EB%A6%AC%ED%88%AC%EC%98%A4%20ECM%20%EB%B6%80%EC%8A%A4%ED%84%B0%20%ED%81%AC%EB%A6%BC",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:53:50+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Elravie Re2O ECM Booster Cream",
+        "attemptedQueries": [
+          "Elravie Re2O ECM Booster Cream"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=Elravie%20Re2O%20ECM%20Booster%20Cream",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=Elravie%20Re2O%20ECM%20Booster%20Cream"
+        ],
+        "inspectedCount": 1,
+        "acceptedCount": 1,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 419,
+          "likes": 1,
+          "comments": 0,
+          "reposts": 1,
+          "saves": 0
+        },
+        "items": [
+          {
+            "id": "7637060071964380436",
+            "url": "https://www.tiktok.com/@elravievn/video/7637060071964380436",
+            "account": "7296711002157220872",
+            "publishedAt": "2026-05-07T08:13:40Z",
+            "title": "- COMING SOON - Elravie Re2O Booster Cream ứng dụng công nghệ tái sin...",
+            "description": "- COMING SOON - Elravie Re2O Booster Cream ứng dụng công nghệ tái sinh ma trận ngoại bào Re2O ECM, giúp làn da tự tái cấu trúc, khơi dậy cơ chế tái tạo sinh học và trẻ hóa toàn diện. Cùng đón chờ khởi đầu của một chuẩn mực mới. #elravie #elraviere2o #ecm #skincare ",
+            "views": 419,
+            "likes": 1,
+            "comments": 0,
+            "reposts": 1,
+            "saves": 0
+          }
+        ],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:51:40+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Elravie Re2O ECM Booster Cream",
+        "attemptedQueries": [
+          "Elravie Re2O ECM Booster Cream"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=Elravie%20Re2O%20ECM%20Booster%20Cream",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=Elravie%20Re2O%20ECM%20Booster%20Cream"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-elravie-re2o-ecm-skinfit-bb",
+      "name": "엘라비에 리투오 ECM 스킨핏 비비",
+      "brand": "ELRAVIE",
+      "category": "약국 BB 크림",
+      "skuNames": [
+        "엘라비에 리투오 이씨엠 스킨핏 비비"
+      ],
+      "keywords": [
+        "엘라비에 리투오 ECM 스킨핏 비비",
+        "Elravie Re2O ECM Skinfit BB",
+        "리투오 이씨엠 비비"
+      ],
+      "exclude": [
+        "액티브 앰플",
+        "부스터 크림"
+      ],
+      "reason": "엘라비에 공식 약국 판매 라인에서 스킨핏 비비만 분리 수집",
+      "keyword": "엘라비에 리투오 ECM 스킨핏 비비",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "엘라비에 리투오 이씨엠 스킨핏 비비",
+          "brand": "ELRAVIE",
+          "sourceUrl": "https://m.elraviecos.com/goods/goods_view.php?goodsNo=1000000821",
+          "sourceType": "브랜드 공식 약국 판매 라인 제품 페이지",
+          "confidence": "A",
+          "entityId": "public-elravie-re2o-ecm-skinfit-bb"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "엘라비에 리투오 ECM 스킨핏 비비",
+        "attemptedQueries": [
+          "엘라비에 리투오 ECM 스킨핏 비비",
+          "Elravie Re2O ECM Skinfit BB",
+          "리투오 이씨엠 비비"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=%EC%97%98%EB%9D%BC%EB%B9%84%EC%97%90%20%EB%A6%AC%ED%88%AC%EC%98%A4%20ECM%20%EC%8A%A4%ED%82%A8%ED%95%8F%20%EB%B9%84%EB%B9%84",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=%EC%97%98%EB%9D%BC%EB%B9%84%EC%97%90%20%EB%A6%AC%ED%88%AC%EC%98%A4%20ECM%20%EC%8A%A4%ED%82%A8%ED%95%8F%20%EB%B9%84%EB%B9%84",
+          "https://www.youtube.com/results?search_query=Elravie%20Re2O%20ECM%20Skinfit%20BB",
+          "https://www.youtube.com/results?search_query=%EB%A6%AC%ED%88%AC%EC%98%A4%20%EC%9D%B4%EC%94%A8%EC%97%A0%20%EB%B9%84%EB%B9%84"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "엘라비에 리투오 ECM 스킨핏 비비",
+            "rawCount": 20,
+            "acceptedCount": 17
+          },
+          {
+            "keyword": "Elravie Re2O ECM Skinfit BB",
+            "rawCount": 13,
+            "acceptedCount": 11
+          },
+          {
+            "keyword": "리투오 이씨엠 비비",
+            "rawCount": 20,
+            "acceptedCount": 2
+          }
+        ],
+        "inspectedCount": 53,
+        "resultSampleCount": 25,
+        "viewSampleCount": 25,
+        "totalViews": 378873,
+        "medianViews": 2386,
+        "topVideos": [
+          {
+            "id": "9dsTVNfYEvo",
+            "title": "엘라비에 리투오 QnA",
+            "channel": "피부과전문의_샘닥",
+            "published": "10개월 전",
+            "views": 136872,
+            "viewsText": "조회수 136,872회",
+            "url": "https://www.youtube.com/watch?v=9dsTVNfYEvo"
+          },
+          {
+            "id": "7ubaHQ_PtoI",
+            "title": "ECM부스터, 피부를 주사한다. 엘라비에 리투오(Re2O)의 모든 것👍",
+            "channel": "피부과전문의_샘닥",
+            "published": "10개월 전",
+            "views": 93412,
+            "viewsText": "조회수 93,412회",
+            "url": "https://www.youtube.com/watch?v=7ubaHQ_PtoI"
+          },
+          {
+            "id": "IHD-vuSyRP8",
+            "title": "\"엘라비에 리투오 스킨부스터\" 효과 제대로 내는 방법? | 모공 흉터 걱정 싹 | 피부과 전문의가 다 알려드립니다",
+            "channel": "닥터원픽의 피부 솔루션",
+            "published": "10개월 전",
+            "views": 39637,
+            "viewsText": "조회수 39,637회",
+            "url": "https://www.youtube.com/watch?v=IHD-vuSyRP8"
+          },
+          {
+            "id": "LYOs5Lzo3pY",
+            "title": "'피부과 전문의'가 알려주는 엘라비에 리투오 효과 200% 보는 법ㅣ효과 확실한 부위와 뜯어 말릴 부위 총정리",
+            "channel": "부산피부왕 닥터케이",
+            "published": "7개월 전",
+            "views": 27689,
+            "viewsText": "조회수 27,689회",
+            "url": "https://www.youtube.com/watch?v=LYOs5Lzo3pY"
+          },
+          {
+            "id": "fpy9sVsbfdM",
+            "title": "\"엘라비에 리투오 스킨부스터\" 효과 제대로 내는 방법? | 모공 흉터 걱정 싹 | 리투오 시술 10문 10답 [통합본]",
+            "channel": "닥터원픽의 피부 솔루션",
+            "published": "5개월 전",
+            "views": 22440,
+            "viewsText": "조회수 22,440회",
+            "url": "https://www.youtube.com/watch?v=fpy9sVsbfdM"
+          },
+          {
+            "id": "OKMyHD7FD7U",
+            "title": "[미도의원] 요즘 HOT한 새로운 스킨부스터‼️리투오 직접 받아봄🤔 | 엘라비에 리투오 | 스킨부스터 | 대구 피부과 | 동성로 피부과",
+            "channel": "중력의사 미도남쟈",
+            "published": "11개월 전",
+            "views": 17984,
+            "viewsText": "조회수 17,984회",
+            "url": "https://www.youtube.com/watch?v=OKMyHD7FD7U"
+          },
+          {
+            "id": "F_FycTeCHkg",
+            "title": "엘라비에 리투오 효과, 이런분들이 받으면 좋습니다/ 의사가 직접 받아본 리투오 후기",
+            "channel": "끌레어X서울",
+            "published": "8개월 전",
+            "views": 13217,
+            "viewsText": "조회수 13,217회",
+            "url": "https://www.youtube.com/watch?v=F_FycTeCHkg"
+          },
+          {
+            "id": "Ee0gAThohOc",
+            "title": "신개념 ECM 스킨 부스터 '엘라비에 리투오'에 대한 모든 것 낋여왔습니다 | 케이성형외과 K - PLASTIC SURGERY",
+            "channel": "케이성형외과",
+            "published": "11개월 전",
+            "views": 5290,
+            "viewsText": "조회수 5,290회",
+            "url": "https://www.youtube.com/watch?v=Ee0gAThohOc"
+          },
+          {
+            "id": "yt3U5sy1gao",
+            "title": "리쥬란보다 좋다는 스킨부스터 끝판왕🔥엘라비에  리투오(Re2O)의 모든것! 다른 스킨부스터와 차이, 통증, 효과, 민감피부가 직접 맞아본 시술 리얼 후기까지! 몽땅 다 알랴줌",
+            "channel": "로지의 성분로드 및 TATOA 타토아",
+            "published": "8개월 전",
+            "views": 4958,
+            "viewsText": "조회수 4,958회",
+            "url": "https://www.youtube.com/watch?v=yt3U5sy1gao"
+          },
+          {
+            "id": "uZ3p-fWEX78",
+            "title": "Skin boosters made from human skin, Elravie Re20, effects and precautions?",
+            "channel": "금손쌤 김세형",
+            "published": "8개월 전",
+            "views": 4011,
+            "viewsText": "조회수 4,011회",
+            "url": "https://www.youtube.com/watch?v=uZ3p-fWEX78"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_d551711520e1188ffec3172db9fefdab",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 0.0,
+          "previous30Mean": 0.0,
+          "changePct": null,
+          "latest90Mean": 0.0,
+          "latest": 0.0,
+          "peak": 0.0,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "엘라비에 리투오 ECM 스킨핏 비비",
+            "Elravie Re2O ECM Skinfit BB",
+            "리투오 이씨엠 비비"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 0.0,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_d551711520e1188ffec3172db9fefdab"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%98%EB%9D%BC%EB%B9%84%EC%97%90%20%EB%A6%AC%ED%88%AC%EC%98%A4%20ECM%20%EC%8A%A4%ED%82%A8%ED%95%8F%20%EB%B9%84%EB%B9%84",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:53:50+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Elravie Re2O ECM Skinfit BB",
+        "attemptedQueries": [
+          "Elravie Re2O ECM Skinfit BB"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=Elravie%20Re2O%20ECM%20Skinfit%20BB",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=Elravie%20Re2O%20ECM%20Skinfit%20BB"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:51:40+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "Elravie Re2O ECM Skinfit BB",
+        "attemptedQueries": [
+          "Elravie Re2O ECM Skinfit BB"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=Elravie%20Re2O%20ECM%20Skinfit%20BB",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=Elravie%20Re2O%20ECM%20Skinfit%20BB"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-fmk-rejuvenating-pdrn-kit",
+      "name": "fmk 리쥬네이팅 PDRN 키트",
+      "brand": "fmk",
+      "category": "PDRN 홈케어 키트",
+      "skuNames": [
+        "fmk 리쥬네이팅 피디알엔 키트"
+      ],
+      "sourceAliases": [
+        "fmk Rejuvenating PDRN Kit"
+      ],
+      "keywords": [
+        "fmk 리쥬네이팅 PDRN 키트",
+        "fmk Rejuvenating PDRN Kit",
+        "에프엠케이 피디알엔 키트"
+      ],
+      "exclude": [
+        "브라이트닝",
+        "비타"
+      ],
+      "reason": "fmk 공식 한글·영문 제품명을 하나의 PDRN 키트 수요로 통합",
+      "keyword": "fmk 리쥬네이팅 PDRN 키트",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "fmk 리쥬네이팅 피디알엔 키트",
+          "brand": "fmk",
+          "sourceUrl": "https://fmkcos.com/product/detail.html?item_code=P000000O000C&product_no=14",
+          "sourceType": "브랜드 공식 제품 페이지·약국 입점 기사 교차확인",
+          "confidence": "A~B",
+          "entityId": "public-fmk-rejuvenating-pdrn-kit"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "fmk 리쥬네이팅 PDRN 키트",
+        "attemptedQueries": [
+          "fmk 리쥬네이팅 PDRN 키트",
+          "fmk Rejuvenating PDRN Kit",
+          "에프엠케이 피디알엔 키트"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=fmk%20%EB%A6%AC%EC%A5%AC%EB%84%A4%EC%9D%B4%ED%8C%85%20PDRN%20%ED%82%A4%ED%8A%B8",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=fmk%20%EB%A6%AC%EC%A5%AC%EB%84%A4%EC%9D%B4%ED%8C%85%20PDRN%20%ED%82%A4%ED%8A%B8",
+          "https://www.youtube.com/results?search_query=fmk%20Rejuvenating%20PDRN%20Kit",
+          "https://www.youtube.com/results?search_query=%EC%97%90%ED%94%84%EC%97%A0%EC%BC%80%EC%9D%B4%20%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%20%ED%82%A4%ED%8A%B8"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "fmk 리쥬네이팅 PDRN 키트",
+            "rawCount": 4,
+            "acceptedCount": 4
+          },
+          {
+            "keyword": "fmk Rejuvenating PDRN Kit",
+            "rawCount": 2,
+            "acceptedCount": 2
+          },
+          {
+            "keyword": "에프엠케이 피디알엔 키트",
+            "rawCount": 6,
+            "acceptedCount": 4
+          }
+        ],
+        "inspectedCount": 12,
+        "resultSampleCount": 9,
+        "viewSampleCount": 9,
+        "totalViews": 324368,
+        "medianViews": 39811,
+        "topVideos": [
+          {
+            "id": "vk6W236Ca_A",
+            "title": "PDRN 정말 효과 있을까?  같이 쓰면 안좋은 성분은?  함량별 제품 10종 비교(부작용, 사용법, 피부타입별 추천)",
+            "channel": "디렉터 파이",
+            "published": "8개월 전",
+            "views": 77660,
+            "viewsText": "조회수 77,660회",
+            "url": "https://www.youtube.com/watch?v=vk6W236Ca_A"
+          },
+          {
+            "id": "E439tYOIpfk",
+            "title": "cc) 올해 PDRN 무조건 뜬다💖피부재생에 좋은 피디알엔 제품 싹다 비교‼️(피부과추천템,올리브영1위템)ㅣ아랑",
+            "channel": "Arang 아랑",
+            "published": "2년 전",
+            "views": 67554,
+            "viewsText": "조회수 67,554회",
+            "url": "https://www.youtube.com/watch?v=E439tYOIpfk"
+          },
+          {
+            "id": "L9w5hEOvQfs",
+            "title": "사지 마세요 ⚠️ 함량 0.01%?  의사가 직접 비교한 PDRN 앰플 TOP5 ㅣ 항노화, 수분, 탄력, 주름 만병통치약이라고..?!",
+            "channel": "청담 닥터원",
+            "published": "1년 전",
+            "views": 65288,
+            "viewsText": "조회수 65,288회",
+            "url": "https://www.youtube.com/watch?v=L9w5hEOvQfs"
+          },
+          {
+            "id": "cjoqEM7qzxU",
+            "title": "Salmon sperm injections, is PDRN Worth the Hype? | Derm explains; Dr. Jenny Liu",
+            "channel": "Dr. Jenny Liu",
+            "published": "1년 전",
+            "views": 57517,
+            "viewsText": "조회수 57,517회",
+            "url": "https://www.youtube.com/watch?v=cjoqEM7qzxU"
+          },
+          {
+            "id": "JTR-PfPOqZs",
+            "title": "cc)  품절대란‼️브이티 리들샷&피디알엔 역대급 마켓소식 (안써보면 후회한다..🔥)ㅣ아랑",
+            "channel": "Arang 아랑",
+            "published": "2년 전",
+            "views": 39811,
+            "viewsText": "조회수 39,811회",
+            "url": "https://www.youtube.com/watch?v=JTR-PfPOqZs"
+          },
+          {
+            "id": "dgPzGrq_EP8",
+            "title": "💉시술 끝판왕 리쥬란주사를 집에서?!🔥 무조건 효과보는 바르는 리쥬란 PDRN 5개 추천| 리쥬란힐러| CNP| 차앤박| 나노레시피| VT| 글로우엠| ep.41",
+            "channel": "뷰티의민족 BeauMin",
+            "published": "1년 전",
+            "views": 13775,
+            "viewsText": "조회수 13,775회",
+            "url": "https://www.youtube.com/watch?v=dgPzGrq_EP8"
+          },
+          {
+            "id": "0BvEFWbUqVs",
+            "title": "전직 화장품 연구원 그루민 2차 화장품 마켓 | 환절기 피부 장벽 회복템 | VT PDRN | 구독자이벤트",
+            "channel": "코숏메틱 그루민",
+            "published": "8개월 전",
+            "views": 2280,
+            "viewsText": "조회수 2,280회",
+            "url": "https://www.youtube.com/watch?v=0BvEFWbUqVs"
+          },
+          {
+            "id": "e5ZIZpYebXQ",
+            "title": "Medicube Salmon DNA PDRN Trial Kit Review: Glass Glow Mini Skincare Set for Hydration",
+            "channel": "Amazon Expert",
+            "published": "8개월 전",
+            "views": 335,
+            "viewsText": "조회수 335회",
+            "url": "https://www.youtube.com/watch?v=e5ZIZpYebXQ"
+          },
+          {
+            "id": "FvslPuQLHCs",
+            "title": "연어 PDRN에 바이옴 PDRN까지 황금비율로 배합했다! 여기에 ‘펩타이드 복합체 15종’으로 재생, 장벽, 탄력을 한 번에 챙기는 고효능 올인원 PDRN 크림!",
+            "channel": "전대미문스튜디오",
+            "published": "2주 전",
+            "views": 148,
+            "viewsText": "조회수 148회",
+            "url": "https://www.youtube.com/watch?v=FvslPuQLHCs"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_d551711520e1188ffec3172db9fefdab",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 0.01,
+          "previous30Mean": 0.0,
+          "changePct": null,
+          "latest90Mean": 0.0,
+          "latest": 0.0,
+          "peak": 0.27,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "fmk 리쥬네이팅 PDRN 키트",
+            "fmk Rejuvenating PDRN Kit",
+            "에프엠케이 피디알엔 키트"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 0.02,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_d551711520e1188ffec3172db9fefdab"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=fmk%20%EB%A6%AC%EC%A5%AC%EB%84%A4%EC%9D%B4%ED%8C%85%20PDRN%20%ED%82%A4%ED%8A%B8",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:53:50+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "fmk Rejuvenating PDRN Kit",
+        "attemptedQueries": [
+          "fmk Rejuvenating PDRN Kit"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=fmk%20Rejuvenating%20PDRN%20Kit",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=fmk%20Rejuvenating%20PDRN%20Kit"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:51:40+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "fmk Rejuvenating PDRN Kit",
+        "attemptedQueries": [
+          "fmk Rejuvenating PDRN Kit"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=fmk%20Rejuvenating%20PDRN%20Kit",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=fmk%20Rejuvenating%20PDRN%20Kit"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      }
+    },
+    {
+      "id": "public-fmk-brightening-vita-kit",
+      "name": "fmk 브라이트닝 Vit+ 키트",
+      "brand": "fmk",
+      "category": "브라이트닝 홈케어 키트",
+      "skuNames": [
+        "fmk 브라이트닝 비타+ 키트"
+      ],
+      "sourceAliases": [
+        "fmk Brightening Vit+ Kit"
+      ],
+      "keywords": [
+        "fmk 브라이트닝 Vit+ 키트",
+        "fmk Brightening Vit+ Kit",
+        "에프엠케이 브라이트닝 비타 키트"
+      ],
+      "exclude": [
+        "리쥬네이팅",
+        "PDRN"
+      ],
+      "reason": "fmk 공식 한글·영문 제품명을 하나의 브라이트닝 키트 수요로 통합",
+      "keyword": "fmk 브라이트닝 Vit+ 키트",
+      "collectedAt": "2026-07-15T12:36:30+09:00",
+      "status": "collected",
+      "catalogSources": [
+        {
+          "productName": "fmk 브라이트닝 비타+ 키트",
+          "brand": "fmk",
+          "sourceUrl": "https://fmkcos.com/",
+          "sourceType": "브랜드 공식 제품 라인·약국 입점 기사 교차확인",
+          "confidence": "A~B",
+          "entityId": "public-fmk-brightening-vita-kit"
+        }
+      ],
+      "youtube": {
+        "status": "collected",
+        "collectedAt": "2026-07-15T12:38:35+09:00",
+        "method": "youtube_web_search_relevance_filtered",
+        "query": "fmk 브라이트닝 Vit+ 키트",
+        "attemptedQueries": [
+          "fmk 브라이트닝 Vit+ 키트",
+          "fmk Brightening Vit+ Kit",
+          "에프엠케이 브라이트닝 비타 키트"
+        ],
+        "sourceUrl": "https://www.youtube.com/results?search_query=fmk%20%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%8B%9D%20Vit%2B%20%ED%82%A4%ED%8A%B8",
+        "sourceUrls": [
+          "https://www.youtube.com/results?search_query=fmk%20%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%8B%9D%20Vit%2B%20%ED%82%A4%ED%8A%B8",
+          "https://www.youtube.com/results?search_query=fmk%20Brightening%20Vit%2B%20Kit",
+          "https://www.youtube.com/results?search_query=%EC%97%90%ED%94%84%EC%97%A0%EC%BC%80%EC%9D%B4%20%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%8B%9D%20%EB%B9%84%ED%83%80%20%ED%82%A4%ED%8A%B8"
+        ],
+        "queryBreakdown": [
+          {
+            "keyword": "fmk 브라이트닝 Vit+ 키트",
+            "rawCount": 17,
+            "acceptedCount": 1
+          },
+          {
+            "keyword": "fmk Brightening Vit+ Kit",
+            "rawCount": 1,
+            "acceptedCount": 0
+          },
+          {
+            "keyword": "에프엠케이 브라이트닝 비타 키트",
+            "rawCount": 15,
+            "acceptedCount": 2
+          }
+        ],
+        "inspectedCount": 33,
+        "resultSampleCount": 3,
+        "viewSampleCount": 3,
+        "totalViews": 9594,
+        "medianViews": 226,
+        "topVideos": [
+          {
+            "id": "Hzbc-pUVF0s",
+            "title": "아마존 K 뷰티 한국 화장품 35%까지 할인 중! 스킨천사 미백 브라이트닝 앰플 후기! 메디큐브.코스알엑스 리뷰",
+            "channel": "Lanimouse라니마우스",
+            "published": "3개월 전",
+            "views": 9298,
+            "viewsText": "조회수 9,298회",
+            "url": "https://www.youtube.com/watch?v=Hzbc-pUVF0s"
+          },
+          {
+            "id": "2faAfHHsGfs",
+            "title": "브라이트닝 비타민C+겔마스크 김지영 강사(2월 온라인 제품 세미나)26,2,9",
+            "channel": "정영민",
+            "published": "5개월 전",
+            "views": 226,
+            "viewsText": "조회수 226회",
+            "url": "https://www.youtube.com/watch?v=2faAfHHsGfs"
+          },
+          {
+            "id": "PVUopCox_tE",
+            "title": "에프엠케이(FMK)의 2019 봄/여름 컬렉션",
+            "channel": "MUSINSA",
+            "published": "7년 전",
+            "views": 70,
+            "viewsText": "조회수 70회",
+            "url": "https://www.youtube.com/watch?v=PVUopCox_tE"
+          }
+        ],
+        "errors": [],
+        "deduplication": "videoId 중복 제거 후 제외어·제품 관련성 필터 적용"
+      },
+      "naver": {
+        "status": "collected",
+        "sourceUrl": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_4da6f5a6fdeddaee5995403a0fadc89f",
+        "trend": {
+          "observations": 366,
+          "latest30Mean": 0.0,
+          "previous30Mean": 0.0,
+          "changePct": null,
+          "latest90Mean": 0.0,
+          "latest": 0.0,
+          "peak": 0.0,
+          "method": "naver_datalab_anchor_normalized",
+          "keywords": [
+            "fmk 브라이트닝 Vit+ 키트",
+            "fmk Brightening Vit+ Kit",
+            "에프엠케이 브라이트닝 비타 키트"
+          ],
+          "period": "2025-07-14 ~ 2026-07-14",
+          "interval": "daily",
+          "device": "all",
+          "gender": "all",
+          "ages": "all",
+          "unit": "relative_index_max_100",
+          "anchor": "노스카나겔",
+          "anchorLatest30Mean": 47.41,
+          "anchorNormalizedLatest30": 0.0,
+          "collectedAt": "2026-07-15T12:39:20+09:00",
+          "downloadUrl": "https://datalab.naver.com/qcExcel.naver?hashKey=N_4da6f5a6fdeddaee5995403a0fadc89f"
+        }
+      },
+      "google": {
+        "status": "rate_limited",
+        "method": "google_trends",
+        "sourceUrl": "https://trends.google.com/trends/explore?geo=KR&q=fmk%20%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%8B%9D%20Vit%2B%20%ED%82%A4%ED%8A%B8",
+        "attemptedAt": "2026-07-15T12:39:20+09:00",
+        "httpStatus": 429,
+        "reason": "Google Trends가 자동 브라우저와 직접 API 요청을 429로 제한해 재수집 대기 중"
+      },
+      "tiktok": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:53:50+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "fmk Brightening Vit+ Kit",
+        "attemptedQueries": [
+          "fmk Brightening Vit+ Kit"
+        ],
+        "sourceUrl": "https://www.tiktok.com/search/video?q=fmk%20Brightening%20Vit%2B%20Kit",
+        "sourceUrls": [
+          "https://www.tiktok.com/search/video?q=fmk%20Brightening%20Vit%2B%20Kit"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
+        "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
+      },
+      "instagram": {
+        "status": "no_results",
+        "collectedAt": "2026-07-15T12:51:40+09:00",
+        "method": "logged_in_browser_ytdlp",
+        "query": "fmk Brightening Vit+ Kit",
+        "attemptedQueries": [
+          "fmk Brightening Vit+ Kit"
+        ],
+        "sourceUrl": "https://www.instagram.com/explore/search/keyword/?q=fmk%20Brightening%20Vit%2B%20Kit",
+        "sourceUrls": [
+          "https://www.instagram.com/explore/search/keyword/?q=fmk%20Brightening%20Vit%2B%20Kit"
+        ],
+        "inspectedCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "errorCount": 0,
+        "totals": {
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "reposts": 0,
+          "saves": 0
+        },
+        "items": [],
         "scoringNote": "검색 후보의 본문에서 제품 키워드가 확인된 콘텐츠만 집계"
       }
     }

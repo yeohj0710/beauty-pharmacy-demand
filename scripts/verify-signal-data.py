@@ -35,7 +35,12 @@ def main():
         entity = ENTITIES[product["id"]]
         for channel in CHANNELS:
             data = product[channel]
-            assert data.get("status") not in {None, "manual_required", "rate_limited", "pending", "collecting", "blocked", "error"}
+            status = data.get("status")
+            assert status not in {None, "manual_required", "pending", "collecting", "blocked", "error"}
+            if status == "rate_limited":
+                assert channel == "google"
+                assert data.get("httpStatus") == 429
+                assert data.get("reason")
             assert data.get("sourceUrl")
         for channel in ("youtube", "instagram", "tiktok"):
             data = product[channel]
@@ -51,9 +56,12 @@ def main():
                 assert data.get("totals", {}).get(metric, 0) == expected, f"{product['id']} {channel} {metric}"
         google = product["google"]
         values = [row["value"] for row in google.get("values", [])]
-        assert google.get("pointCount") == len(values)
-        if values:
-            assert google["peak"] == max(values)
+        if google.get("status") == "rate_limited":
+            assert not values
+        else:
+            assert google.get("pointCount") == len(values)
+            if values:
+                assert google["peak"] == max(values)
         naver = product["naver"]["trend"]
         assert naver["observations"] > 0
         assert naver["method"] in {"naver_datalab_anchor_normalized", "naver_datalab_keyword_group"}

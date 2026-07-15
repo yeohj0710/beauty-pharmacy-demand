@@ -1544,5 +1544,270 @@
       "리들샷 300"
     ],
     "reason": "브랜드·성분·강도 100 표기를 모두 포함해 다른 리들샷과 분리"
+  },
+  {
+    "id": "public-genabelle-pdrn-vita-toning-ampoule",
+    "name": "제나벨 PDRN 비타 토닝 앰플",
+    "brand": "GENABELLE",
+    "category": "PDRN 브라이트닝 앰플",
+    "skuNames": [
+      "제나벨 PDRN 비타 토닝 앰플 30ml"
+    ],
+    "sourceAliases": [
+      "Genabelle PDRN Vita Toning Ampoule 30ml"
+    ],
+    "keywords": [
+      "제나벨 PDRN 비타 토닝 앰플",
+      "Genabelle PDRN Vita Toning Ampoule",
+      "제나벨 피디알엔 비타 앰플"
+    ],
+    "exclude": [
+      "마스크",
+      "크림"
+    ],
+    "reason": "제나벨 공식 제품명과 영문 표기를 하나의 앰플 수요로 통합"
+  },
+  {
+    "id": "public-rxme-rejuyoung-pdrn-10000-cream",
+    "name": "RXme 리쥬영 PDRN 10000 크림",
+    "brand": "RX:ME",
+    "category": "약국 PDRN 크림",
+    "skuNames": [
+      "RXme 리쥬영 PDRN 10000 딥 리페어 크림"
+    ],
+    "sourceAliases": [
+      "Rejuyoung PDRN 10000 Deep Repair Cream"
+    ],
+    "keywords": [
+      "리쥬영 PDRN 10000 크림",
+      "Rejuyoung PDRN 10000",
+      "RXme 리쥬영 크림"
+    ],
+    "exclude": [
+      "쥬베클",
+      "리쥬올"
+    ],
+    "reason": "약국 공개 게시물의 한글·영문 제품명을 하나의 리쥬영 크림 수요로 통합"
+  },
+  {
+    "id": "public-rxme-juvekle-pdlla-10000-cream",
+    "name": "RXme 쥬베클 PDLLA 10000 크림",
+    "brand": "RX:ME",
+    "category": "약국 PDLLA 퍼밍 크림",
+    "skuNames": [
+      "RXme 쥬베클 PDLLA 10000 플러스 퍼밍 크림"
+    ],
+    "sourceAliases": [
+      "Juvekle PDLLA 10000 Plus Firming Cream"
+    ],
+    "keywords": [
+      "쥬베클 PDLLA 10000 크림",
+      "Juvekle PDLLA 10000",
+      "RXme 쥬베클 크림"
+    ],
+    "exclude": [
+      "리쥬영",
+      "리쥬올"
+    ],
+    "reason": "브랜드·쥬베클·PDLLA 함량을 함께 사용해 동시 판매 제품과 분리"
+  },
+  {
+    "id": "public-deesse-pdrn-2000-cream",
+    "name": "디에스 PDRN 2000+ 크림",
+    "brand": "DÉESSE",
+    "category": "약국 PDRN 크림",
+    "skuNames": [
+      "Déesse PDRN 2000+ Cream"
+    ],
+    "sourceAliases": [
+      "디에스 PDRN 2000 플러스 크림"
+    ],
+    "keywords": [
+      "디에스 PDRN 2000 크림",
+      "Déesse PDRN 2000 Cream",
+      "디에스 피디알엔 2000"
+    ],
+    "exclude": [
+      "PDRN 1000",
+      "시카 멜라"
+    ],
+    "reason": "공개 약국 게시물에 노출된 2000+ 함량 제품을 기존 PDRN 1000+와 분리"
+  },
+  {
+    "id": "public-medipeel-melanon-x-ampoule",
+    "name": "메디필 멜라논 엑스 앰플 18.9",
+    "brand": "MEDIPEEL",
+    "category": "브라이트닝 앰플",
+    "skuNames": [
+      "메디필 멜라논 엑스 앰플 18.9 30ml"
+    ],
+    "keywords": [
+      "메디필 멜라논 엑스 앰플 18.9",
+      "MEDIPEEL Melanon X Ampoule 18.9",
+      "멜라논엑스 앰플"
+    ],
+    "exclude": [
+      "크림",
+      "세트"
+    ],
+    "reason": "멜라논 엑스 라인에서 앰플 단품 수요만 분리 수집"
+  },
+  {
+    "id": "public-medipeel-melanon-x-cream",
+    "name": "메디필 멜라논 엑스 크림",
+    "brand": "MEDIPEEL",
+    "category": "브라이트닝 크림",
+    "skuNames": [
+      "메디필 멜라논 엑스 크림 30ml"
+    ],
+    "keywords": [
+      "메디필 멜라논 엑스 크림",
+      "MEDIPEEL Melanon X Cream",
+      "멜라논엑스 크림"
+    ],
+    "exclude": [
+      "앰플",
+      "세트"
+    ],
+    "reason": "멜라논 엑스 라인에서 크림 단품 수요만 분리 수집"
+  },
+  {
+    "id": "public-medipeel-retinal-nmn-booster",
+    "name": "메디필 레티날 NMN 바운스 샷 부스터",
+    "brand": "MEDIPEEL",
+    "category": "레티날 부스터",
+    "skuNames": [
+      "메디필 레티날 NMN 바운스 샷 부스터 30ml"
+    ],
+    "keywords": [
+      "메디필 레티날 NMN 바운스 샷 부스터",
+      "MEDIPEEL Retinal NMN Bounce Shot Booster",
+      "레티날 NMN 부스터"
+    ],
+    "exclude": [
+      "아이 크림",
+      "리필"
+    ],
+    "reason": "동일 라인의 아이크림·리필과 부스터 본품 수요를 분리"
+  },
+  {
+    "id": "public-medipeel-retinal-nmn-eye-cream",
+    "name": "메디필 레티날 NMN 바운스 샷 아이 크림",
+    "brand": "MEDIPEEL",
+    "category": "레티날 아이 크림",
+    "skuNames": [
+      "메디필 레티날 NMN 바운스 샷 아이 크림 15ml"
+    ],
+    "keywords": [
+      "메디필 레티날 NMN 바운스 샷 아이 크림",
+      "MEDIPEEL Retinal NMN Bounce Shot Eye Cream",
+      "레티날 NMN 아이크림"
+    ],
+    "exclude": [
+      "부스터",
+      "리필"
+    ],
+    "reason": "동일 라인의 부스터와 눈가 전용 아이크림 수요를 분리"
+  },
+  {
+    "id": "public-elravie-re2o-ecm-active-ampoule",
+    "name": "엘라비에 리투오 ECM 액티브 앰플",
+    "brand": "ELRAVIE",
+    "category": "약국 ECM 앰플",
+    "skuNames": [
+      "엘라비에 리투오 이씨엠 액티브 앰플 15ml 3개"
+    ],
+    "keywords": [
+      "엘라비에 리투오 ECM 액티브 앰플",
+      "Elravie Re2O ECM Active Ampoule",
+      "리투오 이씨엠 앰플"
+    ],
+    "exclude": [
+      "부스터 크림",
+      "스킨핏 비비"
+    ],
+    "reason": "엘라비에 공식 약국 판매 라인에서 액티브 앰플만 분리 수집"
+  },
+  {
+    "id": "public-elravie-re2o-ecm-booster-cream",
+    "name": "엘라비에 리투오 ECM 부스터 크림",
+    "brand": "ELRAVIE",
+    "category": "약국 ECM 크림",
+    "skuNames": [
+      "엘라비에 리투오 이씨엠 부스터 크림 50ml"
+    ],
+    "keywords": [
+      "엘라비에 리투오 ECM 부스터 크림",
+      "Elravie Re2O ECM Booster Cream",
+      "리투오 이씨엠 크림"
+    ],
+    "exclude": [
+      "액티브 앰플",
+      "스킨핏 비비"
+    ],
+    "reason": "엘라비에 공식 약국 판매 라인에서 부스터 크림만 분리 수집"
+  },
+  {
+    "id": "public-elravie-re2o-ecm-skinfit-bb",
+    "name": "엘라비에 리투오 ECM 스킨핏 비비",
+    "brand": "ELRAVIE",
+    "category": "약국 BB 크림",
+    "skuNames": [
+      "엘라비에 리투오 이씨엠 스킨핏 비비"
+    ],
+    "keywords": [
+      "엘라비에 리투오 ECM 스킨핏 비비",
+      "Elravie Re2O ECM Skinfit BB",
+      "리투오 이씨엠 비비"
+    ],
+    "exclude": [
+      "액티브 앰플",
+      "부스터 크림"
+    ],
+    "reason": "엘라비에 공식 약국 판매 라인에서 스킨핏 비비만 분리 수집"
+  },
+  {
+    "id": "public-fmk-rejuvenating-pdrn-kit",
+    "name": "fmk 리쥬네이팅 PDRN 키트",
+    "brand": "fmk",
+    "category": "PDRN 홈케어 키트",
+    "skuNames": [
+      "fmk 리쥬네이팅 피디알엔 키트"
+    ],
+    "sourceAliases": [
+      "fmk Rejuvenating PDRN Kit"
+    ],
+    "keywords": [
+      "fmk 리쥬네이팅 PDRN 키트",
+      "fmk Rejuvenating PDRN Kit",
+      "에프엠케이 피디알엔 키트"
+    ],
+    "exclude": [
+      "브라이트닝",
+      "비타"
+    ],
+    "reason": "fmk 공식 한글·영문 제품명을 하나의 PDRN 키트 수요로 통합"
+  },
+  {
+    "id": "public-fmk-brightening-vita-kit",
+    "name": "fmk 브라이트닝 Vit+ 키트",
+    "brand": "fmk",
+    "category": "브라이트닝 홈케어 키트",
+    "skuNames": [
+      "fmk 브라이트닝 비타+ 키트"
+    ],
+    "sourceAliases": [
+      "fmk Brightening Vit+ Kit"
+    ],
+    "keywords": [
+      "fmk 브라이트닝 Vit+ 키트",
+      "fmk Brightening Vit+ Kit",
+      "에프엠케이 브라이트닝 비타 키트"
+    ],
+    "exclude": [
+      "리쥬네이팅",
+      "PDRN"
+    ],
+    "reason": "fmk 공식 한글·영문 제품명을 하나의 브라이트닝 키트 수요로 통합"
   }
 ]
