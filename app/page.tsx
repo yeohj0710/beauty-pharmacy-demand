@@ -76,7 +76,10 @@ const platforms: { id: Platform; name: string; rule: string }[] = [
   },
 ];
 const knownSkuNames = new Set(
-  signalFile.products.flatMap((product) => product.skuNames),
+  signalFile.products.flatMap((product) => [
+    ...product.skuNames,
+    ...(product.sourceAliases ?? []),
+  ]),
 );
 const catalogSignals: Signal[] = catalog.products
   .filter((name) => !knownSkuNames.has(name))

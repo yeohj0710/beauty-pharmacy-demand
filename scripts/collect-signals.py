@@ -12,6 +12,7 @@ import json
 import pathlib
 import re
 import statistics
+import sys
 import time
 import urllib.parse
 import urllib.request
@@ -19,6 +20,7 @@ import urllib.request
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 ENTITIES_PATH = ROOT / "app" / "demand-entities.json"
 OUTPUT_PATH = ROOT / "app" / "signals.json"
+PUBLIC_SOURCES_PATH = ROOT / "app" / "public-product-sources.json"
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/138 Safari/537.36"
 
 
@@ -262,17 +264,33 @@ def merge_google(keywords: list[str]) -> dict:
 
 def main() -> None:
     entities = json.loads(ENTITIES_PATH.read_text(encoding="utf-8"))
+    target_ids = set(sys.argv[1:])
     previous = {}
     if OUTPUT_PATH.exists():
         previous = {
             item["id"]: item
             for item in json.loads(OUTPUT_PATH.read_text(encoding="utf-8")).get("products", [])
         }
+    public_sources = {}
+    if PUBLIC_SOURCES_PATH.exists():
+        for source in json.loads(PUBLIC_SOURCES_PATH.read_text(encoding="utf-8")):
+            public_sources.setdefault(source["entityId"], []).append(source)
     collected_at = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).isoformat(timespec="seconds")
     results = []
     for index, entity in enumerate(entities):
+        if target_ids and entity["id"] not in target_ids and entity["id"] in previous:
+            preserved = previous[entity["id"]]
+            for field in ("name", "brand", "category", "skuNames", "sourceAliases", "keywords", "exclude", "reason"):
+                if field in entity:
+                    preserved[field] = entity[field]
+            if entity["id"] in public_sources:
+                preserved["catalogSources"] = public_sources[entity["id"]]
+            results.append(preserved)
+            continue
         keyword = entity["keywords"][0]
         row = {**entity, "keyword": keyword, "collectedAt": collected_at, "status": "collected"}
+        if entity["id"] in public_sources:
+            row["catalogSources"] = public_sources[entity["id"]]
         errors = []
         try:
             row["youtube"] = merge_youtube(entity["keywords"], entity["exclude"])
@@ -302,7 +320,7 @@ def main() -> None:
             row["status"] = "partial" if len(row) > 5 else "failed"
             row["errors"] = errors
         results.append(row)
-        if index < len(entities) - 1:
+        if index < len(entities) - 1 and (not target_ids or entity["id"] in target_ids):
             time.sleep(0.8)
     OUTPUT_PATH.write_text(
         json.dumps({"collectedAt": collected_at, "scope": "full-product-catalog", "products": results}, ensure_ascii=False, indent=2),

@@ -13,6 +13,7 @@ import io
 import json
 import pathlib
 import statistics
+import sys
 import time
 import urllib.parse
 import urllib.request
@@ -95,10 +96,16 @@ def chunks(items: list[dict], size: int):
 
 
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    target_ids = set(sys.argv[1:])
     payload = json.loads(SIGNALS_PATH.read_text(encoding="utf-8"))
     products = payload["products"]
     by_name = {product["name"]: product for product in products}
-    targets = [product for product in products if product["name"] != ANCHOR_NAME]
+    targets = [
+        product for product in products
+        if product["name"] != ANCHOR_NAME and (not target_ids or product["id"] in target_ids)
+    ]
     end = dt.date.today() - dt.timedelta(days=1)
     start = end - dt.timedelta(days=365)
     collected_at = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).isoformat(timespec="seconds")
@@ -130,7 +137,8 @@ def main() -> None:
         download_url = f"{BASE_URL}/qcExcel.naver?hashKey={hash_key}"
         result_url = f"{BASE_URL}/keyword/trendResult.naver?hashKey={hash_key}"
         xlsx = request(client, download_url)
-        (RAW_DIR / f"batch-{batch_number:02d}.xlsx").write_bytes(xlsx)
+        prefix = "expansion-batch" if target_ids else "batch"
+        (RAW_DIR / f"{prefix}-{batch_number:02d}.xlsx").write_bytes(xlsx)
         rows = parse_xlsx(xlsx)
         data_rows = [row for row in rows[7:] if row and len(row) > 1 and row[0][:4].isdigit()]
         value_columns = [1 + index * 2 for index in range(len(groups))]
@@ -167,13 +175,16 @@ def main() -> None:
         print(f"Naver DataLab {batch_number}: {', '.join(group['name'] for group in groups[1:])}")
         time.sleep(0.8)
 
-    anchor = by_name[ANCHOR_NAME]
-    anchor["naver"]["trend"].update({
-        "anchor": ANCHOR_NAME,
-        "anchorLatest30Mean": anchor["naver"]["trend"]["latest30Mean"],
-        "anchorNormalizedLatest30": 100.0,
-    })
+    if not target_ids or by_name[ANCHOR_NAME]["id"] in target_ids:
+        anchor = by_name[ANCHOR_NAME]
+        anchor["naver"]["trend"].update({
+            "anchor": ANCHOR_NAME,
+            "anchorLatest30Mean": anchor["naver"]["trend"]["latest30Mean"],
+            "anchorNormalizedLatest30": 100.0,
+        })
     for product in products:
+        if target_ids and product["id"] not in target_ids:
+            continue
         keyword = product["keywords"][0]
         product["google"] = {
             "status": "rate_limited",

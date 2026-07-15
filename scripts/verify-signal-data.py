@@ -29,7 +29,8 @@ def relevant(item, entity):
 
 
 def main():
-    assert len(PRODUCTS) == 63
+    assert len(PRODUCTS) == len(ENTITIES)
+    assert {product["id"] for product in PRODUCTS} == set(ENTITIES)
     for product in PRODUCTS:
         entity = ENTITIES[product["id"]]
         for channel in CHANNELS:
@@ -56,7 +57,7 @@ def main():
         naver = product["naver"]["trend"]
         assert naver["observations"] > 0
         assert naver["method"] in {"naver_datalab_anchor_normalized", "naver_datalab_keyword_group"}
-    print("63 products / 315 channel records: evidence, relevance, totals, trends OK")
+    print(f"{len(PRODUCTS)} products / {len(PRODUCTS) * len(CHANNELS)} channel records: evidence, relevance, totals, trends OK")
 
 
 if __name__ == "__main__":

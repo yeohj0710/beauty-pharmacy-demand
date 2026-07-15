@@ -3,6 +3,7 @@ import datetime as dt
 import importlib.util
 import json
 import re
+import sys
 import time
 from pathlib import Path
 
@@ -38,6 +39,7 @@ def relevant(video, entity):
 
 
 def main():
+    only = set(sys.argv[1:])
     collector = load_collector()
     entities = json.loads(ENTITIES_PATH.read_text(encoding="utf-8"))
     signals = json.loads(SIGNALS_PATH.read_text(encoding="utf-8"))
@@ -45,6 +47,8 @@ def main():
     collected_at = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).isoformat(timespec="seconds")
 
     for index, entity in enumerate(entities, 1):
+        if only and entity["id"] not in only:
+            continue
         by_id = {}
         breakdown = []
         source_urls = []

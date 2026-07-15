@@ -1,0 +1,258 @@
+[
+  {
+    "productName": "노스카나겔",
+    "brand": "동아제약",
+    "sourceUrl": "https://www.instagram.com/pvrepharmacy/",
+    "sourceType": "공식 약국 계정 게시물",
+    "confidence": "B",
+    "entityId": "noscarna-gel"
+  },
+  {
+    "productName": "노스엣",
+    "brand": "신신제약",
+    "sourceUrl": "https://www.instagram.com/p/DaA1tuVlIka/",
+    "sourceType": "공식 약국 계정 여름 추천 게시물",
+    "confidence": "B",
+    "entityId": "catalog-001"
+  },
+  {
+    "productName": "노스엣센스",
+    "brand": "신신제약",
+    "sourceUrl": "https://www.instagram.com/p/DaA1tuVlIka/",
+    "sourceType": "공식 약국 계정 여름 추천 게시물",
+    "confidence": "B",
+    "entityId": "catalog-001"
+  },
+  {
+    "productName": "유리아 200mg",
+    "brand": "",
+    "sourceUrl": "https://www.instagram.com/p/DaA1tuVlIka/",
+    "sourceType": "공식 약국 계정 여름 추천 게시물",
+    "confidence": "B",
+    "entityId": "public-uria-200"
+  },
+  {
+    "productName": "도미나크림",
+    "brand": "태극제약",
+    "sourceUrl": "https://www.instagram.com/p/DaA1tuVlIka/",
+    "sourceType": "공식 약국 계정 여름 추천 게시물",
+    "confidence": "B",
+    "entityId": "catalog-014"
+  },
+  {
+    "productName": "Beauty of Joseon Clear Rice Sunscreen",
+    "brand": "Beauty of Joseon",
+    "sourceUrl": "https://www.instagram.com/berrynew_pharmacy/",
+    "sourceType": "공식 약국 계정 선케어 비교 콘텐츠",
+    "confidence": "B",
+    "entityId": "public-boj-clear-rice-sunscreen"
+  },
+  {
+    "productName": "iUNIK Beta-Glucan Barrier Sunscreen",
+    "brand": "iUNIK",
+    "sourceUrl": "https://www.instagram.com/berrynew_pharmacy/",
+    "sourceType": "공식 약국 계정 선케어 비교 콘텐츠",
+    "confidence": "B",
+    "entityId": "public-iunik-beta-glucan-sunscreen"
+  },
+  {
+    "productName": "iUNIK Centella Calming Daily Sunscreen",
+    "brand": "iUNIK",
+    "sourceUrl": "https://www.instagram.com/berrynew_pharmacy/",
+    "sourceType": "공식 약국 계정 선케어 비교 콘텐츠",
+    "confidence": "B",
+    "entityId": "public-iunik-centella-sunscreen"
+  },
+  {
+    "productName": "Dr. Vita Vitamin Sunscreen",
+    "brand": "Dr. Vita",
+    "sourceUrl": "https://www.instagram.com/berrynew_pharmacy/",
+    "sourceType": "공식 약국 계정 선케어 비교 콘텐츠",
+    "confidence": "B",
+    "entityId": "public-dr-vita-vitamin-sunscreen"
+  },
+  {
+    "productName": "Dr. Vita Vitamin Sunscreen Cover",
+    "brand": "Dr. Vita",
+    "sourceUrl": "https://www.instagram.com/berrynew_pharmacy/",
+    "sourceType": "공식 약국 계정 선케어 비교 콘텐츠",
+    "confidence": "B",
+    "entityId": "public-dr-vita-vitamin-sunscreen-cover"
+  },
+  {
+    "productName": "SCALP SHOT",
+    "brand": "",
+    "sourceUrl": "https://www.instagram.com/berrynew_pharmacy/",
+    "sourceType": "공식 약국 계정 제품 소개",
+    "confidence": "B",
+    "entityId": "public-scalp-shot"
+  },
+  {
+    "productName": "PDRN 1000 Plus Cream",
+    "brand": "",
+    "sourceUrl": "https://www.instagram.com/reel/DUVQsA3kwYY/?hl=en",
+    "sourceType": "공식 약국 계정 릴스",
+    "confidence": "B",
+    "entityId": "public-pdrn-1000-plus-cream"
+  },
+  {
+    "productName": "Cica Mela Repair Cream",
+    "brand": "",
+    "sourceUrl": "https://www.instagram.com/reel/DUVQsA3kwYY/?hl=en",
+    "sourceType": "공식 약국 계정 릴스",
+    "confidence": "B",
+    "entityId": "public-cica-mela-repair-cream"
+  },
+  {
+    "productName": "멜라토닝크림",
+    "brand": "동아제약",
+    "sourceUrl": "https://www.instagram.com/eight_pharmacy/reel/DaCmkr9A6oi/?hl=en-gb",
+    "sourceType": "공식 약국 계정 제품 스포트라이트",
+    "confidence": "B",
+    "entityId": "melatoning-cream"
+  },
+  {
+    "productName": "PDRN 1000+ Cream",
+    "brand": "",
+    "sourceUrl": "https://www.instagram.com/eight_pharmacy/",
+    "sourceType": "공식 약국 계정 방문 콘텐츠",
+    "confidence": "B",
+    "entityId": "public-pdrn-1000-plus-cream"
+  },
+  {
+    "productName": "Reju-All Advance PDRN Rejuvenating Cream",
+    "brand": "Dr. Reju-All",
+    "sourceUrl": "https://www.instagram.com/eight_pharmacy/",
+    "sourceType": "공식 약국 계정 방문 콘텐츠",
+    "confidence": "B",
+    "entityId": "dr-rejuall-pdrn-cream"
+  },
+  {
+    "productName": "Villemu Mask",
+    "brand": "Villemu",
+    "sourceUrl": "https://www.instagram.com/eight_pharmacy/",
+    "sourceType": "공식 약국 계정 방문 콘텐츠",
+    "confidence": "B",
+    "entityId": "public-villemu-mask"
+  },
+  {
+    "productName": "Déesse 크림 3종(세부 SKU 미확인)",
+    "brand": "Déesse",
+    "sourceUrl": "https://www.instagram.com/p/DVrM_CwESXJ/",
+    "sourceType": "매대 QR·여행 콘텐츠",
+    "confidence": "C",
+    "entityId": "public-deesse-cream"
+  },
+  {
+    "productName": "RE4DAY All-in-One Women Plus",
+    "brand": "RE4DAY",
+    "sourceUrl": "https://www.instagram.com/reel/DavME9XSaQI/",
+    "sourceType": "공식 약국 계정 릴스",
+    "confidence": "B",
+    "entityId": "re4day-woman-plus"
+  },
+  {
+    "productName": "Reju-All",
+    "brand": "Dr. Reju-All",
+    "sourceUrl": "https://www.instagram.com/peachyou_pharmacy/",
+    "sourceType": "공식 약국 계정 제품 소개·라인 표기",
+    "confidence": "B",
+    "entityId": "dr-rejuall-pdrn-cream"
+  },
+  {
+    "productName": "AC7 DAYS 15ml",
+    "brand": "",
+    "sourceUrl": "https://www.instagram.com/p/DZMNVT2GPL4/",
+    "sourceType": "브랜드·공식 관련 입점 게시물",
+    "confidence": "B",
+    "entityId": "public-ac7-days"
+  },
+  {
+    "productName": "Bio Activating PDRN Ampoule",
+    "brand": "",
+    "sourceUrl": "https://www.instagram.com/reel/DYytmcTR_7s/",
+    "sourceType": "관련 릴스·입점 콘텐츠",
+    "confidence": "B",
+    "entityId": "public-bio-activating-pdrn-ampoule"
+  },
+  {
+    "productName": "PDRN Essence RX",
+    "brand": "VT COSMETICS",
+    "sourceUrl": "https://vt-cosmetics.com/category/%EC%95%BD%EA%B5%AD-%ED%8C%90%EB%A7%A4-%EC%A0%9C%ED%92%88/607/",
+    "sourceType": "브랜드 공식 약국 판매 제품 카테고리",
+    "confidence": "A",
+    "entityId": "public-vt-pdrn-essence-rx"
+  },
+  {
+    "productName": "PDRN Cream RX",
+    "brand": "VT COSMETICS",
+    "sourceUrl": "https://vt-cosmetics.com/category/%EC%95%BD%EA%B5%AD-%ED%8C%90%EB%A7%A4-%EC%A0%9C%ED%92%88/607/",
+    "sourceType": "브랜드 공식 약국 판매 제품 카테고리",
+    "confidence": "A",
+    "entityId": "public-vt-pdrn-cream-rx"
+  },
+  {
+    "productName": "Retinal Peptide Serum",
+    "brand": "VT COSMETICS",
+    "sourceUrl": "https://vt-cosmetics.com/category/%EC%95%BD%EA%B5%AD-%ED%8C%90%EB%A7%A4-%EC%A0%9C%ED%92%88/607/",
+    "sourceType": "브랜드 공식 약국 판매 제품 카테고리",
+    "confidence": "A",
+    "entityId": "public-vt-retinal-peptide-serum"
+  },
+  {
+    "productName": "Retinal Pro Cream 0.025",
+    "brand": "VT COSMETICS",
+    "sourceUrl": "https://vt-cosmetics.com/category/%EC%95%BD%EA%B5%AD-%ED%8C%90%EB%A7%A4-%EC%A0%9C%ED%92%88/607/",
+    "sourceType": "브랜드 공식 약국 판매 제품 카테고리",
+    "confidence": "A",
+    "entityId": "public-vt-retinal-pro-cream"
+  },
+  {
+    "productName": "Retinal Pro Cream 0.05",
+    "brand": "VT COSMETICS",
+    "sourceUrl": "https://vt-cosmetics.com/category/%EC%95%BD%EA%B5%AD-%ED%8C%90%EB%A7%A4-%EC%A0%9C%ED%92%88/607/",
+    "sourceType": "브랜드 공식 약국 판매 제품 카테고리",
+    "confidence": "A",
+    "entityId": "public-vt-retinal-pro-cream"
+  },
+  {
+    "productName": "Retinal Pro Cream 0.1",
+    "brand": "VT COSMETICS",
+    "sourceUrl": "https://vt-cosmetics.com/category/%EC%95%BD%EA%B5%AD-%ED%8C%90%EB%A7%A4-%EC%A0%9C%ED%92%88/607/",
+    "sourceType": "브랜드 공식 약국 판매 제품 카테고리",
+    "confidence": "A",
+    "entityId": "public-vt-retinal-pro-cream"
+  },
+  {
+    "productName": "PDRN Moist Tone-Up Sun Essence RX",
+    "brand": "VT COSMETICS",
+    "sourceUrl": "https://vt-cosmetics.com/category/%EC%95%BD%EA%B5%AD-%ED%8C%90%EB%A7%A4-%EC%A0%9C%ED%92%88/607/",
+    "sourceType": "브랜드 공식 약국 판매 제품 카테고리",
+    "confidence": "A",
+    "entityId": "public-vt-pdrn-tone-up-sun-rx"
+  },
+  {
+    "productName": "VT Retinal Serum",
+    "brand": "VT COSMETICS",
+    "sourceUrl": "https://www.cmn.co.kr/sub/news/news_view.asp?news_idx=50334",
+    "sourceType": "약국 유통 협업 공개 기사",
+    "confidence": "A~B",
+    "entityId": "public-vt-retinal-peptide-serum"
+  },
+  {
+    "productName": "VT Vita Eye Cream",
+    "brand": "VT COSMETICS",
+    "sourceUrl": "https://www.cmn.co.kr/sub/news/news_view.asp?news_idx=50334",
+    "sourceType": "약국 유통 협업 공개 기사",
+    "confidence": "A~B",
+    "entityId": "public-vt-vita-eye-cream"
+  },
+  {
+    "productName": "VT PDRN Reedle Shot 100",
+    "brand": "VT COSMETICS",
+    "sourceUrl": "https://www.cmn.co.kr/sub/news/news_view.asp?news_idx=50334",
+    "sourceType": "약국 유통 협업 공개 기사",
+    "confidence": "A~B",
+    "entityId": "public-vt-pdrn-reedle-shot-100"
+  }
+]

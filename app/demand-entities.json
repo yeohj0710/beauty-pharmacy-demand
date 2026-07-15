@@ -8,6 +8,10 @@
       "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 크림 맥스 60ml",
       "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 크림 30ml"
     ],
+    "sourceAliases": [
+      "Reju-All Advance PDRN Rejuvenating Cream",
+      "Reju-All"
+    ],
     "keywords": [
       "닥터 리쥬올 크림",
       "리쥬올 PDRN 크림",
@@ -28,6 +32,9 @@
     "skuNames": [
       "노스카나겔 20g",
       "노스카나겔 10g"
+    ],
+    "sourceAliases": [
+      "노스카나겔"
     ],
     "keywords": [
       "노스카나겔",
@@ -123,6 +130,9 @@
     "skuNames": [
       "올인원 우먼플러스 15포"
     ],
+    "sourceAliases": [
+      "RE4DAY All-in-One Women Plus"
+    ],
     "keywords": [
       "올인원 우먼플러스",
       "RE4DAY 우먼플러스",
@@ -176,6 +186,10 @@
     "category": "",
     "skuNames": [
       "노스엣 센스액 30ml"
+    ],
+    "sourceAliases": [
+      "노스엣",
+      "노스엣센스"
     ],
     "keywords": [
       "노스엣 센스액",
@@ -420,6 +434,9 @@
     "category": "",
     "skuNames": [
       "도미나크림 50g"
+    ],
+    "sourceAliases": [
+      "도미나크림"
     ],
     "keywords": [
       "도미나크림"
@@ -1146,5 +1163,386 @@
       "해외직구"
     ],
     "reason": "용량·포장 표기를 제외하고 제품 핵심어와 붙여쓰기를 함께 수집"
+  },
+  {
+    "id": "public-uria-200",
+    "name": "유리아 200mg",
+    "brand": "",
+    "category": "요소 보습제",
+    "skuNames": [
+      "유리아 200mg"
+    ],
+    "keywords": [
+      "유리아 200mg",
+      "유리아200",
+      "유리아 크림 200mg"
+    ],
+    "exclude": [
+      "유리아쥬",
+      "중고"
+    ],
+    "reason": "제품명과 붙여쓰기 표기를 함께 수집하고 유리아쥬 브랜드 오탐을 제외"
+  },
+  {
+    "id": "public-boj-clear-rice-sunscreen",
+    "name": "Beauty of Joseon Clear Rice Sunscreen",
+    "brand": "Beauty of Joseon",
+    "category": "선케어",
+    "skuNames": [
+      "Beauty of Joseon Clear Rice Sunscreen"
+    ],
+    "keywords": [
+      "Beauty of Joseon Clear Rice Sunscreen",
+      "조선미녀 클리어 라이스 선스크린",
+      "클리어 라이스 선스크린"
+    ],
+    "exclude": [
+      "Relief Sun",
+      "릴리프 선"
+    ],
+    "reason": "영문 정식명과 한국어 표기를 함께 수집하고 다른 조선미녀 선크림을 제외"
+  },
+  {
+    "id": "public-iunik-beta-glucan-sunscreen",
+    "name": "iUNIK Beta-Glucan Barrier Sunscreen",
+    "brand": "iUNIK",
+    "category": "선케어",
+    "skuNames": [
+      "iUNIK Beta-Glucan Barrier Sunscreen"
+    ],
+    "keywords": [
+      "iUNIK Beta-Glucan Barrier Sunscreen",
+      "아이유닉 베타글루칸 배리어 선스크린",
+      "아이유닉 베타글루칸 선크림"
+    ],
+    "exclude": [
+      "Centella Calming",
+      "센텔라 카밍"
+    ],
+    "reason": "브랜드·핵심 성분·제품형을 함께 사용해 같은 브랜드의 센텔라 제품과 분리"
+  },
+  {
+    "id": "public-iunik-centella-sunscreen",
+    "name": "iUNIK Centella Calming Daily Sunscreen",
+    "brand": "iUNIK",
+    "category": "선케어",
+    "skuNames": [
+      "iUNIK Centella Calming Daily Sunscreen"
+    ],
+    "keywords": [
+      "iUNIK Centella Calming Daily Sunscreen",
+      "아이유닉 센텔라 카밍 데일리 선스크린",
+      "아이유닉 센텔라 선크림"
+    ],
+    "exclude": [
+      "Beta-Glucan Barrier",
+      "베타글루칸 배리어"
+    ],
+    "reason": "브랜드·센텔라·데일리 표기를 함께 사용해 베타글루칸 제품과 분리"
+  },
+  {
+    "id": "public-dr-vita-vitamin-sunscreen",
+    "name": "Dr. Vita Vitamin Sunscreen",
+    "brand": "Dr. Vita",
+    "category": "선케어",
+    "skuNames": [
+      "Dr. Vita Vitamin Sunscreen"
+    ],
+    "keywords": [
+      "Dr Vita Vitamin Sunscreen",
+      "닥터비타 비타민 선스크린",
+      "닥터비타 비타민 선크림"
+    ],
+    "exclude": [
+      "Cover",
+      "커버"
+    ],
+    "reason": "일반형과 커버형을 별도 수요로 구분"
+  },
+  {
+    "id": "public-dr-vita-vitamin-sunscreen-cover",
+    "name": "Dr. Vita Vitamin Sunscreen Cover",
+    "brand": "Dr. Vita",
+    "category": "톤업 선케어",
+    "skuNames": [
+      "Dr. Vita Vitamin Sunscreen Cover"
+    ],
+    "keywords": [
+      "Dr Vita Vitamin Sunscreen Cover",
+      "닥터비타 비타민 선스크린 커버",
+      "닥터비타 커버 선크림"
+    ],
+    "exclude": [
+      "일반형"
+    ],
+    "reason": "커버 표기가 포함된 결과만 별도로 수집"
+  },
+  {
+    "id": "public-scalp-shot",
+    "name": "SCALP SHOT",
+    "brand": "",
+    "category": "두피 케어",
+    "skuNames": [
+      "SCALP SHOT"
+    ],
+    "keywords": [
+      "SCALP SHOT 약국",
+      "스칼프샷 약국",
+      "SCALP SHOT 두피"
+    ],
+    "exclude": [
+      "golf",
+      "축구",
+      "게임"
+    ],
+    "reason": "동명 일반어 오탐을 줄이기 위해 약국·두피 맥락을 함께 검색"
+  },
+  {
+    "id": "public-pdrn-1000-plus-cream",
+    "name": "PDRN 1000 Plus Cream",
+    "brand": "",
+    "category": "PDRN 크림",
+    "skuNames": [
+      "PDRN 1000 Plus Cream",
+      "PDRN 1000+ Cream"
+    ],
+    "keywords": [
+      "PDRN 1000 Plus Cream",
+      "PDRN 1000+ Cream",
+      "PDRN 1000 플러스 크림"
+    ],
+    "exclude": [
+      "PDRN 1000 앰플"
+    ],
+    "reason": "Plus와 + 표기를 하나의 크림 수요로 통합"
+  },
+  {
+    "id": "public-cica-mela-repair-cream",
+    "name": "Cica Mela Repair Cream",
+    "brand": "",
+    "category": "시카·미백 크림",
+    "skuNames": [
+      "Cica Mela Repair Cream"
+    ],
+    "keywords": [
+      "Cica Mela Repair Cream",
+      "시카 멜라 리페어 크림",
+      "시카멜라 리페어크림"
+    ],
+    "exclude": [
+      "Cica Mela Serum"
+    ],
+    "reason": "영문명과 한글 음차를 함께 수집"
+  },
+  {
+    "id": "public-villemu-mask",
+    "name": "Villemu Mask",
+    "brand": "Villemu",
+    "category": "마스크팩",
+    "skuNames": [
+      "Villemu Mask"
+    ],
+    "keywords": [
+      "Villemu Mask",
+      "빌레뮤 마스크",
+      "빌레뮤 마스크팩"
+    ],
+    "exclude": [
+      "빌레뮈"
+    ],
+    "reason": "영문명과 국내 음차 표기를 함께 수집"
+  },
+  {
+    "id": "public-deesse-cream",
+    "name": "Déesse 크림",
+    "brand": "Déesse",
+    "category": "스킨케어 크림",
+    "skuNames": [
+      "Déesse 크림 3종(세부 SKU 미확인)"
+    ],
+    "keywords": [
+      "Déesse 크림 약국",
+      "Deesse cream pharmacy",
+      "데에세 크림 약국"
+    ],
+    "exclude": [
+      "device",
+      "dessert"
+    ],
+    "reason": "세부 SKU가 확인되지 않아 브랜드 크림군으로 묶고 약국 맥락만 수집"
+  },
+  {
+    "id": "public-ac7-days",
+    "name": "AC7 DAYS 15ml",
+    "brand": "",
+    "category": "앰플·세럼",
+    "skuNames": [
+      "AC7 DAYS 15ml"
+    ],
+    "keywords": [
+      "AC7 DAYS 15ml",
+      "AC7 데이즈 앰플",
+      "AC7 DAYS 약국"
+    ],
+    "exclude": [
+      "calendar",
+      "air conditioner"
+    ],
+    "reason": "짧은 영문명이므로 용량·약국·제품형 맥락을 함께 검색"
+  },
+  {
+    "id": "public-bio-activating-pdrn-ampoule",
+    "name": "Bio Activating PDRN Ampoule",
+    "brand": "",
+    "category": "PDRN 앰플",
+    "skuNames": [
+      "Bio Activating PDRN Ampoule"
+    ],
+    "keywords": [
+      "Bio Activating PDRN Ampoule",
+      "바이오 액티베이팅 PDRN 앰플",
+      "바이오 액티베이팅 피디알엔 앰플"
+    ],
+    "exclude": [
+      "Bio Activating Serum"
+    ],
+    "reason": "영문 정식명과 PDRN 한글 표기를 함께 수집"
+  },
+  {
+    "id": "public-vt-pdrn-essence-rx",
+    "name": "VT PDRN Essence RX",
+    "brand": "VT COSMETICS",
+    "category": "약국 전용 PDRN 에센스",
+    "skuNames": [
+      "PDRN Essence RX"
+    ],
+    "keywords": [
+      "VT PDRN Essence RX",
+      "VT 피디알엔 에센스 RX",
+      "브이티 PDRN 에센스 RX"
+    ],
+    "exclude": [
+      "Cream RX",
+      "크림 RX"
+    ],
+    "reason": "VT 공식 약국 판매 제품명으로 크림 RX와 분리"
+  },
+  {
+    "id": "public-vt-pdrn-cream-rx",
+    "name": "VT PDRN Cream RX",
+    "brand": "VT COSMETICS",
+    "category": "약국 전용 PDRN 크림",
+    "skuNames": [
+      "PDRN Cream RX"
+    ],
+    "keywords": [
+      "VT PDRN Cream RX",
+      "VT 피디알엔 크림 RX",
+      "브이티 PDRN 크림 RX"
+    ],
+    "exclude": [
+      "Essence RX",
+      "에센스 RX"
+    ],
+    "reason": "VT 공식 약국 판매 제품명으로 에센스 RX와 분리"
+  },
+  {
+    "id": "public-vt-retinal-peptide-serum",
+    "name": "VT Retinal Peptide Serum",
+    "brand": "VT COSMETICS",
+    "category": "약국 전용 레티날 세럼",
+    "skuNames": [
+      "Retinal Peptide Serum"
+    ],
+    "sourceAliases": [
+      "VT Retinal Serum"
+    ],
+    "keywords": [
+      "VT Retinal Peptide Serum",
+      "VT 레티날 펩타이드 세럼",
+      "브이티 레티날 세럼"
+    ],
+    "exclude": [
+      "Retinal Pro Cream",
+      "레티날 프로 크림"
+    ],
+    "reason": "공식 제품명과 유통 기사 축약명을 하나의 세럼 수요로 통합"
+  },
+  {
+    "id": "public-vt-retinal-pro-cream",
+    "name": "VT Retinal Pro Cream",
+    "brand": "VT COSMETICS",
+    "category": "약국 전용 레티날 크림",
+    "skuNames": [
+      "Retinal Pro Cream 0.025",
+      "Retinal Pro Cream 0.05",
+      "Retinal Pro Cream 0.1"
+    ],
+    "keywords": [
+      "VT Retinal Pro Cream",
+      "VT 레티날 프로 크림",
+      "브이티 레티날 프로크림"
+    ],
+    "exclude": [
+      "Retinal Peptide Serum",
+      "레티날 펩타이드 세럼"
+    ],
+    "reason": "0.025·0.05·0.1 농도 SKU를 동일한 레티날 프로 크림 수요로 통합"
+  },
+  {
+    "id": "public-vt-pdrn-tone-up-sun-rx",
+    "name": "VT PDRN Moist Tone-Up Sun Essence RX",
+    "brand": "VT COSMETICS",
+    "category": "약국 전용 선케어",
+    "skuNames": [
+      "PDRN Moist Tone-Up Sun Essence RX"
+    ],
+    "keywords": [
+      "VT PDRN Moist Tone-Up Sun Essence RX",
+      "VT PDRN 모이스트 톤업 선 에센스 RX",
+      "브이티 피디알엔 톤업 선 에센스"
+    ],
+    "exclude": [
+      "PDRN Essence RX"
+    ],
+    "reason": "VT 공식 약국용 선 에센스 제품명을 한글·영문으로 수집"
+  },
+  {
+    "id": "public-vt-vita-eye-cream",
+    "name": "VT Vita Eye Cream",
+    "brand": "VT COSMETICS",
+    "category": "아이 크림",
+    "skuNames": [
+      "VT Vita Eye Cream"
+    ],
+    "keywords": [
+      "VT Vita Eye Cream",
+      "VT 비타 아이크림",
+      "브이티 비타 아이 크림"
+    ],
+    "exclude": [
+      "Dr Vita",
+      "닥터비타"
+    ],
+    "reason": "VT 브랜드명을 포함해 동명의 닥터비타 제품과 분리"
+  },
+  {
+    "id": "public-vt-pdrn-reedle-shot-100",
+    "name": "VT PDRN Reedle Shot 100",
+    "brand": "VT COSMETICS",
+    "category": "PDRN 리들샷",
+    "skuNames": [
+      "VT PDRN Reedle Shot 100"
+    ],
+    "keywords": [
+      "VT PDRN Reedle Shot 100",
+      "VT PDRN 리들샷 100",
+      "브이티 피디알엔 리들샷 100"
+    ],
+    "exclude": [
+      "Reedle Shot 300",
+      "리들샷 300"
+    ],
+    "reason": "브랜드·성분·강도 100 표기를 모두 포함해 다른 리들샷과 분리"
   }
 ]
