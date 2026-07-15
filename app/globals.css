@@ -1428,8 +1428,8 @@ td > small {
 }
 .validation-layout {
   display: grid;
-  grid-template-columns: 330px 1fr;
-  gap: 18px;
+  grid-template-columns: 380px minmax(0, 1fr);
+  gap: 22px;
 }
 .product-list {
   display: flex;
@@ -1438,13 +1438,14 @@ td > small {
 }
 .product-list button {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
   text-align: left;
   background: #fff;
   border: 1px solid #e9ecef;
   border-radius: 13px;
-  padding: 13px;
+  min-height: 70px;
+  padding: 15px 16px;
   cursor: pointer;
 }
 .product-list button.active {
@@ -1452,13 +1453,14 @@ td > small {
   background: #f5faff;
 }
 .product-list button > span {
-  width: 23px;
-  height: 23px;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
   background: #f1f3f5;
   display: grid;
   place-items: center;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
 }
 .product-list button div {
@@ -1468,12 +1470,13 @@ td > small {
 .product-list button em {
   flex: 0 0 auto;
   color: #1b64da;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 750;
 }
 .product-list b {
-  font-size: 11px;
+  font-size: 15px;
+  line-height: 1.4;
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -1482,15 +1485,17 @@ td > small {
 .product-list small {
   display: block;
   color: #8b95a1;
-  font-size: 9px;
-  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.45;
+  margin-top: 5px;
 }
 .validation-detail {
-  padding: 30px;
+  padding: 34px;
 }
 .validation-detail h2 {
-  font-size: 23px;
-  margin: 10px 0 22px;
+  font-size: 28px;
+  line-height: 1.35;
+  margin: 12px 0 24px;
 }
 .selected-score {
   display: grid;
@@ -1516,18 +1521,18 @@ td > small {
 .selected-score small {
   display: block;
   color: #8b95a1;
-  font-size: 9px;
+  font-size: 12px;
   white-space: nowrap;
 }
 .selected-score strong {
   display: block;
   margin: 7px 0 4px;
   color: #333d4b;
-  font-size: 15px;
+  font-size: 17px;
 }
 .selected-score > div:first-child strong {
   color: #1b64da;
-  font-size: 22px;
+  font-size: 26px;
 }
 .sale-facts {
   display: grid;
@@ -1553,7 +1558,7 @@ td > small {
   margin-top: 7px;
 }
 .validation-detail > h3 {
-  font-size: 14px;
+  font-size: 18px;
 }
 .evidence-list {
   border: 1px solid #e9ecef;
@@ -1614,7 +1619,7 @@ td > small {
 .collect-drawer > p b {
   color: #333d4b;
 }
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .weight-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2141,6 +2146,18 @@ td > small {
   }
   .score-label b {
     font-size: 14px;
+  }
+  .product-list button {
+    min-height: 76px;
+  }
+  .product-list b {
+    font-size: 16px;
+  }
+  .product-list small {
+    font-size: 13px;
+  }
+  .product-list button em {
+    font-size: 15px;
   }
 
   .drawer {
