@@ -421,8 +421,11 @@ function CollectionDrawer({
       <aside
         className="drawer collect-drawer"
         onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label={`${signal.name} 수집 작업`}
       >
-        <button className="close" onClick={onClose}>
+        <button className="close" onClick={onClose} aria-label="닫기">
           ×
         </button>
         <span className="drawer-rank">{meta.name} 수집 작업</span>
@@ -631,8 +634,9 @@ function ProductDrawer({
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
+        aria-label={`${signal.name} 수요 상세`}
       >
-        <button className="close" onClick={onClose}>
+        <button className="close" onClick={onClose} aria-label="닫기">
           ×
         </button>
         <div className="drawer-intro">
@@ -835,7 +839,7 @@ function Overview({
           <p>등록 제품</p>
           <strong>
             {allProducts.length}
-            <small>개 수요 개체</small>
+            <small>개 조사 제품</small>
           </strong>
           <span>조사할 전체 제품 목록</span>
         </article>
@@ -845,7 +849,7 @@ function Overview({
             {allProducts.length * 5}
             <small>건</small>
           </strong>
-          <span>수요 개체 {allProducts.length} × 채널 5</span>
+          <span>조사 제품 {allProducts.length} × 채널 5</span>
         </article>
         <article>
           <p>자동 확보</p>
@@ -1224,6 +1228,7 @@ function ResearchWorkspace({
   onDelete,
   onExport,
   onImport,
+  notice,
 }: {
   manual: Record<string, ManualRecord>;
   keywordDrafts: Record<string, string>;
@@ -1232,6 +1237,7 @@ function ResearchWorkspace({
   onDelete: (signal: Signal, platform: Platform) => void;
   onExport: () => void;
   onImport: (file: File) => void;
+  notice?: { tone: "ok" | "error"; text: string } | null;
 }) {
   return (
     <section className="page-section">
@@ -1245,7 +1251,7 @@ function ResearchWorkspace({
       <div className="workspace-summary">
         <div>
           <span>조사 대상</span>
-          <strong>{allProducts.length}개 수요 개체</strong>
+          <strong>{allProducts.length}개 조사 제품</strong>
         </div>
         <div>
           <span>직접 입력 완료</span>
@@ -1271,6 +1277,16 @@ function ResearchWorkspace({
           </label>
         </div>
       </div>
+      {notice && (
+        <div
+          className={`storage-notice ${
+            notice.tone === "error" ? "notice-error" : "notice-ok"
+          }`}
+          role="status"
+        >
+          {notice.text}
+        </div>
+      )}
       <div className="storage-notice">
         공개 방문자가 서로의 데이터를 덮어쓰지 않도록 브라우저별로 저장합니다.
         다른 PC로 옮길 때는 JSON을 내보내고 가져오세요.
@@ -1358,8 +1374,12 @@ function ResearchWorkspace({
 
 export default function Home() {
   const [view, setView] = useState<
-    "overview" | "collection" | "products" | "method"
+    "overview" | "collection" | "products" | "method" | "guide"
   >("overview");
+  const [importNotice, setImportNotice] = useState<{
+    tone: "ok" | "error";
+    text: string;
+  } | null>(null);
   const [manual, setManual] = useState<Record<string, ManualRecord>>({});
   const [weights, setWeights] = useState<ChannelWeights>(recommendedWeights);
   const [keywordDrafts, setKeywordDrafts] = useState<Record<string, string>>(
@@ -1370,6 +1390,11 @@ export default function Home() {
     platform: Platform;
   } | null>(null);
   const [selectedProduct, setSelectedProduct] = useState<Signal | null>(null);
+  useEffect(() => {
+    if (!importNotice) return;
+    const timer = window.setTimeout(() => setImportNotice(null), 4000);
+    return () => window.clearTimeout(timer);
+  }, [importNotice]);
   useEffect(() => {
     const modalOpen = Boolean(selectedProduct || open);
     if (!modalOpen) return;
@@ -1473,9 +1498,12 @@ export default function Home() {
         "demand-keyword-drafts",
         JSON.stringify(parsed.keywordDrafts),
       );
-      window.alert("조사 데이터를 가져왔습니다.");
+      setImportNotice({ tone: "ok", text: "조사 데이터를 가져왔습니다." });
     } catch {
-      window.alert("올바른 조사 데이터 JSON 파일이 아닙니다.");
+      setImportNotice({
+        tone: "error",
+        text: "올바른 조사 데이터 JSON 파일이 아닙니다.",
+      });
     }
   };
   const nav = [
@@ -1483,6 +1511,7 @@ export default function Home() {
     ["collection", "데이터 수집", "◎"],
     ["products", "제품 검증", "▦"],
     ["method", "조사 관리", "◇"],
+    ["guide", "수집·검증 기준", "✦"],
   ] as const;
   return (
     <div className="app-shell">
@@ -1508,7 +1537,7 @@ export default function Home() {
         <div className="sidebar-foot">
           <span className="live-dot" />
           수집 파이프라인
-          <small>{allProducts.length}개 수요 개체 · 5개 채널</small>
+          <small>{allProducts.length}개 조사 제품 · 5개 채널</small>
         </div>
       </aside>
       <main>
@@ -1543,8 +1572,10 @@ export default function Home() {
             onDelete={removeRecord}
             onExport={exportWorkspace}
             onImport={importWorkspace}
+            notice={importNotice}
           />
-        )}
+        )}{" "}
+        {view === "guide" && <Method />}
       </main>
       {selectedProduct && (
         <ProductDrawer

@@ -479,6 +479,11 @@ tr:last-child td {
 tbody tr:hover {
   background: #fafbfd;
 }
+tbody tr:focus-visible {
+  background: #fafbfd;
+  outline: 2px solid #4263a5;
+  outline-offset: -2px;
+}
 td > strong {
   display: block;
   font-size: 13px;
@@ -1811,6 +1816,14 @@ td > small {
   font-size: 12px;
   line-height: 1.55;
   margin-bottom: 18px;
+}
+.storage-notice.notice-ok {
+  background: #e9f8f0;
+  color: #1d7a4f;
+}
+.storage-notice.notice-error {
+  background: #fdeeee;
+  color: #b3403f;
 }
 .research-list {
   display: flex;
