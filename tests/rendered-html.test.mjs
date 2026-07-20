@@ -21,7 +21,7 @@ test("server-renders the product demand dashboard", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>제품 수요 대시보드 \| 웰니스박스<\/title>/i);
-  assert.match(html, /96(?:<!-- -->)?개 수요 개체/);
+  assert.match(html, /96(?:<!-- -->)?개 조사 제품/);
   assert.match(html, /480<small>건<\/small>/);
   assert.match(html, /VT PDRN Cream RX/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|Codex is working/i);
