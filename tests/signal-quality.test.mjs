@@ -123,12 +123,29 @@ test("every product carries fairness diagnostics", () => {
     assert.ok(Array.isArray(entry.fairness.suggestions));
     assert.ok(entry.fairness.keywordCount >= 1, `${name}: no keywords`);
   }
-  // 전 제품 공통 격차는 제품별 제안이 아니라 전역 이슈로만 보고돼야 한다.
-  const tiktokNagged = Object.values(quality.products).filter((entry) =>
-    entry.fairness.suggestions.some((text) => text.startsWith("TikTok")),
-  ).length;
-  assert.equal(tiktokNagged, 0);
-  assert.ok(quality.meta.systemicIssues.some((text) => text.includes("TikTok")));
+  // 대상 제품의 90% 이상에 해당하는 격차만 전역 이슈로 보고해야 한다.
+  for (const [platform, label] of [
+    ["youtube", "YouTube"],
+    ["instagram", "Instagram"],
+    ["tiktok", "TikTok"],
+  ]) {
+    const eligible = signals.products.filter(
+      (product) => (product.keywords || []).length >= 2 && product[platform],
+    );
+    const under = eligible.filter(
+      (product) => (product[platform].attemptedQueries || []).length < 2,
+    );
+    const expectedSystemic = eligible.length > 0 && under.length / eligible.length >= 0.9;
+    const reportedSystemic = quality.meta.systemicIssues.some((text) => text.includes(label));
+    assert.equal(reportedSystemic, expectedSystemic, `${label}: systemic issue mismatch`);
+
+    if (expectedSystemic) {
+      const productLevelNags = Object.values(quality.products).filter((entry) =>
+        entry.fairness.suggestions.some((text) => text.startsWith(label)),
+      ).length;
+      assert.equal(productLevelNags, 0, `${label}: systemic issue duplicated per product`);
+    }
+  }
 });
 
 test("collection failures are exempt from scoring, not zero-scored", () => {

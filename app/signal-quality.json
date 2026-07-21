@@ -1,17 +1,15 @@
 {
  "meta": {
-  "auditedAt": "2026-07-15T12:53:50+09:00",
-  "referenceDate": "2026-07-15T03:53:50.000Z",
+  "auditedAt": "2026-07-21T07:29:00.868Z",
+  "referenceDate": "2026-07-21T07:29:00.868Z",
   "products": 96,
   "verdicts": {
-   "caution": 43,
-   "usable": 15,
-   "insufficient": 38
+   "caution": 33,
+   "usable": 11,
+   "insufficient": 52
   },
   "sharedYoutubeVideos": 79,
-  "systemicIssues": [
-   "TikTok 수집이 전 제품에서 검색어 1개만 시도됐습니다. 재수집 시 제품별 전체 검색어를 적용해야 제품 간 비교가 공정해집니다."
-  ]
+  "systemicIssues": []
  },
  "products": {
   "닥터 리쥬올 PDRN 크림": {
@@ -31,18 +29,18 @@
    "instagram": null,
    "tiktok": {
     "sampleCount": 10,
-    "adjustedSampleCount": 9,
-    "confidence": "medium",
-    "sharedContentCount": 2,
-    "staleCount": 1,
-    "staleViewsShare": 0.11016613052483144,
+    "adjustedSampleCount": 10,
+    "confidence": "high",
+    "sharedContentCount": 0,
+    "staleCount": 0,
+    "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 1766882,
-    "adjustedTopViews": 1601400,
-    "adjustedEngagement": 69661,
-    "adjustedTopEngagement": 64800
+    "engagementAvailable": false,
+    "outlierDominated": true,
+    "adjustedViews": 26986,
+    "adjustedTopViews": 26911,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": true,
@@ -74,35 +72,21 @@
     "adjustedMedianViews": 7509626
    },
    "instagram": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 3,
+    "sampleCount": 2,
+    "adjustedSampleCount": 2,
     "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 7,
+    "staleCount": 0,
     "staleViewsShare": 0,
     "viewsAvailable": false,
     "engagementAvailable": true,
     "outlierDominated": false,
     "adjustedViews": 0,
     "adjustedTopViews": 0,
-    "adjustedEngagement": 1754,
-    "adjustedTopEngagement": 1754
+    "adjustedEngagement": 5376,
+    "adjustedTopEngagement": 5376
    },
-   "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 2,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 8,
-    "staleViewsShare": 0.9925397601852874,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 4255,
-    "adjustedTopViews": 4255,
-    "adjustedEngagement": 129,
-    "adjustedTopEngagement": 129
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": true,
     "baselineSufficient": true,
@@ -118,9 +102,7 @@
     "keywordCount": 3,
     "minKeywordTokens": 1,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
    "verdict": "usable"
   },
@@ -139,21 +121,7 @@
     "adjustedMedianViews": 9301
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 10,
-    "confidence": "high",
-    "sharedContentCount": 0,
-    "staleCount": 0,
-    "staleViewsShare": 0,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 3254440,
-    "adjustedTopViews": 3003700,
-    "adjustedEngagement": 62810,
-    "adjustedTopEngagement": 49142
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -167,7 +135,7 @@
     "collectionGaps": [],
     "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "애크논크림": {
    "youtube": {
@@ -183,36 +151,8 @@
     "adjustedTopViews": 5370,
     "adjustedMedianViews": 5370
    },
-   "instagram": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 1,
-    "confidence": "low",
-    "sharedContentCount": 1,
-    "staleCount": 9,
-    "staleViewsShare": 0,
-    "viewsAvailable": false,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 3,
-    "adjustedTopEngagement": 3
-   },
-   "tiktok": {
-    "sampleCount": 7,
-    "adjustedSampleCount": 2,
-    "confidence": "low",
-    "sharedContentCount": 3,
-    "staleCount": 5,
-    "staleViewsShare": 0.9918549428501297,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 2847,
-    "adjustedTopViews": 2847,
-    "adjustedEngagement": 114,
-    "adjustedTopEngagement": 114
-   },
+   "instagram": null,
+   "tiktok": null,
    "naver": {
     "hasSignal": true,
     "baselineSufficient": true,
@@ -228,9 +168,7 @@
     "keywordCount": 3,
     "minKeywordTokens": 1,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
    "verdict": "usable"
   },
@@ -249,34 +187,34 @@
     "adjustedMedianViews": 11982047
    },
    "instagram": {
-    "sampleCount": 1,
-    "adjustedSampleCount": 0,
+    "sampleCount": 3,
+    "adjustedSampleCount": 3,
     "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 1,
+    "staleCount": 0,
     "staleViewsShare": 0,
     "viewsAvailable": false,
     "engagementAvailable": true,
     "outlierDominated": false,
     "adjustedViews": 0,
     "adjustedTopViews": 0,
-    "adjustedEngagement": 0,
-    "adjustedTopEngagement": 0
+    "adjustedEngagement": 1759,
+    "adjustedTopEngagement": 1759
    },
    "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 7,
-    "confidence": "medium",
+    "sampleCount": 3,
+    "adjustedSampleCount": 3,
+    "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 3,
-    "staleViewsShare": 0.19841006616176293,
+    "staleCount": 0,
+    "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 234437,
-    "adjustedTopViews": 225500,
-    "adjustedEngagement": 10784,
-    "adjustedTopEngagement": 10577
+    "engagementAvailable": false,
+    "outlierDominated": true,
+    "adjustedViews": 495,
+    "adjustedTopViews": 495,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": true,
@@ -293,9 +231,7 @@
     "keywordCount": 3,
     "minKeywordTokens": 1,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
    "verdict": "usable"
   },
@@ -313,21 +249,35 @@
     "adjustedTopViews": 19821055,
     "adjustedMedianViews": 1566463
    },
-   "instagram": null,
-   "tiktok": {
-    "sampleCount": 7,
-    "adjustedSampleCount": 2,
+   "instagram": {
+    "sampleCount": 1,
+    "adjustedSampleCount": 1,
     "confidence": "low",
-    "sharedContentCount": 3,
-    "staleCount": 5,
-    "staleViewsShare": 0.9937372618288617,
-    "viewsAvailable": true,
+    "sharedContentCount": 0,
+    "staleCount": 0,
+    "staleViewsShare": 0,
+    "viewsAvailable": false,
     "engagementAvailable": true,
     "outlierDominated": false,
-    "adjustedViews": 2027,
-    "adjustedTopViews": 2027,
-    "adjustedEngagement": 121,
-    "adjustedTopEngagement": 121
+    "adjustedViews": 0,
+    "adjustedTopViews": 0,
+    "adjustedEngagement": 153,
+    "adjustedTopEngagement": 153
+   },
+   "tiktok": {
+    "sampleCount": 1,
+    "adjustedSampleCount": 1,
+    "confidence": "low",
+    "sharedContentCount": 0,
+    "staleCount": 0,
+    "staleViewsShare": 0,
+    "viewsAvailable": true,
+    "engagementAvailable": false,
+    "outlierDominated": true,
+    "adjustedViews": 9,
+    "adjustedTopViews": 9,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": true,
@@ -344,9 +294,7 @@
     "keywordCount": 3,
     "minKeywordTokens": 1,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
    "verdict": "usable"
   },
@@ -364,35 +312,21 @@
     "adjustedTopViews": 0,
     "adjustedMedianViews": null
    },
-   "instagram": {
-    "sampleCount": 2,
-    "adjustedSampleCount": 1,
+   "instagram": null,
+   "tiktok": {
+    "sampleCount": 3,
+    "adjustedSampleCount": 3,
     "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 1,
+    "staleCount": 0,
     "staleViewsShare": 0,
-    "viewsAvailable": false,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 39,
-    "adjustedTopEngagement": 39
-   },
-   "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 8,
-    "confidence": "medium",
-    "sharedContentCount": 0,
-    "staleCount": 2,
-    "staleViewsShare": 0.8998121293958786,
     "viewsAvailable": true,
-    "engagementAvailable": true,
+    "engagementAvailable": false,
     "outlierDominated": false,
-    "adjustedViews": 3413,
-    "adjustedTopViews": 2779,
-    "adjustedEngagement": 318,
-    "adjustedTopEngagement": 291
+    "adjustedViews": 37,
+    "adjustedTopViews": 37,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": true,
@@ -405,9 +339,7 @@
     "keywordCount": 3,
     "minKeywordTokens": 2,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
    "verdict": "caution"
   },
@@ -468,9 +400,7 @@
     "keywordCount": 2,
     "minKeywordTokens": 1,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
    "verdict": "insufficient"
   },
@@ -581,21 +511,7 @@
     "adjustedMedianViews": null
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 1,
-    "adjustedSampleCount": 0,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 1,
-    "staleViewsShare": 1,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 0,
-    "adjustedTopEngagement": 0
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -718,21 +634,7 @@
     "adjustedMedianViews": null
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 1,
-    "adjustedSampleCount": 1,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 0,
-    "staleViewsShare": 0,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 676,
-    "adjustedTopViews": 676,
-    "adjustedEngagement": 42,
-    "adjustedTopEngagement": 42
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -943,36 +845,8 @@
     "adjustedTopViews": 6735,
     "adjustedMedianViews": 3368
    },
-   "instagram": {
-    "sampleCount": 2,
-    "adjustedSampleCount": 1,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 1,
-    "staleViewsShare": 0,
-    "viewsAvailable": false,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 0,
-    "adjustedTopEngagement": 0
-   },
-   "tiktok": {
-    "sampleCount": 2,
-    "adjustedSampleCount": 0,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 2,
-    "staleViewsShare": 1,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 0,
-    "adjustedTopEngagement": 0
-   },
+   "instagram": null,
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -988,11 +862,9 @@
     "keywordCount": 2,
     "minKeywordTokens": 1,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "리안정안액 30튜브": {
    "youtube": null,
@@ -1028,21 +900,7 @@
     "adjustedMedianViews": null
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 6,
-    "adjustedSampleCount": 2,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 4,
-    "staleViewsShare": 0.622482927683418,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 6468,
-    "adjustedTopViews": 6468,
-    "adjustedEngagement": 140,
-    "adjustedTopEngagement": 140
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -1169,35 +1027,21 @@
     "adjustedMedianViews": 601
    },
    "instagram": {
-    "sampleCount": 1,
-    "adjustedSampleCount": 0,
+    "sampleCount": 2,
+    "adjustedSampleCount": 2,
     "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 1,
+    "staleCount": 0,
     "staleViewsShare": 0,
     "viewsAvailable": false,
     "engagementAvailable": true,
     "outlierDominated": false,
     "adjustedViews": 0,
     "adjustedTopViews": 0,
-    "adjustedEngagement": 0,
-    "adjustedTopEngagement": 0
+    "adjustedEngagement": 1250,
+    "adjustedTopEngagement": 1250
    },
-   "tiktok": {
-    "sampleCount": 1,
-    "adjustedSampleCount": 0,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 1,
-    "staleViewsShare": 1,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 0,
-    "adjustedTopEngagement": 0
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": true,
     "baselineSufficient": true,
@@ -1213,9 +1057,7 @@
     "keywordCount": 2,
     "minKeywordTokens": 1,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
    "verdict": "usable"
   },
@@ -1269,21 +1111,7 @@
     "adjustedMedianViews": 317
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 2,
-    "adjustedSampleCount": 1,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 1,
-    "staleViewsShare": 0.008540882756973064,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 66400,
-    "adjustedTopViews": 66400,
-    "adjustedEngagement": 1361,
-    "adjustedTopEngagement": 1361
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -1297,7 +1125,7 @@
     "collectionGaps": [],
     "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "센텔리안24 마데카 크림 타임 리버스": {
    "youtube": {
@@ -1313,35 +1141,21 @@
     "adjustedTopViews": 6520,
     "adjustedMedianViews": 3260
    },
-   "instagram": {
-    "sampleCount": 2,
-    "adjustedSampleCount": 1,
+   "instagram": null,
+   "tiktok": {
+    "sampleCount": 4,
+    "adjustedSampleCount": 4,
     "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 1,
-    "staleViewsShare": 0,
-    "viewsAvailable": false,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 91,
-    "adjustedTopEngagement": 91
-   },
-   "tiktok": {
-    "sampleCount": 2,
-    "adjustedSampleCount": 2,
-    "confidence": "low",
-    "sharedContentCount": 2,
     "staleCount": 0,
     "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 33948,
-    "adjustedTopViews": 33948,
-    "adjustedEngagement": 521,
-    "adjustedTopEngagement": 521
+    "engagementAvailable": false,
+    "outlierDominated": false,
+    "adjustedViews": 293,
+    "adjustedTopViews": 293,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": true,
@@ -1358,9 +1172,7 @@
     "keywordCount": 3,
     "minKeywordTokens": 1,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
    "verdict": "usable"
   },
@@ -1379,21 +1191,7 @@
     "adjustedMedianViews": 22
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 2,
-    "adjustedSampleCount": 2,
-    "confidence": "low",
-    "sharedContentCount": 2,
-    "staleCount": 0,
-    "staleViewsShare": 0,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 33948,
-    "adjustedTopViews": 33948,
-    "adjustedEngagement": 521,
-    "adjustedTopEngagement": 521
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": true,
     "baselineSufficient": false,
@@ -1683,9 +1481,7 @@
     "keywordCount": 2,
     "minKeywordTokens": 1,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
    "verdict": "caution"
   },
@@ -1705,18 +1501,18 @@
    },
    "instagram": {
     "sampleCount": 2,
-    "adjustedSampleCount": 1,
+    "adjustedSampleCount": 2,
     "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 1,
+    "staleCount": 0,
     "staleViewsShare": 0,
     "viewsAvailable": false,
     "engagementAvailable": true,
     "outlierDominated": false,
     "adjustedViews": 0,
     "adjustedTopViews": 0,
-    "adjustedEngagement": 12,
-    "adjustedTopEngagement": 12
+    "adjustedEngagement": 40,
+    "adjustedTopEngagement": 40
    },
    "tiktok": null,
    "naver": {
@@ -1730,9 +1526,7 @@
     "keywordCount": 2,
     "minKeywordTokens": 1,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
    "verdict": "caution"
   },
@@ -1781,35 +1575,21 @@
     "adjustedTopViews": 2,
     "adjustedMedianViews": 1
    },
-   "instagram": {
-    "sampleCount": 1,
-    "adjustedSampleCount": 0,
+   "instagram": null,
+   "tiktok": {
+    "sampleCount": 3,
+    "adjustedSampleCount": 3,
     "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 1,
+    "staleCount": 0,
     "staleViewsShare": 0,
-    "viewsAvailable": false,
-    "engagementAvailable": true,
+    "viewsAvailable": true,
+    "engagementAvailable": false,
     "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
+    "adjustedViews": 74,
+    "adjustedTopViews": 74,
     "adjustedEngagement": 0,
     "adjustedTopEngagement": 0
-   },
-   "tiktok": {
-    "sampleCount": 9,
-    "adjustedSampleCount": 7,
-    "confidence": "medium",
-    "sharedContentCount": 0,
-    "staleCount": 2,
-    "staleViewsShare": 0.015209197602833175,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 674886,
-    "adjustedTopViews": 673302,
-    "adjustedEngagement": 43023,
-    "adjustedTopEngagement": 42993
    },
    "naver": {
     "hasSignal": true,
@@ -1822,11 +1602,9 @@
     "keywordCount": 2,
     "minKeywordTokens": 1,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
-   "verdict": "usable"
+   "verdict": "caution"
   },
   "이지덤밴드 뷰티 릴리프 57매": {
    "youtube": null,
@@ -1943,21 +1721,7 @@
     "adjustedMedianViews": 489
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 1,
-    "adjustedSampleCount": 0,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 1,
-    "staleViewsShare": 1,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 0,
-    "adjustedTopEngagement": 0
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -1998,36 +1762,8 @@
   },
   "큐립 연고": {
    "youtube": null,
-   "instagram": {
-    "sampleCount": 1,
-    "adjustedSampleCount": 0,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 1,
-    "staleViewsShare": 0,
-    "viewsAvailable": false,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 0,
-    "adjustedTopEngagement": 0
-   },
-   "tiktok": {
-    "sampleCount": 5,
-    "adjustedSampleCount": 1,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 4,
-    "staleViewsShare": 0.9973765984161388,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 374,
-    "adjustedTopViews": 374,
-    "adjustedEngagement": 18,
-    "adjustedTopEngagement": 18
-   },
+   "instagram": null,
+   "tiktok": null,
    "naver": {
     "hasSignal": true,
     "baselineSufficient": true,
@@ -2043,9 +1779,7 @@
     "keywordCount": 2,
     "minKeywordTokens": 1,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
    "verdict": "usable"
   },
@@ -2065,19 +1799,19 @@
    },
    "instagram": null,
    "tiktok": {
-    "sampleCount": 10,
+    "sampleCount": 3,
     "adjustedSampleCount": 3,
     "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 7,
-    "staleViewsShare": 0.9596237683981358,
+    "staleCount": 0,
+    "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
+    "engagementAvailable": false,
     "outlierDominated": true,
-    "adjustedViews": 37574,
-    "adjustedTopViews": 37574,
-    "adjustedEngagement": 1118,
-    "adjustedTopEngagement": 1118
+    "adjustedViews": 407,
+    "adjustedTopViews": 407,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": false,
@@ -2194,21 +1928,7 @@
     "adjustedMedianViews": 1406701
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 5,
-    "confidence": "medium",
-    "sharedContentCount": 9,
-    "staleCount": 5,
-    "staleViewsShare": 0.8002694210754911,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 110413,
-    "adjustedTopViews": 110413,
-    "adjustedEngagement": 5030,
-    "adjustedTopEngagement": 5030
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -2222,7 +1942,7 @@
     "collectionGaps": [],
     "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "프렌즈 아이드롭 점안액 쿨": {
    "youtube": {
@@ -2239,21 +1959,7 @@
     "adjustedMedianViews": 375
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 4,
-    "confidence": "low",
-    "sharedContentCount": 10,
-    "staleCount": 6,
-    "staleViewsShare": 0.8368443327722258,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 107813,
-    "adjustedTopViews": 107813,
-    "adjustedEngagement": 4733,
-    "adjustedTopEngagement": 4733
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -2267,7 +1973,7 @@
     "collectionGaps": [],
     "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "프렌즈 아이드롭 점안액 쿨하이": {
    "youtube": {
@@ -2284,21 +1990,7 @@
     "adjustedMedianViews": 2072174
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 4,
-    "confidence": "low",
-    "sharedContentCount": 10,
-    "staleCount": 6,
-    "staleViewsShare": 0.8368443327722258,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 107813,
-    "adjustedTopViews": 107813,
-    "adjustedEngagement": 4733,
-    "adjustedTopEngagement": 4733
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -2312,7 +2004,7 @@
     "collectionGaps": [],
     "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "프로 칼 레드엑스 크림 에스": {
    "youtube": {
@@ -2506,19 +2198,19 @@
    },
    "instagram": null,
    "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 9,
-    "confidence": "medium",
+    "sampleCount": 1,
+    "adjustedSampleCount": 1,
+    "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 1,
-    "staleViewsShare": 0.9179890952430109,
+    "staleCount": 0,
+    "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 43695,
-    "adjustedTopViews": 41792,
-    "adjustedEngagement": 1819,
-    "adjustedTopEngagement": 1538
+    "engagementAvailable": false,
+    "outlierDominated": true,
+    "adjustedViews": 290,
+    "adjustedTopViews": 290,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": false,
@@ -2537,7 +2229,7 @@
     "collectionGaps": [],
     "suggestions": []
    },
-   "verdict": "usable"
+   "verdict": "caution"
   },
   "iUNIK Beta-Glucan Barrier Sunscreen": {
    "youtube": {
@@ -2556,18 +2248,18 @@
    "instagram": null,
    "tiktok": {
     "sampleCount": 10,
-    "adjustedSampleCount": 7,
-    "confidence": "medium",
+    "adjustedSampleCount": 10,
+    "confidence": "high",
     "sharedContentCount": 0,
-    "staleCount": 3,
-    "staleViewsShare": 0.956842111773838,
+    "staleCount": 0,
+    "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
+    "engagementAvailable": false,
     "outlierDominated": false,
-    "adjustedViews": 104665,
-    "adjustedTopViews": 98897,
-    "adjustedEngagement": 10861,
-    "adjustedTopEngagement": 10171
+    "adjustedViews": 2738,
+    "adjustedTopViews": 2556,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": false,
@@ -2600,19 +2292,19 @@
    },
    "instagram": null,
    "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 9,
-    "confidence": "medium",
+    "sampleCount": 1,
+    "adjustedSampleCount": 1,
+    "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 1,
-    "staleViewsShare": 0.7258548029086453,
+    "staleCount": 0,
+    "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 944215,
-    "adjustedTopViews": 942427,
-    "adjustedEngagement": 38161,
-    "adjustedTopEngagement": 37893
+    "engagementAvailable": false,
+    "outlierDominated": true,
+    "adjustedViews": 23,
+    "adjustedTopViews": 23,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": false,
@@ -2644,21 +2336,7 @@
     "adjustedMedianViews": 134171
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 9,
-    "adjustedSampleCount": 4,
-    "confidence": "low",
-    "sharedContentCount": 5,
-    "staleCount": 5,
-    "staleViewsShare": 0.6222165203526199,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 103171,
-    "adjustedTopViews": 103171,
-    "adjustedEngagement": 653,
-    "adjustedTopEngagement": 653
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -2676,7 +2354,7 @@
     "collectionGaps": [],
     "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "Dr. Vita Vitamin Sunscreen Cover": {
    "youtube": {
@@ -2693,21 +2371,7 @@
     "adjustedMedianViews": 148478
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 8,
-    "adjustedSampleCount": 5,
-    "confidence": "medium",
-    "sharedContentCount": 5,
-    "staleCount": 3,
-    "staleViewsShare": 0.7312450391863681,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 103924,
-    "adjustedTopViews": 103924,
-    "adjustedEngagement": 775,
-    "adjustedTopEngagement": 775
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -2725,26 +2389,12 @@
     "collectionGaps": [],
     "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "SCALP SHOT": {
    "youtube": null,
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 5,
-    "adjustedSampleCount": 4,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 1,
-    "staleViewsShare": 0.031158266341781624,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 201988,
-    "adjustedTopViews": 201988,
-    "adjustedEngagement": 18592,
-    "adjustedTopEngagement": 18592
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -2776,19 +2426,19 @@
    },
    "instagram": null,
    "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 7,
+    "sampleCount": 9,
+    "adjustedSampleCount": 9,
     "confidence": "medium",
-    "sharedContentCount": 3,
-    "staleCount": 3,
-    "staleViewsShare": 0.203593202088034,
+    "sharedContentCount": 0,
+    "staleCount": 0,
+    "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
+    "engagementAvailable": false,
     "outlierDominated": false,
-    "adjustedViews": 1334193,
-    "adjustedTopViews": 1333823,
-    "adjustedEngagement": 29320,
-    "adjustedTopEngagement": 29295
+    "adjustedViews": 265,
+    "adjustedTopViews": 221,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": false,
@@ -2820,35 +2470,21 @@
     "adjustedMedianViews": 142
    },
    "instagram": {
-    "sampleCount": 4,
-    "adjustedSampleCount": 3,
+    "sampleCount": 1,
+    "adjustedSampleCount": 1,
     "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 1,
+    "staleCount": 0,
     "staleViewsShare": 0,
     "viewsAvailable": false,
     "engagementAvailable": true,
     "outlierDominated": false,
     "adjustedViews": 0,
     "adjustedTopViews": 0,
-    "adjustedEngagement": 3423,
-    "adjustedTopEngagement": 3423
+    "adjustedEngagement": 6388,
+    "adjustedTopEngagement": 6388
    },
-   "tiktok": {
-    "sampleCount": 9,
-    "adjustedSampleCount": 7,
-    "confidence": "medium",
-    "sharedContentCount": 0,
-    "staleCount": 2,
-    "staleViewsShare": 0.8969987542929799,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 643041,
-    "adjustedTopViews": 636600,
-    "adjustedEngagement": 19484,
-    "adjustedTopEngagement": 19076
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -2860,11 +2496,9 @@
     "keywordCount": 3,
     "minKeywordTokens": 2,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
-   "verdict": "usable"
+   "verdict": "caution"
   },
   "Villemu Mask": {
    "youtube": {
@@ -2881,21 +2515,7 @@
     "adjustedMedianViews": 351876
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 7,
-    "adjustedSampleCount": 3,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 4,
-    "staleViewsShare": 0.9423106091981597,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 107256,
-    "adjustedTopViews": 107256,
-    "adjustedEngagement": 5730,
-    "adjustedTopEngagement": 5730
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -2926,21 +2546,7 @@
     "adjustedMedianViews": 25661
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 8,
-    "adjustedSampleCount": 7,
-    "confidence": "medium",
-    "sharedContentCount": 0,
-    "staleCount": 1,
-    "staleViewsShare": 0.04359653258858946,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 26369,
-    "adjustedTopViews": 25628,
-    "adjustedEngagement": 1984,
-    "adjustedTopEngagement": 1955
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -2954,26 +2560,12 @@
     "collectionGaps": [],
     "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "AC7 DAYS 15ml": {
    "youtube": null,
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 8,
-    "confidence": "medium",
-    "sharedContentCount": 0,
-    "staleCount": 2,
-    "staleViewsShare": 0.41702322554206994,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 338583,
-    "adjustedTopViews": 336128,
-    "adjustedEngagement": 3034,
-    "adjustedTopEngagement": 2932
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -2987,7 +2579,7 @@
     "collectionGaps": [],
     "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "Bio Activating PDRN Ampoule": {
    "youtube": {
@@ -3005,19 +2597,19 @@
    },
    "instagram": null,
    "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 7,
-    "confidence": "medium",
-    "sharedContentCount": 2,
-    "staleCount": 3,
-    "staleViewsShare": 0.48747068588442993,
+    "sampleCount": 1,
+    "adjustedSampleCount": 1,
+    "confidence": "low",
+    "sharedContentCount": 0,
+    "staleCount": 0,
+    "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 3464550,
-    "adjustedTopViews": 3380350,
-    "adjustedEngagement": 83728,
-    "adjustedTopEngagement": 78051
+    "engagementAvailable": false,
+    "outlierDominated": true,
+    "adjustedViews": 5,
+    "adjustedTopViews": 5,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": false,
@@ -3051,21 +2643,7 @@
     "adjustedMedianViews": 2484
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 5,
-    "confidence": "medium",
-    "sharedContentCount": 2,
-    "staleCount": 5,
-    "staleViewsShare": 0.5665661403680513,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 1467966,
-    "adjustedTopViews": 1467966,
-    "adjustedEngagement": 14570,
-    "adjustedTopEngagement": 14570
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -3081,7 +2659,7 @@
      "검색어가 SKU형 장문이라 검색 노출이 적을 수 있습니다. 짧은 소비자 통칭을 추가하세요."
     ]
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "VT PDRN Cream RX": {
    "youtube": {
@@ -3097,35 +2675,21 @@
     "adjustedTopViews": 116913,
     "adjustedMedianViews": 7666
    },
-   "instagram": {
-    "sampleCount": 5,
-    "adjustedSampleCount": 2,
-    "confidence": "low",
-    "sharedContentCount": 2,
-    "staleCount": 3,
-    "staleViewsShare": 0,
-    "viewsAvailable": false,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 4070,
-    "adjustedTopEngagement": 4070
-   },
+   "instagram": null,
    "tiktok": {
-    "sampleCount": 7,
-    "adjustedSampleCount": 5,
-    "confidence": "medium",
+    "sampleCount": 1,
+    "adjustedSampleCount": 1,
+    "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 2,
-    "staleViewsShare": 0.5101039827349422,
+    "staleCount": 0,
+    "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 2497000,
-    "adjustedTopViews": 2497000,
-    "adjustedEngagement": 65109,
-    "adjustedTopEngagement": 65109
+    "engagementAvailable": false,
+    "outlierDominated": true,
+    "adjustedViews": 71,
+    "adjustedTopViews": 71,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": false,
@@ -3143,8 +2707,7 @@
     "minKeywordTokens": 4,
     "collectionGaps": [],
     "suggestions": [
-     "검색어가 SKU형 장문이라 검색 노출이 적을 수 있습니다. 짧은 소비자 통칭을 추가하세요.",
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
+     "검색어가 SKU형 장문이라 검색 노출이 적을 수 있습니다. 짧은 소비자 통칭을 추가하세요."
     ]
    },
    "verdict": "caution"
@@ -3163,35 +2726,21 @@
     "adjustedTopViews": 446642,
     "adjustedMedianViews": 18545
    },
-   "instagram": {
-    "sampleCount": 3,
-    "adjustedSampleCount": 3,
+   "instagram": null,
+   "tiktok": {
+    "sampleCount": 4,
+    "adjustedSampleCount": 4,
     "confidence": "low",
     "sharedContentCount": 0,
     "staleCount": 0,
     "staleViewsShare": 0,
-    "viewsAvailable": false,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 4176,
-    "adjustedTopEngagement": 4176
-   },
-   "tiktok": {
-    "sampleCount": 7,
-    "adjustedSampleCount": 7,
-    "confidence": "medium",
-    "sharedContentCount": 1,
-    "staleCount": 0,
-    "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
+    "engagementAvailable": false,
     "outlierDominated": false,
-    "adjustedViews": 4816,
-    "adjustedTopViews": 3839,
-    "adjustedEngagement": 1304,
-    "adjustedTopEngagement": 1155
+    "adjustedViews": 296,
+    "adjustedTopViews": 296,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": false,
@@ -3204,9 +2753,7 @@
     "keywordCount": 3,
     "minKeywordTokens": 3,
     "collectionGaps": [],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
-    ]
+    "suggestions": []
    },
    "verdict": "caution"
   },
@@ -3226,19 +2773,19 @@
    },
    "instagram": null,
    "tiktok": {
-    "sampleCount": 7,
-    "adjustedSampleCount": 7,
-    "confidence": "medium",
-    "sharedContentCount": 1,
+    "sampleCount": 1,
+    "adjustedSampleCount": 1,
+    "confidence": "low",
+    "sharedContentCount": 0,
     "staleCount": 0,
     "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
+    "engagementAvailable": false,
     "outlierDominated": true,
-    "adjustedViews": 69454,
-    "adjustedTopViews": 68734,
-    "adjustedEngagement": 8774,
-    "adjustedTopEngagement": 8732
+    "adjustedViews": 12,
+    "adjustedTopViews": 12,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": false,
@@ -3270,21 +2817,7 @@
     "adjustedMedianViews": 61975
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 7,
-    "adjustedSampleCount": 3,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 4,
-    "staleViewsShare": 0.14270252719302992,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 887152,
-    "adjustedTopViews": 887152,
-    "adjustedEngagement": 38835,
-    "adjustedTopEngagement": 38835
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -3300,7 +2833,7 @@
      "검색어가 SKU형 장문이라 검색 노출이 적을 수 있습니다. 짧은 소비자 통칭을 추가하세요."
     ]
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "VT Vita Eye Cream": {
    "youtube": {
@@ -3317,21 +2850,7 @@
     "adjustedMedianViews": 25530
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 10,
-    "confidence": "high",
-    "sharedContentCount": 1,
-    "staleCount": 0,
-    "staleViewsShare": 0,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 5854350,
-    "adjustedTopViews": 4720900,
-    "adjustedEngagement": 100494,
-    "adjustedTopEngagement": 82299
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -3345,7 +2864,7 @@
     "collectionGaps": [],
     "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "VT PDRN Reedle Shot 100": {
    "youtube": {
@@ -3361,36 +2880,8 @@
     "adjustedTopViews": 262435,
     "adjustedMedianViews": 19444
    },
-   "instagram": {
-    "sampleCount": 5,
-    "adjustedSampleCount": 2,
-    "confidence": "low",
-    "sharedContentCount": 1,
-    "staleCount": 3,
-    "staleViewsShare": 0,
-    "viewsAvailable": false,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 11679,
-    "adjustedTopEngagement": 11679
-   },
-   "tiktok": {
-    "sampleCount": 10,
-    "adjustedSampleCount": 5,
-    "confidence": "medium",
-    "sharedContentCount": 2,
-    "staleCount": 5,
-    "staleViewsShare": 0.5992546941685138,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 709969,
-    "adjustedTopViews": 709969,
-    "adjustedEngagement": 16490,
-    "adjustedTopEngagement": 16490
-   },
+   "instagram": null,
+   "tiktok": null,
    "naver": {
     "hasSignal": true,
     "baselineSufficient": false,
@@ -3403,11 +2894,10 @@
     "minKeywordTokens": 4,
     "collectionGaps": [],
     "suggestions": [
-     "검색어가 SKU형 장문이라 검색 노출이 적을 수 있습니다. 짧은 소비자 통칭을 추가하세요.",
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다."
+     "검색어가 SKU형 장문이라 검색 노출이 적을 수 있습니다. 짧은 소비자 통칭을 추가하세요."
     ]
    },
-   "verdict": "usable"
+   "verdict": "caution"
   },
   "제나벨 PDRN 비타 토닝 앰플": {
    "youtube": {
@@ -3425,19 +2915,19 @@
    },
    "instagram": null,
    "tiktok": {
-    "sampleCount": 6,
-    "adjustedSampleCount": 5,
-    "confidence": "medium",
+    "sampleCount": 10,
+    "adjustedSampleCount": 10,
+    "confidence": "high",
     "sharedContentCount": 0,
-    "staleCount": 1,
-    "staleViewsShare": 0.9724028990893886,
+    "staleCount": 0,
+    "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
+    "engagementAvailable": false,
     "outlierDominated": false,
-    "adjustedViews": 5940,
-    "adjustedTopViews": 5940,
-    "adjustedEngagement": 389,
-    "adjustedTopEngagement": 389
+    "adjustedViews": 74,
+    "adjustedTopViews": 50,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": true,
@@ -3449,16 +2939,9 @@
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 4,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
+    "collectionGaps": [],
     "suggestions": [
-     "검색어가 SKU형 장문이라 검색 노출이 적을 수 있습니다. 짧은 소비자 통칭을 추가하세요.",
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
+     "검색어가 SKU형 장문이라 검색 노출이 적을 수 있습니다. 짧은 소비자 통칭을 추가하세요."
     ]
    },
    "verdict": "caution"
@@ -3477,35 +2960,21 @@
     "adjustedTopViews": 243194,
     "adjustedMedianViews": 14448
    },
-   "instagram": {
-    "sampleCount": 1,
-    "adjustedSampleCount": 1,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 0,
-    "staleViewsShare": 0,
-    "viewsAvailable": false,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 22,
-    "adjustedTopEngagement": 22
-   },
+   "instagram": null,
    "tiktok": {
-    "sampleCount": 5,
-    "adjustedSampleCount": 5,
+    "sampleCount": 7,
+    "adjustedSampleCount": 7,
     "confidence": "medium",
     "sharedContentCount": 0,
     "staleCount": 0,
     "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
+    "engagementAvailable": false,
     "outlierDominated": false,
-    "adjustedViews": 23228,
-    "adjustedTopViews": 23228,
-    "adjustedEngagement": 550,
-    "adjustedTopEngagement": 550
+    "adjustedViews": 300,
+    "adjustedTopViews": 272,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": false,
@@ -3517,16 +2986,8 @@
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 3,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
-    ]
+    "collectionGaps": [],
+    "suggestions": []
    },
    "verdict": "caution"
   },
@@ -3556,24 +3017,10 @@
     "outlierDominated": false,
     "adjustedViews": 0,
     "adjustedTopViews": 0,
-    "adjustedEngagement": 3,
-    "adjustedTopEngagement": 3
+    "adjustedEngagement": 87,
+    "adjustedTopEngagement": 87
    },
-   "tiktok": {
-    "sampleCount": 4,
-    "adjustedSampleCount": 0,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 4,
-    "staleViewsShare": 1,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 0,
-    "adjustedTopEngagement": 0
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -3584,16 +3031,8 @@
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 3,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
-    ]
+    "collectionGaps": [],
+    "suggestions": []
    },
    "verdict": "caution"
   },
@@ -3611,21 +3050,7 @@
     "adjustedTopViews": 122572,
     "adjustedMedianViews": 11630
    },
-   "instagram": {
-    "sampleCount": 1,
-    "adjustedSampleCount": 1,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 0,
-    "staleViewsShare": 0,
-    "viewsAvailable": false,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 0,
-    "adjustedTopViews": 0,
-    "adjustedEngagement": 138,
-    "adjustedTopEngagement": 138
-   },
+   "instagram": null,
    "tiktok": null,
    "naver": {
     "hasSignal": false,
@@ -3637,18 +3062,10 @@
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 3,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
-    ]
+    "collectionGaps": [],
+    "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "메디필 멜라논 엑스 앰플 18.9": {
    "youtube": {
@@ -3665,21 +3082,7 @@
     "adjustedMedianViews": 911
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 2,
-    "adjustedSampleCount": 2,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 0,
-    "staleViewsShare": 0,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 3640,
-    "adjustedTopViews": 3640,
-    "adjustedEngagement": 92,
-    "adjustedTopEngagement": 92
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": true,
     "baselineSufficient": false,
@@ -3690,16 +3093,8 @@
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 2,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
-    ]
+    "collectionGaps": [],
+    "suggestions": []
    },
    "verdict": "caution"
   },
@@ -3719,19 +3114,19 @@
    },
    "instagram": null,
    "tiktok": {
-    "sampleCount": 5,
-    "adjustedSampleCount": 1,
+    "sampleCount": 3,
+    "adjustedSampleCount": 3,
     "confidence": "low",
     "sharedContentCount": 0,
-    "staleCount": 4,
-    "staleViewsShare": 0.9626978908502352,
+    "staleCount": 0,
+    "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
+    "engagementAvailable": false,
     "outlierDominated": true,
-    "adjustedViews": 1475,
-    "adjustedTopViews": 1475,
-    "adjustedEngagement": 70,
-    "adjustedTopEngagement": 70
+    "adjustedViews": 396,
+    "adjustedTopViews": 396,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": true,
@@ -3743,16 +3138,8 @@
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 2,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
-    ]
+    "collectionGaps": [],
+    "suggestions": []
    },
    "verdict": "caution"
   },
@@ -3771,21 +3158,7 @@
     "adjustedMedianViews": 23368
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 2,
-    "adjustedSampleCount": 2,
-    "confidence": "low",
-    "sharedContentCount": 1,
-    "staleCount": 0,
-    "staleViewsShare": 0,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 1761,
-    "adjustedTopViews": 1761,
-    "adjustedEngagement": 35,
-    "adjustedTopEngagement": 35
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -3796,16 +3169,8 @@
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 3,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
-    ]
+    "collectionGaps": [],
+    "suggestions": []
    },
    "verdict": "caution"
   },
@@ -3823,21 +3188,35 @@
     "adjustedTopViews": 788451,
     "adjustedMedianViews": 14266
    },
-   "instagram": null,
-   "tiktok": {
-    "sampleCount": 4,
-    "adjustedSampleCount": 4,
+   "instagram": {
+    "sampleCount": 2,
+    "adjustedSampleCount": 2,
     "confidence": "low",
-    "sharedContentCount": 1,
+    "sharedContentCount": 0,
+    "staleCount": 0,
+    "staleViewsShare": 0,
+    "viewsAvailable": false,
+    "engagementAvailable": true,
+    "outlierDominated": false,
+    "adjustedViews": 0,
+    "adjustedTopViews": 0,
+    "adjustedEngagement": 467,
+    "adjustedTopEngagement": 467
+   },
+   "tiktok": {
+    "sampleCount": 1,
+    "adjustedSampleCount": 1,
+    "confidence": "low",
+    "sharedContentCount": 0,
     "staleCount": 0,
     "staleViewsShare": 0,
     "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": false,
-    "adjustedViews": 8255,
-    "adjustedTopViews": 8255,
-    "adjustedEngagement": 262,
-    "adjustedTopEngagement": 262
+    "engagementAvailable": false,
+    "outlierDominated": true,
+    "adjustedViews": 38,
+    "adjustedTopViews": 38,
+    "adjustedEngagement": 0,
+    "adjustedTopEngagement": 0
    },
    "naver": {
     "hasSignal": false,
@@ -3849,16 +3228,8 @@
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 3,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
-    ]
+    "collectionGaps": [],
+    "suggestions": []
    },
    "verdict": "caution"
   },
@@ -3888,16 +3259,8 @@
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 3,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
-    ]
+    "collectionGaps": [],
+    "suggestions": []
    },
    "verdict": "insufficient"
   },
@@ -3916,21 +3279,7 @@
     "adjustedMedianViews": 8236
    },
    "instagram": null,
-   "tiktok": {
-    "sampleCount": 1,
-    "adjustedSampleCount": 1,
-    "confidence": "low",
-    "sharedContentCount": 0,
-    "staleCount": 0,
-    "staleViewsShare": 0,
-    "viewsAvailable": true,
-    "engagementAvailable": true,
-    "outlierDominated": true,
-    "adjustedViews": 419,
-    "adjustedTopViews": 419,
-    "adjustedEngagement": 7,
-    "adjustedTopEngagement": 7
-   },
+   "tiktok": null,
    "naver": {
     "hasSignal": false,
     "baselineSufficient": false,
@@ -3941,18 +3290,10 @@
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 3,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
-    ]
+    "collectionGaps": [],
+    "suggestions": []
    },
-   "verdict": "caution"
+   "verdict": "insufficient"
   },
   "엘라비에 리투오 ECM 스킨핏 비비": {
    "youtube": {
@@ -3980,16 +3321,8 @@
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 3,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
-    ]
+    "collectionGaps": [],
+    "suggestions": []
    },
    "verdict": "insufficient"
   },
@@ -4019,16 +3352,8 @@
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 3,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
-    "suggestions": [
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
-    ]
+    "collectionGaps": [],
+    "suggestions": []
    },
    "verdict": "caution"
   },
@@ -4054,23 +3379,20 @@
     "changeReliable": false,
     "confidence": "none"
    },
-   "google": null,
+   "google": {
+    "baselineSufficient": true,
+    "changeReliable": true,
+    "confidence": "high"
+   },
    "fairness": {
     "keywordCount": 3,
     "minKeywordTokens": 4,
-    "collectionGaps": [
-     {
-      "platform": "google",
-      "status": "rate_limited"
-     }
-    ],
+    "collectionGaps": [],
     "suggestions": [
-     "검색어가 SKU형 장문이라 검색 노출이 적을 수 있습니다. 짧은 소비자 통칭을 추가하세요.",
-     "Instagram은 검색어 1개만 시도됐습니다. 재수집 시 전체 검색어를 적용하면 결과가 늘 수 있습니다.",
-     "Google Trends 수집이 429로 실패했습니다. 재수집 전까지 이 채널은 점수 비중에서 제외됩니다."
+     "검색어가 SKU형 장문이라 검색 노출이 적을 수 있습니다. 짧은 소비자 통칭을 추가하세요."
     ]
    },
-   "verdict": "insufficient"
+   "verdict": "caution"
   }
  }
 }
