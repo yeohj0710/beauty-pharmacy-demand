@@ -26,8 +26,18 @@ npm run dev
 npm run audit:signals
 ```
 
+## 정기 조사
+
+데이터를 갱신할 때는 아래로 오늘의 작업 목록을 확인하고
+[docs/recollection-runbook.md](./docs/recollection-runbook.md)를 따른다.
+
+```bash
+npm run plan:recollection
+```
+
 ## 조사 기준
 
 - 에이전트 실행 절차: [AGENTS.md](./AGENTS.md)
+- 정기 조사 절차: [docs/recollection-runbook.md](./docs/recollection-runbook.md)
 - 플랫폼별 표본·판정·점수 기준: [docs/collection-protocol.md](./docs/collection-protocol.md)
 - 통계 보정·판정 신뢰도 규칙: [docs/collection-protocol.md](./docs/collection-protocol.md)의 "통계 보정과 판정 신뢰도" 절

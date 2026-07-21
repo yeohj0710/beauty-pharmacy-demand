@@ -926,7 +926,11 @@ function ExportDrawer({
           </div>
           <div>
             <span>문서 구성</span>
-            <strong>단일 시트 · 순위 + 채널 점수 + 보정 원자료 18열</strong>
+            <strong>단일 시트 · 순위 + 채널 점수 + 보정 원자료 15열</strong>
+          </div>
+          <div>
+            <span>파일명</span>
+            <strong>[웰니스박스] 약국 뷰티제품 마케팅 수요 데이터_날짜.xlsx</strong>
           </div>
         </div>
         <label className="export-password">

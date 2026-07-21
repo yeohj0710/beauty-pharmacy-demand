@@ -1,5 +1,16 @@
 # 제품 수요 조사 에이전트 지침
 
+## 데이터 조사를 요청받았다면
+
+[docs/recollection-runbook.md](docs/recollection-runbook.md)를 따른다.
+작업 목록은 문서가 아니라 아래 명령이 현재 데이터에서 계산해 알려준다.
+
+```bash
+npm run plan:recollection
+```
+
+이 파일의 나머지는 조사 원칙이고, 실행 절차는 위 runbook에 있다.
+
 ## 목적
 
 등록 제품의 온라인 관심 신호를 5개 플랫폼에서 같은 재현 절차로 조사한다. 내부 매출·판매량·순이익·이익률은 읽거나 저장하거나 공개하지 않는다. 제품명과 공개 웹 정보만 사용한다.
@@ -69,4 +80,4 @@ npm run test:unit          # 회귀 테스트
 
 - `app/signal-quality.json`은 생성 파일이다. 직접 편집하지 않는다.
 - 재수집 작업의 범위·우선순위·절대 규칙은
-  `docs/recollection-brief.md`를 따른다.
+  `docs/recollection-runbook.md`를 따른다.

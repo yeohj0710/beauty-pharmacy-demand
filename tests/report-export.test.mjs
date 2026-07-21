@@ -37,6 +37,48 @@ test("report module encrypts when a password is given and stays single-sheet", (
   assert.match(source, /\.width\(width\)/);
 });
 
+test("sheet layout matches the archived workbook", () => {
+  const source = read("../app/report-export.ts");
+  // 제목·파일명은 보관본과 동일한 문구를 쓴다.
+  assert.match(
+    source,
+    /DOCUMENT_TITLE = "\[웰니스박스\] 약국 뷰티제품 마케팅 수요 데이터"/,
+  );
+  assert.match(source, /\$\{DOCUMENT_TITLE\}_\$\{dateStamp\}\.xlsx/);
+  // 1행 제목 · 2행 헤더 · 3행부터 데이터.
+  assert.match(source, /HEADER_ROW = 2/);
+  // 15열, 순서 고정.
+  const headers = [...source.matchAll(/^ {2}\["([^"]+)", \d+, "(?:left|center|right)"\],$/gm)]
+    .map((match) => match[1]);
+  assert.deepEqual(headers, [
+    "순위",
+    "제품",
+    "카테고리",
+    "브랜드",
+    "종합 점수",
+    "근거",
+    "네이버",
+    "Google",
+    "YouTube",
+    "Instagram",
+    "TikTok",
+    "YouTube 조회",
+    "TikTok 조회",
+    "Instagram 참여",
+    "네이버 지수",
+  ]);
+  assert.match(source, /const LAST_COL = "O"/);
+});
+
+test("save flow prefers a folder picker and falls back to download", () => {
+  const source = read("../app/report-export.ts");
+  assert.match(source, /showSaveFilePicker/);
+  assert.match(source, /suggestedName: fileName/);
+  // 취소는 조용히 종료하고, 미지원 브라우저는 기본 다운로드로 넘어간다.
+  assert.match(source, /AbortError/);
+  assert.match(source, /link\.download = fileName/);
+});
+
 test("dashboard wires the export drawer to current settings", () => {
   const source = read("../app/page.tsx");
   assert.match(source, /className="export-button"/);
