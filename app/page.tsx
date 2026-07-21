@@ -4,6 +4,7 @@ import { type CSSProperties, useEffect, useMemo, useState } from "react";
 import catalog from "./product-catalog.json";
 import signalFile from "./signals.json";
 import qualityFile from "./signal-quality.json";
+import type { ReportRow } from "./report-export";
 
 type Signal = any;
 type Quality = Signal;
@@ -839,6 +840,131 @@ function WeightControls({
   );
 }
 
+function ExportDrawer({
+  presetName,
+  weights,
+  rows,
+  manualCount,
+  onClose,
+}: {
+  presetName: string;
+  weights: ChannelWeights;
+  rows: ReportRow[];
+  manualCount: number;
+  onClose: () => void;
+}) {
+  const [password, setPassword] = useState("");
+  const [phase, setPhase] = useState<"idle" | "busy" | "done" | "error">(
+    "idle",
+  );
+  const generatePassword = () => {
+    const charset = "ABCDEFGHJKMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
+    const random = new Uint32Array(12);
+    crypto.getRandomValues(random);
+    setPassword(
+      [...random].map((value) => charset[value % charset.length]).join(""),
+    );
+  };
+  const run = async () => {
+    setPhase("busy");
+    try {
+      const { exportConfidentialReport } = await import("./report-export");
+      await exportConfidentialReport({
+        password,
+        presetName,
+        weights,
+        rows,
+        manualCount,
+      });
+      setPhase("done");
+    } catch {
+      setPhase("error");
+    }
+  };
+  return (
+    <div className="drawer-backdrop" onClick={onClose}>
+      <aside
+        className="drawer export-drawer"
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="대외비 보고서 내보내기"
+      >
+        <button className="close" onClick={onClose} aria-label="닫기">
+          ×
+        </button>
+        <span className="drawer-rank">암호화 문서 내보내기</span>
+        <h2>대외비 보고서</h2>
+        <p>
+          현재 화면 세팅 그대로 스냅샷을 떠서 <b>열람 암호가 걸린 Excel</b>
+          (표준 ECMA-376 암호화)로 저장합니다.
+        </p>
+        <div className="export-summary">
+          <div>
+            <span>적용 세팅</span>
+            <strong>{presetName}</strong>
+          </div>
+          <div>
+            <span>채널 비중</span>
+            <strong>
+              {platforms
+                .map((platform) => `${platform.name} ${weights[platform.id]}`)
+                .join(" · ")}
+            </strong>
+          </div>
+          <div>
+            <span>수록 범위</span>
+            <strong>
+              순위 {rows.length}개 제품 · 직접 입력 {manualCount}건 반영
+            </strong>
+          </div>
+          <div>
+            <span>시트 구성</span>
+            <strong>표지 · 종합 순위 · 채널 원자료 · 형평성 진단 · 방법론</strong>
+          </div>
+        </div>
+        <label className="export-password">
+          <span>열람 암호 · 6자 이상</span>
+          <div>
+            <input
+              type="text"
+              value={password}
+              placeholder="문서를 열 때 요구할 암호"
+              onChange={(event) => setPassword(event.target.value)}
+              autoComplete="off"
+              spellCheck={false}
+            />
+            <button type="button" onClick={generatePassword}>
+              자동 생성
+            </button>
+          </div>
+        </label>
+        <p className="export-warning">
+          암호를 잊으면 문서를 다시 열 수 없습니다. 안전한 곳에 따로
+          보관하세요.
+        </p>
+        <button
+          className="primary"
+          disabled={password.length < 6 || phase === "busy"}
+          onClick={run}
+        >
+          {phase === "busy" ? "암호화 문서 생성 중…" : "암호 걸어 내보내기"}
+        </button>
+        {phase === "done" && (
+          <p className="export-result ok">
+            내보내기 완료 — 다운로드된 파일은 입력한 암호로만 열립니다.
+          </p>
+        )}
+        {phase === "error" && (
+          <p className="export-result error">
+            내보내기에 실패했습니다. 잠시 후 다시 시도해 주세요.
+          </p>
+        )}
+      </aside>
+    </div>
+  );
+}
+
 function Overview({
   manual,
   weights,
@@ -875,6 +1001,22 @@ function Overview({
     0,
   );
   const manualCount = Object.keys(manual).length;
+  const [exportOpen, setExportOpen] = useState(false);
+  const activePresetName =
+    weightPresets.find((preset) =>
+      platforms.every(
+        (platform) => preset.weights[platform.id] === weights[platform.id],
+      ),
+    )?.name ?? "사용자 설정";
+  const reportRows: ReportRow[] = top.map((item, index) => ({
+    rank: index + 1,
+    name: item.signal.name,
+    score: item.score,
+    coverage: scoreCoverage(item.scores, weights),
+    keywords: item.signal.keywords,
+    skuNames: item.signal.skuNames,
+    channelScores: item.scores,
+  }));
   return (
     <>
       <section className="hero">
@@ -939,7 +1081,15 @@ function Overview({
             <p className="section-kicker">가중치 기반 순위</p>
             <h2>온라인 수요 순위</h2>
           </div>
-          <span className="real-badge">제품을 눌러 상세 보기</span>
+          <div className="ranking-actions">
+            <span className="real-badge">제품을 눌러 상세 보기</span>
+            <button
+              className="export-button"
+              onClick={() => setExportOpen(true)}
+            >
+              🔒 대외비 보고서
+            </button>
+          </div>
         </div>
         <WeightControls weights={weights} onChange={onWeightsChange} scores={channelScores} />
         <p className="quality-note">
@@ -1036,6 +1186,15 @@ function Overview({
           </table>
         </div>
       </section>
+      {exportOpen && (
+        <ExportDrawer
+          presetName={activePresetName}
+          weights={weights}
+          rows={reportRows}
+          manualCount={manualCount}
+          onClose={() => setExportOpen(false)}
+        />
+      )}
     </>
   );
 }

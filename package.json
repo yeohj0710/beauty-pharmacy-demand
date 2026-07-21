@@ -10,7 +10,7 @@
     "build": "vinext build",
     "start": "vinext start",
     "test": "npm run build && node --test \"tests/*.test.mjs\"",
-    "test:unit": "node --test tests/collection-state.test.mjs tests/layout-centering.test.mjs tests/public-catalog-expansion.test.mjs tests/validation-typography.test.mjs tests/signal-quality.test.mjs",
+    "test:unit": "node --test tests/collection-state.test.mjs tests/layout-centering.test.mjs tests/public-catalog-expansion.test.mjs tests/validation-typography.test.mjs tests/signal-quality.test.mjs tests/report-export.test.mjs",
     "audit:signals": "node scripts/audit-signals.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
@@ -19,7 +19,8 @@
     "drizzle-orm": "0.45.2",
     "next": "16.2.6",
     "react": "19.2.6",
-    "react-dom": "19.2.6"
+    "react-dom": "19.2.6",
+    "xlsx-populate": "^1.21.0"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
