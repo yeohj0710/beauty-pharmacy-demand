@@ -15,6 +15,15 @@ test("signal-quality.json is in sync with signals.json", () => {
   }
 });
 
+test("current signals pass the data-contract validator", () => {
+  const output = execFileSync(
+    process.execPath,
+    ["scripts/validate-signals.mjs"],
+    { cwd: new URL("..", import.meta.url), encoding: "utf8" },
+  );
+  assert.match(output, /ERROR 0건/);
+});
+
 test("audit script is deterministic against current signals", () => {
   execFileSync(process.execPath, ["scripts/audit-signals.mjs"], {
     cwd: new URL("..", import.meta.url),

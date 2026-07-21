@@ -55,3 +55,18 @@
 - 광고/협찬/공식 계정 여부가 분리됐다.
 - 플랫폼별 필수 지표와 누락 사유가 기록됐다.
 - 조사 JSON이 `docs/collection-protocol.md`의 레코드 형식을 따른다.
+
+## 수집 후 필수 파이프라인
+
+`app/signals.json`을 갱신했다면 아래 세 명령을 순서대로 실행하고 전부
+성공한 상태에서만 커밋한다.
+
+```bash
+npm run validate:signals   # 데이터 계약 검증 — ERROR 0건 필수
+npm run audit:signals      # 통계 보정 파일(signal-quality.json) 재생성
+npm run test:unit          # 회귀 테스트
+```
+
+- `app/signal-quality.json`은 생성 파일이다. 직접 편집하지 않는다.
+- 재수집 작업의 범위·우선순위·절대 규칙은
+  `docs/recollection-brief.md`를 따른다.
