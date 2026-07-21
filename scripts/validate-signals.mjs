@@ -73,7 +73,8 @@ for (const product of signals.products) {
       continue;
     }
     if (source.status !== "collected" && platform !== "naver") continue;
-    checkSource(name, platform, source);
+    // 네이버는 collectedAt·검색어가 trend 내부에 있는 구조라 별도 검증한다.
+    if (platform !== "naver") checkSource(name, platform, source);
 
     if (platform === "youtube") {
       const videos = source.topVideos || [];
@@ -142,6 +143,7 @@ for (const product of signals.products) {
     }
 
     if (platform === "naver") {
+      if (!isHttps(source.sourceUrl)) err(name, "naver: sourceUrl(https) 누락");
       const trend = source.trend;
       if (!trend) {
         err(name, "naver: trend 누락");
@@ -150,6 +152,12 @@ for (const product of signals.products) {
           if (typeof trend[field] !== "number") err(name, `naver: trend.${field} 누락/형식 오류`);
         }
         if (!trend.anchor) err(name, "naver: 공통 기준어(anchor) 누락");
+        if (!trend.collectedAt || Number.isNaN(new Date(trend.collectedAt).getTime())) {
+          err(name, "naver: trend.collectedAt 누락/형식 오류");
+        }
+        if (!Array.isArray(trend.keywords) || trend.keywords.length === 0) {
+          err(name, "naver: trend.keywords(조사 키워드군) 누락");
+        }
       }
     }
 
