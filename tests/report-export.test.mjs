@@ -22,15 +22,19 @@ test("xlsx password encryption round-trips and rejects wrong passwords", async (
   );
 });
 
-test("report module always encrypts and lays out the confidential sheets", () => {
+test("report module encrypts when a password is given and stays single-sheet", () => {
   const source = read("../app/report-export.ts");
-  // 암호 없이 outputAsync를 호출하는 경로가 없어야 한다.
-  assert.match(source, /outputAsync\(\{ password: input\.password \}\)/);
-  assert.equal(/outputAsync\(\s*\)/.test(source), false);
-  for (const sheet of ["종합 순위", "채널 원자료", "형평성 진단", "방법론"]) {
-    assert.ok(source.includes(`addSheet("${sheet}")`), `missing sheet ${sheet}`);
-  }
-  assert.match(source, /대외비 · CONFIDENTIAL/);
+  // 암호가 있으면 반드시 암호화 경로, 없을 때만 일반 경로를 타야 한다.
+  assert.match(
+    source,
+    /input\.password\s*\n?\s*\? await workbook\.outputAsync\(\{ password: input\.password \}\)\s*\n?\s*: await workbook\.outputAsync\(\)/,
+  );
+  // 단일 시트 데이터 테이블 — 시트 추가 금지.
+  assert.equal(source.includes("addSheet("), false);
+  assert.match(source, /sheet\.name\("수요 데이터"\)/);
+  // 모든 열은 명시적 너비를 가져 셀이 잘리지 않아야 한다.
+  assert.ok(source.includes("COLUMNS.forEach"));
+  assert.match(source, /\.width\(width\)/);
 });
 
 test("dashboard wires the export drawer to current settings", () => {

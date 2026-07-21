@@ -868,8 +868,8 @@ function ExportDrawer({
   const run = async () => {
     setPhase("busy");
     try {
-      const { exportConfidentialReport } = await import("./report-export");
-      await exportConfidentialReport({
+      const { exportDemandReport } = await import("./report-export");
+      await exportDemandReport({
         password,
         presetName,
         weights,
@@ -888,16 +888,17 @@ function ExportDrawer({
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
-        aria-label="대외비 보고서 내보내기"
+        aria-label="수요 데이터 내보내기"
       >
         <button className="close" onClick={onClose} aria-label="닫기">
           ×
         </button>
-        <span className="drawer-rank">암호화 문서 내보내기</span>
-        <h2>대외비 보고서</h2>
+        <span className="drawer-rank">Excel 스냅샷</span>
+        <h2>수요 데이터 내보내기</h2>
         <p>
-          현재 화면 세팅 그대로 스냅샷을 떠서 <b>열람 암호가 걸린 Excel</b>
-          (표준 ECMA-376 암호화)로 저장합니다.
+          현재 화면 세팅 그대로 순위·채널 점수·보정 원자료를 단일 시트
+          데이터 테이블로 저장합니다. 암호를 입력하면 <b>열람 암호가 걸린
+          문서</b>(표준 ECMA-376 암호화)로 내보냅니다.
         </p>
         <div className="export-summary">
           <div>
@@ -919,17 +920,17 @@ function ExportDrawer({
             </strong>
           </div>
           <div>
-            <span>시트 구성</span>
-            <strong>표지 · 종합 순위 · 채널 원자료 · 형평성 진단 · 방법론</strong>
+            <span>문서 구성</span>
+            <strong>단일 시트 · 순위 + 채널 점수 + 보정 원자료 18열</strong>
           </div>
         </div>
         <label className="export-password">
-          <span>열람 암호 · 6자 이상</span>
+          <span>열람 암호 · 선택 (걸려면 6자 이상)</span>
           <div>
             <input
               type="text"
               value={password}
-              placeholder="문서를 열 때 요구할 암호"
+              placeholder="비워두면 암호 없이 내보냅니다"
               onChange={(event) => setPassword(event.target.value)}
               autoComplete="off"
               spellCheck={false}
@@ -939,20 +940,30 @@ function ExportDrawer({
             </button>
           </div>
         </label>
-        <p className="export-warning">
-          암호를 잊으면 문서를 다시 열 수 없습니다. 안전한 곳에 따로
-          보관하세요.
-        </p>
+        {password.length > 0 && (
+          <p className="export-warning">
+            암호를 잊으면 문서를 다시 열 수 없습니다. 안전한 곳에 따로
+            보관하세요.
+          </p>
+        )}
         <button
           className="primary"
-          disabled={password.length < 6 || phase === "busy"}
+          disabled={
+            (password.length > 0 && password.length < 6) || phase === "busy"
+          }
           onClick={run}
         >
-          {phase === "busy" ? "암호화 문서 생성 중…" : "암호 걸어 내보내기"}
+          {phase === "busy"
+            ? "문서 생성 중…"
+            : password.length > 0
+              ? "암호 걸어 내보내기"
+              : "암호 없이 내보내기"}
         </button>
         {phase === "done" && (
           <p className="export-result ok">
-            내보내기 완료 — 다운로드된 파일은 입력한 암호로만 열립니다.
+            {password.length > 0
+              ? "내보내기 완료 — 다운로드된 파일은 입력한 암호로만 열립니다."
+              : "내보내기 완료 — 암호 없는 문서로 저장했습니다."}
           </p>
         )}
         {phase === "error" && (
@@ -1087,7 +1098,7 @@ function Overview({
               className="export-button"
               onClick={() => setExportOpen(true)}
             >
-              🔒 대외비 보고서
+              데이터 내보내기
             </button>
           </div>
         </div>
