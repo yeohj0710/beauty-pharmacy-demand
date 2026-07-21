@@ -10,7 +10,8 @@
     "build": "vinext build",
     "start": "vinext start",
     "test": "npm run build && node --test \"tests/*.test.mjs\"",
-    "test:unit": "node --test tests/collection-state.test.mjs tests/layout-centering.test.mjs tests/public-catalog-expansion.test.mjs tests/validation-typography.test.mjs",
+    "test:unit": "node --test tests/collection-state.test.mjs tests/layout-centering.test.mjs tests/public-catalog-expansion.test.mjs tests/validation-typography.test.mjs tests/signal-quality.test.mjs",
+    "audit:signals": "node scripts/audit-signals.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
   },

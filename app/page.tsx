@@ -3,8 +3,10 @@
 import { type CSSProperties, useEffect, useMemo, useState } from "react";
 import catalog from "./product-catalog.json";
 import signalFile from "./signals.json";
+import qualityFile from "./signal-quality.json";
 
 type Signal = any;
+type Quality = Signal;
 type Platform = "youtube" | "instagram" | "tiktok" | "naver" | "google";
 type ChannelWeights = Record<Platform, number>;
 type ChannelScores = Record<Platform, number | null>;
@@ -114,6 +116,20 @@ const allProducts: Signal[] = [...signalFile.products, ...catalogSignals];
 const fmt = (v?: number | null) =>
   v == null ? "—" : v.toLocaleString("ko-KR");
 
+const qualityOf = (name: string): Quality | undefined =>
+  (qualityFile.products as Record<string, Quality>)[name];
+const verdictLabel: Record<string, { text: string; tone: string }> = {
+  usable: { text: "판단 가능", tone: "ok" },
+  caution: { text: "주의", tone: "warn" },
+  insufficient: { text: "표본 부족", tone: "bad" },
+};
+const confidenceLabel: Record<string, string> = {
+  high: "높음",
+  medium: "중간",
+  low: "낮음",
+  none: "없음",
+};
+
 const recommendedWeights: ChannelWeights = {
   naver: 35,
   google: 10,
@@ -183,6 +199,11 @@ function rawChannelMetrics(
   if (["no_results", "no_relevant_results"].includes(value?.status)) {
     return { primary: 0, secondary: 0 };
   }
+  // Google no_data는 "검색량이 식별 기준에 못 미침"이라는 정보이므로 소셜의
+  // no_results와 같게 0으로 본다. rate_limited 같은 수집 실패만 null로 남긴다.
+  if (platform === "google" && value?.status === "no_data") {
+    return { primary: 0, secondary: 0 };
+  }
   if (value?.status !== "collected" && !(platform === "naver" && value?.trend)) {
     return null;
   }
@@ -199,9 +220,25 @@ function rawChannelMetrics(
     };
   }
   if (platform === "youtube") {
+    const quality = qualityOf(signal.name)?.youtube;
+    if (quality) {
+      // 상위 5개 합계: 검색어를 많이 시도한 제품일수록 표본이 늘어나는
+      // 수집 편향을 상한으로 완화한다.
+      return {
+        primary: Number(quality.adjustedTopViews ?? quality.adjustedTotalViews ?? 0),
+        secondary: Number(quality.adjustedMedianViews ?? 0),
+      };
+    }
     return {
       primary: Number(value?.totalViews ?? 0),
       secondary: Number(value?.medianViews ?? 0),
+    };
+  }
+  const quality = qualityOf(signal.name)?.[platform];
+  if (quality) {
+    return {
+      primary: Number(quality.adjustedTopViews ?? quality.adjustedViews ?? 0),
+      secondary: Number(quality.adjustedTopEngagement ?? quality.adjustedEngagement ?? 0),
     };
   }
   const totals = value?.totals || {};
@@ -269,14 +306,18 @@ function buildChannelScores(
 }
 
 function weightedScore(scores: ChannelScores, weights: ChannelWeights) {
+  // 수집 실패(null) 채널은 분모에서 제외한다. 실패를 0점처럼 취급하면
+  // "데이터를 못 모은 제품"이 "관심이 없는 제품"과 같은 벌점을 받는다.
+  // 측정된 채널 범위는 근거 커버리지로 별도 표시한다.
   const denominator = platforms.reduce(
-    (sum, platform) => sum + weights[platform.id],
+    (sum, platform) =>
+      sum + (scores[platform.id] == null ? 0 : weights[platform.id]),
     0,
   );
   if (!denominator) return 0;
   return platforms.reduce(
     (sum, platform) =>
-      sum + (scores[platform.id] || 0) * weights[platform.id],
+      sum + (scores[platform.id] ?? 0) * weights[platform.id],
     0,
   ) / denominator;
 }
@@ -313,21 +354,36 @@ function statusOf(
 
 function platformSummary(signal: Signal, platform: Platform) {
   const value = getAuto(signal, platform);
+  const quality = qualityOf(signal.name);
   if (platform === "naver" && value?.trend) {
     const trend = value.trend;
-    return `기준어 대비 ${fmt(trend.anchorNormalizedLatest30)} · 30일 증감 ${trend.changePct > 0 ? "+" : ""}${trend.changePct ?? "—"}%`;
+    const change = quality?.naver?.changeReliable
+      ? `30일 증감 ${trend.changePct > 0 ? "+" : ""}${trend.changePct}%`
+      : "검색량 기저 미달 · 증감 해석 불가";
+    return `기준어 대비 ${fmt(trend.anchorNormalizedLatest30)} · ${change}`;
   }
   if (platform === "youtube" && value?.status === "collected") {
+    const yq = quality?.youtube;
+    if (yq) {
+      return `${fmt(yq.adjustedSampleCount)}개 영상 · 보정 조회 ${fmt(yq.adjustedTotalViews)} · 신뢰도 ${confidenceLabel[yq.confidence]}`;
+    }
     return `${fmt(value.resultSampleCount)}개 영상 · 조회 ${fmt(value.totalViews)}`;
   }
   if (["instagram", "tiktok"].includes(platform) && value?.status === "collected") {
+    const sq = quality?.[platform];
+    if (sq) {
+      return `${fmt(sq.adjustedSampleCount)}건 반영 · 보정 조회 ${fmt(sq.adjustedViews)} · 신뢰도 ${confidenceLabel[sq.confidence]}`;
+    }
     return `${fmt(value.acceptedCount)}건 채택 · 조회 ${fmt(value.totals?.views)} · 좋아요 ${fmt(value.totals?.likes)}`;
   }
   if (["no_results", "no_relevant_results"].includes(value?.status)) {
     return value?.status === "no_results" ? "검색 결과 없음" : "제품 관련 콘텐츠 없음";
   }
   if (platform === "google" && value?.status === "collected") {
-    return `최근 4주 평균 ${fmt(value.recent4WeekAverage)} · 증감 ${value.changePct == null ? "비교 불가" : `${value.changePct > 0 ? "+" : ""}${value.changePct}%`}`;
+    const change = quality?.google?.changeReliable
+      ? `${value.changePct > 0 ? "+" : ""}${value.changePct}%`
+      : "기저 미달 · 해석 불가";
+    return `최근 4주 평균 ${fmt(value.recent4WeekAverage)} · 증감 ${change}`;
   }
   if (platform === "google" && value?.status === "no_data") {
     return "Google Trends 검색량 부족";
@@ -447,6 +503,13 @@ function CollectionDrawer({
                   조회수 합계 {fmt(auto.totalViews)} · 중앙값{" "}
                   {fmt(auto.medianViews)}
                 </p>
+                {qualityOf(signal.name)?.youtube && (
+                  <p>
+                    보정 후 합계 {fmt(qualityOf(signal.name).youtube.adjustedTotalViews)} ·
+                    중앙값 {fmt(qualityOf(signal.name).youtube.adjustedMedianViews)} · 공유 콘텐츠{" "}
+                    {fmt(qualityOf(signal.name).youtube.sharedContentCount)}개 분할 반영
+                  </p>
+                )}
               </>
             )}
             {platform === "instagram" && (
@@ -474,8 +537,10 @@ function CollectionDrawer({
                       기준어 대비 {fmt(auto.trend.anchorNormalizedLatest30)}
                     </strong>
                     <p>
-                      최근 30일 평균 {fmt(auto.trend.latest30Mean)} · 직전 30일 대비{" "}
-                      {auto.trend.changePct > 0 ? "+" : ""}{auto.trend.changePct}%
+                      최근 30일 평균 {fmt(auto.trend.latest30Mean)} ·{" "}
+                      {qualityOf(signal.name)?.naver?.changeReliable
+                        ? `직전 30일 대비 ${auto.trend.changePct > 0 ? "+" : ""}${auto.trend.changePct}%`
+                        : "검색량이 기저 수준(30일 평균 1) 미달이라 증감률을 해석하지 않습니다"}
                     </p>
                     <p>
                       공통 기준어: {auto.trend.anchor} · DataLab 공개 상대지수
@@ -768,7 +833,7 @@ function WeightControls({
       <p className="weight-guidance">
         <b>{activePreset?.name || "사용자 설정"}</b>
         {activePreset?.description || "조사 목적에 맞게 채널 비중을 직접 조정한 설정입니다."}
-        <span>값이 없는 채널은 다른 채널로 임의 재배분하지 않고 근거 커버리지에 반영합니다.</span>
+        <span>수집에 실패한 채널은 점수 분모에서 제외해 무벌점 처리하고, 측정 범위는 근거 커버리지로 표시합니다.</span>
       </p>
     </section>
   );
@@ -877,6 +942,23 @@ function Overview({
           <span className="real-badge">제품을 눌러 상세 보기</span>
         </div>
         <WeightControls weights={weights} onChange={onWeightsChange} scores={channelScores} />
+        <p className="quality-note">
+          점수는 통계 보정을 거친 값입니다. 여러 제품에 같은 콘텐츠가 채택된
+          경우 조회수를 제품 수로 나눠 반영하고, 수집 기간(YouTube 365일 ·
+          Instagram·TikTok 180일)을 벗어난 콘텐츠는 제외하며, 검색어 시도
+          횟수 차이로 표본이 늘어나는 편향은 <b>상위 5개 콘텐츠 합계</b>로
+          상한을 둡니다. 수집에 실패한 채널은 점수 분모에서 제외해 무벌점
+          처리합니다. <b>판정 신뢰도</b>는 채널별 표본 수와 브랜드 특정성을
+          종합한 결과로, <b>주의</b>·<b>표본 부족</b> 제품은 이 순위만으로
+          &ldquo;실제로 핫하다&rdquo;고 판단할 수 없습니다.
+        </p>
+        {(qualityFile.meta as Quality)?.systemicIssues?.length > 0 && (
+          <p className="quality-note systemic">
+            {(qualityFile.meta as Quality).systemicIssues.map((issue: string) => (
+              <span key={issue}>수집 공통 한계: {issue}</span>
+            ))}
+          </p>
+        )}
         <div className="table-wrap">
           <table>
             <thead>
@@ -884,7 +966,7 @@ function Overview({
                 <th>번호</th>
                 <th>제품</th>
                 <th>종합 점수</th>
-                <th>통합 제품</th>
+                <th>판정 신뢰도</th>
                 <th>대표 검색어</th>
                 <th>수집 현황</th>
               </tr>
@@ -922,7 +1004,18 @@ function Overview({
                       </div>
                     </td>
                     <td>
-                      <strong>{s.skuNames.length}개 SKU</strong>
+                      {(() => {
+                        const verdict =
+                          verdictLabel[qualityOf(s.name)?.verdict ?? ""] ?? {
+                            text: "미조사",
+                            tone: "bad",
+                          };
+                        return (
+                          <span className={`verdict-badge ${verdict.tone}`}>
+                            {verdict.text}
+                          </span>
+                        );
+                      })()}
                     </td>
                     <td>{s.keywords[0]}</td>
                     <td>
@@ -1096,7 +1189,15 @@ function Products({
         </div>
         <div className="panel validation-detail">
           <span className="drawer-rank">제품 수요 조사</span>
-          <h2>{selected.name}</h2>
+          <h2>
+            {selected.name}{" "}
+            {(() => {
+              const verdict = verdictLabel[qualityOf(selected.name)?.verdict ?? ""];
+              return verdict ? (
+                <span className={`verdict-badge ${verdict.tone}`}>{verdict.text}</span>
+              ) : null;
+            })()}
+          </h2>
           <div className="selected-score">
             <div>
               <span>가중 종합 점수</span>
@@ -1105,17 +1206,25 @@ function Products({
                 근거 {Math.round(scoreCoverage(selectedChannelScores, weights))}%
               </small>
             </div>
-            {platforms.map((platform) => (
-              <div key={platform.id}>
-                <span>{platform.name}</span>
-                <strong>
-                  {selectedChannelScores[platform.id] == null
-                    ? "—"
-                    : selectedChannelScores[platform.id]!.toFixed(1)}
-                </strong>
-                <small>비중 {weights[platform.id]}</small>
-              </div>
-            ))}
+            {platforms.map((platform) => {
+              const channelQuality = qualityOf(selected.name)?.[platform.id];
+              return (
+                <div key={platform.id}>
+                  <span>{platform.name}</span>
+                  <strong>
+                    {selectedChannelScores[platform.id] == null
+                      ? "—"
+                      : selectedChannelScores[platform.id]!.toFixed(1)}
+                  </strong>
+                  <small>
+                    비중 {weights[platform.id]}
+                    {channelQuality?.confidence
+                      ? ` · 신뢰도 ${confidenceLabel[channelQuality.confidence]}`
+                      : ""}
+                  </small>
+                </div>
+              );
+            })}
           </div>
           <div className="entity-rule validation-keywords">
             <b>대표 검색어</b>
@@ -1123,6 +1232,16 @@ function Products({
             <b>통합 제품</b>
             <p>{selected.skuNames.join(" · ")}</p>
           </div>
+          {(qualityOf(selected.name)?.fairness?.suggestions?.length ?? 0) >
+            0 && (
+            <ul className="fairness-suggestions">
+              {qualityOf(selected.name).fairness.suggestions.map(
+                (suggestion: string) => (
+                  <li key={suggestion}>{suggestion}</li>
+                ),
+              )}
+            </ul>
+          )}
           <h3>채널별 수집 근거</h3>
           <div className="evidence-list">
             {platforms.map((p) => {
@@ -1152,9 +1271,9 @@ function Products({
           <div className="score-lock">
             <b>가중 점수 계산됨</b>
             <p>
-              채널별 원시 수치를 상대 점수로 바꾼 뒤 현재 비중을 적용했습니다.
-              값이 없는 채널은 다른 채널로 재배분하지 않고 근거 커버리지에
-              반영합니다.
+              채널별 보정 수치를 상대 점수로 바꾼 뒤 현재 비중을 적용했습니다.
+              수집에 실패한 채널은 점수 분모에서 제외하고, 측정 범위는 근거
+              커버리지로 표시합니다.
             </p>
           </div>
         </div>
@@ -1319,6 +1438,16 @@ function ResearchWorkspace({
               />
               <small>{signal.reason}</small>
             </label>
+            {(qualityOf(signal.name)?.fairness?.suggestions?.length ?? 0) >
+              0 && (
+              <ul className="fairness-suggestions">
+                {qualityOf(signal.name).fairness.suggestions.map(
+                  (suggestion: string) => (
+                    <li key={suggestion}>{suggestion}</li>
+                  ),
+                )}
+              </ul>
+            )}
             <div className="channel-editor">
               {platforms.map((platform) => {
                 const record = manual[`${signal.name}::${platform.id}`];
