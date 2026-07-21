@@ -28,11 +28,10 @@ npm run audit:signals
 
 ## 정기 조사
 
-데이터를 갱신할 때는 아래로 오늘의 작업 목록을 확인하고
-[docs/recollection-runbook.md](./docs/recollection-runbook.md)를 따른다.
+데이터를 갱신할 때는 아래 한 줄로 조사 규칙과 오늘의 작업 목록을 받는다.
 
 ```bash
-npm run plan:recollection
+npm run brief
 ```
 
 ## 조사 기준

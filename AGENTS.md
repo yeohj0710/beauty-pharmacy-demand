@@ -1,15 +1,23 @@
 # 제품 수요 조사 에이전트 지침
 
-## 데이터 조사를 요청받았다면
+## 지금 할 일
 
-[docs/recollection-runbook.md](docs/recollection-runbook.md)를 따른다.
-작업 목록은 문서가 아니라 아래 명령이 현재 데이터에서 계산해 알려준다.
+이 저장소에서 "데이터 조사" "수집" "갱신" 류의 요청을 받았다면, 더 물어보지
+말고 아래를 그대로 실행한다. 무엇을 얼마나 수집할지는 `brief`가 현재 데이터를
+보고 알려주므로 따로 물어볼 필요가 없다.
 
 ```bash
-npm run plan:recollection
+git pull github main
+npm install
+npm run brief          # 조사 규칙 + 오늘의 작업 목록이 한 번에 출력된다
 ```
 
-이 파일의 나머지는 조사 원칙이고, 실행 절차는 위 runbook에 있다.
+`npm run brief` 출력이 이번 작업의 지시서다. 거기 적힌 우선순위(P0→P1→P2→P3)
+순서로 수집하고, 끝나면 같은 출력에 적힌 완료 파이프라인을 돌린 뒤 커밋·푸시한다.
+배포(`npx vercel --prod`)는 명시적으로 요청받았을 때만 한다.
+
+상세 절차는 [docs/recollection-runbook.md](docs/recollection-runbook.md),
+플랫폼별 기준은 [docs/collection-protocol.md](docs/collection-protocol.md)에 있다.
 
 ## 목적
 

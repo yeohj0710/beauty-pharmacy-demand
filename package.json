@@ -13,6 +13,7 @@
     "test:unit": "node --test tests/collection-state.test.mjs tests/layout-centering.test.mjs tests/public-catalog-expansion.test.mjs tests/validation-typography.test.mjs tests/signal-quality.test.mjs tests/report-export.test.mjs tests/recollection-tooling.test.mjs",
     "audit:signals": "node scripts/audit-signals.mjs",
     "validate:signals": "node scripts/validate-signals.mjs",
+    "brief": "node scripts/plan-recollection.mjs",
     "plan:recollection": "node scripts/plan-recollection.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
