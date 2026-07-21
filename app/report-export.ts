@@ -105,7 +105,7 @@ const buildSheet = (sheet: AnyRec, input: ReportInput, now: Date) => {
   ).join(" · ");
   sheet.range(`A3:${LAST_COL}3`).merged(true)
     .value(
-      `데이터 기준 ${String(signalFile.collectedAt).replace("T", " ").slice(0, 16)} KST   |   세팅 ${input.presetName} (${weightText})   |   제품 ${input.rows.length}   |   직접 입력 ${input.manualCount}건   |   생성 ${stamp(now)}`,
+      `데이터 기준 ${new Date(signalFile.collectedAt).toLocaleString("sv-SE", { timeZone: "Asia/Seoul" }).slice(0, 16)} KST   |   세팅 ${input.presetName} (${weightText})   |   제품 ${input.rows.length}   |   직접 입력 ${input.manualCount}건   |   생성 ${stamp(now)}`,
     )
     .style({ fontSize: 9, fontColor: "4e5968", verticalAlignment: "center" });
   sheet.row(3).height(20);

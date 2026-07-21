@@ -131,6 +131,11 @@ const confidenceLabel: Record<string, string> = {
   none: "없음",
 };
 
+// collectedAt이 UTC(Z)든 +09:00이든 KST 기준으로 일관 표시한다.
+const collectedAtKst = new Date(signalFile.collectedAt)
+  .toLocaleString("sv-SE", { timeZone: "Asia/Seoul" })
+  .slice(0, 16);
+
 const recommendedWeights: ChannelWeights = {
   naver: 35,
   google: 10,
@@ -1047,9 +1052,7 @@ function Overview({
         <div className="hero-status">
           <span className="live-dot" />
           최근 수집 실행
-          <strong>
-            {signalFile.collectedAt.replace("T", " ").slice(0, 16)} KST
-          </strong>
+          <strong>{collectedAtKst} KST</strong>
         </div>
       </section>
       <section className="metrics">
