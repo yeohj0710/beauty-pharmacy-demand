@@ -5,6 +5,7 @@ import catalog from "./product-catalog.json";
 import signalFile from "./signals.json";
 import qualityFile from "./signal-quality.json";
 import type { ReportRow } from "./report-export";
+import PharmacyView from "./pharmacy-view";
 
 type Signal = any;
 type Quality = Signal;
@@ -1041,16 +1042,16 @@ function Overview({
     <>
       <section className="hero">
         <div>
-          <p className="eyebrow">PRODUCT DEMAND RESEARCH</p>
+          <p className="eyebrow">ONLINE DEMAND SIGNALS</p>
           <h1>
             제품의 온라인 관심을
             <br />
             한곳에서 확인하세요
           </h1>
           <p className="hero-copy">
-            등록된 제품을 네이버, Google, YouTube, Instagram, TikTok에서
-            <br className="desktop" /> 플랫폼별 기준으로 조사하고 근거와 함께
-            정리합니다.
+            약국 실매출을 보완하는 부가 지표입니다. 네이버, Google, YouTube,
+            <br className="desktop" /> Instagram, TikTok의 관심 신호를 플랫폼별
+            기준으로 정리합니다.
           </p>
         </div>
         <div className="hero-status">
@@ -1680,8 +1681,8 @@ function ResearchWorkspace({
 
 export default function Home() {
   const [view, setView] = useState<
-    "overview" | "collection" | "products" | "method" | "guide"
-  >("overview");
+    "pharmacy" | "overview" | "collection" | "products" | "method" | "guide"
+  >("pharmacy");
   const [importNotice, setImportNotice] = useState<{
     tone: "ok" | "error";
     text: string;
@@ -1812,8 +1813,9 @@ export default function Home() {
       });
     }
   };
-  const nav = [
-    ["overview", "수요 개요", "⌁"],
+  const mainNav = [["pharmacy", "약국 실매출", "⌂"]] as const;
+  const researchNav = [
+    ["overview", "온라인 수요 신호", "⌁"],
     ["collection", "데이터 수집", "◎"],
     ["products", "제품 검증", "▦"],
     ["method", "조사 관리", "◇"],
@@ -1822,14 +1824,25 @@ export default function Home() {
   return (
     <div className="app-shell">
       <aside className="sidebar">
-        <div className="brand" onClick={() => setView("overview")}>
+        <div className="brand" onClick={() => setView("pharmacy")}>
           <span>W</span>
           <div>
-            웰니스박스<small>제품 수요 대시보드</small>
+            웰니스박스<small>뷰티 약국 수요 데이터</small>
           </div>
         </div>
         <nav>
-          {nav.map((n) => (
+          {mainNav.map((n) => (
+            <button
+              key={n[0]}
+              className={view === n[0] ? "active" : ""}
+              onClick={() => setView(n[0])}
+            >
+              <i>{n[2]}</i>
+              {n[1]}
+            </button>
+          ))}
+          <span className="nav-group">온라인 수요 리서치</span>
+          {researchNav.map((n) => (
             <button
               key={n[0]}
               className={view === n[0] ? "active" : ""}
@@ -1842,11 +1855,12 @@ export default function Home() {
         </nav>
         <div className="sidebar-foot">
           <span className="live-dot" />
-          수집 파이프라인
-          <small>{allProducts.length}개 조사 제품 · 5개 채널</small>
+          데이터 파이프라인
+          <small>파트너 약국 5지점 · 조사 제품 {allProducts.length}개</small>
         </div>
       </aside>
       <main>
+        {view === "pharmacy" && <PharmacyView />}{" "}
         {view === "overview" && (
           <Overview
             manual={manual}

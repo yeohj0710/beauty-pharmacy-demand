@@ -20,10 +20,14 @@ test("server-renders the product demand dashboard", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>제품 수요 대시보드 \| 웰니스박스<\/title>/i);
-  assert.match(html, /96(?:<!-- -->)?개 조사 제품/);
-  assert.match(html, /480<small>건<\/small>/);
-  assert.match(html, /VT PDRN Cream RX/);
+  assert.match(html, /<title>뷰티 약국 수요 데이터 \| 웰니스박스<\/title>/i);
+  // 기본 화면은 약국 실매출 뷰다.
+  assert.match(html, /뷰티 약국 실매출을/);
+  assert.match(html, /퓨어약국 성수점/);
+  assert.match(html, /온라인 수요 신호/);
+  assert.match(html, /조사 제품 (?:<!-- -->)?96/);
+  // 매출 수치·상품명은 열람 암호 없이 서버 HTML에 노출되지 않는다.
+  assert.doesNotMatch(html, /애크논크림/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|Codex is working/i);
 });
 
