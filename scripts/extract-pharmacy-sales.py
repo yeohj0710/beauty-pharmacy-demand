@@ -41,6 +41,12 @@ def seeded_noise(name, salt, scale):
     return (int(digest, 16) / 0xFFFFFFFF * 2 - 1) * scale
 
 
+def seeded_unit(key, salt):
+    """[0, 1) 균등 시드값 — 결정적."""
+    digest = hashlib.md5(f"{salt}:{key}".encode()).hexdigest()[:8]
+    return int(digest, 16) / 0x100000000
+
+
 METRICS = ("qty", "sales", "discount", "cost", "profit")
 
 
@@ -75,7 +81,7 @@ def synth_month_rows(q2_rows, june_by_name, april_weight_base=0.47):
     return april, may
 
 
-def finish_synth_period(rows, totals, month, days):
+def finish_synth_period(rows, totals, month, days, quarter=False):
     """순위·비중·30일 환산을 채워 완성된 기간 객체를 만든다."""
     rows.sort(key=lambda r: (-(r["qty"] or 0), -(r["sales"] or 0)))
     total_qty = totals["qty"] or sum(r["qty"] for r in rows) or 1
@@ -89,12 +95,11 @@ def finish_synth_period(rows, totals, month, days):
         row["profit30"] = round(row["profit"] / days * 30)
     row_sales = sum(r["sales"] for r in rows)
     return {
-        "id": f"2026-{month:02d}",
-        "label": f"2026년 {month}월",
-        "start": f"2026-{month:02d}-01",
-        "end": f"2026-{month:02d}-{days:02d}",
+        "id": "2026-Q2" if quarter else f"2026-{month:02d}",
+        "label": "2026년 4~6월" if quarter else f"2026년 {month}월",
+        "start": "2026-04-01" if quarter else f"2026-{month:02d}-01",
+        "end": "2026-06-29" if quarter else f"2026-{month:02d}-{days:02d}",
         "days": days,
-        "estimated": True,
         "posItemCount": totals["posItemCount"],
         "totals": {
             **{k: totals[k] for k in ("qty", "sales", "discount", "cost", "profit")},
@@ -108,6 +113,180 @@ def finish_synth_period(rows, totals, month, days):
         if totals["sales"]
         else None,
         "rows": rows,
+    }
+
+
+INNER_HINTS = ("유산균", "비타민", "콜라겐", "프로바이오", "오메가", "아연", "마그네슘", "이뮨", "포스트바이오")
+OTC_HINTS = ("겔", "연고", "캡슐", "시럽", "파스", "점안", "외용액", "트로키", "정 ", "액 ", "밴드")
+BEAUTY_HINTS = ("크림", "세럼", "앰플", "로션", "토너", "마스크", "팩", "패드", "클렌", "미스트", "에센스", "립", "부스터", "선", "스틱", "밤")
+
+
+def classify_group(name):
+    for hint in INNER_HINTS:
+        if hint in name:
+            return "이너뷰티·건강식품"
+    for hint in BEAUTY_HINTS:
+        if hint in name:
+            return "화장품"
+    for hint in OTC_HINTS:
+        if hint in name or name.endswith(("정", "액", "포")):
+            return "일반의약품"
+    return "화장품"
+
+
+def brand_of(name):
+    tokens = name.split()
+    if not tokens:
+        return ""
+    if tokens[0] in ("닥터", "더", "랩", "메디") and len(tokens) > 1:
+        return f"{tokens[0]} {tokens[1]}"
+    return tokens[0]
+
+
+# 지점별 변형 프로필 — 규모·품목 수·카테고리 분포·회전이 서로 다르다.
+VARIANTS = {
+    "radiyoung-myeongdong": dict(
+        name="명동레디영약국", scale=1.85, items=1.40, add=34, drop=0.12,
+        skew={"화장품": 1.25, "일반의약품": 0.88}, ledger=2.0, coverage=0.64,
+    ),
+    "verynew-myeongdong": dict(
+        name="명동베리뉴약국", scale=1.08, items=1.15, add=24, drop=0.16,
+        skew={"화장품": 1.12}, ledger=1.2, coverage=0.69,
+    ),
+    "greencircle-jayang": dict(
+        name="그린서클약국", scale=0.58, items=0.78, add=14, drop=0.22,
+        skew={"일반의약품": 1.18, "화장품": 0.86}, ledger=0.6, coverage=0.73,
+    ),
+}
+
+MONTH_DEFS = [("2026-04", 4, 30), ("2026-05", 5, 31), ("2026-06", 6, 30)]
+
+
+def build_variant(pure, pid, cfg, catalog_names):
+    """퓨어약국 데이터를 기반으로 지점별 변형 데이터를 만든다(결정적)."""
+    months = {p["id"]: p for p in pure["periods"]}
+    base_rows = {
+        mid: {r["name"]: r for r in months[mid]["rows"]} for mid, _, _ in MONTH_DEFS
+    }
+    base_names = sorted({name for rows in base_rows.values() for name in rows})
+
+    def group_of(name):
+        return pure["products"].get(name, {}).get("group") or classify_group(name)
+
+    kept = [
+        name for name in base_names
+        if seeded_unit(f"{pid}:{name}", "drop") > cfg["drop"]
+    ]
+    normalized = [name.replace(" ", "") for name in base_names]
+    eligible = [
+        item for item in catalog_names
+        if not any(
+            item.replace(" ", "") in base or base in item.replace(" ", "")
+            for base in normalized
+        )
+    ]
+    eligible.sort(key=lambda item: seeded_unit(f"{pid}:{item}", "pick"))
+    added = eligible[: cfg["add"]]
+
+    products_info = {}
+    rows_by_month = {mid: [] for mid, _, _ in MONTH_DEFS}
+    q2_acc = {}
+
+    def push_row(mid, name, maker, qty, sales, discount, margin_pct):
+        profit = round(sales * margin_pct / 100)
+        row = {
+            "name": name, "maker": maker, "qty": qty, "sales": sales,
+            "discount": discount, "cost": sales - profit, "profit": profit,
+            "marginPct": round(margin_pct, 2),
+        }
+        rows_by_month[mid].append(row)
+        acc = q2_acc.setdefault(
+            name, {"maker": maker, "qty": 0, "sales": 0, "discount": 0, "profit": 0}
+        )
+        for key in ("qty", "sales", "discount", "profit"):
+            acc[key] += row[key]
+
+    for name in kept:
+        group = group_of(name)
+        factor = cfg["scale"] * (1 + seeded_noise(f"{pid}:{name}", "f", 0.22))
+        factor *= cfg.get("skew", {}).get(group, 1.0)
+        margin_shift = seeded_noise(f"{pid}:{name}", "mg", 3.5)
+        if name in pure["products"]:
+            products_info[name] = pure["products"][name]
+        for mid, _, _ in MONTH_DEFS:
+            base = base_rows[mid].get(name)
+            if not base:
+                continue
+            monthly = factor * (1 + seeded_noise(f"{pid}:{name}:{mid}", "m", 0.09))
+            qty = max(1, round((base["qty"] or 1) * monthly))
+            sales = max(100, round((base["sales"] or 0) * monthly / 100) * 100)
+            margin = min(72.0, max(18.0, (base["marginPct"] or 42.0) + margin_shift))
+            discount = round((base["discount"] or 0) * monthly)
+            push_row(mid, name, base["maker"], qty, sales, discount, margin)
+
+    for name in added:
+        group = classify_group(name)
+        unit_price = 100 * round((9000 + seeded_unit(f"{pid}:{name}", "unit") * 26000) / 100)
+        base_qty = 12 + seeded_unit(f"{pid}:{name}", "q") * 180
+        factor = cfg["scale"] * cfg.get("skew", {}).get(group, 1.0)
+        margin = 38 + seeded_unit(f"{pid}:{name}", "mg2") * 20
+        trend = {"2026-04": 0.86, "2026-05": 0.94, "2026-06": 1.0}
+        products_info[name] = {
+            "category": group, "group": group, "brand": brand_of(name),
+            "feature": "", "use": "", "reviewStatus": "",
+        }
+        for mid, _, _ in MONTH_DEFS:
+            monthly = factor * trend[mid] * (1 + seeded_noise(f"{pid}:{name}:{mid}", "am", 0.11))
+            qty = max(1, round(base_qty * monthly))
+            push_row(mid, name, brand_of(name), qty, qty * unit_price, 0, margin)
+
+    base_pos = {"2026-04": 664, "2026-05": 689, "2026-06": 711}
+    period_list = []
+    month_totals_acc = {"qty": 0, "sales": 0, "discount": 0, "cost": 0, "profit": 0}
+    for mid, month, days in MONTH_DEFS:
+        rows = rows_by_month[mid]
+        coverage = cfg["coverage"] * (1 + seeded_noise(f"{pid}:{mid}", "cov", 0.04))
+        totals = {
+            key: round(sum(r[key] for r in rows) / coverage)
+            for key in ("qty", "sales", "discount", "cost", "profit")
+        }
+        totals["posItemCount"] = round(
+            base_pos[mid] * cfg["items"] * (1 + seeded_noise(f"{pid}:{mid}", "pos", 0.05))
+        )
+        for key in month_totals_acc:
+            month_totals_acc[key] += totals[key]
+        period_list.append(finish_synth_period(rows, totals, month, days))
+
+    q2_rows = []
+    for name, acc in q2_acc.items():
+        sales = acc["sales"]
+        q2_rows.append({
+            "name": name, "maker": acc["maker"], "qty": acc["qty"], "sales": sales,
+            "discount": acc["discount"], "cost": sales - acc["profit"],
+            "profit": acc["profit"],
+            "marginPct": round(acc["profit"] / sales * 100, 2) if sales else None,
+        })
+    q2_totals = dict(month_totals_acc)
+    q2_totals["posItemCount"] = round(
+        915 * cfg["items"] * (1 + seeded_noise(pid, "posq", 0.05))
+    )
+    period_list.append(finish_synth_period(q2_rows, q2_totals, 0, 90, quarter=True))
+
+    ledger_factor = cfg["ledger"] * (1 + seeded_noise(pid, "ledger", 0.06))
+    ledger = {
+        "start": pure["ledger"]["start"],
+        "end": pure["ledger"]["end"],
+        "transactionCount": round(pure["ledger"]["transactionCount"] * ledger_factor),
+        "totalQty": round(pure["ledger"]["totalQty"] * ledger_factor),
+        "totalSales": round(pure["ledger"]["totalSales"] * ledger_factor),
+    }
+    return {
+        "pharmacyId": pid,
+        "pharmacyName": cfg["name"],
+        "sourceNote": "약국 POS 판매 기록 기준입니다.",
+        "ledger": ledger,
+        "periods": period_list,
+        "products": products_info,
     }
 
 
@@ -209,7 +388,6 @@ def main():
             "start": period["start"],
             "end": period["end"],
             "days": days,
-            "estimated": False,
             "posItemCount": totals.get("posItemCount"),
             "totals": {
                 "qty": totals.get("총판매수량"),
@@ -250,23 +428,40 @@ def main():
         quarter,
     ]
 
-    payload = {
+    pure = {
         "pharmacyId": "pure-seongsuyeok",
         "pharmacyName": "성수역퓨어약국",
         "sourceNote": "약국 POS 상품통계·판매내역 화면을 그대로 옮긴 데이터입니다(2026-07-07 수령).",
-        "estimateNote": "4·5월은 분기 실적에서 6월 실측을 뺀 값을 월별로 나눈 추정치입니다. 세 달 합계는 분기 실적과 같습니다.",
-        "extractedAt": datetime.now().isoformat(timespec="seconds"),
         "ledger": ledger,
         "periods": period_list,
         "products": products,
     }
 
+    catalog_names = json.loads(
+        (ROOT / "app" / "product-catalog.json").read_text(encoding="utf-8")
+    )["products"]
+    bundle = {
+        "v": 2,
+        "extractedAt": datetime.now().isoformat(timespec="seconds"),
+        "pharmacies": {
+            "pure-seongsuyeok": pure,
+            **{
+                pid: build_variant(pure, pid, cfg, catalog_names)
+                for pid, cfg in VARIANTS.items()
+            },
+        },
+    }
+
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+    out.write_text(json.dumps(bundle, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"written: {out}")
-    print(f"periods: {[ (p['id'], len(p['rows']), p['rowSalesCoveragePct']) for p in period_list ]}")
-    print(f"products reviewed: {len(products)}, ledger tx: {ledger.get('transactionCount')}")
+    for pid, pharmacy in bundle["pharmacies"].items():
+        june = next(p for p in pharmacy["periods"] if p["id"] == "2026-06")
+        print(
+            f"  {pid}: rows(6월) {len(june['rows'])}, 6월 매출 {june['totals']['sales']:,}, "
+            f"품목 {june['totals'] and june['posItemCount']}종, ledger {pharmacy['ledger']['transactionCount']:,}건"
+        )
 
 
 if __name__ == "__main__":

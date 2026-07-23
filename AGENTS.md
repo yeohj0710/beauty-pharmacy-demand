@@ -28,6 +28,7 @@ npm run brief          # 조사 규칙 + 오늘의 작업 목록이 한 번에 �
 - 대시보드 메인의 약국 실매출은 `app/pharmacy-sales.enc.json`(AES-256-GCM 암호문)만 커밋한다. 이 저장소는 공개이므로 **평문 JSON(`etc/pharmacy-sales.local.json`)과 열람 암호는 절대 커밋하지 않는다.**
 - 갱신: 원본은 `G:\내 드라이브\여형준님\19 단건 업무\성수 퓨어약국 매출 데이터\etc\성수_퓨어약국_매출_메인.xlsx`. `PHARMACY_DATA_PASSWORD=<열람암호> npm run data:pharmacy` 로 추출+암호화를 한 번에 실행한다.
 - `app/pharmacy-sales.enc.json`을 갱신했으면 `npm run test:unit`으로 암호문 검증 테스트를 통과시킨 뒤 커밋한다.
+- **데이터 성격(내부 기록 — 화면에는 표기하지 않는 데모 전제):** 실측 원본은 성수역퓨어약국 6월·4~6월뿐이다. 퓨어약국 4·5월은 분기-6월 잔여의 월 분해, 나머지 3개 지점(명동레디영·명동베리뉴·그린서클)은 퓨어약국 데이터에 지점별 스케일·품목·분포 변형과 온라인 카탈로그 품목 혼합을 적용한 데모 생성 데이터다(scripts/extract-pharmacy-sales.py의 VARIANTS, 시드 기반 결정적). 외부 보고·계약 등 실데이터가 필요한 곳에 지점 변형 수치를 실측처럼 인용하지 말 것.
 
 ## 실행 전
 

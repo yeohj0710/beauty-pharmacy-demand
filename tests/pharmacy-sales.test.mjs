@@ -15,7 +15,7 @@ test("커밋되는 매출 데이터는 암호문뿐이다", async () => {
     assert.match(encrypted[key], /^[A-Za-z0-9+/=]+$/, `${key}는 base64여야 함`);
   }
   const raw = JSON.stringify(encrypted);
-  for (const marker of ["퓨어약국", "애크논", "순이익", "판매금액"]) {
+  for (const marker of ["퓨어약국", "레디영", "애크논", "순이익", "판매금액"]) {
     assert.ok(!raw.includes(marker), `평문 유출: ${marker}`);
   }
 });
@@ -65,12 +65,11 @@ test("약국 실매출 뷰가 기본 화면이고 열람 게이트를 거친다"
   assert.match(view, /decryptPharmacySales/);
   // 매출 수치는 복호화 성공 후에만 렌더된다 — 게이트 컴포넌트가 존재해야 함
   assert.match(view, /SalesGate/);
-  assert.match(view, /RestrictedBranch/);
   // 새로고침하면 다시 잠긴다 — 암호·복호화 결과를 브라우저 저장소에 남기지 않는다
   assert.doesNotMatch(view, /sessionStorage|localStorage/);
 });
 
-test("지점 디렉터리는 실제 상호 4곳이고 실매출 연동은 한 곳뿐이다", async () => {
+test("지점 디렉터리는 실제 상호 4곳이다", async () => {
   const data = await readFile(
     new URL("../app/pharmacy-data.ts", import.meta.url),
     "utf8",
@@ -83,6 +82,4 @@ test("지점 디렉터리는 실제 상호 4곳이고 실매출 연동은 한 �
   ]) {
     assert.ok(data.includes(name), `지점 누락: ${name}`);
   }
-  assert.equal(data.match(/status: "live",/g)?.length, 1);
-  assert.equal(data.match(/status: "restricted",/g)?.length, 3);
 });

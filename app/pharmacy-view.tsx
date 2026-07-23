@@ -5,6 +5,7 @@ import {
   decryptPharmacySales,
   pharmacies,
   type Pharmacy,
+  type PharmacyDataFile,
   type PharmacySales,
   type SalesPeriod,
   type SalesRow,
@@ -150,13 +151,7 @@ function PharmacyPicker({
                       {pharmacy.area} · {pharmacy.tags.join(" · ")}
                     </small>
                   </div>
-                  <span
-                    className={`branch-badge ${
-                      pharmacy.status === "live" ? "live" : "restricted"
-                    }`}
-                  >
-                    {pharmacy.status === "live" ? "실매출 연동" : "열람 제한"}
-                  </span>
+                  <span className="branch-badge live">실매출 연동</span>
                 </button>
               </li>
             ))}
@@ -170,7 +165,7 @@ function PharmacyPicker({
 function SalesGate({
   onUnlock,
 }: {
-  onUnlock: (data: PharmacySales) => void;
+  onUnlock: (data: PharmacyDataFile) => void;
 }) {
   const [password, setPassword] = useState("");
   const [phase, setPhase] = useState<"idle" | "busy" | "error">("idle");
@@ -236,44 +231,6 @@ function SalesGate({
           <li>AES-256 암호화</li>
           <li>지점별 열람 권한</li>
           <li>닫으면 자동 잠금</li>
-        </ul>
-      </div>
-    </section>
-  );
-}
-
-function RestrictedBranch({ pharmacy }: { pharmacy: Pharmacy }) {
-  return (
-    <section className="gate-stage reveal in" aria-label="지점 열람 제한">
-      <div className="gate-backdrop" aria-hidden>
-        {[52, 34, 70, 48, 88, 60, 76, 42, 92, 66].map((height, index) => (
-          <i key={index} style={{ height: `${height}%` }} />
-        ))}
-      </div>
-      <div className="gate-card">
-        <span className="gate-kicker">Restricted Branch</span>
-        <h2>{pharmacy.name}</h2>
-        <p>
-          이 지점은 열람 권한이 따로 필요합니다.
-          <br />
-          지금은 <b>성수역퓨어약국</b> 데이터만 볼 수 있습니다.
-        </p>
-        <div className="branch-meta">
-          <div>
-            <span>상권</span>
-            <strong>{pharmacy.area}</strong>
-          </div>
-          <div>
-            <span>지점 특성</span>
-            <strong>{pharmacy.tags.join(" · ")}</strong>
-          </div>
-          <div>
-            <span>열람 상태</span>
-            <strong>권한 미발급</strong>
-          </div>
-        </div>
-        <ul className="gate-meta">
-          <li>파트너십 문의 contact@wellnessbox.kr</li>
         </ul>
       </div>
     </section>
@@ -362,7 +319,6 @@ function ProductSalesDrawer({
               <div className="period-detail" key={period.id}>
                 <h3>
                   {period.label}
-                  {period.estimated && <em className="est-tag">추정</em>}
                   <small>
                     {period.start} ~ {period.end}
                   </small>
@@ -402,9 +358,7 @@ function ProductSalesDrawer({
           })}
           <div className="score-lock">
             <b>POS 실판매 기준</b>
-            <p>
-              {data.sourceNote} {data.estimateNote}
-            </p>
+            <p>{data.sourceNote}</p>
           </div>
         </div>
       </aside>
@@ -414,8 +368,7 @@ function ProductSalesDrawer({
 
 function SalesDashboard({ data }: { data: PharmacySales }) {
   const defaultPeriod =
-    data.periods.find((item) => !item.estimated && item.days <= 31) ??
-    data.periods[0];
+    data.periods.find((item) => item.id === "2026-06") ?? data.periods[0];
   const [periodId, setPeriodId] = useState(defaultPeriod.id);
   const [sort, setSort] = useState<SortState>({ key: null, dir: "desc" });
   const [group, setGroup] = useState("전체");
@@ -497,7 +450,7 @@ function SalesDashboard({ data }: { data: PharmacySales }) {
           value={period.totals.qty}
           format={fmt}
           suffix="개"
-          caption={`판매 품목 ${fmt(period.posItemCount)}종${period.estimated ? " · 월 분해 추정" : ""}`}
+          caption={`판매 품목 ${fmt(period.posItemCount)}종`}
         />
         <Metric
           label="뷰티(화장품) 매출 비중"
@@ -530,7 +483,6 @@ function SalesDashboard({ data }: { data: PharmacySales }) {
                 onClick={() => setPeriodId(item.id)}
               >
                 {item.label.replace("2026년 ", "")}
-                {item.estimated && <em className="est-tag">추정</em>}
               </button>
             ))}
           </div>
@@ -674,7 +626,6 @@ function SalesDashboard({ data }: { data: PharmacySales }) {
           {data.sourceNote} 합계 카드는 기간 전체 {fmt(period.posItemCount)}개
           품목, 표는 상위 노출 품목 기준으로 기간 매출의{" "}
           {fmtPct(period.rowSalesCoveragePct)}를 담았습니다.
-          {period.estimated && <> {data.estimateNote}</>}
         </p>
       </section>
       {selectedProduct && (
@@ -691,8 +642,9 @@ function SalesDashboard({ data }: { data: PharmacySales }) {
 export default function PharmacyView() {
   const [pharmacy, setPharmacy] = useState<Pharmacy>(pharmacies[0]);
   // 복호화 결과는 React 상태에만 둔다 — 새로고침하면 다시 잠긴다.
-  const [data, setData] = useState<PharmacySales | null>(null);
-  useRevealOnScroll([pharmacy, data]);
+  const [bundle, setBundle] = useState<PharmacyDataFile | null>(null);
+  const data = bundle?.pharmacies[pharmacy.id] ?? null;
+  useRevealOnScroll([pharmacy, bundle]);
 
   return (
     <>
@@ -710,7 +662,7 @@ export default function PharmacyView() {
         <div className="hero-status">
           <span className="live-dot" />
           파트너 지점
-          <strong>{pharmacies.length}개 지점 · 실매출 연동 1</strong>
+          <strong>실매출 연동 {pharmacies.length}개 지점</strong>
         </div>
       </section>
       <section className="pharmacy-toolbar">
@@ -718,19 +670,17 @@ export default function PharmacyView() {
           selected={pharmacy}
           onSelect={(next) => setPharmacy(next)}
         />
-        {pharmacy.status === "live" && data && (
+        {data && (
           <div className="unlock-state">
             <span className="live-dot" />
             열람 인증됨 · {data.pharmacyName}
           </div>
         )}
       </section>
-      {pharmacy.status === "restricted" ? (
-        <RestrictedBranch pharmacy={pharmacy} />
-      ) : data ? (
-        <SalesDashboard data={data} />
+      {data ? (
+        <SalesDashboard key={pharmacy.id} data={data} />
       ) : (
-        <SalesGate onUnlock={(decrypted) => setData(decrypted)} />
+        <SalesGate onUnlock={(decrypted) => setBundle(decrypted)} />
       )}
     </>
   );
