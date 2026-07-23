@@ -3606,3 +3606,79 @@ body {
     padding-right: 22px;
   }
 }
+
+/* ---------- 모션 리파인 (레퍼런스: 부드러운 스태거 리빌) ---------- */
+.reveal {
+  transform: translateY(28px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.hero {
+  animation: none;
+}
+.hero > div > * {
+  animation: fade-up 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero > div > *:nth-child(2) {
+  animation-delay: 0.09s;
+}
+.hero > div > *:nth-child(3) {
+  animation-delay: 0.18s;
+}
+.hero-status {
+  animation: fade-up 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+}
+.pharmacy-toolbar {
+  animation: fade-up 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.34s both;
+}
+.gate-card {
+  animation: card-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.pharmacy-metrics article {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pharmacy-metrics.in article {
+  opacity: 1;
+  transform: none;
+}
+.pharmacy-metrics.in article:nth-child(2) {
+  transition-delay: 80ms;
+}
+.pharmacy-metrics.in article:nth-child(3) {
+  transition-delay: 160ms;
+}
+.pharmacy-metrics.in article:nth-child(4) {
+  transition-delay: 240ms;
+}
+.pharmacy-metrics.in article:nth-child(5) {
+  transition-delay: 320ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero > div > *,
+  .hero-status,
+  .pharmacy-toolbar,
+  .gate-card {
+    animation: none;
+  }
+  .pharmacy-metrics article {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

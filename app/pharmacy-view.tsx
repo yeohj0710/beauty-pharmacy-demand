@@ -36,10 +36,15 @@ export function useRevealOnScroll(deps: unknown[]) {
     }
     const observer = new IntersectionObserver(
       (entries) => {
+        // 같은 화면에 함께 들어온 요소는 순차적으로 떠오르게 지연을 준다.
+        let order = 0;
         for (const entry of entries) {
           if (!entry.isIntersecting) continue;
-          entry.target.classList.add("in");
-          observer.unobserve(entry.target);
+          const element = entry.target as HTMLElement;
+          element.style.transitionDelay = `${Math.min(order * 110, 440)}ms`;
+          element.classList.add("in");
+          observer.unobserve(element);
+          order += 1;
         }
       },
       { threshold: 0.1 },
@@ -198,9 +203,9 @@ function SalesGate({
         <span className="gate-kicker">Partner Data Room</span>
         <h2>실매출 데이터 열람</h2>
         <p>
-          파트너 약국의 POS 영업 데이터입니다.
+          파트너 약국의 영업 데이터입니다.
           <br />
-          열람 암호가 확인된 뒤에만 이 브라우저에서 복호화됩니다.
+          열람 암호를 입력하면 바로 확인할 수 있습니다.
         </p>
         <form
           className="gate-form"
@@ -228,9 +233,9 @@ function SalesGate({
           <p className="gate-error">열람 암호가 올바르지 않습니다.</p>
         )}
         <ul className="gate-meta">
-          <li>AES-256 암호화 보관</li>
-          <li>지점 단위 열람 권한</li>
-          <li>세션 종료 시 자동 잠금</li>
+          <li>AES-256 암호화</li>
+          <li>지점별 열람 권한</li>
+          <li>닫으면 자동 잠금</li>
         </ul>
       </div>
     </section>
@@ -249,10 +254,9 @@ function RestrictedBranch({ pharmacy }: { pharmacy: Pharmacy }) {
         <span className="gate-kicker">Restricted Branch</span>
         <h2>{pharmacy.name}</h2>
         <p>
-          지점별 매출 데이터 열람 권한은 파트너 계약 범위에 따라
+          이 지점은 열람 권한이 따로 필요합니다.
           <br />
-          지점 단위로 발급됩니다. 현재 세션은 <b>성수역퓨어약국</b>만 열람할 수
-          있습니다.
+          지금은 <b>성수역퓨어약국</b> 데이터만 볼 수 있습니다.
         </p>
         <div className="branch-meta">
           <div>
@@ -399,7 +403,7 @@ function ProductSalesDrawer({
           <div className="score-lock">
             <b>POS 실판매 기준</b>
             <p>
-              {data.sourceNote}. {data.estimateNote}
+              {data.sourceNote} {data.estimateNote}
             </p>
           </div>
         </div>
@@ -478,7 +482,7 @@ function SalesDashboard({ data }: { data: PharmacySales }) {
           caption={
             period.days !== 30
               ? `월 환산 ${fmtWon(period.totals.sales30)}원`
-              : `POS 등록 ${fmt(period.posItemCount)}개 품목 합계`
+              : `등록 품목 ${fmt(period.posItemCount)}개 합계`
           }
         />
         <Metric
@@ -493,14 +497,14 @@ function SalesDashboard({ data }: { data: PharmacySales }) {
           value={period.totals.qty}
           format={fmt}
           suffix="개"
-          caption={`판매 상품 ${fmt(period.posItemCount)}종${period.estimated ? " · 월 분해 추정" : ""}`}
+          caption={`판매 품목 ${fmt(period.posItemCount)}종${period.estimated ? " · 월 분해 추정" : ""}`}
         />
         <Metric
           label="뷰티(화장품) 매출 비중"
           value={beautyShare}
           format={(value) => value.toFixed(1)}
           suffix="%"
-          caption="데이터화 상위 상품 기준"
+          caption="상위 품목 기준"
         />
         <Metric
           label="누적 판매 건수"
@@ -550,7 +554,7 @@ function SalesDashboard({ data }: { data: PharmacySales }) {
             ))}
           </div>
           <span className="sort-hint">
-            열 제목을 누르면 내림차순 → 오름차순 → 기본 순서로 정렬됩니다
+            열 제목을 누르면 내림차순·오름차순·기본 순으로 바뀝니다
           </span>
         </div>
         <div className="table-wrap">
@@ -667,10 +671,9 @@ function SalesDashboard({ data }: { data: PharmacySales }) {
           </table>
         </div>
         <p className="quality-note">
-          {data.sourceNote}. 상단 합계 카드는 기간 전체(
-          {fmt(period.posItemCount)}개 품목) 기준이며, 상품 행은 POS 상위 노출
-          품목을 데이터화한 것으로 기간 매출의{" "}
-          {fmtPct(period.rowSalesCoveragePct)}를 커버합니다.
+          {data.sourceNote} 합계 카드는 기간 전체 {fmt(period.posItemCount)}개
+          품목, 표는 상위 노출 품목 기준으로 기간 매출의{" "}
+          {fmtPct(period.rowSalesCoveragePct)}를 담았습니다.
           {period.estimated && <> {data.estimateNote}</>}
         </p>
       </section>
@@ -700,8 +703,8 @@ export default function PharmacyView() {
             뷰티 약국 <span className="grad">실매출 데이터</span>
           </h1>
           <p className="hero-copy">
-            성수·명동 뷰티 상권 파트너 약국의 POS 판매 데이터를
-            <br className="desktop" /> 제품·기간 단위로 집계합니다.
+            성수·명동 파트너 약국의 POS 판매 기록을
+            <br className="desktop" /> 제품별·기간별로 집계했습니다.
           </p>
         </div>
         <div className="hero-status">

@@ -253,8 +253,8 @@ def main():
     payload = {
         "pharmacyId": "pure-seongsuyeok",
         "pharmacyName": "성수역퓨어약국",
-        "sourceNote": "약국 POS 상품통계·판매내역 화면 기준 데이터화 (2026-07-07 수령)",
-        "estimateNote": "4월·5월 단월은 분기 실적(4~6월)과 6월 실측의 차이를 월 분해한 추정치이며, 합계는 분기 실적과 일치합니다.",
+        "sourceNote": "약국 POS 상품통계·판매내역 화면을 그대로 옮긴 데이터입니다(2026-07-07 수령).",
+        "estimateNote": "4·5월은 분기 실적에서 6월 실측을 뺀 값을 월별로 나눈 추정치입니다. 세 달 합계는 분기 실적과 같습니다.",
         "extractedAt": datetime.now().isoformat(timespec="seconds"),
         "ledger": ledger,
         "periods": period_list,

@@ -1045,9 +1045,8 @@ function Overview({
           <p className="eyebrow">부가 지표</p>
           <h1>온라인 수요 신호</h1>
           <p className="hero-copy">
-            네이버, Google, YouTube, Instagram, TikTok의 제품별 관심 신호를
-            <br className="desktop" /> 플랫폼별 기준으로 수집해 근거와 함께
-            정리합니다.
+            네이버·구글·유튜브·인스타그램·틱톡, 5개 채널의 관심 신호를
+            <br className="desktop" /> 원본 근거와 함께 정리합니다.
           </p>
         </div>
         <div className="hero-status">
