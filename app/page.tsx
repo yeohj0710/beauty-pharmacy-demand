@@ -2,6 +2,7 @@
 
 import { type CSSProperties, useEffect, useMemo, useState } from "react";
 import catalog from "./product-catalog.json";
+import productAssets from "./product-assets.json";
 import signalFile from "./signals.json";
 import qualityFile from "./signal-quality.json";
 import type { ReportRow } from "./report-export";
@@ -699,6 +700,7 @@ function ProductDrawer({
   onClose: () => void;
   onOpen: (platform: Platform) => void;
 }) {
+  const asset = productAssets.find((item) => item.entityId === signal.id);
   return (
     <div className="drawer-backdrop" onClick={onClose}>
       <aside
@@ -714,6 +716,17 @@ function ProductDrawer({
         <div className="drawer-intro">
           <span className="drawer-rank">제품 수요 상세</span>
           <h2>{signal.name}</h2>
+          {asset?.localImagePath && (
+            <div className="product-asset">
+              <img src={asset.localImagePath} alt={`${signal.name} 제품 이미지`} />
+              <div>
+                <span>{asset.brand}</span>
+                <a href={asset.sourcePageUrl} target="_blank" rel="noreferrer">
+                  이미지 출처 확인
+                </a>
+              </div>
+            </div>
+          )}
           <p>
             검색 키워드: <b>{signal.keywords.join(" · ")}</b>
           </p>

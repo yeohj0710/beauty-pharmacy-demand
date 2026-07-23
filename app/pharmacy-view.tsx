@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import demandEntities from "./demand-entities.json";
+import productAssets from "./product-assets.json";
 import {
   decryptPharmacySales,
   pharmacies,
@@ -25,6 +27,13 @@ const fmtPct = (value?: number | null, digits = 1) =>
   value == null ? "—" : `${value.toFixed(digits)}%`;
 // KPI 카드처럼 단위(<small>원</small>)를 따로 붙이는 자리용 — "원" 중복 방지
 const fmtWonBare = (value: number) => fmtWon(value).replace(/원$/, "");
+
+const assetBySalesName = new Map(
+  demandEntities.flatMap((entity) => {
+    const asset = productAssets.find((item) => item.entityId === entity.id);
+    return [...entity.skuNames, ...(entity.sourceAliases ?? []), entity.name].map((name) => [name, asset] as const);
+  }),
+);
 
 // 스크롤 진입 시 .reveal 요소를 순차적으로 띄운다.
 export function useRevealOnScroll(deps: unknown[]) {
@@ -274,6 +283,7 @@ function ProductSalesDrawer({
 }) {
   const info = data.products[name];
   const group = productGroup(data, name);
+  const asset = assetBySalesName.get(name);
   return (
     <div className="drawer-backdrop" onClick={onClose}>
       <aside
@@ -294,6 +304,17 @@ function ProductSalesDrawer({
               {group}
             </span>
           </h2>
+          {asset?.localImagePath && (
+            <div className="product-asset">
+              <img src={asset.localImagePath} alt={`${name} 제품 이미지`} />
+              <div>
+                <span>{asset.brand}</span>
+                <a href={asset.sourcePageUrl} target="_blank" rel="noreferrer">
+                  이미지 출처 확인
+                </a>
+              </div>
+            </div>
+          )}
           {info && (
             <dl className="product-facts">
               <div>
@@ -658,11 +679,6 @@ export default function PharmacyView() {
             성수·명동 파트너 약국의 POS 판매 기록을
             <br className="desktop" /> 제품별·기간별로 집계했습니다.
           </p>
-        </div>
-        <div className="hero-status">
-          <span className="live-dot" />
-          파트너 지점
-          <strong>실매출 연동 {pharmacies.length}개 지점</strong>
         </div>
       </section>
       <section className="pharmacy-toolbar">

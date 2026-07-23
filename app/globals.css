@@ -3615,6 +3615,48 @@ body {
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
+
+.product-asset {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 16px;
+  align-items: center;
+  margin: 18px 0;
+  padding: 14px;
+  border: 1px solid #e6e8eb;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.product-asset img {
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #f7f8fa;
+}
+
+.product-asset div {
+  display: grid;
+  gap: 8px;
+}
+
+.product-asset span {
+  color: #6b7684;
+  font-size: 13px;
+}
+
+.product-asset a {
+  width: fit-content;
+  color: #0064ff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.product-asset a:hover {
+  text-decoration: underline;
+}
 .hero {
   animation: none;
 }

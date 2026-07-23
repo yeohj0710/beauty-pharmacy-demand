@@ -10,7 +10,9 @@
     "sourceType": "official-brand",
     "width": 1500,
     "height": 1500,
-    "matchScore": 187
+    "matchScore": 187,
+    "localImagePath": "/product-images/dr-rejuall-pdrn-cream.jpg",
+    "downloadBytes": 128184
   },
   {
     "entityId": "noscarna-gel",
@@ -23,7 +25,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 632,
     "height": 420,
-    "matchScore": 105
+    "matchScore": 105,
+    "localImagePath": "/product-images/noscarna-gel.jpg",
+    "downloadBytes": 16495
   },
   {
     "entityId": "dr-rejuall-pdrn-lip-serum",
@@ -36,7 +40,9 @@
     "sourceType": "official-brand",
     "width": 800,
     "height": 800,
-    "matchScore": 99
+    "matchScore": 99,
+    "localImagePath": "/product-images/dr-rejuall-pdrn-lip-serum.png",
+    "downloadBytes": 47207
   },
   {
     "entityId": "acnon-cream",
@@ -49,20 +55,24 @@
     "sourceType": "official-brand",
     "width": 337,
     "height": 133,
-    "matchScore": 15
+    "matchScore": 15,
+    "localImagePath": "/product-images/acnon-cream.png",
+    "downloadBytes": 49675
   },
   {
     "entityId": "melatoning-cream",
     "productName": "멜라토닝크림",
     "brand": "동아제약",
-    "sourcePageUrl": "http://dpharm.co.kr/melatoning/ko/story",
-    "sourceImageUrl": "http://www.dpharm.co.kr/images/brand/melatoning-product.png",
+    "sourcePageUrl": "https://dpharm.co.kr/melatoning/ko/story",
+    "sourceImageUrl": "https://www.dpharm.co.kr/images/brand/melatoning-product.png",
     "sourceTitle": "멜라토닝 - 브랜드스토리 - 동아제약 OTC브랜드 홈페이지",
     "sourceHost": "dpharm.co.kr",
     "sourceType": "official-brand",
     "width": 435,
     "height": 340,
-    "matchScore": 15
+    "matchScore": 15,
+    "localImagePath": "/product-images/melatoning-cream.png",
+    "downloadBytes": 92678
   },
   {
     "entityId": "aclean-gel",
@@ -75,7 +85,9 @@
     "sourceType": "official-brand",
     "width": 528,
     "height": 352,
-    "matchScore": 15
+    "matchScore": 15,
+    "localImagePath": "/product-images/aclean-gel.png",
+    "downloadBytes": 40502
   },
   {
     "entityId": "re4day-woman-plus",
@@ -88,7 +100,9 @@
     "sourceType": "official-brand",
     "width": 1000,
     "height": 1000,
-    "matchScore": 39
+    "matchScore": 39,
+    "localImagePath": "/product-images/re4day-woman-plus.jpg",
+    "downloadBytes": 295135
   },
   {
     "entityId": "drdeep-glow-shot",
@@ -101,7 +115,9 @@
     "sourceType": "official-brand",
     "width": 500,
     "height": 500,
-    "matchScore": 87
+    "matchScore": 87,
+    "localImagePath": "/product-images/drdeep-glow-shot.png",
+    "downloadBytes": 41532
   },
   {
     "entityId": "drdeep-tt-cream",
@@ -114,7 +130,9 @@
     "sourceType": "official-brand",
     "width": 500,
     "height": 500,
-    "matchScore": 87
+    "matchScore": 87,
+    "localImagePath": "/product-images/drdeep-tt-cream.jpg",
+    "downloadBytes": 21001
   },
   {
     "entityId": "catalog-001",
@@ -127,137 +145,159 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 552,
     "height": 391,
-    "matchScore": 141
+    "matchScore": 141,
+    "localImagePath": "/product-images/catalog-001.webp",
+    "downloadBytes": 14144
   },
   {
     "entityId": "catalog-002",
     "productName": "뉴베인액 7포",
     "brand": "",
-    "sourcePageUrl": "",
-    "sourceImageUrl": "",
-    "sourceTitle": "",
-    "sourceHost": "",
-    "sourceType": "unresolved",
+    "sourcePageUrl": "https://www.daewonpharm.com/pr/sub01_01_view.jsp?idx=474&lang=1&mb=06&mm=61&ms=611",
+    "sourceImageUrl": "https://www.daewonpharm.com/upload/2025_11_18_104520.jpg",
+    "sourceTitle": "뉴베인액",
+    "sourceHost": "daewonpharm.com",
+    "sourceType": "official-brand",
     "width": null,
     "height": null,
-    "matchScore": 0
+    "matchScore": 0,
+    "localImagePath": "/product-images/catalog-002.jpg",
+    "downloadBytes": 166905
   },
   {
     "entityId": "catalog-003",
     "productName": "닥터 리쥬올 어드밴스드 레티노 멜라 세럼",
     "brand": "",
-    "sourcePageUrl": "https://drreju-all.kr/product/%EB%8B%A5%ED%84%B0-%EB%A6%AC%EC%A5%AC%EC%98%AC-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C-pdrn-%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85-%EB%A6%BD-%EC%84%B8%EB%9F%BC-10ml/43/",
-    "sourceImageUrl": "https://ecimg.cafe24img.com/pg1921b33605515017/neosimplerix/web/product/big/20260521/c8a2d519ba38f6ae8d06be668aab0cd9.png",
-    "sourceTitle": "닥터 리쥬올 어드밴스드 PDRN 리쥬비네이팅 립 세럼 10ml - Dr.Reju-All",
+    "sourcePageUrl": "https://drreju-all.kr/product/drreju-all-advanced-retino-mela-serum-50ml/35/category/63/display/1/",
+    "sourceImageUrl": "https://ecimg.cafe24img.com/pg1921b33605515017/neosimplerix/web/product/medium/20260521/b12a8ed9d7c5a49a36a3233cf8626ca3.png",
+    "sourceTitle": "Dr.Reju-All Advanced Retino-Mela Serum 50ml",
     "sourceHost": "drreju-all.kr",
     "sourceType": "official-brand",
     "width": 800,
     "height": 800,
-    "matchScore": 63
+    "matchScore": 63,
+    "localImagePath": "/product-images/catalog-003.png",
+    "downloadBytes": 86745
   },
   {
     "entityId": "catalog-004",
     "productName": "닥터 리쥬올 어드밴스드 레티노 멜라 톤 크림",
     "brand": "",
-    "sourcePageUrl": "https://www.yakkok.com/product/%EB%8B%A5%ED%84%B0-%EB%A6%AC%EC%A5%AC%EC%98%AC-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C-PDRN-%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85-%ED%81%AC%EB%A6%BC-30ml",
-    "sourceImageUrl": "https://yakkok.com/_next/image?url=https:%2F%2Fcdn.platpharm.co.kr%2F2025%2F12%2F2512160631270003334.webp&w=750&q=75",
-    "sourceTitle": "닥터 리쥬올 어드밴스드 PDRN 리쥬비네이팅 크림의 재고 있는 약국 찾기 | 약콕",
-    "sourceHost": "yakkok.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://drreju-all.kr/product/drreju-all-advanced-retino-mela-tone-cream-30ml/54/category/63/display/1/",
+    "sourceImageUrl": "https://ecimg.cafe24img.com/pg1921b33605515017/neosimplerix/web/product/medium/20260521/0dbe49f906a9b4cf3b0c14447538a89e.png",
+    "sourceTitle": "Dr.Reju-All Advanced Retino-Mela Tone Cream 30ml",
+    "sourceHost": "drreju-all.kr",
+    "sourceType": "official-brand",
     "width": 750,
     "height": 3026,
-    "matchScore": 65
+    "matchScore": 65,
+    "localImagePath": "/product-images/catalog-004.png",
+    "downloadBytes": 96328
   },
   {
     "entityId": "catalog-005",
     "productName": "닥터 리쥬올 어드밴스드 엑씨 세라마이드 베리어 크림",
     "brand": "",
-    "sourcePageUrl": "https://www.hwahae.co.kr/goods/%EB%8B%A5%ED%84%B0%EC%98%A4%EB%9D%BC%ED%81%B4-%EC%84%B8%EB%9D%BC%EB%A7%88%EB%B2%A0%EB%A6%AC%EC%96%B4-%ED%8E%98%EC%9D%B4%EC%85%9C-%EC%84%B8%EB%9D%BC%EB%A7%88%EC%9D%B4%EB%93%9C-%ED%81%AC%EB%A6%BC-80g/16948?goods_tab=review_ingredients",
-    "sourceImageUrl": "https://img.hwahae.co.kr/commerce/goods/20230405_113513_230120_%EC%84%B8%EB%9D%BC%EB%A7%88%EB%B2%A0%EB%A6%AC%EC%96%B4%ED%81%AC%EB%A6%BC_%EB%A6%AC%EB%89%B4%EC%96%BC.jpg",
-    "sourceTitle": "닥터오라클 세라마베리어 페이셜 세라마이드 크림 80g 상품의 정보 및 후기/리뷰, 성분 그리고 가격, 랭킹, 할인 혜택을 ...",
-    "sourceHost": "hwahae.co.kr",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://drreju-all.kr/product/drreju-all-advanced-lc-ceramide-barrier-cream-90ml/36/category/63/display/1/",
+    "sourceImageUrl": "https://ecimg.cafe24img.com/pg1921b33605515017/neosimplerix/web/product/medium/20260521/b89d7821efe7d24f0bb0041cb57ec942.png",
+    "sourceTitle": "Dr.Reju-All Advanced LC Ceramide Barrier Cream 90ml",
+    "sourceHost": "drreju-all.kr",
+    "sourceType": "official-brand",
     "width": 1000,
     "height": 1000,
-    "matchScore": 53
+    "matchScore": 53,
+    "localImagePath": "/product-images/catalog-005.png",
+    "downloadBytes": 106907
   },
   {
     "entityId": "catalog-006",
     "productName": "닥터 리쥬올 어드밴스드 피디알엔 리쥬비네이팅 마스크 6매",
     "brand": "",
-    "sourcePageUrl": "https://www.hwahae.co.kr/products/%EB%8B%A5%ED%84%B0%EB%A6%AC%EC%A5%AC%EC%98%AC-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C-PDRN-%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85-%EB%A7%88%EC%8A%A4%ED%81%AC/2191278",
-    "sourceImageUrl": "https://img.hwahae.co.kr/products/2191278/2191278_20260225124501.jpg",
-    "sourceTitle": "닥터리쥬올 어드밴스드 PDRN 리쥬비네이팅 마스크 제품의 정보 및 후기/리뷰, 성분 그리고 가격, 랭킹, 할인 혜택을 확인하고 ...",
-    "sourceHost": "hwahae.co.kr",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://drreju-all.kr/product/drreju-all-advanced-pdrn-rejuvenating-mask-6p/49/",
+    "sourceImageUrl": "https://ecimg.cafe24img.com/pg1921b33605515017/neosimplerix/web/product/medium/20260521/09878d21fc199048dd793f0ab49e72f6.png",
+    "sourceTitle": "Dr.Reju-All Advanced PDRN Rejuvenating Mask 6P",
+    "sourceHost": "drreju-all.kr",
+    "sourceType": "official-brand",
     "width": 720,
     "height": 720,
-    "matchScore": 65
+    "matchScore": 65,
+    "localImagePath": "/product-images/catalog-006.png",
+    "downloadBytes": 326749
   },
   {
     "entityId": "catalog-007",
     "productName": "닥터 리쥬올 어드밴스드 피디알엔 카밍 선 세럼",
     "brand": "",
-    "sourcePageUrl": "https://drreju-all.kr/product/%EB%8B%A5%ED%84%B0-%EB%A6%AC%EC%A5%AC%EC%98%AC-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C-pdrn-%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85-%EB%A6%BD-%EC%84%B8%EB%9F%BC-10ml/43/",
-    "sourceImageUrl": "https://ecimg.cafe24img.com/pg1921b33605515017/neosimplerix/web/product/big/20260521/c8a2d519ba38f6ae8d06be668aab0cd9.png",
-    "sourceTitle": "닥터 리쥬올 어드밴스드 PDRN 리쥬비네이팅 립 세럼 10ml - Dr.Reju-All",
+    "sourcePageUrl": "https://drreju-all.kr/product/drreju-all-advanced-pdrn-calming-sun-serum-50ml/79/",
+    "sourceImageUrl": "https://ecimg.cafe24img.com/pg1921b33605515017/neosimplerix/web/product/medium/20260601/c42f606a102eee423ce796f9219bf187.png",
+    "sourceTitle": "Dr.Reju-All Advanced PDRN Calming Sun Serum 50ml",
     "sourceHost": "drreju-all.kr",
     "sourceType": "official-brand",
     "width": 800,
     "height": 800,
-    "matchScore": 63
+    "matchScore": 63,
+    "localImagePath": "/product-images/catalog-007.png",
+    "downloadBytes": 86525
   },
   {
     "entityId": "catalog-008",
     "productName": "닥터 리쥬올 어드밴스드 피디알엔 코퍼 펩타이드 세럼",
     "brand": "",
-    "sourcePageUrl": "https://drreju-all.kr/product/%EB%8B%A5%ED%84%B0-%EB%A6%AC%EC%A5%AC%EC%98%AC-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C-pdrn-%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85-%EB%A6%BD-%EC%84%B8%EB%9F%BC-10ml/43/",
-    "sourceImageUrl": "https://ecimg.cafe24img.com/pg1921b33605515017/neosimplerix/web/product/big/20260521/c8a2d519ba38f6ae8d06be668aab0cd9.png",
-    "sourceTitle": "닥터 리쥬올 어드밴스드 PDRN 리쥬비네이팅 립 세럼 10ml - Dr.Reju-All",
-    "sourceHost": "drreju-all.kr",
+    "sourcePageUrl": "https://drrejuall.com/products/advanced-pdrn-copper-peptide-serum",
+    "sourceImageUrl": "https://drrejuall.com/cdn/shop/files/6f4cb2516c4c479c16359c7e9b129bc9.jpg?v=1780023639&width=1500",
+    "sourceTitle": "Advanced PDRN Copper Peptide Serum",
+    "sourceHost": "drrejuall.com",
     "sourceType": "official-brand",
     "width": 800,
     "height": 800,
-    "matchScore": 63
+    "matchScore": 63,
+    "localImagePath": "/product-images/catalog-008.jpg",
+    "downloadBytes": 118451
   },
   {
     "entityId": "catalog-009",
     "productName": "닥터 리쥬올 어드밴스드 피디알엔 헤어 덴시티 스칼프 세럼",
     "brand": "",
-    "sourcePageUrl": "https://www.hwahae.co.kr/products/%EB%8B%A5%ED%84%B0%EB%A6%AC%EC%A5%AC%EC%98%AC-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C-%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94-%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85-%ED%81%AC%EB%A6%BC/2173563",
-    "sourceImageUrl": "https://img.hwahae.co.kr/products/2173563/2173563_20251120134307.jpg",
-    "sourceTitle": "닥터리쥬올 어드밴스드 피디알엔 리쥬비네이팅 크림 제품의 정보 및 후기/리뷰, 성분 그리고 가격, 랭킹, 할인 혜택을 확인하고 ...",
-    "sourceHost": "hwahae.co.kr",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://drreju-all.kr/product/drreju-all-advanced-pdrn-hair-density-scalp-serum-15ml/77/category/63/display/1/",
+    "sourceImageUrl": "https://ecimg.cafe24img.com/pg1921b33605515017/neosimplerix/web/product/medium/20260601/a36d7615e5fddb1b54e2fcc89cbc9530.png",
+    "sourceTitle": "Dr.Reju-All Advanced PDRN Hair Density Scalp Serum 15ml",
+    "sourceHost": "drreju-all.kr",
+    "sourceType": "official-brand",
     "width": 720,
     "height": 720,
-    "matchScore": 53
+    "matchScore": 53,
+    "localImagePath": "/product-images/catalog-009.png",
+    "downloadBytes": 50198
   },
   {
     "entityId": "catalog-010",
     "productName": "닥터 리쥬올 어드밴스드 피디엘엘에이 퍼밍 크림",
     "brand": "",
-    "sourcePageUrl": "https://www.yakkok.com/product/%EB%8B%A5%ED%84%B0-%EB%A6%AC%EC%A5%AC%EC%98%AC-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C-PDRN-%EB%A6%AC%EC%A5%AC%EB%B9%84%EB%84%A4%EC%9D%B4%ED%8C%85-%ED%81%AC%EB%A6%BC-30ml",
-    "sourceImageUrl": "https://yakkok.com/_next/image?url=https:%2F%2Fcdn.platpharm.co.kr%2F2025%2F12%2F2512160631270003334.webp&w=750&q=75",
-    "sourceTitle": "닥터 리쥬올 어드밴스드 PDRN 리쥬비네이팅 크림의 재고 있는 약국 찾기 | 약콕",
-    "sourceHost": "yakkok.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://drreju-all.kr/product/drreju-all-advanced-pdlla-firming-cream-30ml/60/category/63/display/1/",
+    "sourceImageUrl": "https://ecimg.cafe24img.com/pg1921b33605515017/neosimplerix/web/product/medium/20260521/8104d57abe6a2c1186d292803e3e99c0.png",
+    "sourceTitle": "Dr.Reju-All Advanced PDLLA Firming Cream 30ml",
+    "sourceHost": "drreju-all.kr",
+    "sourceType": "official-brand",
     "width": 750,
     "height": 3026,
-    "matchScore": 65
+    "matchScore": 65,
+    "localImagePath": "/product-images/catalog-010.png",
+    "downloadBytes": 64996
   },
   {
     "entityId": "catalog-011",
     "productName": "닥터딥 미네랄 피디알엔 52000 리-베리어 퍼밍 래디언스 크림",
     "brand": "",
-    "sourcePageUrl": "https://www.musinsa.com/products/4989586",
-    "sourceImageUrl": "https://cdn.neopharmshop.co.kr/images/detail/real_Barrier/pdrn_glow_repair_serum/pdrn_glow_repair_serum_10.jpg",
-    "sourceTitle": "리얼베리어(REAL BARRIER) 피디알엔 광채 리페어 세럼 30ML X 2개 - 후기 | 무신사",
-    "sourceHost": "musinsa.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://m.drdeep.co.kr/product/11-%EB%AF%B8%EB%84%A4%EB%9E%84-pdrn-52000-%EB%A6%AC-%EB%B2%A0%EB%A6%AC%EC%96%B4-%ED%8D%BC%EB%B0%8D-%EB%9E%98%EB%94%94%EC%96%B8%EC%8A%A4-%ED%81%AC%EB%A6%BC/1354/category/249/display/1/",
+    "sourceImageUrl": "https://m.drdeep.co.kr/web/product/big/202604/07db2277dc19565174d337ebea974866.png",
+    "sourceTitle": "미네랄 PDRN 52000 리-베리어 퍼밍 래디언스 크림",
+    "sourceHost": "drdeep.co.kr",
+    "sourceType": "official-brand",
     "width": 1000,
     "height": 3542,
-    "matchScore": 41
+    "matchScore": 41,
+    "localImagePath": "/product-images/catalog-011.png",
+    "downloadBytes": 83407
   },
   {
     "entityId": "catalog-012",
@@ -270,7 +310,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 1010,
     "height": 472,
-    "matchScore": 53
+    "matchScore": 53,
+    "localImagePath": "/product-images/catalog-012.jpg",
+    "downloadBytes": 303105
   },
   {
     "entityId": "catalog-013",
@@ -283,20 +325,24 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 1200,
     "height": 1440,
-    "matchScore": 53
+    "matchScore": 53,
+    "localImagePath": "/product-images/catalog-013.jpg",
+    "downloadBytes": 84593
   },
   {
     "entityId": "catalog-014",
     "productName": "도미나크림",
     "brand": "",
-    "sourcePageUrl": "",
-    "sourceImageUrl": "",
-    "sourceTitle": "",
-    "sourceHost": "",
-    "sourceType": "unresolved",
+    "sourcePageUrl": "https://www.mdon.co.kr/news/article.html?no=20133",
+    "sourceImageUrl": "https://www.mdon.co.kr/data/photos/20190206/art_15495515940557_98a469.jpg",
+    "sourceTitle": "태극제약 도미나크림 튜브",
+    "sourceHost": "mdon.co.kr",
+    "sourceType": "official-manufacturer-release",
     "width": null,
     "height": null,
-    "matchScore": 0
+    "matchScore": 0,
+    "localImagePath": "/product-images/catalog-014.jpg",
+    "downloadBytes": 101441
   },
   {
     "entityId": "catalog-015",
@@ -309,7 +355,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 2396,
     "height": 728,
-    "matchScore": 117
+    "matchScore": 117,
+    "localImagePath": "/product-images/catalog-015.jpg",
+    "downloadBytes": 426586
   },
   {
     "entityId": "catalog-016",
@@ -322,7 +370,9 @@
     "sourceType": "official-brand",
     "width": 280,
     "height": 221,
-    "matchScore": 15
+    "matchScore": 15,
+    "localImagePath": "/product-images/catalog-016.png",
+    "downloadBytes": 46251
   },
   {
     "entityId": "catalog-017",
@@ -335,33 +385,39 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 720,
     "height": 720,
-    "matchScore": 41
+    "matchScore": 41,
+    "localImagePath": "/product-images/catalog-017.jpg",
+    "downloadBytes": 174421
   },
   {
     "entityId": "catalog-018",
     "productName": "리안정안액 30튜브",
     "brand": "",
-    "sourcePageUrl": "https://barkiri.com/products/p2142",
-    "sourceImageUrl": "https://imagedelivery.net/SJfchtznPkhOJzvVd6Drkw/barkiri/product/p2142/w=1920",
-    "sourceTitle": "아이스콘 점안액 0.5ml 30튜브의 가격 비교",
-    "sourceHost": "barkiri.com",
+    "sourcePageUrl": "https://korepharm.com/products/pdrn-dry-eye-drops",
+    "sourceImageUrl": "https://korepharm.com/cdn/shop/files/PDRNdryeyedrops.jpg?v=1687689740&width=1445",
+    "sourceTitle": "RE-AN PDRN 리안 점안액 30관",
+    "sourceHost": "korepharm.com",
     "sourceType": "authorized-or-established-retailer",
     "width": 400,
     "height": 400,
-    "matchScore": 17
+    "matchScore": 17,
+    "localImagePath": "/product-images/catalog-018.jpg",
+    "downloadBytes": 36895
   },
   {
     "entityId": "catalog-019",
     "productName": "리쥬부스터 피디알엔 리쥬비네이팅 크림",
     "brand": "",
-    "sourcePageUrl": "https://barkiri.com/products/p2217",
-    "sourceImageUrl": "https://imagedelivery.net/SJfchtznPkhOJzvVd6Drkw/barkiri/product/p2217/w=1920",
-    "sourceTitle": "리쥬부스터 PDRN 리쥬비네이팅 크림 25ml의 가격 비교",
-    "sourceHost": "barkiri.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://pyderin.com/product",
+    "sourceImageUrl": "https://storage.googleapis.com/pyderin-12650.firebasestorage.app/products/thumbnail/%EB%A6%AC%EC%A5%AC%EB%B6%80%EC%8A%A4%ED%84%B0%20%EC%8D%B8%EB%84%A4%EC%9D%BC%20200.png",
+    "sourceTitle": "리쥬부스터 PDRN 리쥬비네이팅 크림",
+    "sourceHost": "pyderin.com",
+    "sourceType": "official-brand",
     "width": 400,
     "height": 400,
-    "matchScore": 53
+    "matchScore": 53,
+    "localImagePath": "/product-images/catalog-019.png",
+    "downloadBytes": 27558
   },
   {
     "entityId": "catalog-020",
@@ -374,20 +430,24 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 2048,
     "height": 2731,
-    "matchScore": 17
+    "matchScore": 17,
+    "localImagePath": "/product-images/catalog-020.jpg",
+    "downloadBytes": 229677
   },
   {
     "entityId": "catalog-021",
     "productName": "마리엔메이 스피큘 레티놀 피디알엔 크림",
     "brand": "",
-    "sourcePageUrl": "https://www.kurly.com/goods/1001756611",
+    "sourcePageUrl": "https://www.kurly.com/goods/1001756614",
     "sourceImageUrl": "https://product-image.kurly.com/hdims/resize/%5E%3E720x%3E936/cropcenter/720x936/quality/85/src/product/image/b184c47d-9c50-4502-914c-eac11d477feb.jpg",
-    "sourceTitle": "[마리엔메이] 스피큘 레티놀 피디알엔 크림 15g - 마켓컬리",
+    "sourceTitle": "마리엔메이 스피큘 레티놀 PDRN 크림",
     "sourceHost": "kurly.com",
     "sourceType": "authorized-or-established-retailer",
     "width": 550,
     "height": 708,
-    "matchScore": 177
+    "matchScore": 177,
+    "localImagePath": "/product-images/catalog-021.jpg",
+    "downloadBytes": 28198
   },
   {
     "entityId": "catalog-022",
@@ -400,7 +460,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 2048,
     "height": 1088,
-    "matchScore": 129
+    "matchScore": 129,
+    "localImagePath": "/product-images/catalog-022.jpg",
+    "downloadBytes": 312490
   },
   {
     "entityId": "catalog-023",
@@ -413,20 +475,24 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 1012,
     "height": 1012,
-    "matchScore": 17
+    "matchScore": 17,
+    "localImagePath": "/product-images/catalog-023.webp",
+    "downloadBytes": 66712
   },
   {
     "entityId": "catalog-024",
     "productName": "모드콜 에스 종합감기",
     "brand": "",
-    "sourcePageUrl": "http://modcol.co.kr/",
-    "sourceImageUrl": "http://modcol.co.kr/resources/images/mo/pop_syrup_img4.png?v1",
+    "sourcePageUrl": "https://modcol.co.kr/",
+    "sourceImageUrl": "https://modcol.co.kr/resources/images/mo/pop_syrup_img4.png?v1",
     "sourceTitle": "선넘는 요즘감기엔 모드콜S",
     "sourceHost": "modcol.co.kr",
     "sourceType": "official-brand",
     "width": 847,
     "height": 961,
-    "matchScore": 27
+    "matchScore": 27,
+    "localImagePath": "/product-images/catalog-024.png",
+    "downloadBytes": 111698
   },
   {
     "entityId": "catalog-025",
@@ -439,7 +505,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 600,
     "height": 600,
-    "matchScore": 177
+    "matchScore": 177,
+    "localImagePath": "/product-images/catalog-025.jpg",
+    "downloadBytes": 41254
   },
   {
     "entityId": "catalog-026",
@@ -452,7 +520,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 640,
     "height": 812,
-    "matchScore": 189
+    "matchScore": 189,
+    "localImagePath": "/product-images/catalog-026.jpg",
+    "downloadBytes": 111163
   },
   {
     "entityId": "catalog-027",
@@ -465,20 +535,24 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 320,
     "height": 320,
-    "matchScore": 129
+    "matchScore": 129,
+    "localImagePath": "/product-images/catalog-027.png",
+    "downloadBytes": 24954
   },
   {
     "entityId": "catalog-028",
     "productName": "신신파스 아렉스 대형 30매",
     "brand": "",
-    "sourcePageUrl": "http://www.sinsinpas.net/",
-    "sourceImageUrl": "http://www.sinsinpas.net/storage/product/00f638cd1b85e802d6fd2b22f70e9c6f_m4liYMgH_c365cbe9004e93acf56a5d2b1c6c290be3c34a6f.png",
+    "sourcePageUrl": "https://www.sinsinpas.net/",
+    "sourceImageUrl": "https://www.sinsinpas.net/storage/product/00f638cd1b85e802d6fd2b22f70e9c6f_m4liYMgH_c365cbe9004e93acf56a5d2b1c6c290be3c34a6f.png",
     "sourceTitle": "신신파스",
     "sourceHost": "sinsinpas.net",
     "sourceType": "official-brand",
     "width": 700,
     "height": 642,
-    "matchScore": 27
+    "matchScore": 27,
+    "localImagePath": "/product-images/catalog-028.png",
+    "downloadBytes": 282381
   },
   {
     "entityId": "catalog-029",
@@ -491,7 +565,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 273,
     "height": 219,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/catalog-029.webp",
+    "downloadBytes": 9828
   },
   {
     "entityId": "catalog-030",
@@ -504,7 +580,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 400,
     "height": 400,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/catalog-030.jpg",
+    "downloadBytes": 20003
   },
   {
     "entityId": "catalog-031",
@@ -517,7 +595,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 454,
     "height": 339,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/catalog-031.webp",
+    "downloadBytes": 13910
   },
   {
     "entityId": "catalog-032",
@@ -530,7 +610,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 677,
     "height": 466,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/catalog-032.webp",
+    "downloadBytes": 17688
   },
   {
     "entityId": "catalog-033",
@@ -543,33 +625,39 @@
     "sourceType": "official-brand",
     "width": 930,
     "height": 882,
-    "matchScore": 15
+    "matchScore": 15,
+    "localImagePath": "/product-images/catalog-033.png",
+    "downloadBytes": 859370
   },
   {
     "entityId": "catalog-034",
     "productName": "안티푸라민 에스 로션",
     "brand": "",
-    "sourcePageUrl": "https://barkiri.com/products/p260",
-    "sourceImageUrl": "https://barkiri.edge.naverncp.com/product/p260.webp",
-    "sourceTitle": "안티푸라민 에스 로션 100ml의 약국 가격 비교",
-    "sourceHost": "barkiri.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://www.yuhan.co.kr/products/list/?YPRD_IDX=1831&mode=view",
+    "sourceImageUrl": "https://www.yuhan.co.kr/__DATA/YH_PRODUCTS/2021/2/%EC%95%88%ED%8B%B0%ED%91%B8%EB%9D%BC%EB%AF%BC_%EC%97%90%EC%8A%A4%EB%A1%9C%EC%85%98_100ml_son(1).jpg",
+    "sourceTitle": "안티푸라민 에스로션",
+    "sourceHost": "yuhan.co.kr",
+    "sourceType": "official-brand",
     "width": 2000,
     "height": 1516,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/catalog-034.jpg",
+    "downloadBytes": 1152487
   },
   {
     "entityId": "catalog-035",
     "productName": "애크린 외용액",
     "brand": "",
     "sourcePageUrl": "https://dpharm.co.kr/acnon/ko/info",
-    "sourceImageUrl": "https://dpharm.co.kr/images/brand/acnon/info_sec01_item02.png",
-    "sourceTitle": "애크논 - 제품정보 - 동아제약 OTC브랜드 홈페이지",
+    "sourceImageUrl": "https://dpharm.co.kr/images/brand/acnon/info_sec01_item03.png",
+    "sourceTitle": "애크린 외용액",
     "sourceHost": "dpharm.co.kr",
     "sourceType": "official-brand",
     "width": 386,
     "height": 138,
-    "matchScore": 15
+    "matchScore": 15,
+    "localImagePath": "/product-images/catalog-035.png",
+    "downloadBytes": 31778
   },
   {
     "entityId": "catalog-036",
@@ -582,20 +670,24 @@
     "sourceType": "official-brand",
     "width": 1000,
     "height": 1000,
-    "matchScore": 15
+    "matchScore": 15,
+    "localImagePath": "/product-images/catalog-036.jpg",
+    "downloadBytes": 312748
   },
   {
     "entityId": "catalog-037",
     "productName": "이지덤 뷰티",
     "brand": "",
-    "sourcePageUrl": "http://www.easydermbeauty.co.kr/",
-    "sourceImageUrl": "http://easydermbeauty.co.kr/image/product/img_product01.jpg",
-    "sourceTitle": "이지덤뷰티",
-    "sourceHost": "easydermbeauty.co.kr",
-    "sourceType": "official-brand",
+    "sourcePageUrl": "https://k-yak.com/ko/products/%EC%9D%B4%EC%A7%80%EB%8D%A4-%EB%B0%B4%EB%93%9C-%EB%B7%B0%ED%8B%B0-%EC%A7%9C%EA%B3%A0%EB%82%9C-%EC%97%AC%EB%93%9C%EB%A6%84-%EB%B6%89%EC%9D%80%EC%9E%90%EA%B5%AD-%EC%9E%91%EC%9D%80-%EC%83%81%EC%B2%98-easyderm-band-beauty-spot-patch-for-post-acne-skin-recovery",
+    "sourceImageUrl": "https://k-yak.com/cdn/shop/files/18886e8668e7498a859b516c8fec7ca5.jpg?v=1757975500&width=1024",
+    "sourceTitle": "이지덤 밴드 뷰티",
+    "sourceHost": "k-yak.com",
+    "sourceType": "authorized-or-established-retailer",
     "width": 202,
     "height": 257,
-    "matchScore": 139
+    "matchScore": 139,
+    "localImagePath": "/product-images/catalog-037.jpg",
+    "downloadBytes": 102939
   },
   {
     "entityId": "catalog-038",
@@ -608,7 +700,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 600,
     "height": 600,
-    "matchScore": 141
+    "matchScore": 141,
+    "localImagePath": "/product-images/catalog-038.jpg",
+    "downloadBytes": 31196
   },
   {
     "entityId": "catalog-039",
@@ -621,7 +715,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 492,
     "height": 492,
-    "matchScore": 29
+    "matchScore": 29,
+    "localImagePath": "/product-images/catalog-039.png",
+    "downloadBytes": 230991
   },
   {
     "entityId": "catalog-040",
@@ -634,7 +730,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 512,
     "height": 369,
-    "matchScore": 41
+    "matchScore": 41,
+    "localImagePath": "/product-images/catalog-040.jpg",
+    "downloadBytes": 20421
   },
   {
     "entityId": "catalog-041",
@@ -647,7 +745,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 456,
     "height": 286,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/catalog-041.webp",
+    "downloadBytes": 11826
   },
   {
     "entityId": "catalog-042",
@@ -660,46 +760,54 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 320,
     "height": 320,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/catalog-042.webp",
+    "downloadBytes": 6004
   },
   {
     "entityId": "catalog-043",
     "productName": "큐립 마일드 연고",
     "brand": "",
     "sourcePageUrl": "https://www.dong-wha.co.kr/product/content.asp?t_idx=730",
-    "sourceImageUrl": "http://www.dong-wha.co.kr/product/pimage/730_img2_S.jpg",
+    "sourceImageUrl": "https://www.dong-wha.co.kr/product/pimage/730_img2_S.jpg",
     "sourceTitle": "[동화약품 - 피부외용제] 큐립연고",
     "sourceHost": "dong-wha.co.kr",
     "sourceType": "official-brand",
     "width": 400,
     "height": 346,
-    "matchScore": 39
+    "matchScore": 39,
+    "localImagePath": "/product-images/catalog-043.jpg",
+    "downloadBytes": 48009
   },
   {
     "entityId": "catalog-044",
     "productName": "큐립 연고",
     "brand": "",
     "sourcePageUrl": "https://www.dong-wha.co.kr/product/content.asp?t_idx=730",
-    "sourceImageUrl": "http://www.dong-wha.co.kr/product/pimage/730_img2_S.jpg",
+    "sourceImageUrl": "https://www.dong-wha.co.kr/product/pimage/730_img2_S.jpg",
     "sourceTitle": "[동화약품 - 피부외용제] 큐립연고",
     "sourceHost": "dong-wha.co.kr",
     "sourceType": "official-brand",
     "width": 400,
     "height": 346,
-    "matchScore": 39
+    "matchScore": 39,
+    "localImagePath": "/product-images/catalog-044.jpg",
+    "downloadBytes": 48009
   },
   {
     "entityId": "catalog-045",
     "productName": "타이레놀 정제",
     "brand": "",
-    "sourcePageUrl": "",
-    "sourceImageUrl": "",
-    "sourceTitle": "",
-    "sourceHost": "",
-    "sourceType": "unresolved",
+    "sourcePageUrl": "https://www.tylenol.co.kr/products/tylenol-500mg",
+    "sourceImageUrl": "https://images.ctfassets.net/dnh87h2n9q42/dW3Rhr8Efpdx0fPtS9h1H/7c763e3ae5281b04b2e9c502def81167/500mg_%C3%A1__%C3%A1__%C3%A1__%C3%A1__%C3%A1__%C3%A1__.jpg",
+    "sourceTitle": "타이레놀 500mg",
+    "sourceHost": "tylenol.co.kr",
+    "sourceType": "official-brand",
     "width": null,
     "height": null,
-    "matchScore": 0
+    "matchScore": 0,
+    "localImagePath": "/product-images/catalog-045.jpg",
+    "downloadBytes": 486722
   },
   {
     "entityId": "catalog-046",
@@ -712,20 +820,24 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 1228,
     "height": 1628,
-    "matchScore": 141
+    "matchScore": 141,
+    "localImagePath": "/product-images/catalog-046.webp",
+    "downloadBytes": 44126
   },
   {
     "entityId": "catalog-047",
     "productName": "톰 씨피알 트리플 시너지 링크 케어 세럼",
     "brand": "",
-    "sourcePageUrl": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=66973&onlineProdCode=111410000708",
-    "sourceImageUrl": "https://images-kr.amoremall.com/products/111410000708/111410000708_03.png?1759206473626",
-    "sourceTitle": "[려]루트젠 탈모케어 트리플샷 두피리페어 세럼 | 아모레몰",
-    "sourceHost": "amoremall.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://thome.kr/product/%EC%95%BD%EA%B5%AD-%EC%A0%84%EC%9A%A9-%ED%86%B0-cpr-%EC%84%B8%EB%9F%BC/451/category/119/display/1/",
+    "sourceImageUrl": "https://cafe24img.poxo.com/thomeinc/web/product/medium/202606/358696ecedac32744ab9f3d05908903a.png",
+    "sourceTitle": "[약국 전용] 톰 CPR 세럼",
+    "sourceHost": "thome.kr",
+    "sourceType": "official-brand",
     "width": 800,
     "height": 800,
-    "matchScore": 41
+    "matchScore": 41,
+    "localImagePath": "/product-images/catalog-047.png",
+    "downloadBytes": 154901
   },
   {
     "entityId": "catalog-048",
@@ -738,7 +850,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 632,
     "height": 420,
-    "matchScore": 105
+    "matchScore": 105,
+    "localImagePath": "/product-images/catalog-048.jpg",
+    "downloadBytes": 21105
   },
   {
     "entityId": "catalog-049",
@@ -751,7 +865,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 500,
     "height": 500,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/catalog-049.webp",
+    "downloadBytes": 8712
   },
   {
     "entityId": "catalog-050",
@@ -764,7 +880,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 402,
     "height": 400,
-    "matchScore": 141
+    "matchScore": 141,
+    "localImagePath": "/product-images/catalog-050.jpg",
+    "downloadBytes": 19919
   },
   {
     "entityId": "catalog-051",
@@ -777,7 +895,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 289,
     "height": 477,
-    "matchScore": 165
+    "matchScore": 165,
+    "localImagePath": "/product-images/catalog-051.jpg",
+    "downloadBytes": 28591
   },
   {
     "entityId": "catalog-052",
@@ -790,7 +910,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 492,
     "height": 492,
-    "matchScore": 53
+    "matchScore": 53,
+    "localImagePath": "/product-images/catalog-052.png",
+    "downloadBytes": 78971
   },
   {
     "entityId": "catalog-053",
@@ -803,7 +925,9 @@
     "sourceType": "official-brand",
     "width": 440,
     "height": 150,
-    "matchScore": 27
+    "matchScore": 27,
+    "localImagePath": "/product-images/catalog-053.jpg",
+    "downloadBytes": 11573
   },
   {
     "entityId": "catalog-054",
@@ -816,7 +940,9 @@
     "sourceType": "official-brand",
     "width": 279,
     "height": 260,
-    "matchScore": 15
+    "matchScore": 15,
+    "localImagePath": "/product-images/catalog-054.png",
+    "downloadBytes": 62187
   },
   {
     "entityId": "public-uria-200",
@@ -829,20 +955,24 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 803,
     "height": 385,
-    "matchScore": 29
+    "matchScore": 29,
+    "localImagePath": "/product-images/public-uria-200.jpg",
+    "downloadBytes": 21884
   },
   {
     "entityId": "public-boj-clear-rice-sunscreen",
     "productName": "Beauty of Joseon Clear Rice Sunscreen",
     "brand": "Beauty of Joseon",
     "sourcePageUrl": "https://beautyofjoseon.com/products/relief-sun-rice-probiotics-spf50-pa-uk?variant=52419610673524&country=GB&currency=GBP&tw_source=google&tw_campaign=21834073630&gbraid=0AAAAAp9LuYS_l_YOAsldVaoAffOaYTUyt",
-    "sourceImageUrl": "http://beautyofjoseon.com/cdn/shop/files/relief-sunscreen-1-front.webp?v=1770603160",
+    "sourceImageUrl": "https://beautyofjoseon.com/cdn/shop/files/relief-sunscreen-1-front.webp?v=1770603160",
     "sourceTitle": "Relief Sun: Rice + Probiotics (SPF50+ PA++++) | Beauty of Joseon ...",
     "sourceHost": "beautyofjoseon.com",
     "sourceType": "official-brand",
     "width": 3000,
     "height": 3000,
-    "matchScore": 63
+    "matchScore": 63,
+    "localImagePath": "/product-images/public-boj-clear-rice-sunscreen.jpg",
+    "downloadBytes": 133757
   },
   {
     "entityId": "public-iunik-beta-glucan-sunscreen",
@@ -855,7 +985,9 @@
     "sourceType": "official-brand",
     "width": 550,
     "height": 550,
-    "matchScore": 75
+    "matchScore": 75,
+    "localImagePath": "/product-images/public-iunik-beta-glucan-sunscreen.png",
+    "downloadBytes": 321672
   },
   {
     "entityId": "public-iunik-centella-sunscreen",
@@ -868,7 +1000,9 @@
     "sourceType": "official-brand",
     "width": 1646,
     "height": 1646,
-    "matchScore": 75
+    "matchScore": 75,
+    "localImagePath": "/product-images/public-iunik-centella-sunscreen.png",
+    "downloadBytes": 4604525
   },
   {
     "entityId": "public-dr-vita-vitamin-sunscreen",
@@ -881,7 +1015,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 720,
     "height": 720,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/public-dr-vita-vitamin-sunscreen.jpg",
+    "downloadBytes": 55449
   },
   {
     "entityId": "public-dr-vita-vitamin-sunscreen-cover",
@@ -894,20 +1030,24 @@
     "sourceType": "official-brand",
     "width": 1000,
     "height": 1000,
-    "matchScore": 63
+    "matchScore": 63,
+    "localImagePath": "/product-images/public-dr-vita-vitamin-sunscreen-cover.jpg",
+    "downloadBytes": 37032
   },
   {
     "entityId": "public-scalp-shot",
     "productName": "SCALP SHOT",
     "brand": "",
-    "sourcePageUrl": "https://www.dodoskin.com/products/volexy-scalp-shot-pro-scalp-care-device",
-    "sourceImageUrl": "http://www.dodoskin.com/cdn/shop/files/VolexyScalpShotProScalpCareDevice-1.jpg?v=1768373236",
-    "sourceTitle": "Volexy Scalp Shot Pro Scalp Care Device | DODO SKIN - DODOSKIN",
-    "sourceHost": "dodoskin.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://www.shinsegaegroupnewsroom.com/just-as-i-am-scalp-shot-launch/",
+    "sourceImageUrl": "https://shinsegae-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2026/03/NR_Press_Details_04-12.png",
+    "sourceTitle": "자주 JAJU SCALP SHOT",
+    "sourceHost": "shinsegaegroupnewsroom.com",
+    "sourceType": "official-brand",
     "width": 1500,
     "height": 1500,
-    "matchScore": 129
+    "matchScore": 129,
+    "localImagePath": "/product-images/public-scalp-shot.png",
+    "downloadBytes": 375958
   },
   {
     "entityId": "public-pdrn-1000-plus-cream",
@@ -920,7 +1060,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 800,
     "height": 1133,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/public-pdrn-1000-plus-cream.jpg",
+    "downloadBytes": 79459
   },
   {
     "entityId": "public-cica-mela-repair-cream",
@@ -933,7 +1075,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 720,
     "height": 720,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/public-cica-mela-repair-cream.jpg",
+    "downloadBytes": 26980
   },
   {
     "entityId": "public-villemu-mask",
@@ -946,7 +1090,9 @@
     "sourceType": "official-brand",
     "width": 1920,
     "height": 2880,
-    "matchScore": 27
+    "matchScore": 27,
+    "localImagePath": "/product-images/public-villemu-mask.jpg",
+    "downloadBytes": 1402245
   },
   {
     "entityId": "public-deesse-cream",
@@ -959,7 +1105,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 720,
     "height": 720,
-    "matchScore": 17
+    "matchScore": 17,
+    "localImagePath": "/product-images/public-deesse-cream.jpg",
+    "downloadBytes": 26980
   },
   {
     "entityId": "public-ac7-days",
@@ -972,7 +1120,9 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 600,
     "height": 600,
-    "matchScore": 29
+    "matchScore": 29,
+    "localImagePath": "/product-images/public-ac7-days.jpg",
+    "downloadBytes": 18939
   },
   {
     "entityId": "public-bio-activating-pdrn-ampoule",
@@ -985,85 +1135,99 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 720,
     "height": 720,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/public-bio-activating-pdrn-ampoule.jpg",
+    "downloadBytes": 52742
   },
   {
     "entityId": "public-vt-pdrn-essence-rx",
     "productName": "VT PDRN Essence RX",
     "brand": "VT COSMETICS",
-    "sourcePageUrl": "https://www.ballagrio.com/products/vt-cosmetics-pdrn-essence-rx",
-    "sourceImageUrl": "http://www.ballagrio.com/cdn/shop/files/vt-cosmetics-pdrn-essence-rx-01_1200x1200.jpg?v=1762316950",
-    "sourceTitle": "[VT Cosmetics] PDRN Essence RX 40ml - Ballagrio",
-    "sourceHost": "ballagrio.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://vt-cosmetics.com/product/detail.html?product_no=1630&cate_no=607&display_group=1",
+    "sourceImageUrl": "https://vt-cosmetics.com/web/product/big/202606/dddc6e8d189f06db42c4253bb4213c08.jpg",
+    "sourceTitle": "[약국 입점] 피디알엔 에센스 RX",
+    "sourceHost": "vt-cosmetics.com",
+    "sourceType": "official-brand",
     "width": 1000,
     "height": 1000,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/public-vt-pdrn-essence-rx.jpg",
+    "downloadBytes": 34478
   },
   {
     "entityId": "public-vt-pdrn-cream-rx",
     "productName": "VT PDRN Cream RX",
     "brand": "VT COSMETICS",
-    "sourcePageUrl": "https://www.ballagrio.com/products/vtcosmetics-pdrn-cream-rx",
-    "sourceImageUrl": "http://www.ballagrio.com/cdn/shop/files/vt-cosmetics-pdrn-cream-rx-60-01_1200x1200.jpg?v=1762232792",
-    "sourceTitle": "[VT Cosmetics] PDRN Cream RX 60ml - Ballagrio",
-    "sourceHost": "ballagrio.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://vt-cosmetics.com/product/detail.html?product_no=1631&cate_no=607&display_group=1",
+    "sourceImageUrl": "https://vt-cosmetics.com/web/product/big/202606/4ac413074a1880635402402f2c0f7803.jpg",
+    "sourceTitle": "[약국 입점] 피디알엔 크림 RX",
+    "sourceHost": "vt-cosmetics.com",
+    "sourceType": "official-brand",
     "width": 1000,
     "height": 1000,
-    "matchScore": 153
+    "matchScore": 153,
+    "localImagePath": "/product-images/public-vt-pdrn-cream-rx.jpg",
+    "downloadBytes": 38328
   },
   {
     "entityId": "public-vt-retinal-peptide-serum",
     "productName": "VT Retinal Peptide Serum",
     "brand": "VT COSMETICS",
-    "sourcePageUrl": "https://globalvt-cosmetics.com/products/retinal-peptide-capsule-cream",
-    "sourceImageUrl": "https://globalvt-cosmetics.com/cdn/shop/files/01_dc28c406-05a7-4d43-97e9-21e33c41827c.jpg?v=1774257365&width=990",
-    "sourceTitle": "Retinal Peptide Hyaluronic Capsule Cream - VT Cosmetics official",
-    "sourceHost": "globalvt-cosmetics.com",
+    "sourcePageUrl": "https://vt-cosmetics.com/product/detail.html?product_no=2472&cate_no=607&display_group=1",
+    "sourceImageUrl": "https://vt-cosmetics.com/web/product/big/202606/5a70fafdc01207eee842ff5d07906cbc.jpg",
+    "sourceTitle": "[약국 입점] 레티날 펩타이드 세럼",
+    "sourceHost": "vt-cosmetics.com",
     "sourceType": "official-brand",
     "width": 474,
     "height": 474,
-    "matchScore": 51
+    "matchScore": 51,
+    "localImagePath": "/product-images/public-vt-retinal-peptide-serum.jpg",
+    "downloadBytes": 48143
   },
   {
     "entityId": "public-vt-retinal-pro-cream",
     "productName": "VT Retinal Pro Cream",
     "brand": "VT COSMETICS",
-    "sourcePageUrl": "https://globalvt-cosmetics.com/products/retinal-pro-cream-0-05",
-    "sourceImageUrl": "https://globalvt-cosmetics.com/cdn/shop/files/0.05.png?v=1778222048",
-    "sourceTitle": "Retinal Pro Cream 0.05 - VT Cosmetics official",
-    "sourceHost": "globalvt-cosmetics.com",
+    "sourcePageUrl": "https://vt-cosmetics.com/product/detail.html?product_no=2380&cate_no=607&display_group=1",
+    "sourceImageUrl": "https://vt-cosmetics.com/web/product/medium/202606/7ab6b604b334655de538cbbb786342e2.jpg",
+    "sourceTitle": "[약국 입점] 레티날 프로 크림 0.05",
+    "sourceHost": "vt-cosmetics.com",
     "sourceType": "official-brand",
     "width": 500,
     "height": 500,
-    "matchScore": 175
+    "matchScore": 175,
+    "localImagePath": "/product-images/public-vt-retinal-pro-cream.jpg",
+    "downloadBytes": 32675
   },
   {
     "entityId": "public-vt-pdrn-tone-up-sun-rx",
     "productName": "VT PDRN Moist Tone-Up Sun Essence RX",
     "brand": "VT COSMETICS",
-    "sourcePageUrl": "https://www.hwahae.com/en/products/VTCOSMETICS-PDRN-MOIST-TONE-UP-SUN-ESSENCE-RX-SPF50PLUS-PAPLUS-PLUS-PLUS-PLUS/2126879",
-    "sourceImageUrl": "https://img.hwahae.co.kr/products/2126879/2126879_20241216161037.jpg",
-    "sourceTitle": "VTCOSMETICS PDRN MOIST TONE UP SUN ESSENCE RX [SPF50+/PA++++] | Hwahae ...",
-    "sourceHost": "hwahae.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://vt-cosmetics.com/product/detail.html?product_no=1632&cate_no=607&display_group=1",
+    "sourceImageUrl": "https://vt-cosmetics.com/web/product/medium/202606/7f32254d05afc3f6820f0a53e454d1fc.jpg",
+    "sourceTitle": "[약국 입점] 피디알엔 모이스트 톤업 선 에센스 RX",
+    "sourceHost": "vt-cosmetics.com",
+    "sourceType": "official-brand",
     "width": 720,
     "height": 720,
-    "matchScore": 201
+    "matchScore": 201,
+    "localImagePath": "/product-images/public-vt-pdrn-tone-up-sun-rx.jpg",
+    "downloadBytes": 36505
   },
   {
     "entityId": "public-vt-vita-eye-cream",
     "productName": "VT Vita Eye Cream",
     "brand": "VT COSMETICS",
-    "sourcePageUrl": "",
-    "sourceImageUrl": "",
-    "sourceTitle": "",
-    "sourceHost": "",
-    "sourceType": "unresolved",
+    "sourcePageUrl": "https://globalvt-cosmetics.com/products/vita-light-eye-cream",
+    "sourceImageUrl": "https://globalvt-cosmetics.com/cdn/shop/files/Vita-LightEyeCream.png?v=1778220790&width=1445",
+    "sourceTitle": "Vita-Light Eye Cream",
+    "sourceHost": "globalvt-cosmetics.com",
+    "sourceType": "official-brand",
     "width": null,
     "height": null,
-    "matchScore": 0
+    "matchScore": 0,
+    "localImagePath": "/product-images/public-vt-vita-eye-cream.png",
+    "downloadBytes": 43112
   },
   {
     "entityId": "public-vt-pdrn-reedle-shot-100",
@@ -1076,59 +1240,69 @@
     "sourceType": "official-brand",
     "width": 1946,
     "height": 1946,
-    "matchScore": 75
+    "matchScore": 75,
+    "localImagePath": "/product-images/public-vt-pdrn-reedle-shot-100.jpg",
+    "downloadBytes": 221125
   },
   {
     "entityId": "public-genabelle-pdrn-vita-toning-ampoule",
     "productName": "제나벨 PDRN 비타 토닝 앰플",
     "brand": "GENABELLE",
-    "sourcePageUrl": "https://www.shinsegaev.com/goods/initDetailGoods.siv?goods_no=2303716740",
-    "sourceImageUrl": "https://image.shinsegaev.com/upload/C00001/s3/goods/org/242/260301145005242.jpg?RS=750&SP=1",
-    "sourceTitle": "GENABELLE(제나벨) [제나벨] [진정/광채] 제나벨 PDRN 비타 토닝 앰플 30ml | 신세계V",
-    "sourceHost": "shinsegaev.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://genabelle.com/products/genabelle-pdrn-vita-toning-ampoule",
+    "sourceImageUrl": "https://genabelle.com/cdn/shop/files/pdrn-vita-toning-ampoule-genabelle-1620644.png?crop=center&height=630&v=1770173435&width=1200",
+    "sourceTitle": "Genabelle PDRN Vita Toning Ampoule",
+    "sourceHost": "genabelle.com",
+    "sourceType": "official-brand",
     "width": 750,
     "height": 750,
-    "matchScore": 189
+    "matchScore": 189,
+    "localImagePath": "/product-images/public-genabelle-pdrn-vita-toning-ampoule.png",
+    "downloadBytes": 105990
   },
   {
     "entityId": "public-rxme-rejuyoung-pdrn-10000-cream",
     "productName": "RXme 리쥬영 PDRN 10000 크림",
     "brand": "RX:ME",
-    "sourcePageUrl": "https://www.coupang.com/vp/products/8972179759",
-    "sourceImageUrl": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2025/08/18/10/3/3e4a69f5-7520-45a8-bd28-0bad3edf597a.jpg",
-    "sourceTitle": "리르 PDRN 리쥬딘 크림, 10g, 1개 - 페이셜크림 | 쿠팡",
-    "sourceHost": "coupang.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://rxmecosmetics.com/",
+    "sourceImageUrl": "https://rxmecosmetics.com/web/product/medium/202604/5cfcb89597763f5fc22c7a983a00ea9d.png",
+    "sourceTitle": "RXme 리쥬영 PDRN 10000 크림",
+    "sourceHost": "rxmecosmetics.com",
+    "sourceType": "official-brand",
     "width": 492,
     "height": 492,
-    "matchScore": 29
+    "matchScore": 29,
+    "localImagePath": "/product-images/public-rxme-rejuyoung-pdrn-10000-cream.png",
+    "downloadBytes": 1074757
   },
   {
     "entityId": "public-rxme-juvekle-pdlla-10000-cream",
     "productName": "RXme 쥬베클 PDLLA 10000 크림",
     "brand": "RX:ME",
-    "sourcePageUrl": "https://beautyboxkorea.com/product/rx-me-juvekle-pdlla-10000-fill-up-cream-30ml/74292/",
-    "sourceImageUrl": "https://cafe24img.poxo.com/beautyboxkorea/web/product/big/202603/aa2f1bd8483f95946507d588c10baf23.jpg",
-    "sourceTitle": "RX ME Juvekle PDLLA 10000 Fill Up Cream 30ml - Firming Care Cream",
-    "sourceHost": "beautyboxkorea.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://rxmecosmetics.com/",
+    "sourceImageUrl": "https://rxmecosmetics.com/web/product/medium/202604/6555359a939fa356b4cdee5fe81ad4dd.png",
+    "sourceTitle": "RXme 쥬베클 PDLLA 10000 크림",
+    "sourceHost": "rxmecosmetics.com",
+    "sourceType": "official-brand",
     "width": 500,
     "height": 500,
-    "matchScore": 65
+    "matchScore": 65,
+    "localImagePath": "/product-images/public-rxme-juvekle-pdlla-10000-cream.png",
+    "downloadBytes": 1077426
   },
   {
     "entityId": "public-deesse-pdrn-2000-cream",
     "productName": "디에스 PDRN 2000+ 크림",
     "brand": "DÉESSE",
-    "sourcePageUrl": "https://www.musinsa.com/products/3705491",
-    "sourceImageUrl": "https://image.msscdn.net/images/goods_img/20231113/3705491/3705491_17622141692758_500.jpg",
-    "sourceTitle": "아이스트(I.ST) 더모 PDRN 리쥬버네이션 100 크림 50ml - 후기 | 무신사",
-    "sourceHost": "musinsa.com",
+    "sourcePageUrl": "https://8beauty.co.kr/product/%EB%94%94%EC%97%90%EC%8A%A4-pdrn1000-plus-20ml-%EC%95%BD%EA%B5%AD%EC%9A%A9-pdrn-%EC%9E%AC%EC%83%9D%ED%81%AC%EB%A6%BC/19/",
+    "sourceImageUrl": "https://ecimg.cafe24img.com/pg1503b13426605023/eightbeauty8/web/product/big/20260604/07f511bc8ee37e7c34d85ff3e35f3834.jpg",
+    "sourceTitle": "디에스 PDRN2000 PLUS 20mL",
+    "sourceHost": "8beauty.co.kr",
     "sourceType": "authorized-or-established-retailer",
     "width": 500,
     "height": 500,
-    "matchScore": 29
+    "matchScore": 29,
+    "localImagePath": "/product-images/public-deesse-pdrn-2000-cream.jpg",
+    "downloadBytes": 39523
   },
   {
     "entityId": "public-medipeel-melanon-x-ampoule",
@@ -1141,7 +1315,9 @@
     "sourceType": "official-brand",
     "width": 800,
     "height": 800,
-    "matchScore": 63
+    "matchScore": 63,
+    "localImagePath": "/product-images/public-medipeel-melanon-x-ampoule.jpg",
+    "downloadBytes": 75546
   },
   {
     "entityId": "public-medipeel-melanon-x-cream",
@@ -1154,20 +1330,24 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 750,
     "height": 840,
-    "matchScore": 165
+    "matchScore": 165,
+    "localImagePath": "/product-images/public-medipeel-melanon-x-cream.jpg",
+    "downloadBytes": 33905
   },
   {
     "entityId": "public-medipeel-retinal-nmn-booster",
     "productName": "메디필 레티날 NMN 바운스 샷 부스터",
     "brand": "MEDIPEEL",
-    "sourcePageUrl": "https://www.musinsa.com/products/6120851",
-    "sourceImageUrl": "https://image.msscdn.net/images/goods_img/20260312/6120851/6120851_17750914606137_500.jpg",
-    "sourceTitle": "메디필(MEDIPEEL) 레티날 NMN 바운스 샷 부스터 30ml - 후기 | 무신사",
-    "sourceHost": "musinsa.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://m.medipeel.com/product/retinal-nmn-bounce-shot-booster-30ml/1041/",
+    "sourceImageUrl": "https://m.medipeel.com/web/product/big/202607/2074ef565f0b1e3f3db2fc8b858fea61.jpg",
+    "sourceTitle": "Retinal NMN Bounce Shot Booster",
+    "sourceHost": "medipeel.com",
+    "sourceType": "official-brand",
     "width": 500,
     "height": 600,
-    "matchScore": 77
+    "matchScore": 77,
+    "localImagePath": "/product-images/public-medipeel-retinal-nmn-booster.jpg",
+    "downloadBytes": 34162
   },
   {
     "entityId": "public-medipeel-retinal-nmn-eye-cream",
@@ -1180,71 +1360,83 @@
     "sourceType": "authorized-or-established-retailer",
     "width": 720,
     "height": 720,
-    "matchScore": 89
+    "matchScore": 89,
+    "localImagePath": "/product-images/public-medipeel-retinal-nmn-eye-cream.jpg",
+    "downloadBytes": 22172
   },
   {
     "entityId": "public-elravie-re2o-ecm-active-ampoule",
     "productName": "엘라비에 리투오 ECM 액티브 앰플",
     "brand": "ELRAVIE",
-    "sourcePageUrl": "https://elraviecos.com/goods/goods_view.php?goodsNo=1000000821",
-    "sourceImageUrl": "https://godomall.speedycdn.net/f0bae9f5fc4c5a8e13573939e1406a25/goods/1000000821/image/detail/1000000821_detail_026.jpg",
-    "sourceTitle": "엘라비에 코스메틱",
+    "sourcePageUrl": "https://m.elraviecos.com/main/html.php?htmid=proc%2Fre2obrand.htm",
+    "sourceImageUrl": "https://cdn-pro-web-223-233.cdn-nhncommerce.com/humedix1_godomall_com/data/img/re2o/re2o_ampoule.jpg",
+    "sourceTitle": "엘라비에 리투오 ECM 액티브 앰플",
     "sourceHost": "elraviecos.com",
     "sourceType": "official-brand",
     "width": 500,
     "height": 500,
-    "matchScore": 27
+    "matchScore": 27,
+    "localImagePath": "/product-images/public-elravie-re2o-ecm-active-ampoule.jpg",
+    "downloadBytes": 64677
   },
   {
     "entityId": "public-elravie-re2o-ecm-booster-cream",
     "productName": "엘라비에 리투오 ECM 부스터 크림",
     "brand": "ELRAVIE",
-    "sourcePageUrl": "",
-    "sourceImageUrl": "",
-    "sourceTitle": "",
-    "sourceHost": "",
-    "sourceType": "unresolved",
+    "sourcePageUrl": "https://m.elraviecos.com/main/html.php?htmid=proc%2Fre2obrand.htm",
+    "sourceImageUrl": "https://cdn-pro-web-223-233.cdn-nhncommerce.com/humedix1_godomall_com/data/img/re2o/re2o_cream.jpg",
+    "sourceTitle": "엘라비에 리투오 ECM 부스터 크림",
+    "sourceHost": "elraviecos.com",
+    "sourceType": "official-brand",
     "width": null,
     "height": null,
-    "matchScore": 0
+    "matchScore": 0,
+    "localImagePath": "/product-images/public-elravie-re2o-ecm-booster-cream.jpg",
+    "downloadBytes": 33757
   },
   {
     "entityId": "public-elravie-re2o-ecm-skinfit-bb",
     "productName": "엘라비에 리투오 ECM 스킨핏 비비",
     "brand": "ELRAVIE",
-    "sourcePageUrl": "https://elraviecos.com/goods/goods_view.php?goodsNo=1000000821",
-    "sourceImageUrl": "https://godomall.speedycdn.net/f0bae9f5fc4c5a8e13573939e1406a25/goods/1000000821/image/detail/1000000821_detail_026.jpg",
-    "sourceTitle": "엘라비에 코스메틱",
+    "sourcePageUrl": "https://m.elraviecos.com/main/html.php?htmid=proc%2Fre2obrand.htm",
+    "sourceImageUrl": "https://cdn-pro-web-223-233.cdn-nhncommerce.com/humedix1_godomall_com/data/img/re2o/re2o_bb.jpg",
+    "sourceTitle": "엘라비에 리투오 ECM 스킨핏 비비",
     "sourceHost": "elraviecos.com",
     "sourceType": "official-brand",
     "width": 500,
     "height": 500,
-    "matchScore": 27
+    "matchScore": 27,
+    "localImagePath": "/product-images/public-elravie-re2o-ecm-skinfit-bb.jpg",
+    "downloadBytes": 36248
   },
   {
     "entityId": "public-fmk-rejuvenating-pdrn-kit",
     "productName": "fmk 리쥬네이팅 PDRN 키트",
     "brand": "fmk",
-    "sourcePageUrl": "https://www.kurly.com/goods/1000627455",
-    "sourceImageUrl": "https://img-cf.kurly.com/hdims/resize/%3E1010x/quality/90/src/shop/data/goodsview/20240702/gv10000936065_1.jpg",
-    "sourceTitle": "[브이티] 산삼 PDRN 마스크 키트 2회분 (리프팅케어) - 마켓컬리",
-    "sourceHost": "kurly.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://fmkcos.com/product/detail.html?product_no=14",
+    "sourceImageUrl": "https://fmkcos.com/web/product/big/202604/395afd91a8c1287b34e54bfb4b90ab8b.png",
+    "sourceTitle": "fmk Rejuvenating PDRN Kit",
+    "sourceHost": "fmkcos.com",
+    "sourceType": "official-brand",
     "width": 1010,
     "height": 1493,
-    "matchScore": 29
+    "matchScore": 29,
+    "localImagePath": "/product-images/public-fmk-rejuvenating-pdrn-kit.png",
+    "downloadBytes": 136938
   },
   {
     "entityId": "public-fmk-brightening-vita-kit",
     "productName": "fmk 브라이트닝 Vit+ 키트",
     "brand": "fmk",
-    "sourcePageUrl": "https://www.musinsa.com/products/5678333",
-    "sourceImageUrl": "https://image.msscdn.net/thumbnails/images/goods_img/20251103/5678333/5678333_17627340758953_big.jpg?w=1200",
-    "sourceTitle": "아이다 코스메틱(AIDA COSMETIC) [SET] 글루타치온 브라이트닝 앰플 미스트 120ml X 1개+60ml X 2개 ...",
-    "sourceHost": "musinsa.com",
-    "sourceType": "authorized-or-established-retailer",
+    "sourcePageUrl": "https://fmkcos.com/product/detail.html?product_no=13",
+    "sourceImageUrl": "https://fmkcos.com/web/product/big/202604/245f888af9297770951f8e05bb4c66b1.png",
+    "sourceTitle": "fmk Brightening Vit+ Kit",
+    "sourceHost": "fmkcos.com",
+    "sourceType": "official-brand",
     "width": 1200,
     "height": 1440,
-    "matchScore": 17
+    "matchScore": 17,
+    "localImagePath": "/product-images/public-fmk-brightening-vita-kit.png",
+    "downloadBytes": 133586
   }
 ]
