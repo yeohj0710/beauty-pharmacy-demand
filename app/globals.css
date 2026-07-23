@@ -2993,6 +2993,7 @@ td > small {
   padding: 0 26px;
   width: auto;
   height: 54px;
+  margin: 0;
   font-weight: 750;
   cursor: pointer;
   box-shadow: 0 10px 24px rgba(47, 111, 228, 0.35);
