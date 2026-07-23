@@ -3682,3 +3682,16 @@ body {
     transition: none;
   }
 }
+
+/* 기간 탭이 많은 지점(1~6월)을 위한 줄바꿈 */
+.period-toggle {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+@media (max-width: 999px) {
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}
