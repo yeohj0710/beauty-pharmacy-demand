@@ -5,7 +5,7 @@ import catalog from "./product-catalog.json";
 import signalFile from "./signals.json";
 import qualityFile from "./signal-quality.json";
 import type { ReportRow } from "./report-export";
-import PharmacyView from "./pharmacy-view";
+import PharmacyView, { useRevealOnScroll } from "./pharmacy-view";
 
 type Signal = any;
 type Quality = Signal;
@@ -1813,6 +1813,7 @@ export default function Home() {
       });
     }
   };
+  useRevealOnScroll([view]);
   const mainNav = [["pharmacy", "약국 실매출", "⌂"]] as const;
   const researchNav = [
     ["overview", "온라인 수요 신호", "⌁"],
@@ -1825,9 +1826,9 @@ export default function Home() {
     <div className="app-shell">
       <aside className="sidebar">
         <div className="brand" onClick={() => setView("pharmacy")}>
-          <span>W</span>
+          <img src="/wellnessbox-mark.png" alt="" width={34} height={34} />
           <div>
-            웰니스박스<small>뷰티 약국 수요 데이터</small>
+            Wellnessbox<small>뷰티 약국 수요 데이터</small>
           </div>
         </div>
         <nav>
@@ -1856,7 +1857,7 @@ export default function Home() {
         <div className="sidebar-foot">
           <span className="live-dot" />
           데이터 파이프라인
-          <small>파트너 약국 5지점 · 조사 제품 {allProducts.length}개</small>
+          <small>파트너 약국 4지점 · 조사 제품 {allProducts.length}개</small>
         </div>
       </aside>
       <main>
@@ -1896,6 +1897,33 @@ export default function Home() {
           />
         )}{" "}
         {view === "guide" && <Method />}
+        <footer className="site-footer reveal">
+          <div className="footer-top">
+            <div>
+              <img
+                src="/wellnessbox-wordmark.png"
+                alt="Wellnessbox"
+                height={22}
+              />
+              <p>뷰티 약국 실매출과 온라인 수요 신호를 한곳에서.</p>
+            </div>
+            <div className="footer-contact">
+              <span>파트너십 문의</span>
+              <a href="mailto:contact@wellnessbox.kr">contact@wellnessbox.kr</a>
+              <a href="tel:02-6241-5530">02-6241-5530</a>
+            </div>
+          </div>
+          <div className="footer-info">
+            <p>
+              주식회사 웰니스박스 · 대표 권혁찬 · 사업자등록번호 728-88-03267 ·
+              통신판매업신고 제2025-서울동대문-1562호
+            </p>
+            <p>서울특별시 광진구 광나루로 520, 4층 402호(구의동, 신용보증기금)</p>
+            <p className="footer-copy">
+              © 2026 Wellnessbox Inc. All rights reserved.
+            </p>
+          </div>
+        </footer>
       </main>
       {selectedProduct && (
         <ProductDrawer

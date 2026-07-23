@@ -23,8 +23,11 @@ test("server-renders the product demand dashboard", async () => {
   assert.match(html, /<title>뷰티 약국 수요 데이터 \| 웰니스박스<\/title>/i);
   // 기본 화면은 약국 실매출 뷰다.
   assert.match(html, /뷰티 약국 실매출을/);
-  assert.match(html, /퓨어약국 성수점/);
+  assert.match(html, /성수역퓨어약국/);
   assert.match(html, /온라인 수요 신호/);
+  // 회사 정보 푸터
+  assert.match(html, /728-88-03267/);
+  assert.match(html, /광나루로 520/);
   assert.match(html, /조사 제품 (?:<!-- -->)?96/);
   // 매출 수치·상품명은 열람 암호 없이 서버 HTML에 노출되지 않는다.
   assert.doesNotMatch(html, /애크논크림/);
