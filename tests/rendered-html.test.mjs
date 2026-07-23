@@ -22,7 +22,7 @@ test("server-renders the product demand dashboard", async () => {
   const html = await response.text();
   assert.match(html, /<title>뷰티 약국 수요 데이터 \| 웰니스박스<\/title>/i);
   // 기본 화면은 약국 실매출 뷰다.
-  assert.match(html, /뷰티 약국 실매출을/);
+  assert.match(html, /뷰티 약국 .*실매출 데이터/);
   assert.match(html, /성수역퓨어약국/);
   assert.match(html, /온라인 수요 신호/);
   // 회사 정보 푸터

@@ -1042,16 +1042,12 @@ function Overview({
     <>
       <section className="hero">
         <div>
-          <p className="eyebrow">ONLINE DEMAND SIGNALS</p>
-          <h1>
-            제품의 온라인 관심을
-            <br />
-            한곳에서 확인하세요
-          </h1>
+          <p className="eyebrow">부가 지표</p>
+          <h1>온라인 수요 신호</h1>
           <p className="hero-copy">
-            약국 실매출을 보완하는 부가 지표입니다. 네이버, Google, YouTube,
-            <br className="desktop" /> Instagram, TikTok의 관심 신호를 플랫폼별
-            기준으로 정리합니다.
+            네이버, Google, YouTube, Instagram, TikTok의 제품별 관심 신호를
+            <br className="desktop" /> 플랫폼별 기준으로 수집해 근거와 함께
+            정리합니다.
           </p>
         </div>
         <div className="hero-status">
@@ -1905,7 +1901,7 @@ export default function Home() {
                 alt="Wellnessbox"
                 height={22}
               />
-              <p>뷰티 약국 실매출과 온라인 수요 신호를 한곳에서.</p>
+              <p>뷰티 약국 수요 데이터</p>
             </div>
             <div className="footer-contact">
               <span>파트너십 문의</span>

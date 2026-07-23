@@ -695,16 +695,13 @@ export default function PharmacyView() {
     <>
       <section className="hero pharmacy-hero">
         <div>
-          <p className="eyebrow">Beauty Pharmacy Sales Intelligence</p>
+          <p className="eyebrow">POS 실판매 집계</p>
           <h1>
-            뷰티 약국 실매출을
-            <br />
-            <span className="grad">지점 단위로</span> 확인하세요
+            뷰티 약국 <span className="grad">실매출 데이터</span>
           </h1>
           <p className="hero-copy">
             성수·명동 뷰티 상권 파트너 약국의 POS 판매 데이터를
-            <br className="desktop" /> 제품·기간 단위로 집계해 실제 팔리는
-            제품을 보여줍니다.
+            <br className="desktop" /> 제품·기간 단위로 집계합니다.
           </p>
         </div>
         <div className="hero-status">

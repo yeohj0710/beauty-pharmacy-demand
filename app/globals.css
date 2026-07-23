@@ -2966,12 +2966,12 @@ td > small {
   font-weight: 550;
 }
 .gate-form {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 8px;
 }
 .gate-form input {
-  flex: 1;
-  min-width: 0;
+  width: 100%;
   height: 54px;
   border: 1.5px solid #d8dde3;
   border-radius: 15px;
@@ -2991,6 +2991,7 @@ td > small {
   color: #fff;
   border-radius: 15px;
   padding: 0 26px;
+  width: auto;
   height: 54px;
   font-weight: 750;
   cursor: pointer;
@@ -3236,8 +3237,7 @@ td > small {
     grid-template-columns: 1fr;
   }
   .gate-form {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -3594,7 +3594,7 @@ body {
     text-align: left;
   }
   .gate-form {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
   .branch-meta {
     grid-template-columns: 1fr;
