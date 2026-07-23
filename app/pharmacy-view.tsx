@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import demandEntities from "./demand-entities.json";
 import productAssets from "./product-assets.json";
+import signatureAssets from "./signature-assets.json";
 import {
   decryptPharmacySales,
   pharmacies,
@@ -28,12 +29,14 @@ const fmtPct = (value?: number | null, digits = 1) =>
 // KPI 카드처럼 단위(<small>원</small>)를 따로 붙이는 자리용 — "원" 중복 방지
 const fmtWonBare = (value: number) => fmtWon(value).replace(/원$/, "");
 
-const assetBySalesName = new Map(
-  demandEntities.flatMap((entity) => {
+// 수요 개체(온라인 카탈로그) 이미지 + 지점 시그니처 품목 이미지를 제품명으로 합친다.
+const assetBySalesName = new Map([
+  ...demandEntities.flatMap((entity) => {
     const asset = productAssets.find((item) => item.entityId === entity.id);
     return [...entity.skuNames, ...(entity.sourceAliases ?? []), entity.name].map((name) => [name, asset] as const);
   }),
-);
+  ...signatureAssets.map((asset) => [asset.productName, asset] as const),
+]);
 
 // 스크롤 진입 시 .reveal 요소를 순차적으로 띄운다.
 export function useRevealOnScroll(deps: unknown[]) {
