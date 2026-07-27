@@ -490,7 +490,7 @@ function CollectionDrawer({
         aria-label={`${signal.name} 수집 작업`}
       >
         <button className="close" onClick={onClose} aria-label="닫기">
-          ×
+          <span aria-hidden="true">×</span>
         </button>
         <span className="drawer-rank">{meta.name} 수집 작업</span>
         <h2>{signal.name}</h2>
@@ -718,13 +718,13 @@ function ProductDrawer({
           <h2>{signal.name}</h2>
           {asset?.localImagePath && (
             <div className="product-asset">
-              <img src={asset.localImagePath} alt={`${signal.name} 제품 이미지`} />
-              <div>
-                <span>{asset.brand}</span>
-                <a href={asset.sourcePageUrl} target="_blank" rel="noreferrer">
-                  이미지 출처 확인
-                </a>
-              </div>
+              <img
+                src={asset.localImagePath}
+                alt={`${signal.name} 제품 이미지`}
+                width={640}
+                height={480}
+                loading="lazy"
+              />
             </div>
           )}
           <p>
@@ -1055,11 +1055,11 @@ function Overview({
     <>
       <section className="hero">
         <div>
-          <p className="eyebrow">부가 지표</p>
-          <h1>온라인 수요 신호</h1>
+          <p className="eyebrow">PROPRIETARY DEMAND DATA</p>
+          <h1>마켓 수요 인텔리전스</h1>
           <p className="hero-copy">
-            네이버·구글·유튜브·인스타그램·틱톡, 5개 채널의 관심 신호를
-            <br className="desktop" /> 원본 근거와 함께 정리합니다.
+            5개 채널의 원본 신호를 교차 집계해 제품별 시장 관심도를
+            <br className="desktop" /> 근거 데이터와 함께 제공합니다.
           </p>
         </div>
         <div className="hero-status">
@@ -1691,6 +1691,9 @@ export default function Home() {
   const [view, setView] = useState<
     "pharmacy" | "overview" | "collection" | "products" | "method" | "guide"
   >("pharmacy");
+  const [pendingView, setPendingView] = useState<typeof view | null>(null);
+  const [navigationPassword, setNavigationPassword] = useState("");
+  const [navigationError, setNavigationError] = useState(false);
   const [importNotice, setImportNotice] = useState<{
     tone: "ok" | "error";
     text: string;
@@ -1711,14 +1714,14 @@ export default function Home() {
     return () => window.clearTimeout(timer);
   }, [importNotice]);
   useEffect(() => {
-    const modalOpen = Boolean(selectedProduct || open);
+    const modalOpen = Boolean(selectedProduct || open || pendingView);
     if (!modalOpen) return;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = previousOverflow;
     };
-  }, [selectedProduct, open]);
+  }, [selectedProduct, open, pendingView]);
   useEffect(() => {
     try {
       setManual(
@@ -1822,21 +1825,27 @@ export default function Home() {
     }
   };
   useRevealOnScroll([view]);
-  const mainNav = [["pharmacy", "약국 실매출", "⌂"]] as const;
+  const mainNav = [["pharmacy", "약국 실판매 데이터", "⌂"]] as const;
   const researchNav = [
-    ["overview", "온라인 수요 신호", "⌁"],
+    ["overview", "마켓 수요 인텔리전스", "⌁"],
     ["collection", "데이터 수집", "◎"],
     ["products", "제품 검증", "▦"],
     ["method", "조사 관리", "◇"],
     ["guide", "수집·검증 기준", "✦"],
   ] as const;
+  const requestView = (next: typeof view) => {
+    if (next === view) return;
+    setNavigationPassword("");
+    setNavigationError(false);
+    setPendingView(next);
+  };
   return (
     <div className="app-shell">
       <aside className="sidebar">
-        <div className="brand" onClick={() => setView("pharmacy")}>
+        <div className="brand" onClick={() => requestView("pharmacy")}>
           <img src="/wellnessbox-mark.png" alt="" width={34} height={34} />
           <div>
-            Wellnessbox<small>뷰티 약국 수요 데이터</small>
+            Wellnessbox<small>프라이빗 커머스 인텔리전스</small>
           </div>
         </div>
         <nav>
@@ -1844,29 +1853,24 @@ export default function Home() {
             <button
               key={n[0]}
               className={view === n[0] ? "active" : ""}
-              onClick={() => setView(n[0])}
+              onClick={() => requestView(n[0])}
             >
               <i>{n[2]}</i>
               {n[1]}
             </button>
           ))}
-          <span className="nav-group">온라인 수요 리서치</span>
+          <span className="nav-group">독점 수요 데이터</span>
           {researchNav.map((n) => (
             <button
               key={n[0]}
               className={view === n[0] ? "active" : ""}
-              onClick={() => setView(n[0])}
+              onClick={() => requestView(n[0])}
             >
               <i>{n[2]}</i>
               {n[1]}
             </button>
           ))}
         </nav>
-        <div className="sidebar-foot">
-          <span className="live-dot" />
-          데이터 파이프라인
-          <small>파트너 약국 4지점 · 조사 제품 {allProducts.length}개</small>
-        </div>
       </aside>
       <main>
         {view === "pharmacy" && <PharmacyView />}{" "}
@@ -1953,6 +1957,67 @@ export default function Home() {
           onSave={save}
           onDelete={() => removeRecord(open.signal, open.platform)}
         />
+      )}
+      {pendingView && (
+        <div
+          className="drawer-backdrop navigation-access-backdrop"
+          onClick={() => setPendingView(null)}
+        >
+          <form
+            className="navigation-access-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="navigation-access-title"
+            onClick={(event) => event.stopPropagation()}
+            onSubmit={(event) => {
+              event.preventDefault();
+              if (navigationPassword === "kwonhc0903!") {
+                setView(pendingView);
+                setPendingView(null);
+                setNavigationPassword("");
+                setNavigationError(false);
+                return;
+              }
+              setNavigationPassword("");
+              setNavigationError(true);
+            }}
+          >
+            <button
+              className="close"
+              type="button"
+              aria-label="닫기"
+              onClick={() => setPendingView(null)}
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <p>RESTRICTED NAVIGATION</p>
+            <h2 id="navigation-access-title">탭 이동 인증</h2>
+            <span>다른 데이터 탭을 열려면 비밀번호를 입력하세요.</span>
+            <label htmlFor="navigation-password">열람 비밀번호</label>
+            <input
+              id="navigation-password"
+              name="navigation-password"
+              type="password"
+              autoComplete="off"
+              placeholder="열람 비밀번호를 입력하세요"
+              value={navigationPassword}
+              aria-invalid={navigationError}
+              aria-describedby={navigationError ? "navigation-error" : undefined}
+              onChange={(event) => {
+                setNavigationPassword(event.target.value);
+                setNavigationError(false);
+              }}
+            />
+            {navigationError && (
+              <strong id="navigation-error" role="alert">
+                비밀번호가 올바르지 않습니다. 다시 입력하세요.
+              </strong>
+            )}
+            <button className="primary" type="submit" disabled={!navigationPassword}>
+              탭 열기
+            </button>
+          </form>
+        </div>
       )}
     </div>
   );

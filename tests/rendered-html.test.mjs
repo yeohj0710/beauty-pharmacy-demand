@@ -14,22 +14,22 @@ async function render() {
   );
 }
 
-test("server-renders the product demand dashboard", async () => {
+test("server-renders the dashboard shell with private sales data locked", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>뷰티 약국 수요 데이터 \| 웰니스박스<\/title>/i);
-  // 기본 화면은 약국 실매출 뷰다.
-  assert.match(html, /뷰티 약국 .*실매출 데이터/);
-  assert.match(html, /성수역퓨어약국/);
-  assert.match(html, /온라인 수요 신호/);
-  // 회사 정보 푸터
-  assert.match(html, /728-88-03267/);
-  assert.match(html, /광나루로 520/);
-  assert.match(html, /조사 제품 (?:<!-- -->)?96/);
-  // 매출 수치·상품명은 열람 암호 없이 서버 HTML에 노출되지 않는다.
+  assert.match(html, /<title>프라이빗 약국 데이터 인텔리전스 \| 웰니스박스<\/title>/i);
+  assert.match(html, /약국 매출 .*인텔리전스/);
+  assert.match(html, /약국 실판매 데이터/);
+  assert.match(html, /마켓 수요 인텔리전스/);
+  assert.match(html, /데이터 수집/);
+  assert.match(html, /제품 검증/);
+  assert.match(html, /조사 관리/);
+  assert.match(html, /열람 비밀번호를 입력하세요/);
+  assert.match(html, /성수퓨어약국/);
+  // 비밀번호 인증 전에는 매출 상품명과 수치가 서버 HTML에 노출되지 않는다.
   assert.doesNotMatch(html, /애크논크림/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|Codex is working/i);
 });
@@ -46,4 +46,11 @@ test("uses canonical product and signal data without starter preview files", asy
   assert.match(page, /import signalFile from "\.\/signals\.json"/);
   assert.match(page, /import catalog from "\.\/product-catalog\.json"/);
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
+});
+
+test("다른 탭으로 이동할 때마다 열람 비밀번호를 확인한다", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(page, /requestView\(n\[0\]\)/);
+  assert.match(page, /navigationPassword === "kwonhc0903!"/);
+  assert.match(page, /탭 이동 인증/);
 });

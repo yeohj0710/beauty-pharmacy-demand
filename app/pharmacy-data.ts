@@ -76,33 +76,33 @@ export type Pharmacy = {
   tags: string[];
 };
 
-// 지점 디렉터리 — 상호·주소는 카카오맵 등록 정보 기준(2026-07 확인).
+// 공개 지점 디렉터리 — 약국명은 공개하고 상세 주소는 상권 단위로 표시한다.
 export const pharmacies: Pharmacy[] = [
   {
     id: "pure-seongsuyeok",
-    name: "성수역퓨어약국",
-    area: "서울 성동구 성수이로20길 3",
+    name: "성수퓨어약국",
+    area: "서울 동부 · 플래그십",
     tier: "flagship",
     tags: ["뷰티 특화", "성수 상권"],
   },
   {
     id: "radiyoung-myeongdong",
     name: "명동레디영약국",
-    area: "서울 중구 명동8나길 7",
+    area: "명동 상권 · 플래그십",
     tier: "flagship",
     tags: ["관광상권 대형", "K-뷰티 특화"],
   },
   {
     id: "verynew-myeongdong",
     name: "명동베리뉴약국",
-    area: "서울 중구 명동8길 18",
+    area: "명동 상권 · 스탠더드",
     tier: "standard",
     tags: ["관광상권", "연중무휴"],
   },
   {
     id: "greencircle-jayang",
     name: "그린서클약국",
-    area: "서울 광진구 아차산로 212",
+    area: "서울 동부 · 스탠더드",
     tier: "standard",
     tags: ["로컬 상권"],
   },
@@ -110,6 +110,32 @@ export const pharmacies: Pharmacy[] = [
 
 const fromBase64 = (value: string) =>
   Uint8Array.from(atob(value), (char) => char.charCodeAt(0));
+
+const SALES_REPORTING_START = "2026-04-01";
+
+function hidePreOpeningSales(data: PharmacyDataFile): PharmacyDataFile {
+  return {
+    ...data,
+    pharmacies: Object.fromEntries(
+      Object.entries(data.pharmacies).map(([id, pharmacy]) => [
+        id,
+        {
+          ...pharmacy,
+          ledger: {
+            ...pharmacy.ledger,
+            start:
+              pharmacy.ledger.start < SALES_REPORTING_START
+                ? SALES_REPORTING_START
+                : pharmacy.ledger.start,
+          },
+          periods: pharmacy.periods.filter(
+            (period) => period.start >= SALES_REPORTING_START,
+          ),
+        },
+      ]),
+    ),
+  };
+}
 
 // 매출 데이터는 저장소·번들에 AES-256-GCM 암호문으로만 실린다.
 // 열람 암호가 맞을 때만 복호화에 성공한다(GCM 무결성 검증 실패 시 예외).
@@ -140,5 +166,8 @@ export async function decryptPharmacySales(
     key,
     fromBase64(encrypted.data),
   );
-  return JSON.parse(new TextDecoder().decode(plain)) as PharmacyDataFile;
+  const data = JSON.parse(
+    new TextDecoder().decode(plain),
+  ) as PharmacyDataFile;
+  return hidePreOpeningSales(data);
 }

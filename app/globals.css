@@ -36,6 +36,76 @@ select {
 .app-shell {
   min-height: 100vh;
 }
+.navigation-access-backdrop {
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.navigation-access-card {
+  position: relative;
+  width: min(420px, 100%);
+  padding: 38px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+}
+.navigation-access-card > p {
+  margin: 0 0 9px;
+  color: var(--blue);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+.navigation-access-card h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+.navigation-access-card > span {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.navigation-access-card label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--strong);
+  font-size: 12px;
+  font-weight: 700;
+}
+.navigation-access-card > input {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: #f9fafb;
+}
+.navigation-access-card > input:focus-visible {
+  outline: 3px solid rgba(49, 130, 246, 0.2);
+  border-color: var(--blue);
+}
+.navigation-access-card > strong {
+  display: block;
+  margin-top: 9px;
+  color: #e03131;
+  font-size: 12px;
+}
+.navigation-access-card > .primary {
+  width: 100%;
+  height: 50px;
+  margin-top: 16px;
+  border: 0;
+  border-radius: 13px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 750;
+  cursor: pointer;
+}
+.navigation-access-card > .primary:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
 .sidebar {
   position: fixed;
   inset: 0 auto 0 0;
@@ -910,8 +980,16 @@ td > small {
   border-radius: 50%;
   width: 34px;
   height: 34px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  line-height: 1;
   font-size: 22px;
   cursor: pointer;
+}
+.close > span {
+  display: block;
+  transform: translateY(-1px);
 }
 .drawer-rank {
   color: #3182f6;
@@ -2090,6 +2168,9 @@ td > small {
   padding: 12px;
   text-align: left;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .channel-item > button:first-child:hover {
   border-color: #74c0fc;
@@ -2780,7 +2861,7 @@ td > small {
 }
 .pharmacy-picker-trigger {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 12px;
   background: #fff;
   border: 1px solid #e9ecef;
@@ -2808,6 +2889,7 @@ td > small {
   font-style: normal;
   color: var(--blue);
   font-size: 13px;
+  line-height: 1;
 }
 .pharmacy-picker-backdrop {
   position: fixed;
@@ -3281,7 +3363,6 @@ body {
 .sidebar nav button.active {
   background: linear-gradient(90deg, rgba(61, 139, 255, 0.28), rgba(61, 139, 255, 0.1));
   color: #fff;
-  box-shadow: inset 2.5px 0 0 #4d94ff;
 }
 .nav-group {
   color: #506a94;
@@ -3617,45 +3698,33 @@ body {
 }
 
 .product-asset {
-  display: grid;
-  grid-template-columns: 112px 1fr;
-  gap: 16px;
-  align-items: center;
   margin: 18px 0;
-  padding: 14px;
+  padding: 22px;
   border: 1px solid #e6e8eb;
-  border-radius: 16px;
-  background: #fff;
+  border-radius: 18px;
+  background: #f7f8fa;
+  min-height: 230px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
 .product-asset img {
-  width: 112px;
-  height: 112px;
+  display: block;
+  width: 100%;
+  height: 210px;
   object-fit: contain;
-  border-radius: 12px;
-  background: #f7f8fa;
+  mix-blend-mode: multiply;
 }
 
-.product-asset div {
-  display: grid;
-  gap: 8px;
-}
-
-.product-asset span {
-  color: #6b7684;
-  font-size: 13px;
-}
-
-.product-asset a {
-  width: fit-content;
-  color: #0064ff;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.product-asset a:hover {
-  text-decoration: underline;
+@media (max-width: 760px) {
+  .product-asset {
+    min-height: 190px;
+    padding: 18px;
+  }
+  .product-asset img {
+    height: 170px;
+  }
 }
 .hero {
   animation: none;

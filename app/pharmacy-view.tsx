@@ -212,7 +212,7 @@ function SalesGate({
         <p>
           파트너 약국의 영업 데이터입니다.
           <br />
-          열람 암호를 입력하면 바로 확인할 수 있습니다.
+          열람 비밀번호를 입력하면 매출 수치를 확인할 수 있습니다.
         </p>
         <form
           className="gate-form"
@@ -224,20 +224,26 @@ function SalesGate({
           <input
             type="password"
             autoComplete="off"
-            placeholder="열람 암호를 입력하세요"
-            aria-label="열람 암호"
+            placeholder="열람 비밀번호를 입력하세요"
+            aria-label="데이터 열람 비밀번호"
             value={password}
             onChange={(event) => {
               setPassword(event.target.value);
               if (phase === "error") setPhase("idle");
             }}
           />
-          <button className="primary" type="submit" disabled={phase === "busy"}>
-            {phase === "busy" ? "확인 중…" : "열람하기"}
+          <button
+            className="primary"
+            type="submit"
+            disabled={phase === "busy" || !password}
+          >
+            {phase === "busy" ? "확인 중…" : "데이터 열람"}
           </button>
         </form>
         {phase === "error" && (
-          <p className="gate-error">열람 암호가 올바르지 않습니다.</p>
+          <p className="gate-error">
+            열람 비밀번호가 올바르지 않습니다. 다시 입력하세요.
+          </p>
         )}
         <ul className="gate-meta">
           <li>AES-256 암호화</li>
@@ -297,7 +303,7 @@ function ProductSalesDrawer({
         aria-label={`${name} 판매 상세`}
       >
         <button className="close" onClick={onClose} aria-label="닫기">
-          ×
+          <span aria-hidden="true">×</span>
         </button>
         <div className="sales-drawer-head">
           <span className="drawer-rank">제품 판매 상세</span>
@@ -309,13 +315,13 @@ function ProductSalesDrawer({
           </h2>
           {asset?.localImagePath && (
             <div className="product-asset">
-              <img src={asset.localImagePath} alt={`${name} 제품 이미지`} />
-              <div>
-                <span>{asset.brand}</span>
-                <a href={asset.sourcePageUrl} target="_blank" rel="noreferrer">
-                  이미지 출처 확인
-                </a>
-              </div>
+              <img
+                src={asset.localImagePath}
+                alt={`${name} 제품 이미지`}
+                width={640}
+                height={480}
+                loading="lazy"
+              />
             </div>
           )}
           {info && (
@@ -674,25 +680,29 @@ export default function PharmacyView() {
     <>
       <section className="hero pharmacy-hero">
         <div>
-          <p className="eyebrow">POS 실판매 집계</p>
+          <p className="eyebrow">PRIVATE POS INTELLIGENCE</p>
           <h1>
-            뷰티 약국 <span className="grad">실매출 데이터</span>
+            약국 매출 <span className="grad">인텔리전스</span>
           </h1>
           <p className="hero-copy">
-            성수·명동 파트너 약국의 POS 판매 기록을
-            <br className="desktop" /> 제품별·기간별로 집계했습니다.
+            외부에 공개되지 않는 파트너 약국의 POS 판매 기록을
+            <br className="desktop" /> 제품별·기간별 인텔리전스로 제공합니다.
           </p>
         </div>
       </section>
       <section className="pharmacy-toolbar">
         <PharmacyPicker
           selected={pharmacy}
-          onSelect={(next) => setPharmacy(next)}
+          onSelect={(next) => {
+            if (next.id === pharmacy.id) return;
+            setBundle(null);
+            setPharmacy(next);
+          }}
         />
         {data && (
           <div className="unlock-state">
             <span className="live-dot" />
-            열람 인증됨 · {data.pharmacyName}
+            열람 인증됨 · {pharmacy.name}
           </div>
         )}
       </section>

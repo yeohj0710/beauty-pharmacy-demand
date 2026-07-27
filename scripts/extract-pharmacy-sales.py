@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""성수역퓨어약국 매출 xlsx(메인 통합본)를 대시보드용 JSON으로 추출한다.
+"""성수퓨어약국 매출 xlsx(메인 통합본)를 대시보드용 JSON으로 추출한다.
 
 입력: G드라이브 원본(기본) 또는 --source 로 지정한 메인.xlsx
 출력: etc/pharmacy-sales.local.json  (평문 — etc/ 는 gitignore, 절대 커밋 금지)
@@ -168,7 +168,7 @@ VARIANTS = {
     "radiyoung-myeongdong": dict(
         name="명동레디영약국", scale=1.85, items=1.40, add=30, drop=0.14,
         skew={"화장품": 1.25, "일반의약품": 0.85}, ledger=2.0, coverage=0.64,
-        months=[1, 2, 3, 4, 5, 6], ledger_start="2026-01-06",
+        months=[4, 5, 6], ledger_start="2026-04-01",
         signature=[
             sig("VT 리들샷 100 페이셜 부스팅 앰플 50ml", "브이티", "화장품", 32000, 1350, 46, "마이크로니들 부스팅", growth=0.80),
             sig("리쥬란 힐러 턴오버 앰플 30ml", "파마리서치", "화장품", 55000, 620, 44, "피부 재생/탄력", growth=0.88),
@@ -185,7 +185,7 @@ VARIANTS = {
     "verynew-myeongdong": dict(
         name="명동베리뉴약국", scale=1.08, items=1.15, add=22, drop=0.18,
         skew={"화장품": 1.12}, ledger=1.2, coverage=0.69,
-        months=[3, 4, 5, 6], ledger_start="2026-03-04",
+        months=[4, 5, 6], ledger_start="2026-04-01",
         signature=[
             sig("셀퓨전씨 레이저 썬스크린 100 35ml", "셀퓨전씨", "화장품", 35000, 560, 45, "저자극 자외선 차단", growth=0.90),
             sig("티르티르 마스크핏 레드 쿠션 18g", "티르티르", "화장품", 25000, 490, 41, "커버/밀착 쿠션", growth=0.91),
@@ -532,7 +532,7 @@ def main():
 
     pure = {
         "pharmacyId": "pure-seongsuyeok",
-        "pharmacyName": "성수역퓨어약국",
+        "pharmacyName": "성수퓨어약국",
         "sourceNote": "약국 POS 상품통계·판매내역 화면을 그대로 옮긴 데이터입니다(2026-07-07 수령).",
         "ledger": ledger,
         "periods": period_list,
